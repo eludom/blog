@@ -1,0 +1,139 @@
+#+TITLE: Curious Musings
+#+OPTIONS: num:nil toc:nil \n:nil
+#+TODO: TODO(t) CANCELLED(c) |  WIP(w) PUBLISHED(p)
+#+hugo_base_dir: .
+#+hugo_auto_set_lastmod: %Y-%m-%d
+#+MACRO instagram @@html:https://www.instagram.com/p/$1
+
+:PROPERTIES:
+:EXPORT_HUGO_SECTION:
+:END:
+* Content
+** Blog
+ :PROPERTIES:
+  :EXPORT_HUGO_SECTION: Blog
+  :END:
+
+*** INTRO
+  :PROPERTIES:
+  :EXPORT_HUGO_SECTION: Blog
+  :EXPORT_FILE_NAME: _index
+  :END:
+
+The main technology section. Every project starts here, eventually branching off to its own category.
+
+
+*** PUBLISHED When things go wrong                                 :security:
+:PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: 20200103
+    :EXPORT_HUGO_PUBLISHDATE: 2020-01-03:
+    :END:
+
+Short stuff here
+
+#+hugo: more
+
+Longer stuff here
+
+*** PUBLISHED Switching to K                                          :linux:
+ubuntu over openSuSE
+:PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: 20200108
+    :EXPORT_HUGO_PUBLISHDATE: 2020-01-08:
+    :END:
+
+
+[[https://joshrollinswrites.com/help-desk-head-desk/20191208/][After giving openSuSE a try]], I decided to switch to Kubuntu. So far it's been a month or so since the switch, and everything I want works to the point that I havne't booted into Windows once.
+
+#+hugo: more
+
+I ran into several issues with openSuSE and finally decided to call it quits when Company of Heroes 2, one of the few games I play, refused to work. When I contacted Linux support for it, the answer I got was along the lines "sorry, we don't support this version of Linux." My new Desktop Linux setup is not geared toward hardcore gaming is it was first intended when I built it, but I still want to spend some time gaming here and there. There were other issues, of course, mostly the need to download a specifically tailored software for something I needed.
+
+With Kubuntu installed, I looked into installing windows on a VM. I ended up choosing [[https://www.virtualbox.org/wiki/Downloads][Oracle's Virtual Box]] for its better integration with the Linux Kernel (latest version) and indeed, it runs pretty well. Windows now is in a confined frame used for occasional downloads and remoting to computers at work - this completely satisfies any need I need out of Windows at this point. After a bit of a hardware upgrade which hopefully will happen soon, I wouldn't even need to turn off the VM when I'm done.
+
+The VM caused several "hijacking" issues of my keyboard and mouse, so I disconnected my [[https://joshrollinswrites.com/help-desk-head-desk/switching-to-manjaro/][KVM swtich]] and stored it away. Having a powerful desktop means my laptop is no longer in use unless I travel or need a backup. It still runs Manjaro and I think I will keep it this way.
+
+I feel like my Linux setup is mostly complete at this point. My desktop ([[https://joshrollinswrites.com/help-desk-head-desk/20191208/][which I call Hedwig]]) is used for writing or productivity, photography and gaming.
+
+
+
+
+#+hugo: more
+
+
+
+
+
+** BMC
+:PROPERTIES:
+   :EXPORT_HUGO_SECTION: BMC
+   :END:
+*** INTRO
+  :PROPERTIES:
+  :EXPORT_HUGO_SECTION: BMC
+  :EXPORT_FILE_NAME: _index
+  :END:
+
+**** Buy Me Coffee?
+
+Here, this should work:
+Test 1 2 3
+
+your mom!!!! yes
+
+
+
+{{< rawhtml >}}
+<style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 22px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/I2HmaZYGh"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me Coffee</span></a>
+{{< /rawhtml >}}
+
+* About George Jones
+   :PROPERTIES:
+   :EXPORT_HUGO_SECTION: About
+   :EXPORT_FILE_NAME: _index
+   :EXPORT_HUGO_LAYOUT: single
+   :END:
+
+   George Jones is a Christian, husband, father, technical security
+   geek etc., backpacker, Latin, Classics, and Philosophy dabbler,
+   Emacs Org Mode addict, Cincinnati Reds and Skyline Chili fan.  In
+   something like that order.  He tries to combine his passions and
+   has thus been know to write Latin entries in Appalachian Trail
+   shelter log books ("Via longa sed vita brevis"), and write blog
+   posts about the intersection of epistemology and computer security.
+   You have a lot of time to think when hiking or stuck at home during
+   a pandemic.  Maybe too much :-)
+
+   Professionally George has made a living variously as a programmer,
+   systems administrator, network security engineer, open source
+   software developer, Internet Standards author (RFC3871), security
+   researcher, conference chair (Flocon 2013, 2014), security
+   analytics developer and data scientist.  He has been employed
+   variously by CompuServe, UUNET, MITRE, Carnegie-Mellon/CERT, Amazon
+   and Redjack.
+
+   He can be reached via email as gmj at pobox dot com at
+   https://www.linkedin.com/in/georgemjones/
+
+* Curious Musings
+:PROPERTIES:
+   :EXPORT_HUGO_SECTION: curious
+   :EXPORT_FILE_NAME: _index
+   :EXPORT_HUGO_LAYOUT: single
+   :END:
+
+Curious Musings is a place I put up thoughts on life, family, work,
+security, the outdoors, etc.   As someone who started work at
+CompuServe, the original walled garden, I am sensitive to my content
+remaining free and available.
+
+Curious Musisings is created with [[https://gohugo.io/][Hugo Go]], a free open-source site
+generator. It is designed and authored on a free Linux OS using [[https://www.gnu.org/software/emacs/][Emacs]]
+[[https://orgmode.org/][org-mode]] and [[https://ox-hugo.scripter.co/][ox-hugo]].  Bandwidth is currently supplied free of charge
+by Github.
+
+I am grateful to Josh Rollins for his [[https://joshrollinswrites.com/][TAONAW]] blog which I used as a
+model/too for learning Hugo and ox-hugo.  The source can be found
+https://github.com/jarss/
