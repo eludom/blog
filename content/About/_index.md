@@ -2,7 +2,7 @@
 title = "About George Jones"
 author = ["George Jones"]
 layout = "single"
-lastmod = 2020-04-18T15:07:03-04:00
+lastmod = 2020-04-18T19:55:21-04:00
 draft = false
 +++
 
@@ -22,7 +22,6 @@ software developer, Internet Standards author (RFC3871), security
 researcher, conference chair (Flocon 2013, 2014), security
 analytics developer and data scientist.  He has been employed
 variously by CompuServe, UUNET, MITRE, Carnegie-Mellon/CERT, Amazon
-and Redjack.
+and Redjack.  See  <https://www.linkedin.com/in/georgemjones/>
 
-He can be reached via email as gmj at pobox dot com at
-<https://www.linkedin.com/in/georgemjones/>
+He can be reached via email as gmj at pobox dot com

@@ -22,73 +22,130 @@
 
 The main technology section. Every project starts here, eventually branching off to its own category.
 
-
-*** PUBLISHED When things go wrong                                 :security:
+*** WIP Fixing GNU bash associative array insert speed :programming:gnu:linux:
 :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
-    :EXPORT_FILE_NAME: 20200103
-    :EXPORT_HUGO_PUBLISHDATE: 2020-01-03:
+    :EXPORT_FILE_NAME: 20200418
+    :EXPORT_HUGO_PUBLISHDATE: 2020-04-18:
     :END:
 
-Short stuff here
+Bash uses linear search to insert values in to associative arrays.
+This is all well and good for small numbers of keys.   I was adding
+millions[fn:1].    I went poking around the bash source code today
+(2020-04-18) to confirm my suspicion and gauge the difficulty of
+adding an option to do something more sensible.
 
 #+hugo: more
 
-Longer stuff here
+Here the steps I took and where I might go if I get serious about
+fixing the problem:
 
-*** PUBLISHED Switching to K                                          :linux:
-ubuntu over openSuSE
-:PROPERTIES:
-    :EXPORT_HUGO_SECTION: Blog
-    :EXPORT_FILE_NAME: 20200108
-    :EXPORT_HUGO_PUBLISHDATE: 2020-01-08:
-    :END:
+**** Get the source code
 
 
-[[https://joshrollinswrites.com/help-desk-head-desk/20191208/][After giving openSuSE a try]], I decided to switch to Kubuntu. So far it's been a month or so since the switch, and everything I want works to the point that I havne't booted into Windows once.
+***** Find it
+      - find the homepage :: A quick bit of googling lead to the homepage http://savannah.gnu.org/projects/bash/
+      - use git :: For a minute it looked like GNU was still stuck in the bad old
+        days of having to download a tarball and then apply a series
+        of patches, but fortunately, it there is a git repo http://savannah.gnu.org/git/?group=bash
+***** Download it
+      #+begin_src bash :eval no
+git clone https://git.savannah.gnu.org/git/bash.git
+      #+end_src
+***** Build it
 
-#+hugo: more
+      Bash follows a time honored build convention
+      #+begin_src bash :results output :eval no
+./configure
+make
+      #+end_src
 
-I ran into several issues with openSuSE and finally decided to call it quits when Company of Heroes 2, one of the few games I play, refused to work. When I contacted Linux support for it, the answer I got was along the lines "sorry, we don't support this version of Linux." My new Desktop Linux setup is not geared toward hardcore gaming is it was first intended when I built it, but I still want to spend some time gaming here and there. There were other issues, of course, mostly the need to download a specifically tailored software for something I needed.
+***** Analyze it
+      - I read the NEWS file for any indication that associative arrays
+        has been worked on to speed up associative array
+        insert/look-ups.  No indication that they had.
+      - I checked the git commit logs, which appear to be meaningful
+        after Bash-4.4 patch 19.  Nothing.
+      - With judicious use of grep ("grep-find in Emacs") for
+        "associative" and "hash_search" it turns out that associative
+        array inserts (as all inserts) are done with use of the
+        "hash_search" function in =hashlib.c=
+      - has_insert() begins as follows:
+#+begin_src C
+/* Create an entry for STRING, in TABLE.  If the entry already
+   exists, then return it (unless the HASH_NOSRCH flag is set). */
+BUCKET_CONTENTS *
+hash_insert (string, table, flags)
+     char *string;
+     HASH_TABLE *table;
+     int flags;
+{
+  BUCKET_CONTENTS *item;
+  int bucket;
+  unsigned int hv;
 
-With Kubuntu installed, I looked into installing windows on a VM. I ended up choosing [[https://www.virtualbox.org/wiki/Downloads][Oracle's Virtual Box]] for its better integration with the Linux Kernel (latest version) and indeed, it runs pretty well. Windows now is in a confined frame used for occasional downloads and remoting to computers at work - this completely satisfies any need I need out of Windows at this point. After a bit of a hardware upgrade which hopefully will happen soon, I wouldn't even need to turn off the VM when I'm done.
+  if (table == 0)
+    table = hash_create (0);
 
-The VM caused several "hijacking" issues of my keyboard and mouse, so I disconnected my [[https://joshrollinswrites.com/help-desk-head-desk/switching-to-manjaro/][KVM swtich]] and stored it away. Having a powerful desktop means my laptop is no longer in use unless I travel or need a backup. It still runs Manjaro and I think I will keep it this way.
+  item = (flags & HASH_NOSRCH) ? (BUCKET_CONTENTS *)NULL
+                               : hash_search (string, table, 0);
+#+end_src
+      - and there it is, the linear search walking the list in
+        =hash_search()=
+#+begin_src C
+/* Return a pointer to the hashed item.  If the HASH_CREATE flag is passed,
+   create a new hash table entry for STRING, otherwise return NULL. */
+BUCKET_CONTENTS *
+hash_search (string, table, flags)
+     const char *string;
+     HASH_TABLE *table;
+     int flags;
+{
+  BUCKET_CONTENTS *list;
+  int bucket;
+  unsigned int hv;
 
-I feel like my Linux setup is mostly complete at this point. My desktop ([[https://joshrollinswrites.com/help-desk-head-desk/20191208/][which I call Hedwig]]) is used for writing or productivity, photography and gaming.
+  if (table == 0 || ((flags & HASH_CREATE) == 0 && HASH_ENTRIES (table) == 0))
+    return (BUCKET_CONTENTS *)NULL;
+
+  bucket = HASH_BUCKET (string, table, hv);
+
+  for (list = table->bucket_array ? table->bucket_array[bucket] : 0; list; list = list->next)
+    {
+      /* This is the comparison function */
+      if (hv == list->khash && STREQ (list->key, string))
+        {
+          list->times_found++;
+          return (list);
+        }
+    }
+#+end_src
 
 
 
+***** Next steps
+****** TODO Reach out to the maintainers
+       see if they would even entertain the idea of a patch
+****** TODO Look for appropriate in-memory hash insert/lookup functions
+       - btrees ?
+****** TODO Code it
+****** TODO test it
+****** TODO submit patch
 
-#+hugo: more
+*** TODO From CompuServe, UUNET, and the great beyond :history:internet:online:
+   Perspectives on the growth of "online" communities/my experience
 
+   - Adm3a terminals
+   - Vax email
+   - CompuServe
+   - Usenet
+   - CompuServe again
+   - The web
+   - UUNET
 
-
-
-
-** BMC
-:PROPERTIES:
-   :EXPORT_HUGO_SECTION: BMC
-   :END:
-*** INTRO
-  :PROPERTIES:
-  :EXPORT_HUGO_SECTION: BMC
-  :EXPORT_FILE_NAME: _index
-  :END:
-
-**** Buy Me Coffee?
-
-Here, this should work:
-Test 1 2 3
-
-your mom!!!! yes
-
-
-
-{{< rawhtml >}}
-<style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 22px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/I2HmaZYGh"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me Coffee</span></a>
-{{< /rawhtml >}}
-
+*** TODO Pull in my recent LinkedIn Posts
+*** TODO Publish thoughts from my journal
+*** TODO original building bash                    :unix:linux:bash:software:
 * About George Jones
    :PROPERTIES:
    :EXPORT_HUGO_SECTION: About
@@ -112,10 +169,9 @@ your mom!!!! yes
    researcher, conference chair (Flocon 2013, 2014), security
    analytics developer and data scientist.  He has been employed
    variously by CompuServe, UUNET, MITRE, Carnegie-Mellon/CERT, Amazon
-   and Redjack.
+   and Redjack.  See  https://www.linkedin.com/in/georgemjones/
 
-   He can be reached via email as gmj at pobox dot com at
-   https://www.linkedin.com/in/georgemjones/
+   He can be reached via email as gmj at pobox dot com
 
 * Curious Musings
 :PROPERTIES:
@@ -137,3 +193,7 @@ by Github.
 I am grateful to Josh Rollins for his [[https://joshrollinswrites.com/][TAONAW]] blog which I used as a
 model/too for learning Hugo and ox-hugo.  The source can be found
 https://github.com/jarss/
+
+** Footnotes
+
+[fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
