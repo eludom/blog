@@ -22,6 +22,15 @@
 
 The main technology section. Every project starts here, eventually branching off to its own category.
 
+*** TODO foo  bar                                                       :foo:
+:PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: foo
+    :EXPORT_HUGO_PUBLISHDATE: 2020-04-19:
+    :END:
+
+Bash uses linear search to insert values in to associative arrays.
+
 *** WIP Fixing GNU bash associative array insert speed :programming:gnu:linux:
 :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
@@ -34,6 +43,7 @@ This is all well and good for small numbers of keys.   I was adding
 millions[fn:1].    I went poking around the bash source code today
 (2020-04-18) to confirm my suspicion and gauge the difficulty of
 adding an option to do something more sensible.
+
 
 #+hugo: more
 
@@ -122,7 +132,6 @@ hash_search (string, table, flags)
 #+end_src
 
 
-
 ***** Next steps
 ****** TODO Reach out to the maintainers
        see if they would even entertain the idea of a patch
@@ -132,7 +141,14 @@ hash_search (string, table, flags)
 ****** TODO test it
 ****** TODO submit patch
 
-*** TODO From CompuServe, UUNET, and the great beyond :history:internet:online:
+
+*** TODO The journey from CompuServe to now         :history:internet:online:
+# :PROPERTIES:
+#     :EXPORT_HUGO_SECTION: Blog
+#     :EXPORT_FILE_NAME: from-compuserve-to-now
+#     :EXPORT_HUGO_PUBLISHDATE: 2020-04-18:
+#     :END:
+
    Perspectives on the growth of "online" communities/my experience
 
    - Adm3a terminals
@@ -145,7 +161,7 @@ hash_search (string, table, flags)
 
 *** TODO Pull in my recent LinkedIn Posts
 *** TODO Publish thoughts from my journal
-*** TODO original building bash                    :unix:linux:bash:software:
+
 * About George Jones
    :PROPERTIES:
    :EXPORT_HUGO_SECTION: About

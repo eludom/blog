@@ -6,7 +6,7 @@ languageCode = "en-us"
 title = "Curious Musings"
 themesDir = "themes"
 theme = "hyde"
-disqusShortname = "taonaw"
+disqusShortname = "curiousmusings"
 footnoteReturnLinkContents = "[^ back]"
 
 name = "Hyde"
