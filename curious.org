@@ -152,8 +152,7 @@ but, it turns out, there are still good reasons to play the game.
     - Ultimate Guide to Cybersecurity :: "Your Ultimate Guide to Cybersecurity: At Home, at Work, and on the Go." https://www.ibtimes.com/your-ultimate-guide-cybersecurity-home-work-go-2818655. A little more in depth.
     - CIS Critical Controls :: "The Center for Internet Security (CIS) Critical Security Controls" - https://www.cisecurity.org/controls/cis-controls-implementation-groups/ More in depth. For enterprises.
 
-
-*** WIP Fixing GNU bash associative array insert speed :programming:gnu:linux:
+*** PUBLISHED Fixing GNU bash associative array insert speed :programming:gnu:linux:
 :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
     :EXPORT_FILE_NAME: 20200418
@@ -167,13 +166,17 @@ millions[fn:1].    I went poking around the bash source code today
 adding an option to do something more sensible.
 
 
+In less than a day after I reported it, there is a patch
+https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html My
+timing code and pre and post patch timings are here:
+https://github.com/eludom/snippits/tree/master/bash/tests
+
 #+hugo: more
 
 Here the steps I took and where I might go if I get serious about
 fixing the problem:
 
 **** Get the source code
-
 
 ***** Find it
       - find the homepage :: A quick bit of googling lead to the homepage http://savannah.gnu.org/projects/bash/
@@ -254,15 +257,15 @@ hash_search (string, table, flags)
 #+end_src
 
 
-***** Next steps
-****** TODO Reach out to the maintainers
-       see if they would even entertain the idea of a patch
-****** TODO Look for appropriate in-memory hash insert/lookup functions
-       - btrees ?
-****** TODO Code it
-****** TODO test it
-****** TODO submit patch
-
+**** Next steps
+***** DONE Reach out to the maintainers
+      see if they would even entertain the idea of a patch
+***** CANCELED Look for appropriate in-memory hash insert/lookup functions
+      - btrees ?
+***** CANCELED Code it
+***** CANCELED test it
+***** CANCELED submit patch
+      See https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html
 
 *** TODO The journey from CompuServe to now         :history:internet:online:
 # :PROPERTIES:
