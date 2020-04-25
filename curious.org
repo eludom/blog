@@ -1,4 +1,4 @@
-#+TITLE: Curious Musings
+i#+TITLE: Curious Musings
 #+OPTIONS: num:nil toc:nil \n:nil
 #+TODO: TODO(t) CANCELLED(c) |  WIP(w) PUBLISHED(p)
 #+hugo_base_dir: .
@@ -267,7 +267,7 @@ hash_search (string, table, flags)
 ***** CANCELED submit patch
       See https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html
 
-*** PUBLISHED Some Happy Notes                            :music:family:life:
+*** PUBLISHED Some Happy Notes                      :music:family:life:piano:
 :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
     :EXPORT_FILE_NAME: happy-notes
@@ -280,7 +280,9 @@ hash_search (string, table, flags)
     listen to [[https://www.youtube.com/playlist?list=PLp9RFZrc7DMtCEg0SmtEL5weDiTis3rH5][Bryan Jones' masters degree piano recitle at Duquesne]] on
     Youtube.
 
-    file:images/2020-04-21-BryanJonesRecital.png
+    [[file:static/bryan.png]]
+
+    # file:static/2020-04-21-BryanJonesRecital.png
 
 #+hugo: more
 
@@ -316,6 +318,61 @@ may hike together a week or two if possible in June or July.
 
 Life goes on.   All is not doom and gloom.   There are some happy
 notes.  Share some of yours?
+
+*** WIP All is not doom and gloom: go for a walk !!!              :life:hope:
+:PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: go-for-a-walk
+    :EXPORT_HUGO_PUBLISHDATE: 2020-04-25:
+    :END:
+
+I find that when I stay glued to twitter (pick your
+social-media-of-doom-amplifier) I tend to get a rather gloomy view of
+life.  There is indeed a lot one can be gloomy about these days.  But
+if you just go for a walk and look around you may be
+surprised:
+
+I found this art [[pic:sidewalk-art][sidewalk art]] at just about the exact place where last
+fall I had purchased a cup of lemonade from 4 eager young
+entrepreneurs.  I suspect the ring leader of that optimistic young
+bunch.
+
+#+CAPTION: Sidewalk art
+#+LABEL: pic:sidewalk-art
+[[file:images/walks/sidewalk-art.jpg]]
+
+#+hugo: more
+
+Spring is the best time of year.  The daffodils bloom, [[pic:dogwoods][dogwoods are in
+full bloom]], red-bud trees come out, the tree-frogs sing up a storm (at
+least that's how it goes in Virginia)
+
+#+CAPTION: Dogwoods in bloom
+#+LABEL: pic:dogwoods
+[[file:images/walks/dogwood.jpg]]
+
+I recently had my yard re-graded and re-seeded and now, after 17 years
+I have [[pic:grass][full luscious grass]] (that has to be mowed).  This may not happen
+again:
+
+#+CAPTION: Actual grass
+#+LABEL: pic:grass
+file:images/walks/grass.jpg
+
+And last but not least I saw a bird I don't think I've seen before,
+it turned out to be a common [[pic:tree-swallow][tree swallow]], but it was startling to see
+the almost metallic, shinny dark blue back and white belly (the
+picture does not capture it well)
+
+#+CAPTION: Tree Swallow (/Tachycineta bicolor/)
+#+LABEL: pic:tree-swallow
+file:images/walks/tree-swallow.jpg
+
+
+Go for a walk.  Look at the world around you.  It's spring.  All is
+not doom and gloom!
+
+
 
 
 *** TODO The journey from CompuServe to now         :history:internet:online:

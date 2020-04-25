@@ -7,7 +7,7 @@
       <ul class="sidebar-nav">
         <h3>◾ Frequent</h3>
         {{ range $.Site.Taxonomies.tags.ByCount }}
-        {{ if gt .Count 4 }}
+        {{ if gt .Count 1 }}
         <li>
           <a href="/tags/{{ .Name }}"> {{ .Name }} <small>({{ .Count }})</small></a>
         </li>

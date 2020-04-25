@@ -1,8 +1,9 @@
 {{ define "main" -}}
+{{ template "_internal/twitter_cards.html" . }}
 <div class="post">
   <h1>{{ .Title }}</h1>
  <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }} class="post-date">{{ .Date.Format "2006-01-02" }} {{ partial "tags.html" .}}</time>
- {{ .Content }}
+{{ .Content }}
 </div>
 {{ if .Site.DisqusShortname -}}
 <hr>
