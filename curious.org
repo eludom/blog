@@ -490,10 +490,144 @@ This brings me to the question this article explores: /why write/?
     be one of the goals of the [[https://100daystooffload.com/][#100DaysToOffload concept]].  I'm going
     to give it a try.  Thanks [[https://kevq.uk/][Kev Quirk]]
 
+
 I'll never know why Thelma Jane wrote her poetry.  I'm still trying to
 figure out why I write.  Maybe it's one of the reasons discussed
 above.  Maybe it's all of them.
 
+*** WIP Choosy Programmers Choose GIF :Wilhite:CompuServe:GIF:History:Computers:Emacs:Programming:
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: steve
+    :EXPORT_HUGO_PUBLISHDATE: <2020-04-30 Thu>
+    :END:
+
+[[https://en.wikipedia.org/wiki/Steve_Wilhite][Steve Wilhite]] is the most prolific programmer I've ever known.  He's
+mostly remembered for creating [[https://en.wikipedia.org/wiki/gif][GIF]] but he spent 30 years writing piles
+of amazing software which helped set the stage for the Web.
+
+#+CAPTION: CompuServe XF4 Fortran Manual
+#+LABEL: pic:XF4MAN
+file:images/cs/XF4MAN.gif
+
+Day 02 of #100DaysToOffload.
+
+#+hugo: more
+
+  Steve worked at CompuServe (and successors) from 1970 to 2001.  I
+  was fortunate enough to start my career working with/for him.  My
+  view of his programming output comes largely from 1985-1995.  I'm
+  sure there was much more that I missed.
+
+**** Things Steve Wrote
+  Steve ran the languages and tools group when I arrived.  He had just
+  given up on writing at DEC10 ADA compiler (Steve is still writing
+  ADA software), was just beginning to embrace PCs as "real computers"
+  worthy of his attention, had written a FORTRAN compiler, a BASIC
+  compiler and associated run-time systems, and a run-time library for
+  BLISS called BTOOLS.  These were partially in support of
+  CompuServe's pre-information-service time-sharing services supported
+  by a homegrown packet-switched networking.  "Cloud computing" in the
+  1970s :-)
+
+  I worked on BTOOLS, SKIMAN (Single Key Index Access Manager), a
+  B-Tree library Steve had created.  There was a full-fledged database
+  system written in there somewhere I think.  There were ports and
+  hacks to various tools such as FINE (Fine Is Not Emacs), a C
+  compiler, DEC Runoff, laser printer support, source code control
+  systems, etc.
+
+  On top of that, Steve created the HMI (Host Micro Interface)
+  protocol that rode on top of [[https://en.wikipedia.org/wiki/b_protocol][CompuServe "B-Protocol"]] to allow API
+  driven interactions with the information service (the alternative
+  being text/command line interfaces).  This was all in an environment
+  where 9600baud modems were considered "fast".  Compression,
+  incremental display, etc. were paramount.
+
+  He later used that as the substrate for [[https://en.wikipedia.org/wiki/compuserve_information_manager][WinCim]], the graphical interface
+  to the information service that he created which kept the company
+  going for a while in the face of the likes of AOL.  Somewhere in
+  there, there was a graphics library and enough pieces that I was
+  able to write a web browser that worked inside WinCim, that would
+  have allowed CompuServe users without an Internet connection (most
+  everyone then) to browse the web.  Marketing did not want to release
+  my web browser.  *Sigh*.
+
+  Later on (after my time) Steve as pulled into major projects to support
+  the back end processing for H&R Blocks's TaxCut program when online
+  tax-filing was a new thing.  He was also pulled into the WOW project
+  which was supposed to be the AOL killer when it became apparent that
+  CompuServe needed an AOL killer.  One of those projects succeeded.
+  Single-handed technical virtuosity could not fix the one that
+  didn't.
+
+  And there was this little side project called GIF.
+
+**** Things that got out
+
+***** GIF
+  Be careful what you do and say.  It's often the incidentals that you
+  are remembered for.  The kind (or unkind) words.  The side projects.
+
+  In the world of the mid 80s there were IBM PCs, Apple Macs
+  (classic), Amigas, Atari-STs, CoCos, and yes, Apple-IIs and
+  Commodor-68s.  The information service was moving beyond a
+  text-based, menu-driven system (I like curses and termcap as much as
+  the next guy, but hey..).  People wanted to share pictures, display
+  online-shopping catalogs, weather maps, etc.  There were no/few good
+  portable graphics formats.  So Steve wrote one.  GIF.  Then the web happened.
+  The web wanted portable images too.  GIF worked.  So the early web
+  adopted it.  There was the kerfuffle over the LZW compression
+  algorithm it used resulting in the creation of the PNG format, but,
+  hey, who in 1987 would ever think that an algorithm published in ACM
+  might not be free.  OK, [[https://en.wikipedia.org/wiki/richard_stallman][Stallman]], but who else :-).  And now there
+  are Giffy's in slack that I turn off because I hate dancing bears.
+  Thank-you Steve.
+
+**** MicroEmacs/mg display hacks
+
+  And then there are the [[https://www.emacswiki.org/emacs/MicroEmacs][MiroEmacs]] display hacks.  When the Amiga came
+  out Steve convinced me to buy one (it was that or the AtariST, he
+  had and was hacking on both).  But there was no Emacs.  Somehow
+  (Steve?) I became aware that the source to MicroEmacs was included
+  on with the disks to Mark Williams C compiler for the PC.  So I bought
+  the C compiler, ported the source to the Amiga (all it needed was
+  character I/O drivers to work in the native ANSI/VT-100 terminal)
+  and gave the source to Steve, who, I think, hacked/improved the
+  screen update logic.  I then posted the source to the USENET group
+  comp.sources.amiga. It took off from there (thanks to Daniel
+  Lawerence).  It's rumored that Linus Torvalds uses a version of the
+  code to this day.
+
+
+**** CompuServe: Groundbreaking events, great teams and amazing individuals.
+
+     At the recent (2019-10-19) CompuServe 50th Anniversary reunion I
+     was reminded of the revolutionary things that happened there: the
+     first commercial email, the first online banking, the first
+     online shopping, the first electronic news wire feed, the first
+     song released exclusively online (Arrowsmith 1994), online chat
+     (CB), OS and compiler development, VPNs (X.25 !), data over cable
+     in 82....and Dan Piskur inventing what we know today as much of
+     standard online security, incident response and "cyber"/law
+     enforcement collaboration, all before the Internet.
+
+     Of course it all took the efforts of many people and groups:  the
+     network software team (packet switching c.a. 1972, take that
+     DARPA), the "monitor group" (TOPS-10 OS development),
+     MicroComputer Software (terminal emulators forever !), large
+     systems software (billing et. al.), and of course the genius of
+     the founders (John Goltz) and the vision of Jeff Wilkins (CEO
+     1970-1985).
+
+     There's a lot to be said for being in the right place at the
+     right time, and for having a team, but many things do not happen
+     without the essential contributions of amazing individuals.
+
+     Thanks Steve.
+
+#+CAPTION: It all started...
+#+LABEL: pic:shirt
+file:images/cs/compuserveshirt.gif
 
 *** TODO Thinking on paper
 *** TODO The journey from CompuServe to now         :history:internet:online:
