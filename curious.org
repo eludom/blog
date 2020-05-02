@@ -655,9 +655,10 @@ the outcome would have been better if he had...
     :EXPORT_HUGO_PUBLISHDATE: 2020-05-01
     :END:
 
-/This article is a work in progress.  To be updated as exploration continues./
+/This article is a work in progress.  Updated: 2020-05-02.  This is
+turning into a bit of a catch-up on the state of DNS for me./
 
-Day 03 of #100DaysToOffload.
+Day 03 and 04 of #100DaysToOffload.
 
 **** Intro
 # Thanks to Paul Vixie for the pointer to
@@ -686,16 +687,20 @@ have your 12yo child or cousin install it.
 
 **** Why
      - Blocking ads is a moral good.
-     - I've not done home network hacking for a while
+     - I've not done home network hacking for a while.
      - I'm moving into a bit of a more "don't track me" frame of mind.
 
 **** When
-     - Now, because I'm home more during corona-virus
+     - Now, because I'm home more during corona-virus.
 
 **** How
-     - Set up local server
+     - Set up local server.
+     - First on a Linux laptop that (usually) does not go off the net.
+     - Then maybe on an old pogoplug or laptop.
 
 **** Install It
+
+     Here's what I did to instlal
 
      - [ ]  basic install :: On a Linux server, the *basic* install is
        simple:
@@ -708,16 +713,16 @@ have your 12yo child or cousin install it.
        address. This may involve, e.g., convincing your wireless
        router to hand out a the same static IP to a static IP
 
-     - [ ] Tell other systems to use this IP for DNS :: Again, probably
-       configuring your wireless router to specify your local IP as
-       the DNS server for dynamic assignments.   You could also do
-       this by configuring the individual devices to use it.
+     - [ ] Tell other systems to use this IP for DNS :: Again,
+       probably configuring your wireless router to specify your local
+       IP as the DNS server for DNS assignments via DHCP assignments.
+       You could also do this by configuring the individual devices to
+       use it.
 
      - [ ] Remember your admin password :: Make note of the admin password during install
 
      - [ ] hit the local admin web server :: Its a very nice.  It will
        be at a something like  http://192.168.86.230/admin/index.php.
-
 
 **** Test It
 
@@ -768,10 +773,81 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
      - If the counters go crazy and you don't see the expected
        plethora of ads, you win.  If not dig deeper.
 
+     - If you are all-ready using ad-dblockers :: If you are already
+       using ad-blockers or browsers such as Brave that block ads, you
+       may have to test with something else (Firefox, Chrome, etc.)
+
      - Browser and other apps are getting cagey about using not using
        the system DNS, using DOH, and otherwise not acting like you
        expect them too.  Editing =/etc/resolv.conf= is not the whole
        game anymore.
+
+**** Tools you may want to use/learn/install
+     - dig :: for making/testing queries by hand
+     - [[https://www.wireshark.org/][Wireshark]] :: Use Wireshark to see what's going on on the wire,
+       who you're talking to, etc.
+**** The things you learn
+     - pi-hole can apparently function as a DHCP server itself.
+
+     - You can choose your upstream DNS servers from a list with
+       options for IPv4, IPv6, DNSSEC/no DNSSEC, filtered/unfiltered.
+
+    - Quad9 is one of the choices.  It looks to be really useful for
+      adding malware blocking to your domain.  See
+      https://www.quad9.net/faq/ for a useful bit of education.
+
+
+    - The logs are at =/var/log/pihole.log=
+
+    - Possibly use [[http://www.ranum.com/security/computer_security/papers/ai/][Marcus Ranums's principal of "Artificial Ignorance"]]
+      to grep out the known and see what's left:
+
+      #+begin_example
+      $  cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\ | sed 's/.*: //'  | sort | uniq -c | sort -rn | head
+      334 reply min-api.cryptocompare.com is <CNAME>
+      334 reply ccc-api.cloudapp.net is 40.115.22.134
+      334 query[A] min-api.cryptocompare.com from 127.0.0.1
+      238 forwarded min-api.cryptocompare.com to 8.8.4.4
+      143 cached min-api.cryptocompare.com is <CNAME>
+      101 query[A] no-thanks.invalid.lan from 127.0.0.1
+      101 query[A] no-thanks.invalid from 127.0.0.1
+      101 forwarded min-api.cryptocompare.com to 8.8.8.8
+      100 reply hfq2h9152m63.statuspage.io is <CNAME>
+      100 query[A] rpt.cedexis.com from 127.0.0.1
+      #+end_example
+
+      #+begin_example
+      $ cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\|compuserve\|aol | sed 's/.*: //'  | sort | uniq -c | sort -rn | tail -20
+      1 cached imap.gmail.com is 2607:f8b0:400d:c0f::6d
+      1 cached imap.gmail.com is 2607:f8b0:400d:c07::6d
+      1 cached imap.gmail.com is 2607:f8b0:400d:c00::6d
+      1 cached imap.gmail.com is 2607:f8b0:4004:c08::6d
+      1 cached imap.gmail.com is 2607:f8b0:4004:c08::6c
+      1 cached imap.gmail.com is 172.253.63.109
+      1 cached imap.gmail.com is 172.253.63.108
+      1 cached hosts-file.net is 3.234.198.254
+      1 cached encrypted-tbn0.gstatic.com is 172.217.13.78
+      1 cached dig is NXDOMAIN
+      1 cached content-signature-2.cdn.mozilla.net is <CNAME>
+      1 cached beacons-handoff.gcp.gvt2.com is 172.217.15.99
+      1 cached beacons.gvt2.com is 172.217.13.227
+      1 cached beacons.gcp.gvt2.com is <CNAME>
+      1 cached beacons4.gvt2.com is 216.239.32.116
+      1 cached beacons2.gvt2.com is 216.239.38.117
+      1 cached beacons2.gvt2.com is 216.239.36.117
+      1 cached beacons2.gvt2.com is 216.239.34.117
+      1 cached beacons2.gvt2.com is 216.239.32.117
+      1 cached article.smartasset.com is <CNAME>
+      #+end_example
+
+      What is this stuff?
+
+**** Tune it
+     I'm not sure all the devices in the house are using the P-hole
+     proxy.  If they are, then they are showing up as the single
+     device _gateway.   I need to understand this and figure out if I
+     can get other devices pulling wireless addresses via DHCP from
+     the WAP to use the Pi-hole DNS directly.   Stay tuned.
 
 **** POST INCOMPLETE FROM HERE
 
