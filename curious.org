@@ -270,6 +270,12 @@ hash_search (string, table, flags)
 ***** CANCELED submit patch
       See https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html
 
+
+**** Footnotes
+
+[fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
+
+
 *** PUBLISHED Some Happy Notes                      :music:family:life:piano:
 :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
@@ -495,7 +501,7 @@ I'll never know why Thelma Jane wrote her poetry.  I'm still trying to
 figure out why I write.  Maybe it's one of the reasons discussed
 above.  Maybe it's all of them.
 
-*** WIP Choosy Programmers Choose GIF :Wilhite:CompuServe:GIF:History:Computers:Emacs:Programming:
+*** PUBLISHED Choosy Programmers Choose GIF :Wilhite:CompuServe:GIF:History:Computers:Emacs:Programming:
     :PROPERTIES:
     :EXPORT_FILE_NAME: steve
     :EXPORT_HUGO_PUBLISHDATE: <2020-04-30 Thu>
@@ -519,8 +525,8 @@ Day 02 of #100DaysToOffload.
   sure there was much more that I missed.
 
 **** Things Steve Wrote
-  Steve ran the languages and tools group when I arrived.  He had just
-  given up on writing at DEC10 ADA compiler (Steve is still writing
+  Steve ran the languages and tools group when I arrived.  /He had just/
+  /given up on writing at DEC10 ADA compiler/[fn:2] (Steve is still writing
   ADA software), was just beginning to embrace PCs as "real computers"
   worthy of his attention, had written a FORTRAN compiler, a BASIC
   compiler and associated run-time systems, and a run-time library for
@@ -554,9 +560,9 @@ Day 02 of #100DaysToOffload.
 
   Later on (after my time) Steve as pulled into major projects to support
   the back end processing for H&R Blocks's TaxCut program when online
-  tax-filing was a new thing.  He was also pulled into the WOW project
-  which was supposed to be the AOL killer when it became apparent that
-  CompuServe needed an AOL killer.  One of those projects succeeded.
+  tax-filing was a new thing.  /He was also pulled into the WOW project/
+  /which was supposed to be the AOL killer when it became apparent that/
+  /CompuServe needed an AOL killer./[fn:3]  One of those projects succeeded.
   Single-handed technical virtuosity could not fix the one that
   didn't.
 
@@ -629,6 +635,157 @@ Day 02 of #100DaysToOffload.
 #+LABEL: pic:shirt
 file:images/cs/compuserveshirt.gif
 
+
+**** Footnotes
+
+[fn:2] Steve corrected me.  There were never actually plans to write
+an Ada compiler.  But I was unaware of the XBASIC compiler.   So 3
+compilers in all.
+
+[fn:3] Steve informs me he was NOT pulled into the WOW project.  Maybe
+the outcome would have been better if he had...
+
+
+[fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
+
+
+*** WIP HOWTO: Using Pi-hole DNS to block ads.  The struggle continues... :DNS:privacy:networking:HOWTO:
+:PROPERTIES:
+    :EXPORT_FILE_NAME: 2020-05-01
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-01
+    :END:
+
+/This article is a work in progress.  To be updated as exploration continues./
+
+Day 03 of #100DaysToOffload.
+
+**** Intro
+# Thanks to Paul Vixie for the pointer to
+
+The war against ads continues. https://pi-hole.net/ looks like a
+reasonable, good, new?, open source entry in the war against ads. Get
+'yer source/install for linux at https://github.com/pi-hole/pi-hole
+
+Per Paul Vixie
+#+begin_quote
+not even non-technical users need a "public DNS" to shield themselves
+from a lot of known-evil internet sites. check out @The_Pi_Hole or
+have your 12yo child or cousin install it.
+#+end_quote
+
+..but I always make things harder.
+
+#+CAPTION: pi-hole console after a few hours on my system
+#+LABEL: pic:pi-hole.png
+[[file:images/pi-hole.png]]
+
+#+hugo: more
+
+**** What
+     - It's a local DNS server to block adds.
+
+**** Why
+     - Blocking ads is a moral good.
+     - I've not done home network hacking for a while
+     - I'm moving into a bit of a more "don't track me" frame of mind.
+
+**** When
+     - Now, because I'm home more during corona-virus
+
+**** How
+     - Set up local server
+
+**** Install It
+
+     - [ ]  basic install :: On a Linux server, the *basic* install is
+       simple:
+
+       #+begin_example
+       sudo bash basic-install.sh
+       #+end_example
+
+     - [ ] Static IP :: But you will want a Linux box with a static IP
+       address. This may involve, e.g., convincing your wireless
+       router to hand out a the same static IP to a static IP
+
+     - [ ] Tell other systems to use this IP for DNS :: Again, probably
+       configuring your wireless router to specify your local IP as
+       the DNS server for dynamic assignments.   You could also do
+       this by configuring the individual devices to use it.
+
+     - [ ] Remember your admin password :: Make note of the admin password during install
+
+     - [ ] hit the local admin web server :: Its a very nice.  It will
+       be at a something like  http://192.168.86.230/admin/index.php.
+
+
+**** Test It
+
+     - [ ] Look something up by hand :: Use dig(1) or host(1).  Note
+       the =SERVER= in the response below that shows where the answer
+       came from.  If it's your IPS's DNS or Google, try again
+       (something's not configured right).  In my case 127.1 is right.
+
+     #+begin_example
+$ dig www.uu.net
+
+; <<>> DiG 9.11.3-1ubuntu1.11-Ubuntu <<>> www.uu.net
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54721
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;www.uu.net.			IN	A
+
+;; ANSWER SECTION:
+www.uu.net.		299	IN	CNAME	global.mci.com.
+global.mci.com.		959	IN	CNAME	wac.C449.edgecastcdn.net.
+wac.C449.edgecastcdn.net. 3599	IN	CNAME	gp1.wac.v2cdn.net.
+gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
+
+;; Query time: 59 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1)
+;; WHEN: Fri May 01 19:16:11 EDT 2020
+;; MSG SIZE  rcvd: 146
+     #+end_example
+
+     - [ ] Check the query logs via the UI to make sure your target domain
+       showed.   Be aware of caching.  It may only show up the first
+       time you query.
+
+     - [ ] Go trolling for ads :: Find your favorite 90s-era web site,
+       go hit it, and watch the counters
+
+       + http://computershopper.com
+       + http://www.yahoo.com
+       + http://www.compuserve.com
+       + http://www.aol.com
+       + http://sears.com (get it while it lasts)
+
+     - If the counters go crazy and you don't see the expected
+       plethora of ads, you win.  If not dig deeper.
+
+     - Browser and other apps are getting cagey about using not using
+       the system DNS, using DOH, and otherwise not acting like you
+       expect them too.  Editing =/etc/resolv.conf= is not the whole
+       game anymore.
+
+**** POST INCOMPLETE FROM HERE
+
+**** Migrate
+
+**** Burn in
+
+
+**** Inflict it on others
+
+# **** Show and Tell
+
+#      http://192.168.86.230/admin/index.php
+
 *** TODO Thinking on paper
 *** TODO The journey from CompuServe to now         :history:internet:online:
 # :PROPERTIES:
@@ -698,7 +855,3 @@ by Github.
 I am grateful to Josh Rollins for his [[https://joshrollinswrites.com/][TAONAW]] blog which I used as a
 model/too for learning Hugo and ox-hugo.  The source can be found
 https://github.com/jarss/
-
-** Footnotes
-
-[fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
