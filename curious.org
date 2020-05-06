@@ -931,27 +931,56 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
 file:images/on-katahdin.jpg
 
 
-*** WIP You really do have to work out to stay in shape :hiking:exercise:100DaysToOffload:
+*** PUBLISHED Vis tibi sit                                       :latin:rome:
     :PROPERTIES:
         :EXPORT_HUGO_SECTION: Blog
         :EXPORT_FILE_NAME: 2020-05-04
         :EXPORT_HUGO_PUBLISHDATE: 2020-05-04
         :END:
 
-So yesterday I got out and walked up the 2.5 miles/900 foot rise of
-the section of the Appalachian Trail form VA-55 to the Manassas Gap
-shelter.   It reminded me that you really do have to do serious
-workout to stay in shape.   I had been going for 1 or 2 hour walks
-around the house (flat), but it became clear, that even on that short
-"easy" walk it was not enough.  I got back to my body-weight workouts
-this morning.
+On the occasion of the ancient Roman Festival /Bella Stellaria/, I
+wish you
 
-And on the occasion of the ancient Roman festivalia bella stellarum
 #+begin_quote
 Vis tibi sit
+
+Lucas Skywalker
 #+end_quote
 
+magis de bella stellaria hic: https://la.wikipedia.org/wiki/Star_Wars
+et hic https://twitter.com/tutubuslatinus/status/1257065883614109696
+
 Day 05 of #100DaysToOffload.
+
+*** WIP Getting started in life is harder right now :life:family:100DaysToOffload:
+    :PROPERTIES:
+        :EXPORT_HUGO_SECTION: Blog
+        :EXPORT_FILE_NAME: 2020-05-05
+        :EXPORT_HUGO_PUBLISHDATE: 2020-05-05
+        :END:
+
+Getting started in life is harder right now.  I have two college age
+sons who both just finished up their year with online classes, and
+both are home now. In "normal" times they would be working summer jobs or participating
+in other activities that would help them advance toward their chosen
+careers.  Jobs may or may not happen.  Even getting out of the house
+may not happen much.  These are weird times.
+
+
+#+caption: The Great Seal of the State of Ohio
+#+label: pic:seal-duq
+file:images/seals.png
+
+
+I am happy to help my sons with a place to live, emotional and other
+support, but it is a time of life where they should be moving towards
+increased independence.  The opportunities to do that are drastically
+reduced right now.  This state of affairs concerns me, and it's not
+just my family.  Maybe we need to look for the silver lining, find
+opportunity in change, etc., but it is certainly going to take more
+effort and intentionality right now.
+
+Day 06 of #100DaysToOffload.
 
 
 *** TODO Keeping my blood pressure down, keeping politics personal
