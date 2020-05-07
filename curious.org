@@ -270,9 +270,7 @@ hash_search (string, table, flags)
 ***** CANCELED submit patch
       See https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html
 
-
 **** Footnotes
-
 [fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
 
 
@@ -981,6 +979,120 @@ opportunity in change, etc., but it is certainly going to take more
 effort and intentionality right now.
 
 Day 06 of #100DaysToOffload.
+
+*** WIP  Awesome online singing from Denmark to Australia, and social distancing too! :choir:music:singing:easter:sacredharp:harmoniasacra:100DaysToOffload:
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: 2020-05-06
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-06
+    :END:
+
+    There are some amazing online singing events happening now around
+    the world: Denmark, Australia, Nashville, etc.  I want to highlight
+    a couple examples of that to add brightness to these dark times.
+
+    Human beings have an unquenchable desire to live in community.
+    Singing has always been an expression of that.  Modern technology
+    has enabled it.
+
+    #+caption: The Sacred Harp Quarantine Chorus
+    #+label: pic:sacred-harp
+    file:images/sacred-harp.png
+
+
+    Day 06 of #100DaysToOffload.
+
+#+hugo: more
+
+***** Harmonia Sacra - a capella four part shape note singing
+       I sing (the quality is arguable at times). For the past 25
+       years on-and-off I've been singing 4 part a capella hymns in
+       Mennonite circles.  It's a communal thing.  You /can/ sing the
+       bass line by yourself, but it's not the same.
+
+       For the past 10 years or so, my family and I have been driving
+       over to Shenandoah Valley 2 or 3 times a year to participate in
+       a few of the annual "sings" that have been happening in the
+       area since Joseph Funk first published [[https://harmoniasacra.org/][Harmonia Sacra]] in 1832
+       (in the little town of "Singers Glen"[fn:4])
+
+       Since we could not have the regular April singing in person, I
+       figured out how to host one on Zoom, based on [[https://www.youtube.com/watch?v=50NoWIiYECA][instructions for
+       leading Chorial Music over Zoom by Jim Daus Hjernøe of the
+       Royal Academy of Music in Denmark]]
+
+
+       #+caption: RAMA Vocal Center, Denmark
+       #+label: pic:rama
+       file:images/royal-academy.png
+
+
+       Basically, I split out a number of tracks from one of the
+       better sings and rebroadcast the them as guide tracks.  [[https://drive.google.com/file/d/1ALCFebmtOjjm74y540sKTAc6wH-rsKTQ/view?usp=sharing][Here is
+       a recording of "Dedication Anthem", a.k.a., "606"]], a.k.a.  "The
+       Mennonite National Anthem" sung in 4 part harmony by 400 people.
+
+       It worked, more or less.  There was not the same sense of
+       community as standing right next to other singers, but it let
+       out some our pent up need to sing our favorite joyful songs in
+       a time of uncertainty.
+
+***** "Movers and Shapers"
+
+       There is another, larger tradition of shape note singers called
+       [[https://fasola.org/][Sacred Harp]].  When looking or examples of how to put together
+       online singings, I came across [[https://sacredharpaustralia.com/resources/singing-shape-note/][Sacred Harp Australia]], who put
+       up a video of a Fa-So-La "singing school".  Unlike Harmonia
+       Sacra sings, the Sacred Harp singers sit in a square/circle "by
+       parts" (Bass, Tenor, Alto, Soprano).
+
+       The Sacred Harp singers took remote singing to an entirely
+       different level with [[https://youtu.be/LDbOD3OO20g][The Sacred Harp Quarantine Chorus -EASTER
+       ANTHEM - 360° Virtual Singing and Easter Egg Hunt!]].  This an
+       amazing recording of 331 singers from 37 states, 4 Canadian
+       provences and 11 countries singing a joyful song "together".
+       This 360 degree video puts you you in the best seat in the
+       house. And here's how they did it:
+       https://www.youtube.com/watch?v=RIEJOK_m1ek
+
+***** The pros in Nashville
+
+       And then there were the pros in Nashville.  [[https://www.youtube.com/watch?v=nDIJz6zzHNU][The Nashville
+       Studio Singer Community - Virtual Cell Phone Choir - “It Is
+       Well With My Soul” arranged by: David Wise]] This was a group of
+       professional singers, who indeed looked like they were enjoying
+       being part of the virtual community of singers.  They covered
+       the standard hymn "It Is Well With My Soul" which was written
+       by Horatio Spafford in response to the loss of his family when
+       a ship sank.
+
+       #+caption: The Nashville Studio Singer Community  - Virtual Cell Phone Choir
+       #+label: pic:it-is-well
+       file:images/it-is-well.png
+
+***** Is it well?
+
+
+       #+begin_quote
+       When peace like a river, attendeth my way,
+       When sorrows like sea billows roll;
+       Whatever my lot, Thou hast taught me to say
+       It is well, it is well, with my soul.
+       #+end_quote
+
+
+       Whatever your faith, I think we can all take a little solace in
+       the human spirit that can't be contained and overflows into
+       joyous music even at times like these.  It is indeed well with
+       my soul.
+
+**** Footnotes
+
+[fn:4] Alice Parker, associate of the former Atlanta Symphony
+Orchestra and Choir conductor Robert Shaw wrote a play called "Singers
+Glenn" about Joseph Funk which is staged very 5 years in Singers Glen
+across the street from his log cabin with descendants in attendance.
+She has attended many of the performances.
 
 
 *** TODO Keeping my blood pressure down, keeping politics personal
