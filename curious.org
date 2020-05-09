@@ -326,7 +326,7 @@ may hike together a week or two if possible in June or July.
 Life goes on.   All is not doom and gloom.   There are some happy
 notes.  Share some of yours?
 
-*** WIP All is not doom and gloom: go for a walk !!!              :life:hope:
+*** PUBLISHED All is not doom and gloom: go for a walk !!!        :life:hope:
 :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
     :EXPORT_FILE_NAME: go-for-a-walk
@@ -646,7 +646,6 @@ the outcome would have been better if he had...
 
 [fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
 
-
 *** WIP HOWTO: Using Pi-hole DNS to block ads.  The struggle continues... :DNS:privacy:networking:HOWTO:
 :PROPERTIES:
     :EXPORT_FILE_NAME: 2020-05-01
@@ -928,7 +927,6 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
 #+label: pic:on-katahdin
 file:images/on-katahdin.jpg
 
-
 *** PUBLISHED Vis tibi sit                                       :latin:rome:
     :PROPERTIES:
         :EXPORT_HUGO_SECTION: Blog
@@ -950,7 +948,7 @@ et hic https://twitter.com/tutubuslatinus/status/1257065883614109696
 
 Day 05 of #100DaysToOffload.
 
-*** WIP Getting started in life is harder right now :life:family:100DaysToOffload:
+*** PUBLISHED Getting started in life is harder right now       :life:family:
     :PROPERTIES:
         :EXPORT_HUGO_SECTION: Blog
         :EXPORT_FILE_NAME: 2020-05-05
@@ -980,7 +978,7 @@ effort and intentionality right now.
 
 Day 06 of #100DaysToOffload.
 
-*** WIP  Awesome online singing from Denmark to Australia, and social distancing too! :choir:music:singing:easter:sacredharp:harmoniasacra:100DaysToOffload:
+*** PUBLISHED Awesome online singing from Denmark to Australia, and social distancing too! :choir:music:singing:easter:sacredharp:harmoniasacra:
     :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
     :EXPORT_FILE_NAME: 2020-05-06
@@ -999,8 +997,7 @@ Day 06 of #100DaysToOffload.
     #+label: pic:sacred-harp
     file:images/sacred-harp.png
 
-
-    Day 06 of #100DaysToOffload.
+    Day 07 of #100DaysToOffload.
 
 #+hugo: more
 
@@ -1020,7 +1017,6 @@ Day 06 of #100DaysToOffload.
        figured out how to host one on Zoom, based on [[https://www.youtube.com/watch?v=50NoWIiYECA][instructions for
        leading Chorial Music over Zoom by Jim Daus Hjernøe of the
        Royal Academy of Music in Denmark]]
-
 
        #+caption: RAMA Vocal Center, Denmark
        #+label: pic:rama
@@ -1088,12 +1084,94 @@ Day 06 of #100DaysToOffload.
 
 **** Footnotes
 
+
 [fn:4] Alice Parker, associate of the former Atlanta Symphony
 Orchestra and Choir conductor Robert Shaw wrote a play called "Singers
 Glenn" about Joseph Funk which is staged very 5 years in Singers Glen
 across the street from his log cabin with descendants in attendance.
 She has attended many of the performances.
 
+*** PUBLISHED Life imitates...                      :life:games:civilization:
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: 2020-05-07
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-07
+    :END:
+
+    And to get away from it all tonight we played (well, continued) a game
+    of Civilization: Famine, Strife, Civil War, Flood,
+    Earthquakes, Volcanoes, but strangely no epidemic (yet).
+
+    #+caption: Civilization
+    #+label: pic:civ
+    file:images/civ.jpg
+
+    #+hugo: more
+
+    I think I'll take the real world please.   Wait, no.  We're loosing
+    Democracy, Law and Philosophy....
+
+    Day 08 of #100DaysToOffload.
+
+
+*** WIP 9 days of #100DaysToOffload :blogging:writing:emacs:100DaysToOffload:text:
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: 2020-05-08
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-08
+    :END:
+
+**** Experiences after 9 days of blogging
+
+  About 3 weeks ago I decided to start blogging.  For various still
+  ill-defined reasons, some of which I explored in a [[https://eludom.github.io/blog/poetry-in-the-trash/][blog post
+  contemplating the fate of writing and writers great and small]].
+  But it's still somewhat mushy.
+
+  I spent some time coming up the curve on the [[https://gohugo.io/][Hugo framework for
+  building static web sites]] and the [[https://ox-hugo.scripter.co/][emacs org mode counterpart ox-hugo]]
+  which let me put up my [[https://eludom.github.io/][Curious Musings]] blog.
+
+  The a few days after that on [[https://fosstodon.org/web/timelines/home][Fosstodon]] (open source distributed social
+  media) I came across the https://100daystooffload.com/ challenge
+  which, basically encourages you to "just write".   Good timing.
+  Here it is.
+
+  #+hugo: more
+
+  I've put out a couple posts that I've put some work into like
+  this one about [[https://eludom.github.io/blog/2020-05-06/][Awesome online singing from Denmark to Australia, and
+  social distancing too!]] and [[https://eludom.github.io/blog/steve/][a tribute to Steve Wilhite]] who was my
+  first mentor and whom some of you know as the creator of GIF (a
+  very minor output of Steve's total work that just happened to
+  stick).  Some post have been quick.
+
+**** "Yes, but what if /everyone/ did this"?
+  Yesterday, also on Fosstodon, Per Gregory@g had this say:
+
+  #+begin_quote
+  "Social media:
+  Don't use it to impress people, use it to impact people" ~ unknown
+
+  I love this, and I'm going to remind myself of it when on social media.
+  #+end_quote
+
+  Wise words.  Basically, "it's not about me" (unless you take the
+  catharsis or hubris angles I explored earlier).  OK, it /should not/
+  be all about me.
+
+**** Who is /this/ post for?
+
+  So who is /this/ post for and is it useful?  You be the judge.
+
+  Maybe you're interested in getting started blogging, or wondering
+  what software you could use, or where you could find new online
+  communities that are not monitized by ads, or you want to pay
+  tribute to someone, or you're interested in organizing online choral
+  singing, or joining meet-ups of new online communities during social
+  distancing.  Then this post might be for you.
+
+  Day 09 of #100DaysToOffload.
 
 *** TODO Keeping my blood pressure down, keeping politics personal
 **** Intro - me and politics
@@ -1134,9 +1212,9 @@ Neighbors dogs bark.  I don't like it.   That's their choice.
    - The web
    - UUNET
 
-*** TODO Pull in my recent LinkedIn Posts
-*** TODO Publish thoughts from my journal
 
+
+*** TODO Publish thoughts from my journal
 *** TODO Hiking stories
 * About George Jones
    :PROPERTIES:
