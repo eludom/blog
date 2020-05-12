@@ -2,7 +2,7 @@
 title = "Things That Have Been Around The House for 220+ Years"
 author = ["George Jones"]
 publishDate = 2020-05-11
-lastmod = 2020-05-11T21:21:35-04:00
+lastmod = 2020-05-11T21:35:00-04:00
 tags = ["family", "history", "tolkien", "life"]
 draft = false
 +++
@@ -23,7 +23,7 @@ is this page torn out of a family bible (I have at least 3 of them,
 big, old, once-cherished).  It records the death of a William Gould in
 1792, and of Joseph Dennis Gould in 1835.
 
-<a id="orgecbd4fa"></a>
+<a id="org55d43d5"></a>
 
 {{< figure src="/ox-hugo/goulds.jpg" caption="Figure 1: left-behind" >}}
 
@@ -75,4 +75,4 @@ came before.
 >
 > ― J.R.R. Tolkien, The Fellowship of the Ring
 
-Day 10 of #100DaysToOffload <https://100daystooffload.com/>
+Day 11 of #100DaysToOffload <https://100daystooffload.com/>
