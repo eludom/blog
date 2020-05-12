@@ -2,7 +2,7 @@
 title = "​Reproducible security analytics?"
 author = ["George Jones"]
 publishDate = 2020-02-25T00:00:00-05:00
-lastmod = 2020-04-19T10:17:58-04:00
+lastmod = 2020-05-09T09:06:25-04:00
 tags = ["cybersecurity", "org", "emacs"]
 draft = false
 +++

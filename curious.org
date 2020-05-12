@@ -16,7 +16,6 @@
     :EXPORT_HUGO_PUBLISHDATE:
     :END:
 
-
 *** INTRO
   :PROPERTIES:
   :EXPORT_HUGO_SECTION: Blog
@@ -25,6 +24,8 @@
 
 The main technology section. Every project starts here, eventually branching off to its own category.
 
+
+** Geek Stuff
 *** PUBLISHED "​Reproducible security analytics?"    :cybersecurity:org:emacs:
 :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
@@ -45,40 +46,6 @@ One thing that looks promising is [[https://car.mitre.org/][mitre's cyber analyt
 repository]]. Another is [[https://github.com/hunters-forge/mordor][Hunters Forge/Mordor]] I'd be interested in
 pointers to more.
 
-*** PUBLISHED "​I'm passionate about..."​                 :Latin:humanity:work:
-:PROPERTIES:
-    :EXPORT_HUGO_SECTION: Blog
-    :EXPORT_FILE_NAME: Im-passionate about
-    :EXPORT_HUGO_PUBLISHDATE: 2020-03-09:
-    :END:
-
-
-"I'm passionate about..." I've always hated that phrase. Because I
-thought it was fake. I thought it was trendy. I've reflexively reacted
-against trendy things for decades. Pet Rocks, Disco, TED talks,
-cryptocurrency... But I am coming to see what the phrase is getting
-at. And I think I like it.
-
-In a work world where human beings are called "resources", where
-intelligent, creative, inquisitive, motivated people are subjected to
-management practices derived from 19th century steel mills and
-automotive assembly line production, the phrase "I'm passionate
-about..." is (can be) an attempt to re-assert humanity.
-
-I've just finished reading [[https://www.amazon.com/Long-Live-Latin-Pleasures-Language/dp/0374284520#ace-8881249860][Long Live Latin: The Pleasures of a Useless
-Language]] . For no good reason. Again and again, it raises the question
-of what it means to be human: to be joyful, spontaneous, creative,
-inquisitive, fulfilled, to discover, to appreciate beauty, music, art,
-language, and poetry (yes, I have a liberal arts degree)
-
-I guess if I had to say what I'm passionate about, it's about being
-human and treating other people as humans. To put a professional spin
-on it "I am passionate about collaborating with technical people to
-find creative solutions to important problems."
-
-Go learn a useless language. Climb a mountain and enjoy the
-view. Spend time playing games with your family. Be human. Be
-passionate. Carpe diem.
 
 *** PUBLISHED Bear attacks, no-win situations and cybersecurity :cybersecurity:bears:
 :PROPERTIES:
@@ -154,6 +121,7 @@ but, it turns out, there are still good reasons to play the game.
     - Internet safety 101 :: "Internet safety 101: 15 tips to keep your kids and family safe online" https://us.norton.com/internetsecurity-kids-safety-stop-stressing-10-internet-safety-rules-to-help-keep-your-family-safe-online.html. Sure they want to sell you antivirus software, but this is generally good advice.
     - Ultimate Guide to Cybersecurity :: "Your Ultimate Guide to Cybersecurity: At Home, at Work, and on the Go." https://www.ibtimes.com/your-ultimate-guide-cybersecurity-home-work-go-2818655. A little more in depth.
     - CIS Critical Controls :: "The Center for Internet Security (CIS) Critical Security Controls" - https://www.cisecurity.org/controls/cis-controls-implementation-groups/ More in depth. For enterprises.
+
 
 *** PUBLISHED Fixing GNU bash associative array insert speed :programming:gnu:linux:
 :PROPERTIES:
@@ -274,377 +242,6 @@ hash_search (string, table, flags)
 [fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
 
 
-*** PUBLISHED Some Happy Notes                      :music:family:life:piano:
-:PROPERTIES:
-    :EXPORT_HUGO_SECTION: Blog
-    :EXPORT_FILE_NAME: happy-notes
-    :EXPORT_HUGO_PUBLISHDATE: 2020-04-21:
-    :END:
-
-    And on a happy note...my son Bryan has finished his Masters of
-    Piano Performance at Duquesne University and will be headed to
-    Penn State to pursue a Doctor of Musical Arts.  You can watch
-    listen to [[https://www.youtube.com/playlist?list=PLp9RFZrc7DMtCEg0SmtEL5weDiTis3rH5][Bryan Jones' masters degree piano recitle at Duquesne]] on
-    Youtube.
-
-    [[file:static/bryan.png]]
-
-    # file:static/2020-04-21-BryanJonesRecital.png
-
-#+hugo: more
-
-**** Bryan's Music
-
-    The corona virus has wreaked havoc with many things, not the least
-    of which is the performing arts, but, as they say, "the show must
-    go on".  The program was to have been a live performance, but
-    things being what they are (social distancing) recordings where
-    made to satisfy the requirement.
-
-    The program includes:
-
-    - Schumann: Symphonic Etudes, Op. 13 (original version, 1837)
-    - Debussy: Images Book II - I. Cloches à travers les feuilles
-    - Debussy: Images Book II - II. Et la lune descend sur le temple qui fut
-    - Debussy: Images Book II - III. Poissons d'or
-    - Ginastera: Piano Sonata #1, Op. 22 - I. Allegro marcato
-    - Ginastera: Piano Sonata #1, Op. 22 - II. Presto misterioso
-    - Ginastera: Piano Sonata #1, Op. 22 - III. Adagio molto appassionato
-    - Ginastera: Piano Sonata #1, Op. 22 - IV. Ruvido ed ostinato
-
-   I particularly like the Debussy.
-
-**** Other Happy Notes
-
-My other son Daniel is finishing out his junior year at Cedarville
-from home.  Bryan's girlfriend (also graduating from Duquesne) will
-again spend the summer doing something she loves, counting birds for
-Bird Conservancy of the Rockies.  A "kid" I knew from scouting is
-headed off for a masters in biomedical engineering this fall, and we
-may hike together a week or two if possible in June or July.
-
-Life goes on.   All is not doom and gloom.   There are some happy
-notes.  Share some of yours?
-
-*** PUBLISHED All is not doom and gloom: go for a walk !!!        :life:hope:
-:PROPERTIES:
-    :EXPORT_HUGO_SECTION: Blog
-    :EXPORT_FILE_NAME: go-for-a-walk
-    :EXPORT_HUGO_PUBLISHDATE: 2020-04-25:
-    :END:
-
-I find that when I stay glued to twitter (pick your
-social-media-of-doom-amplifier) I tend to get a rather gloomy view of
-life.  There is indeed a lot one can be gloomy about these days.  But
-if you just go for a walk and look around you may be
-surprised:
-
-I found this art [[pic:sidewalk-art][sidewalk art]] at just about the exact place where last
-fall I had purchased a cup of lemonade from 4 eager young
-entrepreneurs.  I suspect the ring leader of that optimistic young
-bunch.
-
-#+CAPTION: Sidewalk art
-#+LABEL: pic:sidewalk-art
-[[file:images/walks/sidewalk-art.jpg]]
-
-#+hugo: more
-
-Spring is the best time of year.  The daffodils bloom, [[pic:dogwoods][dogwoods are in
-full bloom]], red-bud trees come out, the tree-frogs sing up a storm (at
-least that's how it goes in Virginia)
-
-#+CAPTION: Dogwoods in bloom
-#+LABEL: pic:dogwoods
-[[file:images/walks/dogwood.jpg]]
-
-I recently had my yard re-graded and re-seeded and now, after 17 years
-I have [[pic:grass][full luscious grass]] (that has to be mowed).  This may not happen
-again:
-
-#+CAPTION: Actual grass
-#+LABEL: pic:grass
-file:images/walks/grass.jpg
-
-And last but not least I saw a bird I don't think I've seen before,
-it turned out to be a common [[pic:tree-swallow][tree swallow]], but it was startling to see
-the almost metallic, shinny dark blue back and white belly (the
-picture does not capture it well)
-
-#+CAPTION: Tree Swallow (/Tachycineta bicolor/)
-#+LABEL: pic:tree-swallow
-file:images/walks/tree-swallow.jpg
-
-
-Go for a walk.  Look at the world around you.  It's spring.  All is
-not doom and gloom!
-
-*** PUBLISHED Digital chimney smoke?          :life:twitter:DigitalFrontiers:
-    :PROPERTIES:
-    :EXPORT_FILE_NAME: digital-chimney-smoke
-    :EXPORT_HUGO_PUBLISHDATE: 2020-04-27
-    :END:
-    Daniel Boone is quoted (via Hubert Humphrey) as saying
-
-    #+begin_quote
-    when he could see the smoke from another chimney, felt himself too
-    crowded and moved further out into the wilderness.
-    #+end_quote
-
-    Mark Twain said
-    #+begin_quote
-    Whenever you find yourself on the side of the majority, it is time to pause and reflect.
-    #+end_quote
-
-#+hugo: more
-
-    I was on email as early as 1980 on a DEC20. I was on Usenet news
-    when it was the digital frontier and on the Internet in the
-    mid-80s, 10 years or so before the Web.  I helped bring America
-    online working at CompuServe before America Online existed.  I
-    quit Facebook in the run-up to the 2016 election as it got too
-    political and now I find that my main digital platform (Twitter)
-    is home to the daily, um, ?sophisms? of the President who spawned
-    the political rhetoric I fled.
-
-    Is it time to move on?  Time to find another avant-guard tech hole
-    to clime into?  Thanks to the Internet there are infinitely more
-    options than just the dial-up BBS systems of the early 80s.
-
-    I was a little sad to loose contact with all the elementary school
-    friends that Facebook enabled me to reconnect with after 40 years
-    (OK, not really) and I would be sad too loose touch with the zany
-    [[https://twitter.com/search?q=%2523classicstwitter&src=typed_query][#ClassicsTwitter]] crowd ([[https://twitter.com/aeneasgoogling][aeneasgoogling apud elysium]] I'm looking at
-    you) that tweets in Latin.
-
-    Where to go?  Maybe just pick up stakes, head west and see where I
-    find myself?
-
-*** PUBLISHED Poetry in the trash                      :life:blogging:poetry:
-    :PROPERTIES:
-    :EXPORT_FILE_NAME: poetry-in-the-trash
-    :EXPORT_HUGO_PUBLISHDATE: <2020-04-29 Wed>
-    :END:
-
-A few years ago, my mother went through the effects of her cousin
-after she died.  It turns out Thelma Jane wrote poetry.  Nobody knew.
-It wound up in the trash.
-
-Thelma lived alone.  Her husband had died in his 40s.  They had no
-children. Her mother, my great-aunt Bess, lived to 102 and took her
-first motorcycle ride at 100.  My mom had to go through Thelma's stuff
-and Aunt Bess' stuff, most of which Thelma still had.  I now have some
-of the leftovers.  But nobody wanted the poetry.  So it's gone.
-
-This brings me to the question this article explores: /why write/?
-
-#100daystooffload #whywrite #poetry
-
-#+hugo: more
-
-  - Permanence? :: Thelma's poetry is gone.  Even names carved on
-    tombstones crumble with time.  If your writing is very good (see,
-    e.g., Virgil and Cicero) and you're lucky (see scribes in Celtic
-    monasteries) your scribblings on paper, velum or in cyberspace
-    might last the centuries and inspire other writers (see Dante).
-
-  - Therapy? ::  I've been journaling (on paper) for a month or so.   I find
-    the process quite creative and even cathartic.  And there is
-    something freeing about being able to scribble, erase, underline,
-    circle, draw arrows from one idea to the next, and in processing
-    information a non-linear fashion.  Unexpected connections can be
-    made.  I'm a huge fan of [[https://orgmode.org/][emacs org mode]] (this blog post is being
-    written in org mode exported using [[https://ox-hugo.scripter.co/][ox-hugo]] to export a [[https://gohugo.io/][hugo]] static
-    web site hosted on [[https://pages.github.com/][Github pages]], but even using the best of
-    digital writing tools, there is something not quite as free about
-    it.  There is something mentally relaxing about writing on paper
-    (and going for long walks).
-
-  - Learning? :: You learn by doing.  The process of writing (can)
-    help you organize thoughts.  You often have to research things.
-    Putting ideas out there opens you up to criticism.  You have to
-    defend or modify your position.   It can be a starting point for
-    conversation.
-
-  - Social Connections? :: See Facebook, Twitter, et al.  For all
-    their downsides, there is no denying that writing, even the at the
-    banal and everyday level of much of "social media" generates
-    connections.   I prefer to think it will allow me to maintain
-    meaningful connections to people who are important to me in life,
-    but my writing may not, in fact, be that noble.
-
-  - Hubris? :: Pride?  Vanity?  Self-importance?  Self-absorption?
-    These are all possibilities.
-
-  - Professional Reasons? :: I sometimes write on professional topics, see
-    [[https://eludom.github.io/blog/cybersecurity-and-bears/][Bears Attacks and Cybersecurity]]  and [[https://eludom.github.io/blog/reproducable-security-analytics/][Reproducable Security Analytics]].
-    A mix of the same motivations is often in play.
-
-  - To kill time? :: In this busy world we don't often feel that we
-    have time to kill.  We don't sit on our front porch watching the
-    world go by (and, in fact, it's been a hundred years or so since
-    the front porch featured prominently in residential architecture,
-    at least in the USA.), and even Baseball, the "national pass-time"
-    is looking for ways to speed up the game for a public that has
-    lost patience.   Maybe we need to slow down and focus on important
-    things, or just enjoyable things.   Writing may be one of those
-    things.
-
-  - A habit? :: For some people, writing is a habit.  I think that may
-    be one of the goals of the [[https://100daystooffload.com/][#100DaysToOffload concept]].  I'm going
-    to give it a try.  Thanks [[https://kevq.uk/][Kev Quirk]]
-
-
-I'll never know why Thelma Jane wrote her poetry.  I'm still trying to
-figure out why I write.  Maybe it's one of the reasons discussed
-above.  Maybe it's all of them.
-
-*** PUBLISHED Choosy Programmers Choose GIF :Wilhite:CompuServe:GIF:History:Computers:Emacs:Programming:
-    :PROPERTIES:
-    :EXPORT_FILE_NAME: steve
-    :EXPORT_HUGO_PUBLISHDATE: <2020-04-30 Thu>
-    :END:
-
-[[https://en.wikipedia.org/wiki/Steve_Wilhite][Steve Wilhite]] is the most prolific programmer I've ever known.  He's
-mostly remembered for creating [[https://en.wikipedia.org/wiki/gif][GIF]] but he spent 30 years writing piles
-of amazing software which helped set the stage for the Web.
-
-#+CAPTION: CompuServe XF4 Fortran Manual
-#+LABEL: pic:XF4MAN
-file:images/cs/XF4MAN.gif
-
-Day 02 of #100DaysToOffload.
-
-#+hugo: more
-
-  Steve worked at CompuServe (and successors) from 1970 to 2001.  I
-  was fortunate enough to start my career working with/for him.  My
-  view of his programming output comes largely from 1985-1995.  I'm
-  sure there was much more that I missed.
-
-**** Things Steve Wrote
-  Steve ran the languages and tools group when I arrived.  /He had just/
-  /given up on writing at DEC10 ADA compiler/[fn:2] (Steve is still writing
-  ADA software), was just beginning to embrace PCs as "real computers"
-  worthy of his attention, had written a FORTRAN compiler, a BASIC
-  compiler and associated run-time systems, and a run-time library for
-  BLISS called BTOOLS.  These were partially in support of
-  CompuServe's pre-information-service time-sharing services supported
-  by a homegrown packet-switched networking.  "Cloud computing" in the
-  1970s :-)
-
-  I worked on BTOOLS, SKIMAN (Single Key Index Access Manager), a
-  B-Tree library Steve had created.  There was a full-fledged database
-  system written in there somewhere I think.  There were ports and
-  hacks to various tools such as FINE (Fine Is Not Emacs), a C
-  compiler, DEC Runoff, laser printer support, source code control
-  systems, etc.
-
-  On top of that, Steve created the HMI (Host Micro Interface)
-  protocol that rode on top of [[https://en.wikipedia.org/wiki/b_protocol][CompuServe "B-Protocol"]] to allow API
-  driven interactions with the information service (the alternative
-  being text/command line interfaces).  This was all in an environment
-  where 9600baud modems were considered "fast".  Compression,
-  incremental display, etc. were paramount.
-
-  He later used that as the substrate for [[https://en.wikipedia.org/wiki/compuserve_information_manager][WinCim]], the graphical interface
-  to the information service that he created which kept the company
-  going for a while in the face of the likes of AOL.  Somewhere in
-  there, there was a graphics library and enough pieces that I was
-  able to write a web browser that worked inside WinCim, that would
-  have allowed CompuServe users without an Internet connection (most
-  everyone then) to browse the web.  Marketing did not want to release
-  my web browser.  *Sigh*.
-
-  Later on (after my time) Steve as pulled into major projects to support
-  the back end processing for H&R Blocks's TaxCut program when online
-  tax-filing was a new thing.  /He was also pulled into the WOW project/
-  /which was supposed to be the AOL killer when it became apparent that/
-  /CompuServe needed an AOL killer./[fn:3]  One of those projects succeeded.
-  Single-handed technical virtuosity could not fix the one that
-  didn't.
-
-  And there was this little side project called GIF.
-
-**** Things that got out
-
-***** GIF
-  Be careful what you do and say.  It's often the incidentals that you
-  are remembered for.  The kind (or unkind) words.  The side projects.
-
-  In the world of the mid 80s there were IBM PCs, Apple Macs
-  (classic), Amigas, Atari-STs, CoCos, and yes, Apple-IIs and
-  Commodor-68s.  The information service was moving beyond a
-  text-based, menu-driven system (I like curses and termcap as much as
-  the next guy, but hey..).  People wanted to share pictures, display
-  online-shopping catalogs, weather maps, etc.  There were no/few good
-  portable graphics formats.  So Steve wrote one.  GIF.  Then the web happened.
-  The web wanted portable images too.  GIF worked.  So the early web
-  adopted it.  There was the kerfuffle over the LZW compression
-  algorithm it used resulting in the creation of the PNG format, but,
-  hey, who in 1987 would ever think that an algorithm published in ACM
-  might not be free.  OK, [[https://en.wikipedia.org/wiki/richard_stallman][Stallman]], but who else :-).  And now there
-  are Giffy's in slack that I turn off because I hate dancing bears.
-  Thank-you Steve.
-
-**** MicroEmacs/mg display hacks
-
-  And then there are the [[https://www.emacswiki.org/emacs/MicroEmacs][MiroEmacs]] display hacks.  When the Amiga came
-  out Steve convinced me to buy one (it was that or the AtariST, he
-  had and was hacking on both).  But there was no Emacs.  Somehow
-  (Steve?) I became aware that the source to MicroEmacs was included
-  on with the disks to Mark Williams C compiler for the PC.  So I bought
-  the C compiler, ported the source to the Amiga (all it needed was
-  character I/O drivers to work in the native ANSI/VT-100 terminal)
-  and gave the source to Steve, who, I think, hacked/improved the
-  screen update logic.  I then posted the source to the USENET group
-  comp.sources.amiga. It took off from there (thanks to Daniel
-  Lawerence).  It's rumored that Linus Torvalds uses a version of the
-  code to this day.
-
-
-**** CompuServe: Groundbreaking events, great teams and amazing individuals.
-
-     At the recent (2019-10-19) CompuServe 50th Anniversary reunion I
-     was reminded of the revolutionary things that happened there: the
-     first commercial email, the first online banking, the first
-     online shopping, the first electronic news wire feed, the first
-     song released exclusively online (Arrowsmith 1994), online chat
-     (CB), OS and compiler development, VPNs (X.25 !), data over cable
-     in 82....and Dan Piskur inventing what we know today as much of
-     standard online security, incident response and "cyber"/law
-     enforcement collaboration, all before the Internet.
-
-     Of course it all took the efforts of many people and groups:  the
-     network software team (packet switching c.a. 1972, take that
-     DARPA), the "monitor group" (TOPS-10 OS development),
-     MicroComputer Software (terminal emulators forever !), large
-     systems software (billing et. al.), and of course the genius of
-     the founders (John Goltz) and the vision of Jeff Wilkins (CEO
-     1970-1985).
-
-     There's a lot to be said for being in the right place at the
-     right time, and for having a team, but many things do not happen
-     without the essential contributions of amazing individuals.
-
-     Thanks Steve.
-
-#+CAPTION: It all started...
-#+LABEL: pic:shirt
-file:images/cs/compuserveshirt.gif
-
-
-**** Footnotes
-
-[fn:2] Steve corrected me.  There were never actually plans to write
-an Ada compiler.  But I was unaware of the XBASIC compiler.   So 3
-compilers in all.
-
-[fn:3] Steve informs me he was NOT pulled into the WOW project.  Maybe
-the outcome would have been better if he had...
-
-
-[fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
 
 *** WIP HOWTO: Using Pi-hole DNS to block ads.  The struggle continues... :DNS:privacy:networking:HOWTO:
 :PROPERTIES:
@@ -858,6 +455,343 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
 # **** Show and Tell
 
 #      http://192.168.86.230/admin/index.php
+
+
+
+** Work
+*** PUBLISHED "​I'm passionate about..."​                 :Latin:humanity:work:
+:PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: Im-passionate about
+    :EXPORT_HUGO_PUBLISHDATE: 2020-03-09:
+    :END:
+
+
+"I'm passionate about..." I've always hated that phrase. Because I
+thought it was fake. I thought it was trendy. I've reflexively reacted
+against trendy things for decades. Pet Rocks, Disco, TED talks,
+cryptocurrency... But I am coming to see what the phrase is getting
+at. And I think I like it.
+
+In a work world where human beings are called "resources", where
+intelligent, creative, inquisitive, motivated people are subjected to
+management practices derived from 19th century steel mills and
+automotive assembly line production, the phrase "I'm passionate
+about..." is (can be) an attempt to re-assert humanity.
+
+I've just finished reading [[https://www.amazon.com/Long-Live-Latin-Pleasures-Language/dp/0374284520#ace-8881249860][Long Live Latin: The Pleasures of a Useless
+Language]] . For no good reason. Again and again, it raises the question
+of what it means to be human: to be joyful, spontaneous, creative,
+inquisitive, fulfilled, to discover, to appreciate beauty, music, art,
+language, and poetry (yes, I have a liberal arts degree)
+
+I guess if I had to say what I'm passionate about, it's about being
+human and treating other people as humans. To put a professional spin
+on it "I am passionate about collaborating with technical people to
+find creative solutions to important problems."
+
+Go learn a useless language. Climb a mountain and enjoy the
+view. Spend time playing games with your family. Be human. Be
+passionate. Carpe diem.
+
+
+
+*** PUBLISHED Choosy Programmers Choose GIF :Wilhite:CompuServe:GIF:History:Computers:Emacs:Programming:
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: steve
+    :EXPORT_HUGO_PUBLISHDATE: <2020-04-30 Thu>
+    :END:
+
+[[https://en.wikipedia.org/wiki/Steve_Wilhite][Steve Wilhite]] is the most prolific programmer I've ever known.  He's
+mostly remembered for creating [[https://en.wikipedia.org/wiki/gif][GIF]] but he spent 30 years writing piles
+of amazing software which helped set the stage for the Web.
+
+#+CAPTION: CompuServe XF4 Fortran Manual
+#+LABEL: pic:XF4MAN
+file:images/cs/XF4MAN.gif
+
+Day 02 of #100DaysToOffload.
+
+#+hugo: more
+
+  Steve worked at CompuServe (and successors) from 1970 to 2001.  I
+  was fortunate enough to start my career working with/for him.  My
+  view of his programming output comes largely from 1985-1995.  I'm
+  sure there was much more that I missed.
+
+**** Things Steve Wrote
+  Steve ran the languages and tools group when I arrived.  /He had just/
+  /given up on writing at DEC10 ADA compiler/[fn:2] (Steve is still writing
+  ADA software), was just beginning to embrace PCs as "real computers"
+  worthy of his attention, had written a FORTRAN compiler, a BASIC
+  compiler and associated run-time systems, and a run-time library for
+  BLISS called BTOOLS.  These were partially in support of
+  CompuServe's pre-information-service time-sharing services supported
+  by a homegrown packet-switched networking.  "Cloud computing" in the
+  1970s :-)
+
+  I worked on BTOOLS, SKIMAN (Single Key Index Access Manager), a
+  B-Tree library Steve had created.  There was a full-fledged database
+  system written in there somewhere I think.  There were ports and
+  hacks to various tools such as FINE (Fine Is Not Emacs), a C
+  compiler, DEC Runoff, laser printer support, source code control
+  systems, etc.
+
+  On top of that, Steve created the HMI (Host Micro Interface)
+  protocol that rode on top of [[https://en.wikipedia.org/wiki/b_protocol][CompuServe "B-Protocol"]] to allow API
+  driven interactions with the information service (the alternative
+  being text/command line interfaces).  This was all in an environment
+  where 9600baud modems were considered "fast".  Compression,
+  incremental display, etc. were paramount.
+
+  He later used that as the substrate for [[https://en.wikipedia.org/wiki/compuserve_information_manager][WinCim]], the graphical interface
+  to the information service that he created which kept the company
+  going for a while in the face of the likes of AOL.  Somewhere in
+  there, there was a graphics library and enough pieces that I was
+  able to write a web browser that worked inside WinCim, that would
+  have allowed CompuServe users without an Internet connection (most
+  everyone then) to browse the web.  Marketing did not want to release
+  my web browser.  *Sigh*.
+
+  Later on (after my time) Steve as pulled into major projects to support
+  the back end processing for H&R Blocks's TaxCut program when online
+  tax-filing was a new thing.  /He was also pulled into the WOW project/
+  /which was supposed to be the AOL killer when it became apparent that/
+  /CompuServe needed an AOL killer./[fn:3]  One of those projects succeeded.
+  Single-handed technical virtuosity could not fix the one that
+  didn't.
+
+  And there was this little side project called GIF.
+
+**** Things that got out
+
+***** GIF
+  Be careful what you do and say.  It's often the incidentals that you
+  are remembered for.  The kind (or unkind) words.  The side projects.
+
+  In the world of the mid 80s there were IBM PCs, Apple Macs
+  (classic), Amigas, Atari-STs, CoCos, and yes, Apple-IIs and
+  Commodor-68s.  The information service was moving beyond a
+  text-based, menu-driven system (I like curses and termcap as much as
+  the next guy, but hey..).  People wanted to share pictures, display
+  online-shopping catalogs, weather maps, etc.  There were no/few good
+  portable graphics formats.  So Steve wrote one.  GIF.  Then the web happened.
+  The web wanted portable images too.  GIF worked.  So the early web
+  adopted it.  There was the kerfuffle over the LZW compression
+  algorithm it used resulting in the creation of the PNG format, but,
+  hey, who in 1987 would ever think that an algorithm published in ACM
+  might not be free.  OK, [[https://en.wikipedia.org/wiki/richard_stallman][Stallman]], but who else :-).  And now there
+  are Giffy's in slack that I turn off because I hate dancing bears.
+  Thank-you Steve.
+
+**** MicroEmacs/mg display hacks
+
+  And then there are the [[https://www.emacswiki.org/emacs/MicroEmacs][MiroEmacs]] display hacks.  When the Amiga came
+  out Steve convinced me to buy one (it was that or the AtariST, he
+  had and was hacking on both).  But there was no Emacs.  Somehow
+  (Steve?) I became aware that the source to MicroEmacs was included
+  on with the disks to Mark Williams C compiler for the PC.  So I bought
+  the C compiler, ported the source to the Amiga (all it needed was
+  character I/O drivers to work in the native ANSI/VT-100 terminal)
+  and gave the source to Steve, who, I think, hacked/improved the
+  screen update logic.  I then posted the source to the USENET group
+  comp.sources.amiga. It took off from there (thanks to Daniel
+  Lawerence).  It's rumored that Linus Torvalds uses a version of the
+  code to this day.
+
+
+**** CompuServe: Groundbreaking events, great teams and amazing individuals.
+
+     At the recent (2019-10-19) CompuServe 50th Anniversary reunion I
+     was reminded of the revolutionary things that happened there: the
+     first commercial email, the first online banking, the first
+     online shopping, the first electronic news wire feed, the first
+     song released exclusively online (Arrowsmith 1994), online chat
+     (CB), OS and compiler development, VPNs (X.25 !), data over cable
+     in 82....and Dan Piskur inventing what we know today as much of
+     standard online security, incident response and "cyber"/law
+     enforcement collaboration, all before the Internet.
+
+     Of course it all took the efforts of many people and groups:  the
+     network software team (packet switching c.a. 1972, take that
+     DARPA), the "monitor group" (TOPS-10 OS development),
+     MicroComputer Software (terminal emulators forever !), large
+     systems software (billing et. al.), and of course the genius of
+     the founders (John Goltz) and the vision of Jeff Wilkins (CEO
+     1970-1985).
+
+     There's a lot to be said for being in the right place at the
+     right time, and for having a team, but many things do not happen
+     without the essential contributions of amazing individuals.
+
+     Thanks Steve.
+
+#+CAPTION: It all started...
+#+LABEL: pic:shirt
+file:images/cs/compuserveshirt.gif
+
+
+**** Footnotes
+
+[fn:2] Steve corrected me.  There were never actually plans to write
+an Ada compiler.  But I was unaware of the XBASIC compiler.   So 3
+compilers in all.
+
+[fn:3] Steve informs me he was NOT pulled into the WOW project.  Maybe
+the outcome would have been better if he had...
+
+
+[fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
+
+
+
+** Life
+*** PUBLISHED Some Happy Notes                      :music:family:life:piano:
+:PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: happy-notes
+    :EXPORT_HUGO_PUBLISHDATE: 2020-04-21:
+    :END:
+
+    And on a happy note...my son Bryan has finished his Masters of
+    Piano Performance at Duquesne University and will be headed to
+    Penn State to pursue a Doctor of Musical Arts.  You can watch
+    listen to [[https://www.youtube.com/playlist?list=PLp9RFZrc7DMtCEg0SmtEL5weDiTis3rH5][Bryan Jones' masters degree piano recitle at Duquesne]] on
+    Youtube.
+
+    [[file:static/bryan.png]]
+
+    # file:static/2020-04-21-BryanJonesRecital.png
+
+#+hugo: more
+
+**** Bryan's Music
+
+    The corona virus has wreaked havoc with many things, not the least
+    of which is the performing arts, but, as they say, "the show must
+    go on".  The program was to have been a live performance, but
+    things being what they are (social distancing) recordings where
+    made to satisfy the requirement.
+
+    The program includes:
+
+    - Schumann: Symphonic Etudes, Op. 13 (original version, 1837)
+    - Debussy: Images Book II - I. Cloches à travers les feuilles
+    - Debussy: Images Book II - II. Et la lune descend sur le temple qui fut
+    - Debussy: Images Book II - III. Poissons d'or
+    - Ginastera: Piano Sonata #1, Op. 22 - I. Allegro marcato
+    - Ginastera: Piano Sonata #1, Op. 22 - II. Presto misterioso
+    - Ginastera: Piano Sonata #1, Op. 22 - III. Adagio molto appassionato
+    - Ginastera: Piano Sonata #1, Op. 22 - IV. Ruvido ed ostinato
+
+   I particularly like the Debussy.
+
+**** Other Happy Notes
+
+My other son Daniel is finishing out his junior year at Cedarville
+from home.  Bryan's girlfriend (also graduating from Duquesne) will
+again spend the summer doing something she loves, counting birds for
+Bird Conservancy of the Rockies.  A "kid" I knew from scouting is
+headed off for a masters in biomedical engineering this fall, and we
+may hike together a week or two if possible in June or July.
+
+Life goes on.   All is not doom and gloom.   There are some happy
+notes.  Share some of yours?
+
+*** PUBLISHED All is not doom and gloom: go for a walk !!!        :life:hope:
+:PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: go-for-a-walk
+    :EXPORT_HUGO_PUBLISHDATE: 2020-04-25:
+    :END:
+
+I find that when I stay glued to twitter (pick your
+social-media-of-doom-amplifier) I tend to get a rather gloomy view of
+life.  There is indeed a lot one can be gloomy about these days.  But
+if you just go for a walk and look around you may be
+surprised:
+
+I found this art [[pic:sidewalk-art][sidewalk art]] at just about the exact place where last
+fall I had purchased a cup of lemonade from 4 eager young
+entrepreneurs.  I suspect the ring leader of that optimistic young
+bunch.
+
+#+CAPTION: Sidewalk art
+#+LABEL: pic:sidewalk-art
+[[file:images/walks/sidewalk-art.jpg]]
+
+#+hugo: more
+
+Spring is the best time of year.  The daffodils bloom, [[pic:dogwoods][dogwoods are in
+full bloom]], red-bud trees come out, the tree-frogs sing up a storm (at
+least that's how it goes in Virginia)
+
+#+CAPTION: Dogwoods in bloom
+#+LABEL: pic:dogwoods
+[[file:images/walks/dogwood.jpg]]
+
+I recently had my yard re-graded and re-seeded and now, after 17 years
+I have [[pic:grass][full luscious grass]] (that has to be mowed).  This may not happen
+again:
+
+#+CAPTION: Actual grass
+#+LABEL: pic:grass
+file:images/walks/grass.jpg
+
+And last but not least I saw a bird I don't think I've seen before,
+it turned out to be a common [[pic:tree-swallow][tree swallow]], but it was startling to see
+the almost metallic, shinny dark blue back and white belly (the
+picture does not capture it well)
+
+#+CAPTION: Tree Swallow (/Tachycineta bicolor/)
+#+LABEL: pic:tree-swallow
+file:images/walks/tree-swallow.jpg
+
+
+Go for a walk.  Look at the world around you.  It's spring.  All is
+not doom and gloom!
+
+
+*** PUBLISHED Digital chimney smoke?          :life:twitter:DigitalFrontiers:
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: digital-chimney-smoke
+    :EXPORT_HUGO_PUBLISHDATE: 2020-04-27
+    :END:
+    Daniel Boone is quoted (via Hubert Humphrey) as saying
+
+    #+begin_quote
+    when he could see the smoke from another chimney, felt himself too
+    crowded and moved further out into the wilderness.
+    #+end_quote
+
+    Mark Twain said
+    #+begin_quote
+    Whenever you find yourself on the side of the majority, it is time to pause and reflect.
+    #+end_quote
+
+#+hugo: more
+
+    I was on email as early as 1980 on a DEC20. I was on Usenet news
+    when it was the digital frontier and on the Internet in the
+    mid-80s, 10 years or so before the Web.  I helped bring America
+    online working at CompuServe before America Online existed.  I
+    quit Facebook in the run-up to the 2016 election as it got too
+    political and now I find that my main digital platform (Twitter)
+    is home to the daily, um, ?sophisms? of the President who spawned
+    the political rhetoric I fled.
+
+    Is it time to move on?  Time to find another avant-guard tech hole
+    to clime into?  Thanks to the Internet there are infinitely more
+    options than just the dial-up BBS systems of the early 80s.
+
+    I was a little sad to loose contact with all the elementary school
+    friends that Facebook enabled me to reconnect with after 40 years
+    (OK, not really) and I would be sad too loose touch with the zany
+    [[https://twitter.com/search?q=%2523classicstwitter&src=typed_query][#ClassicsTwitter]] crowd ([[https://twitter.com/aeneasgoogling][aeneasgoogling apud elysium]] I'm looking at
+    you) that tweets in Latin.
+
+    Where to go?  Maybe just pick up stakes, head west and see where I
+    find myself?
 
 *** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:
     :PROPERTIES:
@@ -1114,6 +1048,88 @@ She has attended many of the performances.
     Day 08 of #100DaysToOffload.
 
 
+
+** Writing
+*** PUBLISHED Poetry in the trash                      :life:blogging:poetry:
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: poetry-in-the-trash
+    :EXPORT_HUGO_PUBLISHDATE: <2020-04-29 Wed>
+    :END:
+
+A few years ago, my mother went through the effects of her cousin
+after she died.  It turns out Thelma Jane wrote poetry.  Nobody knew.
+It wound up in the trash.
+
+Thelma lived alone.  Her husband had died in his 40s.  They had no
+children. Her mother, my great-aunt Bess, lived to 102 and took her
+first motorcycle ride at 100.  My mom had to go through Thelma's stuff
+and Aunt Bess' stuff, most of which Thelma still had.  I now have some
+of the leftovers.  But nobody wanted the poetry.  So it's gone.
+
+This brings me to the question this article explores: /why write/?
+
+#100daystooffload #whywrite #poetry
+
+#+hugo: more
+
+  - Permanence? :: Thelma's poetry is gone.  Even names carved on
+    tombstones crumble with time.  If your writing is very good (see,
+    e.g., Virgil and Cicero) and you're lucky (see scribes in Celtic
+    monasteries) your scribblings on paper, velum or in cyberspace
+    might last the centuries and inspire other writers (see Dante).
+
+  - Therapy? ::  I've been journaling (on paper) for a month or so.   I find
+    the process quite creative and even cathartic.  And there is
+    something freeing about being able to scribble, erase, underline,
+    circle, draw arrows from one idea to the next, and in processing
+    information a non-linear fashion.  Unexpected connections can be
+    made.  I'm a huge fan of [[https://orgmode.org/][emacs org mode]] (this blog post is being
+    written in org mode exported using [[https://ox-hugo.scripter.co/][ox-hugo]] to export a [[https://gohugo.io/][hugo]] static
+    web site hosted on [[https://pages.github.com/][Github pages]], but even using the best of
+    digital writing tools, there is something not quite as free about
+    it.  There is something mentally relaxing about writing on paper
+    (and going for long walks).
+
+  - Learning? :: You learn by doing.  The process of writing (can)
+    help you organize thoughts.  You often have to research things.
+    Putting ideas out there opens you up to criticism.  You have to
+    defend or modify your position.   It can be a starting point for
+    conversation.
+
+  - Social Connections? :: See Facebook, Twitter, et al.  For all
+    their downsides, there is no denying that writing, even the at the
+    banal and everyday level of much of "social media" generates
+    connections.   I prefer to think it will allow me to maintain
+    meaningful connections to people who are important to me in life,
+    but my writing may not, in fact, be that noble.
+
+  - Hubris? :: Pride?  Vanity?  Self-importance?  Self-absorption?
+    These are all possibilities.
+
+  - Professional Reasons? :: I sometimes write on professional topics, see
+    [[https://eludom.github.io/blog/cybersecurity-and-bears/][Bears Attacks and Cybersecurity]]  and [[https://eludom.github.io/blog/reproducable-security-analytics/][Reproducable Security Analytics]].
+    A mix of the same motivations is often in play.
+
+  - To kill time? :: In this busy world we don't often feel that we
+    have time to kill.  We don't sit on our front porch watching the
+    world go by (and, in fact, it's been a hundred years or so since
+    the front porch featured prominently in residential architecture,
+    at least in the USA.), and even Baseball, the "national pass-time"
+    is looking for ways to speed up the game for a public that has
+    lost patience.   Maybe we need to slow down and focus on important
+    things, or just enjoyable things.   Writing may be one of those
+    things.
+
+  - A habit? :: For some people, writing is a habit.  I think that may
+    be one of the goals of the [[https://100daystooffload.com/][#100DaysToOffload concept]].  I'm going
+    to give it a try.  Thanks [[https://kevq.uk/][Kev Quirk]]
+
+
+I'll never know why Thelma Jane wrote her poetry.  I'm still trying to
+figure out why I write.  Maybe it's one of the reasons discussed
+above.  Maybe it's all of them.
+
+
 *** WIP 9 days of #100DaysToOffload :blogging:writing:emacs:100DaysToOffload:text:
     :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
@@ -1173,6 +1189,335 @@ She has attended many of the performances.
 
   Day 09 of #100DaysToOffload.
 
+
+
+
+** Tech HOWTOs
+
+*** PUBLISHED HOWTO: Breaking and fixing DNS - Understanding modern DNS on Ubuntu. :DNS:Ubuntu:HOWTO:Linux:systemd:
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: dns-today
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-10
+    :END:
+    One dark and stormy night I broke my DNS.   I decided to move
+    beyond =/etc/resolv.conf= and see what demons (daemons?) were
+    lurking under the hood.  "Its complicated."  This is the story of
+    understanding, debugging and fixing it.
+
+# If you've ever wondered "what's up with systemd, DNS, and name
+# resolution on Ubuntu" and "how does it all work", you may want to
+# read this journey of discovery.  Or not.  When you turn over rocks,
+# sometimes ugly things crawl out...
+
+    #+hugo: more
+
+**** /etc/resolv.conf
+
+
+   If you  look at =/etc/resolv.conf= on a Linux system today (Ubuntu
+   19.10) you will find something like:
+
+#+begin_example
+# Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)
+#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN
+# 127.0.0.53 is the systemd-resolved stub resolver.
+# run "systemd-resolve --status" to see details about the actual nameservers.
+
+nameserver 127.0.0.1
+search lan
+#+end_example
+
+    But the file seems to change.  I've seen it without most of the
+    verbiage above.  I've seen the file contain both 127.0.0.1 and
+    127.0.0.53.  Confusing.  systemd?
+
+**** You /can/ edit =/etc/resolv.conf=
+    First let me say that despite the dire warnings below, you *can*
+    edit =/etc/resolv.conf=, e.g. to make it look like
+
+    #+begin_example
+# Generated by NetworkManager
+search lan
+nameserver 9.9.9.9
+    #+end_example
+
+    And it will work until NetworkManager chooses to overwrite the
+    file.  Not sure if =sudo chmod 444 /etc/resolv.conf= be enough to
+    keep NetworkManager from overwriting it.
+
+**** Debugging a broken DNS
+     I was living dangerously and simultaneously playing with
+     https://pi-hole.net/ and letting Ubuntu try to upgrade my system.
+     It went south.  DNS stopped working.  The following were some of
+     the debugging steps I took to try to understand/fix the issue:
+
+***** Testing resolution - is name resolution working?
+
+      In this phase of debugging, I try to do name resolution as configured:
+
+     - dig - no namserver specified :: I ran =$ dig www.uu.net= to see if everything was working as
+       intended.  Nope.  No response.
+
+     - dig - known-good nameserver :: I ran =$ dig www.uu.net
+       @9.9.9.9= to see if I could resolve against a known-good
+       nameserver.  This worked.  No issues with connectivity/routing.
+
+     - dig - 127.0.0.53 :: I ran =$ dig www.uu.net @127.0.0.53= to see
+       if the local systemd-resolved nameserver specified in
+       /etc/resolv.conf was working.  Nope.
+
+     - systemd-resolved - how is it configured?  :: I ran =$
+       systemd-resolve --status= to see how systemd thought dns was
+       configured.  The wireless interface I was using pointed to a
+       nameserver (the proxy server on my wireless router) that should work:
+
+#+begin_example
+$ systemd-resolve --status
+...
+Link 3 (wlp2s0)
+      Current Scopes: DNS
+       LLMNR setting: yes
+MulticastDNS setting: no
+      DNSSEC setting: no
+    DNSSEC supported: no
+         DNS Servers: 192.168.86.1
+          DNS Domain: ~.
+                      lan
+#+end_example
+
+     - systemd-resolve - let systemd resolve a name :: dig(1) and host(1) are
+       not the only game in town for doing command line DNS look-ups.
+       Systemd (of course) will do it for you:
+       #+begin_example
+       $ systemd-resolve www.uu.net
+       www.uu.net: 152.195.32.39
+       #+end_example
+       In this case, it worked, which tells me that systemd-resolved
+       is happy and working.
+
+     - try dig again :: Try another "normal" lookup:
+       #+begin_example
+       $ dig www.uu.net
+       #+end_example
+
+       This failed.  The conclusion seems to be that the whatever the
+       resolver library is looking at (127.0.0.53) is not working.
+
+     - edit =/etc/resolv.conf= :: Pointing =/etc/resolv.conf= at
+        working nameservers fixed the problem:
+
+#+begin_example
+# Generated by NetworkManager
+search lan
+#nameserver 127.0.0.53  # BROKEN. systemd-resolved nameserver set by NetworkManager
+#nameserver 9.9.9.9     # WORKS. quad9 nameserver
+nameserver 192.168.86.1 # WORKS. wireless router nameserver
+#+end_example
+
+****** Conclusion - the systemd-resolved is not answering
+
+***** What name resolution processes are running?
+
+      The next question is: what's (not) running?  What's (not) listening?
+
+      To answer these questions, I poked at the network and the
+      running processes:
+
+     - nmap - look for listeners :: nmap did not show a DNS listener at 127.0.0.53
+#+begin_example
+gmj@ed home-computing [master] $ sudo nmap -v -sU -PS  127.0.0.53
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-05-10 07:51 EDT
+Initiating Parallel DNS resolution of 1 host. at 07:51
+Completed Parallel DNS resolution of 1 host. at 07:51, 0.02s elapsed
+Initiating UDP Scan at 07:51
+Scanning 127.0.0.53 [1000 ports]
+Completed UDP Scan at 07:51, 2.80s elapsed (1000 total ports)
+Nmap scan report for 127.0.0.53
+Host is up (0.000049s latency).
+Not shown: 997 closed ports
+PORT     STATE         SERVICE
+68/udp   open|filtered dhcpc
+631/udp  open|filtered ipp
+5353/udp open|filtered zeroconf
+#+end_example
+
+zeroconf :: Is zeroconf listening?  What is 5353?
+
+It looks like 5353 is multicast DNS.
+
+#+begin_example
+$ egrep -i domain\|dns /etc/services
+domain		53/tcp				# Domain Name Server
+domain		53/udp
+mdns		5353/tcp			# Multicast DNS
+mdns		5353/udp
+#+end_example
+
+      - lsof -i :: look at listening ports
+
+        Next, I used lsof(1) to look at listening and connected ports,
+        successively grepping out the "known" and "uninteresting":
+
+#+begin_example
+gmj@ed home-computing [master] $  sudo lsof -i -n  | egrep -vi established\|dropbox\|ssh\|http\|smtp\|bootp\|ipp
+COMMAND     PID            USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+avahi-dae  1064           avahi   12u  IPv4  25434      0t0  UDP *:mdns
+avahi-dae  1064           avahi   13u  IPv6  25435      0t0  UDP *:mdns
+avahi-dae  1064           avahi   14u  IPv4  25436      0t0  UDP *:42027
+avahi-dae  1064           avahi   15u  IPv6  25437      0t0  UDP *:44240
+dnsmasq    2538 libvirt-dnsmasq    5u  IPv4  37248      0t0  UDP 192.168.122.1:domain
+dnsmasq    2538 libvirt-dnsmasq    6u  IPv4  37249      0t0  TCP 192.168.122.1:domain (LISTEN)
+brave     28951             gmj   43u  IPv4 250584      0t0  UDP 224.0.0.251:mdns
+#+end_example
+
+Looks like avahe-dae[mon] is listening on multicast-dns (mdns) on
+5353, and there are outbound connections to 192.168.122.1:53, which
+*was* a wired connection to the router, but nothing listening on
+port 53.  This is a problem.
+
+***** Why is systemd-resolved not answering - do I care?
+
+      Do I really want to debug systemd-resolved? No.  I was half
+      planing on upgrading to the latest Ubuntu release (20.04)
+      anyhow.  This seems like the time to do it, rather than
+      debugging this problem further.
+
+***** Lessons learned
+
+      - run servers on dedicated systems :: I had been messing with
+        https://pi-hole.net/ on this system (a laptop that mostly does
+        not move/go off the net).  There was some confusion/doubt
+        about whether this interacted badly with things/caused the
+        problems.   It may have.  I un-installed it.   But running a
+        dedicated server would be better.
+
+      - Failed Ubuntu "upgrade" :: The actual trigger that made things not
+        work was an attempt to let the Ubuntu installer upgrade the
+        system.  This failed in strange ways.  After running, my
+        system which was Ubuntu 19.10 reported (/etc/issue) to being
+        18.04 and the pi-hole logs reported that they could not find
+        the wireless interface it had been configured to use (but the
+        device was still there, same name, still working...)
+
+**** Next Steps
+
+***** TODO Do a hard upgrade to Ubuntu 20.04
+      - Full backup, wipe disk, restore...
+      - Use ansible, docker, chief or similar to make configs
+        repeatable.
+
+***** TODO Set up a server to run pi-hole and other services
+      - Possibly re-purpose an old laptop or pogo-plug device running
+        something minimal like Arch Linux
+      - Use ansible, docker, chief or similar to make configs
+        repeatable.
+
+**** Things to learn more about
+     - avhai :: So what is [[https://en.wikipedia.org/wiki/Avahi_%28software%29][avhai]]-dae[mon]?  It looks like a
+       zero-configuration (I wish !) networking services that uses
+       multi-cast DNS on a local network.  Do I need to be running this?
+
+     - systemd-resolved :: I may want to learn more about this, as it is
+       part of the new regime in most Linux distros.  But not now.
+
+**** For Further Reading
+     - resolvers, stub resolvers and nameservers :: https://unix.stackexchange.com/questions/500536/what-are-dns-server-resolver-and-stub-resolver
+
+Day 10 of #100DaysToOffload.  Delayed a day due to DNS problems :-)
+
+*** TODO This is not your fathers /etc/resolv.conf -  understanding modern DNS resolution
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: dns-today
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-09
+    :END:
+
+**** How things used to work
+     In 1987 the staff at the Ohio State University Computer and
+     Information Science were periodically logging in to SRI-NIC via
+     FTP and downloading "the hosts file", that would be =/etc/hosts=
+     on today's Unix systems.
+
+     No DNS?  No problem.  Just look up the hosts IP address in the
+     local database (flatfile) and off you go.  DNS was new then and
+     still rolling out.  Updates?  No problem.  We'll pull the file
+     once a week or so....
+
+     Then along came DNS the resolver library.  Just configure
+     =/etc/resolv.conf= on your VAX780 running BSD4.2 and let it go
+     ask the new-fangled Root Name Servers who was authoritative for
+     =.edu= and where to find the SOA for /red.rutgers.edu/.  Poof.
+     Life is good for few years on the academic/military/industrial
+     not-so-complex Internet.
+
+     Then the Web happened.  Then Window boxes all started getting
+     TCP/IP stacks.  And the marketers, hackers, AOL-me-too crowd and
+     the unwashed masses all arrived.   And the stress on the nice
+     friendly system coordinate by Jon Postel and friends started to
+     show.
+
+     Spoofed records?  No problem.  With a "quick" IETF DNS standard
+     to permit (require?) people to digitally sign their zones and
+     replies, everything will be fine, right?
+
+**** What's in a name?
+
+     People seems to have caught on that to be able to name something
+     is to have power over it, so now *evreybody* wants to mess with
+     name resolution for all kinds of reasons, ranging from
+
+     - Load balancing
+     - Advertising
+     - Tracking user behavior
+     - Blocking unwanted content
+     - Key distribution
+     - Security reconnaissance/mapping
+
+**** Ubuntu - How does it today?
+     This is an article/post all of its own.  I broke my DNS.  The
+     attempts to fix it reveal an odyssey in the discovery of the
+     complexity that has acreeted around DNS in the past 30 years.
+
+**** Android - How does it today?
+**** Windows - How does it today?
+**** Chromebook - How does it today?
+**** What about - VPNs
+     - Protonvpn
+**** What about - DoH
+**** Around the edges - The dark web
+**** Around the edges - Alternate roots
+
+**** Back to sticks and stones
+     DNS and the routing infrastructure represent two of the biggest
+     potential points of failure for the modern Internet.
+
+     Take DNS down and most everything does not work...Amazon,
+     Apple, Netflix, online shopping, zoom.
+
+     Of course, it would be possible to go back to the world before
+     DNS.   As long as you have a fixed IP address and don't mind
+     working with network addresses such as  /192.168.8.230/ or
+     /fe90::5e3d:4bd8:7e40:3078/ instead of /amazon.com/
+
+     Looks like you don't have to ftp to sri-nic anymore, you can get
+     get it from github.com https://github.com/PDP-10/sri-nic
+
+     Wait, no DNS?
+
+     #+begin_example
+     host github.com | head -1
+     github.com has address 140.82.113.4
+     #+end_example
+
+     Make that
+
+     #+begin_example
+     https://140.82.113.4/PDP-10/sri-nic
+     #+end_example
+
+** Drafts
 *** TODO Keeping my blood pressure down, keeping politics personal
 **** Intro - me and politics
 
@@ -1213,9 +1558,9 @@ Neighbors dogs bark.  I don't like it.   That's their choice.
    - UUNET
 
 
-
 *** TODO Publish thoughts from my journal
 *** TODO Hiking stories
+
 * About George Jones
    :PROPERTIES:
    :EXPORT_HUGO_SECTION: About
@@ -1242,6 +1587,7 @@ Neighbors dogs bark.  I don't like it.   That's their choice.
    and Redjack.  See  https://www.linkedin.com/in/georgemjones/
 
    He can be reached via email as gmj at pobox dot com
+
 
 * Curious Musings
 :PROPERTIES:
