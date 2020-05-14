@@ -501,6 +501,7 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
 
     Day 11 of #100DaysToOffload https://100daystooffload.com/
 
+
 ** Work
 *** PUBLISHED "​I'm passionate about..."​                 :Latin:humanity:work:
 :PROPERTIES:
@@ -1176,12 +1177,43 @@ time that is given us.”
 
 Day 11 of #100DaysToOffload https://100daystooffload.com/
 
+*** WIP WARNING: Extreme Social Distancing In The Rain :backpacking:hiking:REI:
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: 2020-05-14
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-14
+    :END:
+
+
+    I've got some extreme social distancing going on this weekend.  It
+    requires gear.  Might involve a mountain or two.  Loaded up the
+    pack and put it on.  Feels good!  There may be rain, but
+
+    #+begin_quote
+    There is no bad weather, only bad gear
+    #+end_quote
+
+    #+CAPTION: Social Distancing Gear
+    #+LABEL: pic:gear
+    [[file:images/gear.jpg]]
+
+    #+hugo: more
+
+
+    Will have minimal connectivity, so #100DaysToOffload will be on
+    hold for a few.
+
+    Day 12 of #100DaysToOffload https://100daystooffload.com/
+
+
 ** Writing
 *** PUBLISHED Poetry in the trash                      :life:blogging:poetry:
     :PROPERTIES:
     :EXPORT_FILE_NAME: poetry-in-the-trash
     :EXPORT_HUGO_PUBLISHDATE: <2020-04-29 Wed>
     :END:
+
+# For Sam Clinard
 
 A few years ago, my mother went through the effects of her cousin
 after she died.  It turns out Thelma Jane wrote poetry.  Nobody knew.
