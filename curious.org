@@ -1177,7 +1177,7 @@ time that is given us.”
 
 Day 11 of #100DaysToOffload https://100daystooffload.com/
 
-*** WIP WARNING: Extreme Social Distancing In The Rain :backpacking:hiking:REI:
+*** PUBLISHED WARNING: Extreme Social Distancing In The Rain :backpacking:hiking:REI:
     :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
     :EXPORT_FILE_NAME: 2020-05-14
@@ -1204,6 +1204,31 @@ Day 11 of #100DaysToOffload https://100daystooffload.com/
     hold for a few.
 
     Day 12 of #100DaysToOffload https://100daystooffload.com/
+
+
+*** PUBLISHED Tuscarora Trek                         :backpacking:hiking:REI:
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: 2020-05-17
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-17
+    :END:
+
+    May 15-17, 2020 Son Bryan ("Music Man"), Jason Boyle ("Alaska")
+    and I ("Curious George") hiked 30 miles on the Tuscarora trail.
+
+    The picture below shows Bryan standing on Eagles Rock with the
+    first 11 miles of the hike on the ridge behind him.
+
+    #+CAPTION: Bryan at Eagles Rock
+    #+LABEL: pic:eagles-rock
+    [[file:images/eagles-rock.jpg]]
+
+    #+hugo: more
+
+    Full trip report and more pictures here:
+    https://outdoorfoo.wordpress.com/2020/05/17/tuscarora-trek/
+
+    Day 13 of #100DaysToOffload https://100daystooffload.com/
 
 
 ** Writing
@@ -1717,10 +1742,11 @@ Neighbors dogs bark.  I don't like it.   That's their choice.
    - The web
    - UUNET
 
-
 *** TODO Publish thoughts from my journal
 *** TODO Hiking stories
 
+*** TODO Using ed(1)
+    - twitter @edconf
 
 * About George Jones
    :PROPERTIES:
