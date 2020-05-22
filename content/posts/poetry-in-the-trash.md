@@ -2,7 +2,7 @@
 title = "Poetry in the trash"
 author = ["George Jones"]
 publishDate = 2020-04-29T00:00:00-04:00
-lastmod = 2020-05-14T08:03:41-04:00
+lastmod = 2020-05-20T05:35:11-04:00
 tags = ["life", "blogging", "poetry"]
 draft = false
 +++

@@ -1,78 +1,120 @@
 +++
-title = "Things That Have Been Around The House for 220+ Years"
+title = "More Thoughts on More Stuff"
 author = ["George Jones"]
-publishDate = 2020-05-11
-lastmod = 2020-05-11T21:35:00-04:00
-tags = ["family", "history", "tolkien", "life"]
+publishDate = 2020-05-21
+lastmod = 2020-05-21T19:50:51-04:00
+tags = ["family", "history", "life"]
 draft = false
 +++
 
-> The world has changed.
-> I see it in the water.
-> I feel it in the Earth.
-> I smell it in the air.
-> Much that once was is lost,
-> For none now live who remember it. ”
->
-> ― J. R. R. Tolkien
+## What is this and who is it for? {#what-is-this-and-who-is-it-for}
 
-Life goes on, until it doesn't.  Then those of us who are still here
-are often left with the cherished collections of a generation, or two,
-or three, or four, or...  The oldest thing I think I have in the house
-is this page torn out of a family bible (I have at least 3 of them,
-big, old, once-cherished).  It records the death of a William Gould in
-1792, and of Joseph Dennis Gould in 1835.
+This is written primarily as a personal reflection to my cousin
+about us both winding up with tons of family "stuff".
+Secondarily it is intended for a family newsletter.  Tertiarily,
+for my sons to document snippets of family history, and lastly
+(quarternarily ?) it is written as an "open letter".
 
-<a id="org55d43d5"></a>
 
-{{< figure src="/ox-hugo/goulds.jpg" caption="Figure 1: left-behind" >}}
+## To John {#to-john}
 
-<!--more-->
+You and I both have a lot of "family stuff", for different
+reasons I think.   I sort of inherited it as, literally, "the
+last man standing".   I care about it some.  I've been told
+stories about some of it my whole life.   I think you have been a
+little more active (well, a lot more active) in collecting and
+organizing "family stuff".
 
-I also have lecture notes Joseph Gould took at seminary, as describe
-in this slightly edited email I sent to a relative a few years ago.
-There were some big things going on in those days.
 
-> And here, almost certainly is the Dr. Beecher in question.  Father of
-> Harriet Beecher Stowe [Uncle Tom's Cabin].  Calvinist evangelist at
-> the head of the second great awakening, leader in the temperance
-> movement and at the center of a controversy at a seminary in
-> Cincinnati about slavery the same year [1834] these notes were
-> taken...18 straight nights of debate on the topic, near riots, 50
-> students withdrawing en mass and moving to Oberlin college.  The
-> church and the nation [were] starting to pull apart.
->
-> And then there was this barn [built by my ?great-great? grandfather
-> Morrison for my other great-great grandfather ?Ephriam Gouuld?] north
-> of Marietta [Lower Salem, Ohio] that housed runaway slaves. It was a
-> stop on the underground railroad just north of the Ohio river. And 27
-> years later another young man [my great grandfather Elisha Morrison,
-> later to marry Lydia Catherine Gould] who enlisted in the union
-> army....
->
-> <http://en.m.wikipedia.org/wiki/Lyman%5FBeecher>
->
-> .... I have a book that appears to have started as Joseph Gould's
-> notes on "Dr. Beechers lectures on theology" in 1834, then used by
-> Daniel Gould as his account book from 1847 to his death in 1851.  Then
-> it contains Ephraim Gould's records as administrator of the estate,
-> later records of Morris Morrison and and E F Morrison through 1891,
-> and finally entries from Anna Gould from 1923 to 1925.  We have Anna
-> Goulds will dated 1925.  I think I was told she was a sister to [my
-> great grandmother] Catherine Gould Morrison and cared for Ephraim
-> Gould in his old age, which is probably also why I have his
-> cane..... I guess paper was scarce....
+## Some (more) of the stuff I have {#some--more--of-the-stuff-i-have}
 
-I'm not sure what to make of all this.  It's good to know where you
-came from.  There are stories and values associated with some of these
-things.  It's good to remember the trials and victories of those who
-came before.
+I have (top of the head, small sample) the [Crokinole](https://en.wikipedia.org/wiki/Crokinole) game board
+(19th century I think), the big old custom-made oak cabinet (that
+has moved exactly 3 times since it was made in the 1860s), two
+old oak kitchen tables (Grandma/"Esther Morrison"'s and Ernie's),
+our great grandmother's 1868 wind-up clock with which she "set up
+housekeeping", wall hangings, family bibles, hymnals, cookbooks,
+school books, farm records, the founding constitution Union
+Soldiers Aid Society (1863) of the Dry Run Church, tools
+(Grandpa's scythe), and until recently we had the Civil War Diary
+of Elisha Morrison and his discharge papers.  Mike has the rifle
+Elisha Morrison picked up after the other one he had was struck
+by a bullet saving his life, or none of us would be here today.
 
-> “I wish it need not have happened in my time," said Frodo.  "So do I,"
-> said Gandalf, "and so do all who live to see such times. But that is
-> not for them to decide. All we have to decide is what to do with the
-> time that is given us.”
->
-> ― J.R.R. Tolkien, The Fellowship of the Ring
+On the Jones side I have all Dad the photography major's
+negatives, the Jones/Reeder/Williams family records, my
+grandmother's family photo album showing Dad's high school dance
+band practicing (lead by one of Nancy's former neighbors
+... small world) and pictures of the TV showing live atomic bomb
+test blasts and the coronation of Queen Elizabeth  (who is STILL
+on the throne, is she immortal?)
 
-Day 11 of #100DaysToOffload <https://100daystooffload.com/>
+If anybody in the family wants some "family stuff" talk to me.
+Much of it can be had cheep (free).  I may be making an inventory
+which would aid your selection.
+
+
+## What's the value? {#what-s-the-value}
+
+Some of the people we have behind us include Pilgrims (John
+Alden, Priscilla Mullins), "Underground Railroad" participants
+(Ephraim Gould), Union Soldiers (Elisha Morrison) and on "Esther
+(Free) Morrison"'s side a Hessian Soldier from the Revolution
+who jumped ship and took the name "Free" with some connection to
+the zany "[Immortal J. N. Free](http://yesteryear.clunette.com/immortaljn.html)", and then there's "Cousin Henry
+[Longfellow]" (also descended from John Alden)
+
+> Tell me not in mournful numbers, life is but an empty
+> dream....life is real! Life is earnest! And the grave is not it's
+> goal; Dust thou art, to dust returnest, was not spoken of the soul
+
+It's good to know where you came from.   It's good to know the
+laudable deeds of your ancestors.   Not everybody has that.  Not
+all deeds we know about were laudable or momentous,
+
+> "Though it's the laughter, we will remember, whenever we
+> remember, they way we were ... the rest we simply choose to
+> forget" (B. Streisand)
+
+
+## Where is the stuff going? {#where-is-the-stuff-going}
+
+I often wonder where this stuff is going.   Some of it's been
+around since the 1700s.   Apparently somebody has cared about it
+in every generation since then.   Maybe I'm the last.   Maybe it
+will finally wind up in the dump (Bryan, Daniel, Doug, Meg
+.... your call :-))
+
+
+## Where are WE going? {#where-are-we-going}
+
+At one level **we** are stuff.   I think you and I may both have a
+date to join all the loved ones we know in the Frankfort cemetery
+in the next few years (every time I go there I look around and
+say "Telma/Bess/Mom/Dad/Gramdma...what are YOU doing here?".  As
+time goes on I "know" more and more people there.
+
+Until then, back to "Cousin Henry"
+
+> Let us, then, be up and doing,
+> With a heart for any fate ;
+> Still achieving, still pursuing,
+> Learn to labor and to wait.
+
+And one of the passages that I'm sure inspired him:
+
+> 54 But when this perishable will have put on the imperishable,
+> and this mortal will have put on immortality, then will come
+> about the saying that is written, “DEATH IS SWALLOWED UP in
+> victory. 55 “O DEATH, WHERE IS YOUR VICTORY? O DEATH, WHERE IS
+> YOUR STING?”  [1 Corinthians 15](https://biblehub.com/nasb/1%5Fcorinthians/15.htm)
+
+
+## Closing {#closing}
+
+Stay safe during this strange (COVID19) time.  Enjoy time with
+your family.  Enjoy your genealogy work (and thank you).  Thanks
+for following up with Ebright on Dad's stone.  Hope to see you
+soon.
+
+Day 14 of #100DaysToOffload <https://100daystooffload.com/>
