@@ -689,6 +689,97 @@ the outcome would have been better if he had...
 
 
 
+*** WIP  Thoughts on the OODA loop and falling out of a canoe :cybersecurity:outdoors:SOC:OODA:
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: ooda-loop-and-getting-wet
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-26
+    :END:
+
+
+# Tim, Jono, Leigh
+
+In my never ending quest for synthesis, this post combines thoughts on
+[[https://en.wikipedia.org/wiki/OODA_loop][the OODA loop]] and falling out of a canoe twice this weekend in rapids
+on the Shenandoah river.  There is a connection.  Maybe.
+
+If you want to see the full trip report, pictures, etc. go here [[https://eludom.github.io/blog/get-wet/][Things
+that fall in the river get wet]].  If you're interested in how this relates to
+the OODA loop or, better, if you have experience/thoughts on applying
+the OODA loop to operational cybersecurity settings, read on (and
+comment !)
+
+#+CAPTION: On the river during calm between crisis events
+#+attr_html: :width 400px
+#+attr_latex: :width 400px
+#+ATTR_ODT: :scale 0.5
+[[./images/paddling.jpg]]
+
+
+#+hugo: more
+
+**** The OODA Loop
+
+[[https://en.wikipedia.org/wiki/OODA_loop][The OODA loop]] is a concept cybersecurity has borrowed from the US Air Force.
+"OODA" stands for "Observe, Orient, Decide, Act".
+The OODA loop began as a very fighter-pilot-centric view of a problem
+space.  I always think of Snoopy and the Red Barron.  Snoopy
+*observes* the Red Barron at a distance, *orients* his Sopwith-Camel
+towards the Red Barron, *decides* to fire, and then *acts* by firing-away.
+Then repeat the OODA loop.  *Observe*: what was the effect of your
+action (the Red Barron went down in flames, or you missed and now he's on your
+tail)...
+
+**** The OODA Loop and falling out of a canoe
+The OODA loop parallels my decision making process in the rapids this
+weekend.  In one of our two crisis events I *observed* the other
+canoe flip in the rapids ahead.  I *oriented* my canoe towards shore.
+I *decided* to grab a tree root to buy time to sit and contemplate
+options.  I *acted* by grabbing the tree root.  We flipped due to the
+strong current.
+REPEAT.
+I *observed* that we were in the water 10 or 20 yards (9 to 18 meters)
+from the start
+of the rapids.  I *oriented* myself towards shore.  I *decided* to
+swim to shore at all costs (loosing the canoe and all our gear) rather
+than float the rapids in life jackets.  I *acted* by swimming to shore.
+REPEAT.
+I *observed* that we were safe on shore without our boat, gear or
+friends.  I *oriented* myself downstream.  I *decided* to walk in
+search of boat, gear and friends.  I *acted* by walking...
+
+**** Where does the OODA loop work well?
+
+The OODA loop seems to be a good model for rapidly changing situations
+where the personal stakes to the actor are high, the actor is
+receiving relevant information in a timely fashion and has the ability
+to decide on appropriate action and execute in a very short
+timescale.  There were elements of this in Bill Cheswick's classic [[https://www.cheswick.com/ches/papers/berferd.pdf][An
+Evening with Berferd]] and Cliff Stoll's [[https://en.wikipedia.org/wiki/The_Cuckoo%27s_Egg][The Cuckoo's Egg]], but I am
+wondering how many of these conditions apply, to, say the modern SOC?
+
+
+**** Does the OODA loop work in SOCs?
+
+How do the characteristics of crisis situations such has that
+described above or a fighter pilot in dogfight map to the modern SOC?
+Does a SOC have a rapidly changing situation?  Probably.  Are there
+personal stakes for the actor (analyst)?  It depends.  Is it just
+"work my shift and go home after the hand-off"?  Are the actors
+(analysts) receiving relevant information in a timely fashion?  Or are
+they waiting for a weeks-long (months-long?) approval process for the
+ingest of needed data, the provisioning of enough storage and compute
+power to run the queries they need?  Are they empowered to take action
+in a short timescale?  Or are there three levels of management
+approval needed and reports to be written before any action can taken?
+Can they take machines offline, implement blocks, etc?  Even if it
+impacts production?  Can they observe, orient, decide and act, or is
+it time to put your feet up, hope for the best and float through the
+rapids?
+
+Your thoughts?  Experiences?
+
+Days 17 of #100DaysToOffload https://100daystooffload.com/
+
 ** Life
 *** PUBLISHED Some Happy Notes                      :music:family:life:piano:
 :PROPERTIES:
@@ -835,74 +926,6 @@ not doom and gloom!
 
     Where to go?  Maybe just pick up stakes, head west and see where I
     find myself?
-
-*** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:
-    :PROPERTIES:
-        :EXPORT_HUGO_SECTION: Blog
-        :EXPORT_FILE_NAME: hiking-and-strange-times
-        :EXPORT_HUGO_PUBLISHDATE: 2020-05-03
-        :END:
-
-    I've section-hiked over 1000 miles on the Appalachian Trail.
-    Through-hikes have been shut down this year, upsetting plans
-    people have made for years. I'm headed out today to do maintenance
-    today.  Not sure what I'll find. I will be good to be out.
-
-    #+CAPTION: Mt. Katahdin from Abol Bridge, 2018
-    #+LABEL: pic:katahdin-abol
-    [[file:images/katahdin-abol.jpg]]
-
-    Day 05 of #100DaysToOffload.
-
-    #+hugo: more
-
-    I like to hike.  The Appalachian Trail is near my house.
-    Literally the day before the [[http://www.appalachiantrail.org/][Appalachian Trail Conservancy]] (ATC)
-    recommended EVERYONE stay off the trail (180 degrees against its
-    primary mission), I accepted the responsibility of maintaining a 3
-    mile section for the [[https://www.patc.net/][Potomac Appalachian Trail Club]] (PATC).  Just
-    yesterday I got word that trail maintainers have a local exception
-    and are allowed to be on the trail.  I'm going out this afternoon
-    to see how much underbrush needs cut, if there are any trees that
-    need chainsaw work, if any work is needed on erosion control, etc.
-    It will be a joy to "be out" again.
-
-    A couple weeks before the cronavirus lockdown started, I went for
-    a hike on the [[https://www.hikethetuscarora.org/][Tuscarora Trail]].  It was going to be a quick day
-    hike.  Up 900 feet, along a ridge, back down.  Maybe 8 miles.
-    Going up the hill I fell on a rock and sliced my forearm open and
-    wound up going the ER in Romney, WV with 21 stitches.  I accept some
-    risk when I choose to hike (there are bears too).  With the
-    potential strain on the medical system and emergency care being
-    uncertain, I'm choosing not taking risks now.
-
-    I am a "section hiker".  I go out when I can, usually 2 weeks or
-    so a year.  I have over half the Appalachian Trail done (1000+
-    miles) and had plans to go out Memorial Day (May 25) for two
-    weeks.  That's probably not happening.  I'm not young.  I only
-    have so many years to get this done.  Health is never a given.
-
-    The ATC asked all hikers this year to call it off: through hikers,
-    section hikers as well as day hikers.  Through hikers are people
-    who have re-arranged their life, their finances, their work and
-    family life to spend 6 months on the trail.  For many, it may be a
-    once-in-a-lifetime opportunity.  But for most, through-hiking
-    involves staying together in shelters on rainy nights, sleeping in
-    bunk-houses in hostels, getting rides with local shuttle drivers,
-    going into trail towns to shop for re-supply, etc.  These all make
-    social-distancing hard.  And there is the assumption that there
-    will be /some/ local medical care available, like that which I
-    needed when I fell.  So the ATC /asked/ people to shut it down
-    this year.
-
-    The last time I was out hiking, the day after my initial
-    trail-maintainer training, the parking lot at the trail-head was
-    *packed*.  Not sure what I'll find today.  Crowds?  Empty Trails?
-    A persistent through-hiker?  People make their own choices.
-
-#+caption: me, on top of old smokey, 2018
-#+label: pic:on-katahdin
-file:images/on-katahdin.jpg
 
 *** PUBLISHED Vis tibi sit                                       :latin:rome:
     :PROPERTIES:
@@ -1175,64 +1198,18 @@ time that is given us.”
 
 Day 11 of #100DaysToOffload https://100daystooffload.com/
 
-*** PUBLISHED WARNING: Extreme Social Distancing In The Rain :backpacking:hiking:REI:
-    :PROPERTIES:
-    :EXPORT_HUGO_SECTION: Blog
-    :EXPORT_FILE_NAME: 2020-05-14
-    :EXPORT_HUGO_PUBLISHDATE: 2020-05-14
-    :END:
-
-
-    I've got some extreme social distancing going on this weekend.  It
-    requires gear.  Might involve a mountain or two.  Loaded up the
-    pack and put it on.  Feels good!  There may be rain, but
-
-    #+begin_quote
-    There is no bad weather, only bad gear
-    #+end_quote
-
-    #+CAPTION: Social Distancing Gear
-    #+LABEL: pic:gear
-    [[file:images/gear.jpg]]
-
-    #+hugo: more
-
-
-    Will have minimal connectivity, so #100DaysToOffload will be on
-    hold for a few.
-
-    Day 12 of #100DaysToOffload https://100daystooffload.com/
-
-*** PUBLISHED Tuscarora Trek                         :backpacking:hiking:REI:
-    :PROPERTIES:
-    :EXPORT_HUGO_SECTION: Blog
-    :EXPORT_FILE_NAME: 2020-05-17
-    :EXPORT_HUGO_PUBLISHDATE: 2020-05-17
-    :END:
-
-    May 15-17, 2020 Son Bryan ("Music Man"), Jason Boyle ("Alaska")
-    and I ("Curious George") hiked 30 miles on the Tuscarora trail.
-
-    The picture below shows Bryan standing on Eagles Rock with the
-    first 11 miles of the hike on the ridge behind him.
-
-    #+CAPTION: Bryan at Eagles Rock
-    #+LABEL: pic:eagles-rock
-    [[file:images/eagles-rock.jpg]]
-
-    #+hugo: more
-
-    Full trip report and more pictures here:
-    https://outdoorfoo.wordpress.com/2020/05/17/tuscarora-trek/
-
-    Day 13 of #100DaysToOffload https://100daystooffload.com/
-
-*** WIP More Thoughts on More Stuff                     :family:history:life:
+*** PUBLISHED More Thoughts on More Stuff               :family:history:life:
     :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
     :EXPORT_FILE_NAME: the-stuff-of-time
     :EXPORT_HUGO_PUBLISHDATE: 2020-05-21
     :END:
+
+#+CAPTION: Things on our mantle
+#+attr_html: :width 400px
+#+attr_latex: :width 400px
+#+ATTR_ODT: :scale 0.5
+[[./images/our_mantle_2020_05.jpg]]
 
 **** What is this and who is it for?
 
@@ -1243,23 +1220,24 @@ Day 11 of #100DaysToOffload https://100daystooffload.com/
      (quarternarily ?) it is written as an "open letter".
 
 **** To John
-     You and I both have a lot of "family stuff", for different
-     reasons I think.   I sort of inherited it as, literally, "the
-     last man standing".   I care about it some.  I've been told
-     stories about some of it my whole life.   I think you have been a
-     little more active (well, a lot more active) in collecting and
-     organizing "family stuff".
+ John, you and I both have a lot of "family stuff", for different
+ reasons I think.  I sort of inherited it as, literally, "the last man
+ standing".  I care about it some.  I've been told stories about some
+ of it my whole life.  I think you have been a little more active
+ (well, a lot more active) in collecting and organizing "family
+ stuff".
+
+
 
 **** Some (more) of the stuff I have
-
      I have (top of the head, small sample) the [[https://en.wikipedia.org/wiki/Crokinole][Crokinole]] game board
      (19th century I think), the big old custom-made oak cabinet (that
      has moved exactly 3 times since it was made in the 1860s), two
      old oak kitchen tables (Grandma/"Esther Morrison"'s and Ernie's),
      our great grandmother's 1868 wind-up clock with which she "set up
      housekeeping", wall hangings, family bibles, hymnals, cookbooks,
-     school books, farm records, the founding constitution Union
-     Soldiers Aid Society (1863) of the Dry Run Church, tools
+     school books, farm records, the founding constitution of the
+     Union Soldiers Aid Society (1863) of the Dry Run Church, tools
      (Grandpa's scythe), and until recently we had the Civil War Diary
      of Elisha Morrison and his discharge papers.  Mike has the rifle
      Elisha Morrison picked up after the other one he had was struck
@@ -1268,7 +1246,7 @@ Day 11 of #100DaysToOffload https://100daystooffload.com/
      On the Jones side I have all Dad the photography major's
      negatives, the Jones/Reeder/Williams family records, my
      grandmother's family photo album showing Dad's high school dance
-     band practicing (lead by one of Nancy's former neighbors
+     band practicing (led by one of Nancy's former neighbors
      ... small world) and pictures of the TV showing live atomic bomb
      test blasts and the coronation of Queen Elizabeth  (who is STILL
      on the throne, is she immortal?)
@@ -1315,7 +1293,7 @@ Day 11 of #100DaysToOffload https://100daystooffload.com/
      At one level *we* are stuff.   I think you and I may both have a
      date to join all the loved ones we know in the Frankfort cemetery
      in the next few years (every time I go there I look around and
-     say "Telma/Bess/Mom/Dad/Gramdma...what are YOU doing here?".  As
+     say "Thelma/Bess/Mom/Dad/Grandma...what are YOU doing here?".  As
      time goes on I "know" more and more people there.
 
      Until then, back to "Cousin Henry"
@@ -1337,8 +1315,6 @@ Day 11 of #100DaysToOffload https://100daystooffload.com/
      YOUR STING?”  [[https://biblehub.com/nasb/1_corinthians/15.htm][1 Corinthians 15]]
      #+end_quote
 
-
-
 **** Closing
 
      Stay safe during this strange (COVID19) time.  Enjoy time with
@@ -1348,6 +1324,241 @@ Day 11 of #100DaysToOffload https://100daystooffload.com/
 
 Day 14 of #100DaysToOffload https://100daystooffload.com/
 
+
+** Outdoors
+*** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:outdoors:
+    :PROPERTIES:
+        :EXPORT_HUGO_SECTION: Blog
+        :EXPORT_FILE_NAME: hiking-and-strange-times
+        :EXPORT_HUGO_PUBLISHDATE: 2020-05-03
+        :END:
+
+    I've section-hiked over 1000 miles on the Appalachian Trail.
+    Through-hikes have been shut down this year, upsetting plans
+    people have made for years. I'm headed out today to do maintenance
+    today.  Not sure what I'll find. I will be good to be out.
+
+    #+CAPTION: Mt. Katahdin from Abol Bridge, 2018
+    #+LABEL: pic:katahdin-abol
+    [[file:images/katahdin-abol.jpg]]
+
+    Day 05 of #100DaysToOffload.
+
+    #+hugo: more
+
+    I like to hike.  The Appalachian Trail is near my house.
+    Literally the day before the [[http://www.appalachiantrail.org/][Appalachian Trail Conservancy]] (ATC)
+    recommended EVERYONE stay off the trail (180 degrees against its
+    primary mission), I accepted the responsibility of maintaining a 3
+    mile section for the [[https://www.patc.net/][Potomac Appalachian Trail Club]] (PATC).  Just
+    yesterday I got word that trail maintainers have a local exception
+    and are allowed to be on the trail.  I'm going out this afternoon
+    to see how much underbrush needs cut, if there are any trees that
+    need chainsaw work, if any work is needed on erosion control, etc.
+    It will be a joy to "be out" again.
+
+    A couple weeks before the cronavirus lockdown started, I went for
+    a hike on the [[https://www.hikethetuscarora.org/][Tuscarora Trail]].  It was going to be a quick day
+    hike.  Up 900 feet, along a ridge, back down.  Maybe 8 miles.
+    Going up the hill I fell on a rock and sliced my forearm open and
+    wound up going the ER in Romney, WV with 21 stitches.  I accept some
+    risk when I choose to hike (there are bears too).  With the
+    potential strain on the medical system and emergency care being
+    uncertain, I'm choosing not taking risks now.
+
+    I am a "section hiker".  I go out when I can, usually 2 weeks or
+    so a year.  I have over half the Appalachian Trail done (1000+
+    miles) and had plans to go out Memorial Day (May 25) for two
+    weeks.  That's probably not happening.  I'm not young.  I only
+    have so many years to get this done.  Health is never a given.
+
+    The ATC asked all hikers this year to call it off: through hikers,
+    section hikers as well as day hikers.  Through hikers are people
+    who have re-arranged their life, their finances, their work and
+    family life to spend 6 months on the trail.  For many, it may be a
+    once-in-a-lifetime opportunity.  But for most, through-hiking
+    involves staying together in shelters on rainy nights, sleeping in
+    bunk-houses in hostels, getting rides with local shuttle drivers,
+    going into trail towns to shop for re-supply, etc.  These all make
+    social-distancing hard.  And there is the assumption that there
+    will be /some/ local medical care available, like that which I
+    needed when I fell.  So the ATC /asked/ people to shut it down
+    this year.
+
+    The last time I was out hiking, the day after my initial
+    trail-maintainer training, the parking lot at the trail-head was
+    *packed*.  Not sure what I'll find today.  Crowds?  Empty Trails?
+    A persistent through-hiker?  People make their own choices.
+
+#+caption: me, on top of old smokey, 2018
+#+label: pic:on-katahdin
+file:images/on-katahdin.jpg
+
+*** PUBLISHED WARNING: Extreme Social Distancing In The Rain :outdoors:backpacking:hiking:REI:
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: 2020-05-14
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-14
+    :END:
+
+
+    I've got some extreme social distancing going on this weekend.  It
+    requires gear.  Might involve a mountain or two.  Loaded up the
+    pack and put it on.  Feels good!  There may be rain, but
+
+    #+begin_quote
+    There is no bad weather, only bad gear
+    #+end_quote
+
+    #+CAPTION: Social Distancing Gear
+    #+LABEL: pic:gear
+    [[file:images/gear.jpg]]
+
+    #+hugo: more
+
+
+    Will have minimal connectivity, so #100DaysToOffload will be on
+    hold for a few.
+
+    Day 12 of #100DaysToOffload https://100daystooffload.com/
+
+*** PUBLISHED Tuscarora Trek                :backpacking:hiking:REI:outdoors:
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: 2020-05-17
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-17
+    :END:
+
+    May 15-17, 2020 Son Bryan ("Music Man"), Jason Boyle ("Alaska")
+    and I ("Curious George") hiked 30 miles on the Tuscarora trail.
+
+    The picture below shows Bryan standing on Eagles Rock with the
+    first 11 miles of the hike on the ridge behind him.
+
+    #+CAPTION: Bryan at Eagles Rock
+    #+LABEL: pic:eagles-rock
+    [[file:images/eagles-rock.jpg]]
+
+    #+hugo: more
+
+    Full trip report and more pictures here:
+    https://outdoorfoo.wordpress.com/2020/05/17/tuscarora-trek/
+
+    Day 13 of #100DaysToOffload https://100daystooffload.com/
+
+*** WIP Things that fall in the river get wet                 :life:outdoors:
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: get-wet
+    :EXPORT_HUGO_PUBLISHDATE: 2020-05-25
+    :END:
+
+
+# Primary Audience: Bryan, Sam, Preston
+# Secondary Audience: Family
+# Tirtiary Audience: public/general
+
+#+CAPTION: Bryan paddling on the Shenandoah
+#+attr_html: :width 400px
+#+attr_latex: :width 400px
+#+ATTR_ODT: :scale 0.5
+[[./images/paddling.jpg]]
+
+**** Intro
+This weekend my son Bryan, friends (former scouts from Philmont days)
+Sam and Preston and friend Jack went on an canoe trip down the
+Shenandoah river.  We were only dumped in the river by two of the two
+rapids we encountered.  More on that below.
+
+#+CAPTION: Things that fall in the river get wet
+#+attr_html: :width 400px
+#+attr_latex: :width 400px
+#+ATTR_ODT: :scale 0.5
+[[./images/swimming.jpg]]
+
+#+hugo: more
+
+**** Other people having fun
+
+Along the way we saw many people out enjoying the Memorial Day weekend
+along the river.  The photo below shows a water slide set up to let
+kids slide into the river, with a twist: the last 10 (3m) feet or so of the
+slide were down a mud bank.  For safety there was a kayak in the water
+to help the fun-havers out if needed
+
+#+CAPTION: Water and Mud Slide Into The River
+#+attr_html: :width 400px
+#+attr_latex: :width 400px
+#+ATTR_ODT: :scale 0.5
+[[./images/mud-slide.jpg]]
+
+
+**** Getting Dumped the first time
+
+The river was up.   Running about 6 feet (1.8m) at Luray.   The outfitters
+along the river recommend only going at 5 feet (1.5m) or less.   Our second
+day out we were making 5 miles per hour (8 km/h).
+
+We hit the [[https://youtu.be/Zswr_IB9C_A][Compton Rapids]].  The swells were 3 feet (0.9m) or so.  We made it
+about half way through, taking on water, and then got dumped.  Life
+jackets are a good thing.  It was a little dicey floating though the
+end of the rapids.  We kept our paddles and stayed with the
+upside-down canoe.  The only losses were a couple water bottles, cup
+holders and a fishing rod (other canoe).  Most everything was tied
+down.
+
+We floated 10 or 20 minutes in still-ish water and wound up swimming
+our swamped canoe to the banks where there was a large group camp-out.
+Some of the people (speaking pretty-much only Spanish) helped get our
+sorry selves and swamped canoe out of the water and drained out.  They
+gave us 6 water bottles which replaced the water we had lost.  Gracias
+!
+
+
+**** Getting Dumped the second time
+
+#+CAPTION: Pulling out after the second spill
+#+attr_html: :width 400px
+#+attr_latex: :width 400px
+#+ATTR_ODT: :scale 0.5
+[[./images/swamp-number-2.jpg]]
+
+The second time we got dumped was a about a mile from the end of the
+trip.  Our planning had failed to disclose the presence of these
+rapids, just had it had failed to disclose the possibility of portage
+around the first set (Preston :-))
+
+The other canoe went first.   We hung back in the smooth (but fast)
+water so as not to run into them if they had trouble.   They did.
+They dumped about half way through.   These canoes were a little heavy
+with gear and people and not horribly stable.  Extra water in the boat
+does not help.
+
+I decided to go to the shore and work thorough options.   We reached
+shore 10 or 20 yards (9 or 18) upstream from the rapids.   I grabbed a tree
+root to hold us in place, but the current flipped us.   At that point
+I made the call to "abandon ship".   We let the canoe go and swam to
+the bank rather than float the rapids in life jackets.
+
+We climbed up the bank, staggered downstream and found that our
+friends were a) OK and b) had snagged our canoe.
+
+**** The end
+
+In the end, we had minimal losses, no significant injuries, no harm,
+no foul?  Live and learn?  Life jackets, tying down your gear and
+quick thinking are your friend.  And fun was had in the face of
+self-selected risks.
+
+#+CAPTION: At the takeout point (BEFORE we were drowned rats)
+#+attr_html: :width 400px
+#+attr_latex: :width 400px
+#+ATTR_ODT: :scale 0.5
+[[./images/starting-out.jpg]]
+
+
+
+Days 15 and 16 of #100DaysToOffload https://100daystooffload.com/
 
 
 ** Writing
@@ -1546,6 +1757,18 @@ nameserver 9.9.9.9
     And it will work until NetworkManager chooses to overwrite the
     file.  Not sure if =sudo chmod 444 /etc/resolv.conf= be enough to
     keep NetworkManager from overwriting it.
+
+**** You /can/ make =/etc/resolv.conf= immutable
+
+If you /do/ edit =/etc/resolv.conf= you can make it immutable to
+prevent systemd from updating it:
+
+#+begin_example
+$ sudo chattr +i /etc/resolv.conf
+$ sudo rm /etc/resolv.conf
+rm: cannot remove '/etc/resolv.conf': Operation not permitted
+#+end_example
+
 
 **** Debugging a broken DNS
      I was living dangerously and simultaneously playing with

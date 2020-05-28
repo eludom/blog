@@ -2,10 +2,13 @@
 title = "More Thoughts on More Stuff"
 author = ["George Jones"]
 publishDate = 2020-05-21
-lastmod = 2020-05-21T19:50:51-04:00
+lastmod = 2020-05-21T21:43:11-04:00
 tags = ["family", "history", "life"]
 draft = false
 +++
+
+{{< figure src="/ox-hugo/our_mantle_2020_05.jpg" caption="Figure 1: Things on our mantle" width="400px" >}}
+
 
 ## What is this and who is it for? {#what-is-this-and-who-is-it-for}
 
@@ -18,12 +21,12 @@ for my sons to document snippets of family history, and lastly
 
 ## To John {#to-john}
 
-You and I both have a lot of "family stuff", for different
-reasons I think.   I sort of inherited it as, literally, "the
-last man standing".   I care about it some.  I've been told
-stories about some of it my whole life.   I think you have been a
-little more active (well, a lot more active) in collecting and
-organizing "family stuff".
+John, you and I both have a lot of "family stuff", for different
+reasons I think.  I sort of inherited it as, literally, "the last man
+standing".  I care about it some.  I've been told stories about some
+of it my whole life.  I think you have been a little more active
+(well, a lot more active) in collecting and organizing "family
+stuff".
 
 
 ## Some (more) of the stuff I have {#some--more--of-the-stuff-i-have}
@@ -34,8 +37,8 @@ has moved exactly 3 times since it was made in the 1860s), two
 old oak kitchen tables (Grandma/"Esther Morrison"'s and Ernie's),
 our great grandmother's 1868 wind-up clock with which she "set up
 housekeeping", wall hangings, family bibles, hymnals, cookbooks,
-school books, farm records, the founding constitution Union
-Soldiers Aid Society (1863) of the Dry Run Church, tools
+school books, farm records, the founding constitution of the
+Union Soldiers Aid Society (1863) of the Dry Run Church, tools
 (Grandpa's scythe), and until recently we had the Civil War Diary
 of Elisha Morrison and his discharge papers.  Mike has the rifle
 Elisha Morrison picked up after the other one he had was struck
@@ -44,7 +47,7 @@ by a bullet saving his life, or none of us would be here today.
 On the Jones side I have all Dad the photography major's
 negatives, the Jones/Reeder/Williams family records, my
 grandmother's family photo album showing Dad's high school dance
-band practicing (lead by one of Nancy's former neighbors
+band practicing (led by one of Nancy's former neighbors
 ... small world) and pictures of the TV showing live atomic bomb
 test blasts and the coronation of Queen Elizabeth  (who is STILL
 on the throne, is she immortal?)
@@ -91,7 +94,7 @@ will finally wind up in the dump (Bryan, Daniel, Doug, Meg
 At one level **we** are stuff.   I think you and I may both have a
 date to join all the loved ones we know in the Frankfort cemetery
 in the next few years (every time I go there I look around and
-say "Telma/Bess/Mom/Dad/Gramdma...what are YOU doing here?".  As
+say "Thelma/Bess/Mom/Dad/Grandma...what are YOU doing here?".  As
 time goes on I "know" more and more people there.
 
 Until then, back to "Cousin Henry"

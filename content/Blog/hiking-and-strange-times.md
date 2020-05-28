@@ -2,8 +2,8 @@
 title = "Hiking, the Appalachian Trail, Health and Choices"
 author = ["George Jones"]
 publishDate = 2020-05-03
-lastmod = 2020-05-03T09:31:55-04:00
-tags = ["hiking", "AppalachianTrail", "ATC", "PATC", "Katahdin"]
+lastmod = 2020-05-25T21:09:54-04:00
+tags = ["hiking", "AppalachianTrail", "ATC", "PATC", "Katahdin", "outdoors"]
 draft = false
 +++
 
@@ -12,7 +12,7 @@ Through-hikes have been shut down this year, upsetting plans
 people have made for years. I'm headed out today to do maintenance
 today.  Not sure what I'll find. I will be good to be out.
 
-<a id="org64dce02"></a>
+<a id="orgac4805e"></a>
 
 {{< figure src="/ox-hugo/katahdin-abol.jpg" caption="Figure 1: Mt. Katahdin from Abol Bridge, 2018" >}}
 
@@ -64,6 +64,6 @@ trail-maintainer training, the parking lot at the trail-head was
 **packed**.  Not sure what I'll find today.  Crowds?  Empty Trails?
 A persistent through-hiker?  People make their own choices.
 
-<a id="org5b47ad9"></a>
+<a id="orga2a2826"></a>
 
 {{< figure src="/ox-hugo/on-katahdin.jpg" caption="Figure 2: me, on top of old smokey, 2018" >}}

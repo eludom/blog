@@ -2,7 +2,7 @@
 title = "HOWTO: Breaking and fixing DNS - Understanding modern DNS on Ubuntu."
 author = ["George Jones"]
 publishDate = 2020-05-10
-lastmod = 2020-05-10T16:16:13-04:00
+lastmod = 2020-05-27T08:02:46-04:00
 tags = ["DNS", "Ubuntu", "HOWTO", "Linux", "systemd"]
 draft = false
 +++
@@ -49,6 +49,18 @@ nameserver 9.9.9.9
 And it will work until NetworkManager chooses to overwrite the
 file.  Not sure if `sudo chmod 444 /etc/resolv.conf` be enough to
 keep NetworkManager from overwriting it.
+
+
+## You _can_ make `/etc/resolv.conf` immutable {#you-can-make-etc-resolv-dot-conf-immutable}
+
+If you _do_ edit `/etc/resolv.conf` you can make it immutable to
+prevent systemd from updating it:
+
+```text
+$ sudo chattr +i /etc/resolv.conf
+$ sudo rm /etc/resolv.conf
+rm: cannot remove '/etc/resolv.conf': Operation not permitted
+```
 
 
 ## Debugging a broken DNS {#debugging-a-broken-dns}
