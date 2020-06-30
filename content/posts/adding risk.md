@@ -1,8 +1,8 @@
 +++
-title = "Adding uncertainty in uncertain times"
+title = "Adding uncertainty in uncertain times            :life:work:startups:GTD"
 author = ["George Jones"]
 publishDate = 2020-06-29
-lastmod = 2020-06-29T12:01:53-04:00
+lastmod = 2020-06-30T07:43:31-04:00
 draft = false
 +++
 
