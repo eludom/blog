@@ -2,7 +2,7 @@
 title = "About George Jones"
 author = ["George Jones"]
 layout = "single"
-lastmod = 2020-04-18T19:55:21-04:00
+lastmod = 2020-08-08T15:20:39-04:00
 draft = false
 +++
 
