@@ -501,7 +501,6 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
      :EXPORT_HUGO_PUBLISHDATE: 2020-03-09:
      :END:
 
-
  "I'm passionate about..." I've always hated that phrase. Because I
  thought it was fake. I thought it was trendy. I've reflexively reacted
  against trendy things for decades. Pet Rocks, Disco, TED talks,
@@ -536,7 +535,6 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
      :EXPORT_FILE_NAME: steve
      :EXPORT_HUGO_PUBLISHDATE: <2020-04-30 Thu>
      :END:
-
 
  [[https://en.wikipedia.org/wiki/Steve_Wilhite][Steve Wilhite]] is the most prolific programmer I've ever known.  He's
  mostly remembered for creating [[https://en.wikipedia.org/wiki/gif][GIF]] but he spent 30 years writing piles
@@ -687,7 +685,6 @@ the outcome would have been better if he had...
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-26
      :END:
 
-
  # Tim, Jono, Leigh
 
  In my never ending quest for synthesis, this post combines thoughts on
@@ -778,6 +775,7 @@ the outcome would have been better if he had...
      :EXPORT_FILE_NAME: 2020-06-30
      :EXPORT_HUGO_PUBLISHDATE: 2020-06-30
      :END:
+
      So, when life turns uncertain you have two choices.   Cling to
      things that seem to add stability and certainty, i.e. try to "stay
      safe", or embrace the uncertainty, live now, carpe diem, and do
@@ -955,6 +953,7 @@ the outcome would have been better if he had...
      :EXPORT_FILE_NAME: digital-chimney-smoke
      :EXPORT_HUGO_PUBLISHDATE: 2020-04-27
      :END:
+
      Daniel Boone is quoted (via Hubert Humphrey) as saying
 
      #+begin_quote
@@ -996,7 +995,6 @@ the outcome would have been better if he had...
      :EXPORT_FILE_NAME: 2020-05-04
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-04
      :END:
-
  On the occasion of the ancient Roman Festival /Bella Stellaria/, I
  wish you
 
@@ -1016,7 +1014,6 @@ the outcome would have been better if he had...
      :EXPORT_FILE_NAME: 2020-05-05
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-05
      :END:
-
  Getting started in life is harder right now.  I have two college age
  sons who both just finished up their year with online classes, and
  both are home now. In "normal" times they would be working summer jobs or participating
@@ -1045,7 +1042,6 @@ the outcome would have been better if he had...
      :EXPORT_FILE_NAME: 2020-05-06
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-06
      :END:
-
      There are some amazing online singing events happening now around
      the world: Denmark, Australia, Nashville, etc.  I want to highlight
      a couple examples of that to add brightness to these dark times.
@@ -1157,7 +1153,6 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: 2020-05-07
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-07
      :END:
-
      And to get away from it all tonight we played (well, continued) a game
      of Civilization: Famine, Strife, Civil War, Flood,
      Earthquakes, Volcanoes, but strangely no epidemic (yet).
@@ -1178,7 +1173,6 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: the-stuff-of-time
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-11
      :END:
-
  #+begin_quote
  The world has changed.
  I see it in the water.
@@ -1262,7 +1256,6 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: the-stuff-of-time
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-21
      :END:
-
  #+CAPTION: Things on our mantle
  #+attr_html: :width 400px
  #+attr_latex: :width 400px
@@ -1387,7 +1380,6 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: opening-day-2020
      :EXPORT_HUGO_PUBLISHDATE: 2020-06-07
      :END:
-
  # To: Ken Gilbert
 
  # hook for twitter, etc.
@@ -1597,6 +1589,7 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: who-says-so
      :EXPORT_HUGO_PUBLISHDATE: 2020-08-08
      :END:
+
      I recently picked up reader of samples of important ancient texts
      that I've had for a LONG time and read excerpts from Socrates
      Apology.  Short version:
@@ -1636,6 +1629,7 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: platos-cave
      :EXPORT_HUGO_PUBLISHDATE: 2020-08-08
      :END:
+
 
  You learn things when you read original sources for yourself.
 
@@ -1699,7 +1693,6 @@ She has attended many of the performances.
      :EXPORT_HUGO_PUBLISHDATE: 2020-08-11
      :END:
 
- test
       This is a brain dump on something like 40 years experience with
       "social media" of various forms.
 
@@ -1937,7 +1930,6 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: hiking-and-strange-times
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-03
      :END:
-
      I've section-hiked over 1000 miles on the Appalachian Trail.
      Through-hikes have been shut down this year, upsetting plans
      people have made for years. I'm headed out today to do maintenance
@@ -2005,7 +1997,6 @@ She has attended many of the performances.
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-14
      :END:
 
-
      I've got some extreme social distancing going on this weekend.  It
      requires gear.  Might involve a mountain or two.  Loaded up the
      pack and put it on.  Feels good!  There may be rain, but
@@ -2031,7 +2022,6 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: 2020-05-17
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-17
      :END:
-
      May 15-17, 2020 Son Bryan ("Music Man"), Jason Boyle ("Alaska")
      and I ("Curious George") hiked 30 miles on the Tuscarora trail.
 
@@ -2054,7 +2044,6 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: get-wet
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-25
      :END:
-
 
  # Primary Audience: Bryan, Sam, Preston
  # Secondary Audience: Family
@@ -2168,7 +2157,6 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: poetry-in-the-trash
      :EXPORT_HUGO_PUBLISHDATE: <2020-04-29 Wed>
      :END:
-
  A few years ago, my mother went through the effects of her cousin
  after she died.  It turns out Thelma Jane wrote poetry.  Nobody knew.
  It wound up in the trash.
@@ -2248,7 +2236,6 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: 2020-05-08
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-08
      :END:
-
 ***** Experiences after 9 days of blogging
 
    About 3 weeks ago I decided to start blogging.  For various still
@@ -2310,7 +2297,6 @@ She has attended many of the performances.
      :EXPORT_FILE_NAME: 2020-06-09
      :EXPORT_HUGO_PUBLISHDATE: 2020-06-09
      :END:
-
      So my attempt at "just blogging something" for 100 straight days as
      part of #100DaysToOffload https://100daystooffload.com/ has
      stalled, but that's OK.
@@ -2629,7 +2615,6 @@ brave     28951             gmj   43u  IPv4 250584      0t0  UDP 224.0.0.251:mdn
      :EXPORT_FILE_NAME: dns-today
      :EXPORT_HUGO_PUBLISHDATE: 2020-05-09
      :END:
-
 ***** How things used to work
       In 1987 the staff at the Ohio State University Computer and
       Information Science were periodically logging in to SRI-NIC via
@@ -2744,6 +2729,7 @@ brave     28951             gmj   43u  IPv4 250584      0t0  UDP 224.0.0.251:mdn
  #     :EXPORT_HUGO_PUBLISHDATE: 2020-04-18:
  #     :END:
 
+
     Perspectives on the growth of "online" communities/my experience
 
     - Adm3a terminals
@@ -2795,7 +2781,6 @@ brave     28951             gmj   43u  IPv4 250584      0t0  UDP 224.0.0.251:mdn
    :EXPORT_FILE_NAME: _index
    :EXPORT_HUGO_LAYOUT: single
    :END:
-
 Curious Musings is a place I put up thoughts on life, family, work,
 security, the outdoors, etc.
 
