@@ -2750,6 +2750,7 @@ Day 10 of #100DaysToOffload.  Delayed a day due to DNS problems :-)
      https://140.82.113.4/PDP-10/sri-nic
      #+end_example
 
+*** TODO DoH - understanding, experimenting, wireshark, personal options
 
 ** Drafts
 *** TODO Keeping my blood pressure down, keeping politics personal
