@@ -500,7 +500,15 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
     "MyComputer".
 
 
+*** TODO TLS 1.3, China blocking
+    - See Paul Vixie Tweet 2020-08-09 + my android brave reading
+      bookmarks (cloudflare blog, etc.)
+
 ** Work
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: Blog
+    :END:
+
 *** PUBLISHED "​I'm passionate about..."​                 :Latin:humanity:work:
 :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
@@ -1710,6 +1718,245 @@ State.  --- Plato, Republic, 8.vii
 Where there is no vision, the people perish
 --- Proverbs 29:8, KJV
 #+end_quote
+
+*** TODO Walled Gardens
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: walled-gardens
+    :EXPORT_HUGO_PUBLISHDATE: 2020-08-11
+    :END:
+
+test
+     This is a brain dump on something like 40 years experience with
+     "social media" of various forms.
+
+     Dial-up BBSs, Fidonet, Usenet, IRC, CompuServe, AOL, Slashdot,
+     Sourceforge, blogspot, Facebook, Jabber, Google+, Twitter,
+     LinkedIn, Mastadon "...we didn't start the fire..."  OK, maybe we
+     did.
+
+     I hope this is useful, or at least interesting.  It may wind up
+     just being a mix of introspection, hubris or narcissism, it may
+     be part of working up the nerve to quit Twitter as I quit
+     Facebook in 2016, maybe I'll even work up the nerve to go cold
+     turkey as [[https://musings.tychi.me/so-long-and-thanks-for-all-the-fish][tychi]] is doing.
+
+**** Who To/why write                                              :noexport:
+
+     This blog post is in reaction to "TyChi"'s rant about quitting
+     social media:
+     share a lot of his concerns/perspectives, and I am again looking
+     at ways to "detoxify" my online life.
+
+     As someone who has had a small part in creating the online-world
+     we live in and who (to a much greater extent) has tried to ride
+     the digital wave and not get drowned in the process, I tought I
+     might refelect on the journey and try to map out my next
+     steps.
+
+
+**** The Past                                                      :noexport:
+     - Telegraphs, Phones, Blind Kids and Steve Jobs :: I pick up the
+       story where I have personal history.  If you want a fascinating
+       story of technology and hacking culture from telegraphs to
+       somewhere after Steve Jobs and Woz were going door to door in
+       the Berkeley dorms selling little black boxes, read Explode The
+       Phone:
+       https://www.amazon.com/Exploding-Phone-Phil-Lapsley/dp/0802122280
+       I've met "Captin Crunch". What a character.  Hackers everywhere
+       owe him homage.
+
+     - Dialup BBS Systems :: once upon a time it was illegal to
+       connect modems (or anything else but AT&T equipment) to the
+       phone network.  And that was, basically, the only network.
+       Some time after that changed, "Dialup Bullitin Board Systems
+       (BBS) arrived.  You could dial up and connect to often the only
+       line (the home phone in most cases), leave messages, read
+       messages, etc.  Communities formed this way.
+
+     - TOPS-20 Bulletin Boards :: I'm not sure, but my first exposure
+       to bulletin boards and email ("social media") was probably on
+       the Ohio State DecSystem-20.  I had friends who worked there,
+       and we later went to school there and thus had a "legitimate"
+       accounts.  The world and software I remember is describe well
+       here http://www.columbia.edu/kermit/dec20.html.  Kermit (the
+       project that the authors of this article ran) was a very
+       important piece of software for 10-15 years, a workhorse of
+       moving files across dial-up phone connections.
+
+     - Usenet News :: Social media c.a. 1980.  [[https://en.wikipedia.org/wiki/Usenet][Usenet]] was (is) a
+       system that moves messages (posts) between connected computers.
+       In the beginning this was dial-up lines.  Mostly between
+       universities and research institutions and, of course,
+       AT&T/Bell Labs etc.  For a while the USENET "backbone" (the
+       long haul links, the well connected site) were run by an
+       unofficial cabal internally AT&T (because they had free access
+       to "long lines") and traffic was farmed out to local sites
+       (universities) for further distribution.  It was the
+       quintessential "old boy" network.  To connect, you had to know
+       someone and convince them to "give you a feed".  I was on
+       sometime from the mid-80s on.
+
+     - I appear in the geologic records :: I make what may be my first
+       appearance in the public record on the on the security-digest
+       mailing list here
+       https://securitydigest.org/tcp-ip/archive/1988/08#000129 (not
+       sure why proxy arp source was a security issue ?), but the
+       content is typical of the day ... software floating across the
+       net (comp.sources.*, etc.) being grabbed (by me) and thrown up
+       on an FTP server 'case that was the cats-meow in those days for
+       software distribution.  Check out the variety of email
+       addressing mechanisms, one familiar, two unfamiliar today which
+       expose topology in the email address.
+       =he%idt.unit.no@relay.cs.net= =george@cis.ohio-state.edu=
+       =!osu-cis!george= Back then, you often had to know how systems
+       connected (pathalias anyone ?)  There was a brief period (Hi,
+       Karl !) where I was running the official GNU mailing <-> Usenet
+       News gateway.  B-News, C-News, NNTP, NNRP, and honey-danbur,
+       Oh-My.
+
+     - Preserving history :: At one point it was rumored that [[https://en.wikipedia.org/wiki/Henry_Spencer][Henry
+       Spencer]] (he of regular expression library fame a.k.a
+       =decvax!utzoo!henry@ucbvax.Berkeley.EDU= ) had a copy of "every
+       Usenet message ever" on tape and there was an effort to collect
+       and archive them...I think Google picked up on that effort
+       later.  Later the "way back" machine (archive.org) came online
+       to try to do similar things for the web.  The ephemeral nature
+       of our digital presence and the importance of preserving it was
+       apparent (to some) early on.  But I'm pretty sure most
+       CompuServe Forum messages are gone forever (anybody got [[https://en.wikipedia.org/wiki/CompuServe#TapCIS][TapCIS]]
+       arcives lying around ?)
+
+
+- My VAX/VMS Fortran BBS system
+  + recursion using common blocks
+- GNU mailing lists, news<->mail gateways
+- CompusServe, the original walled garding
+     + forums, the Amaga Forum, The UNIX forum...
+       o sysop, free account -> karl hakcing things
+     + news, mail opening them up
+     + the web changed the economics
+       o server, client, network
+       o advertising
+         - Charlie McCall said they talked about it
+   - The rise of the web
+     + AOL continued to rise, walled gardin
+     + open, then
+     + cookies, lock-in, paywalls
+     + Now the goolges, facebooks and twitters of the world own you
+     + Just try to link out from a linked-in article
+   - the rise of social media
+     + the graveyard of social media
+       CompuServe, AOL/AIM, MySpace, GooglePlus
+     + the talking wounded of social media
+       SourceForge, SlashDot, BlogSpot, Wordpress, Yahoo, Jabber
+     + the current rage in social media (those about to die...)
+       Facebook, Linkedin, Twitter
+
+**** The 404 Hall Of Fame                                          :noexport:
+
+     And before we leave the past completely, let's take a moment to
+     remember the dearly departed.  Here are some URLs I've known and
+     loved.  See where they lead now (and we're not even going to talk
+     about AOL Keywords....)
+
+     Many of these URLs still resolve to SOMETHING, because, hey, who
+     doesn't check in at myspace.com once in a while, and eyeballs are
+     eyeballs...
+
+     - WOW from CompuServe :: This was going to be the AOL Killer:
+       https://archive.org/details/WOW_from_CompuServe_Online_Made_Easy_META-CS1750A_Version_1.1_1996
+
+     -  Lycos.com :: the search engine that "spider"ed the web (get
+       it?) https://web.archive.org/web/19961022175214/http://www.lycos.com/
+
+     - http://www.compuserve.com :: Still there, but looking back
+       https://web.archive.org/web/19990424095338/http://www.compuserve.com/gateway/default.asp
+       Once upon a tiem I was hostmaster@compuserve.com (I ran the
+       Solaris server that hosted the ?Apache? server ... might have
+       been before Apache ... [[https://en.wikipedia.org/wiki/NCSA_HTTPd][NCSA httpd]] ? ... [[https://en.wikipedia.org/wiki/CERN_httpd][httpd]] ?
+
+     - www.uu.net :: https://www.uu.net I worked there.  Routed over
+       1/2 the Internet.  Now Verizon Business network. Not the same
+       company that use to run billing on Rick Adams' Awk scripts...
+
+     - WorldCom :: Bernie went to jail.  I left the company. The
+       number of productive companies that got sucked into that black
+       hole and destroyed was, well, part of a crime.  Value was was
+       destroyed. Dot Bomb. ... http://www.worldcom.com
+
+     - myspace.com :: Something still there, but not my few web pages
+       ... http://myspace.com
+
+     - plus.google.com :: Gone, Gone, Gone. It was kind of like
+       facebook-for-geeks. Mostly geeks used it. Not enough eyeballs.
+       Facebook won.  G+ got Killed By Google... :
+       https://plus.google.com
+
+     - Killed By Google :: And Google is in class by itself, with a
+       whole web site dedicated just to tracking the things it created
+       and killed (and is still killing): https://killedbygoogle.com/
+
+     - I guess the moral of the story is if you expect Twitter to be a
+       system of permanent record for things subject to the
+       [[https://en.wikipedia.org/wiki/Presidential_Records_Act][Presidentail Records Act]], think again.
+
+     - Microfilm the Internet !!! :: And in the honorable mention
+       department, my father, Robert B Jones, spent 25 years fighting
+       the loss of ephemeral information by running the Microfilm
+       department at the Ohio Historical Society.  Microfilm lasts
+       hundreds of years.  He preserved 19th century newspapers with
+       the only extant account of Aunt Myrtle's visitors from
+       Galopolis and the price of corn at the grain elevator in
+       Mechanicsburg.  He even has a publication reference on Amazon
+       https://www.amazon.com/Microfilm-Preparation-techniques-procedures-Historical/dp/B00071A5DE
+
+**** The Present                                                   :noexport:
+
+
+- I quite facebook in 2016, too political
+    + lost friends
+  - thinking about quitting twitter now
+    + but my main news source, professional feeds
+    + short attention span, snipits, judmentalism, tribal
+    + push model, not pull
+  - addiction, "have to check it" constantly
+    + keep phone off as long as possible
+    + shortens attention span
+
+Here an app, there an app, evereywhere an app, app.  Old McDonald had
+an app. E-I-E-I-O.   Link to Narseo's work on privacy.
+
+And when you go to yahoo.com using a text based browser today, the
+first and only thing you see is....
+#+begin_quote
+Your data, your experience
+
+Yahoo is part of Verizon Media. Click 'I agree' to *allow Verizon Media
+and our partners* to use cookies and similar technologies *to access
+your device and use your data (including location)* to understand your
+interests, and provide and measure personalised ads. We will also
+*provide you with personalised ads* on partner products. Learn more
+about how we use your data
+#+end_quote
+
+No.  Just no.
+
+**** The Future                                                    :noexport:
+  - What's next?
+    + text based browsing?
+    + vpns?
+    + just going offline?
+    + returning to paper, journaling, letters
+    + set up a BBS?
+      o way more options than the early 80s (dialup)
+    + RSS feeds?
+    + run my own server?
+      o mastadon?
+      o discord?
+    + a mix?
+
+**** Conclusions                                                   :noexport:
 
 ** Outdoors
 *** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:outdoors:
