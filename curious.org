@@ -2820,8 +2820,8 @@ Neighbors dogs bark.  I don't like it.   That's their choice.
    software developer, Internet Standards author (RFC3871), security
    researcher, conference chair (Flocon 2013, 2014), security
    analytics developer and data scientist.  He has been employed
-   variously by CompuServe, UUNET, MITRE, Carnegie-Mellon/CERT, Amazon
-   and Redjack.  See  https://www.linkedin.com/in/georgemjones/
+   variously by CompuServe, UUNET, MITRE, Carnegie-Mellon/CERT, Amazon,
+   Redjack and Expanse.  See  https://www.linkedin.com/in/georgemjones/
 
    He can be reached via email as gmj at pobox dot com
 
