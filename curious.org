@@ -2834,9 +2834,13 @@ Neighbors dogs bark.  I don't like it.   That's their choice.
    :END:
 
 Curious Musings is a place I put up thoughts on life, family, work,
-security, the outdoors, etc.   As someone who started work at
-CompuServe, the original walled garden, I am sensitive to my content
-remaining free and available.
+security, the outdoors, etc.
+
+As someone who started work at CompuServe, the original walled garden,
+I am sensitive to my content remaining free and available.  The
+content here is made available under the terms of the [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0]]
+license: you can use it, you can change it, you can sell it, just say
+where it came from and what you changed.
 
 Curious Musisings is created with [[https://gohugo.io/][Hugo Go]], a free open-source site
 generator. It is designed and authored on a free Linux OS using [[https://www.gnu.org/software/emacs/][Emacs]]
