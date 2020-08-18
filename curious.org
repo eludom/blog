@@ -17,101 +17,6 @@
     :END:
 
 *** Geek Stuff                                                        :@geek:
-**** PUBLISHED "​Reproducible security analytics?"   :cybersecurity:org:emacs:
-     :PROPERTIES:
-     :EXPORT_FILE_NAME: reproducable-security-analytics
-     :EXPORT_HUGO_PUBLISHDATE: 2020-02-25:
-     :END:
-
-
- I'm looking for repositories of "reproducible security analytics".
-
- As an addict of [[https://www.gnu.org/software/emacs/][Emacs]] [[https://orgmode.org/][Org mode]], one of the papers that got me started
- thinking along these lines was [[https://www.jstatsoft.org/article/view/v046i03/v46i03.pdf][A Multi-Language Computing Environment
- for Literate Programming and Reproducible Research]]. I realize for most
- of the rest of the world this vision is now realized more in things
- like Jupyter and Zeppelin notebooks. Your loss :-)
-
- One thing that looks promising is [[https://car.mitre.org/][mitre's cyber analytics
- repository]]. Another is [[https://github.com/hunters-forge/mordor][Hunters Forge/Mordor]] I'd be interested in
- pointers to more.
-
-
-**** PUBLISHED Bear attacks, no-win situations and cybersecurity :cybersecurity:bears:
-     :PROPERTIES:
-     :EXPORT_FILE_NAME: cybersecurity-and-bears
-     :EXPORT_HUGO_PUBLISHDATE: 2020-03-19:
-     :END:
-
- I spend a good amount of time hiking in Shenandoah National Park and
- surrounding areas. I've seen quite a few #bears and I've followed one
- down the trail. I've been growled at by a mother bear when I
- unknowingly came between her and her cubs. This is going somewhere
- related to #cybersecurity. I promise.
-
- You can't outrun a bear. Climbing a tree won't help. If a bear
- actually decides to attack you, the odds are not in your favor, but
- fortunately they almost never attack. The old joke goes "I don't have
- to outrun the bear, I just have to outrun you" because, presumably the
- bear will catch your slower partner, stop, and not bother you when you
- both decide to run for it in violation of bear encounter best
- practices.
-
- This hints at any number of cybersecurity principals:
-
-   - Know your threat model.
-   - Know and follow best practices.
-   - Don't let fear (or adrenaline) dictate your response.
-   - Know and practice situationally appropriate responses (Grizzlies:
-     if attacked play dead. Black Bear: if attacked fight for your
-     life)
-   - Be prepared (bear spray, first aid kit)
-   - Practice deterrence (make noise, travel in groups)
-   - Prevention costs less than recovery. By far.
-   - And, of course, make sure the other guy is an easier target. Run faster if you run. Apply patches, have good backups (Hello, ransomware !), have layers of defense, decoys, monitoring, DLP, practice threat hunting, etc.
-      For a decade or so, I've been reflecting on the fact that
-     defensive cybersecurity is a loosing igame. The red team
-     (attackers) always win. I don't like no-win situations.
-
- There's a lesson here:
-
-     - Don't feed the bears :: They become habituated to humans, loose
-          their inhibition, become a nuisance and sometimes have to be
-          relocated or killed. Nobody wins.
-
- OK, not that lesson. Lessons like:
-
-     - Follow best practices :: Following best practices CAN help avoid
-          problems. Not following best practices WILL invite problems.
-     - Have an incident response plan :: If you see a bad thing
-          happening, if it is coming straight for you, what do you do?
-     - Line up the right resources ::  Do you know how to triage
-          wounds? Do you have a cell phone? Are you in range of cell
-          towers? If not, do you have a SPOT to call for help? Where is
-          the nearest hospital? Are you prepared to shelter in place if
-          need be?
-     - It's not just you :: Feeding the bears or failing to store food
-          properly might result in perfectly good backcountry shelters
-          being torn down. And here we are, 20 or so years after it
-          became clear that that allowing spoofed packets out of your
-          network enables #DDoS #attacks and we *still* do not have
-          widespread adoption of reverse path forwarding
-          checks. *Please* stop spoofed packets at your border !
-
-
- So it maybe true that few people win in the face of an actual attack,
- but, it turns out, there are still good reasons to play the game.
-
-
-***** For Further Reading
-
-     - Numbers of bear attacks :: In North America, only 2-5 people are killed annually by bears: https://www.thealaskalife.com/outdoors/bear-attacks-statistic/ vs (Worldwide) 10 killed by sharks, 50,000 by snakes and 725,000 by mosquitos. https://www.statista.com/chart/2203/the-worlds-deadliest-animals/
-     - U.S. Forrest Service :: "Be bear aware" https://www.fs.usda.gov/visit/know-before-you-go/bears
-     - Internet safety 101 :: "Internet safety 101: 15 tips to keep your kids and family safe online" https://us.norton.com/internetsecurity-kids-safety-stop-stressing-10-internet-safety-rules-to-help-keep-your-family-safe-online.html. Sure they want to sell you antivirus software, but this is generally good advice.
-     - Ultimate Guide to Cybersecurity :: "Your Ultimate Guide to Cybersecurity: At Home, at Work, and on the Go." https://www.ibtimes.com/your-ultimate-guide-cybersecurity-home-work-go-2818655. A little more in depth.
-     - CIS Critical Controls :: "The Center for Internet Security (CIS) Critical Security Controls" - https://www.cisecurity.org/controls/cis-controls-implementation-groups/ More in depth. For enterprises.
-
-
 **** PUBLISHED Fixing GNU bash associative array insert speed :programming:gnu:linux:
      :PROPERTIES:
      :EXPORT_FILE_NAME: 20200418
@@ -228,7 +133,6 @@ hash_search (string, table, flags)
 
 ***** Footnotes
 [fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
-
 
 
 **** WIP HOWTO: Using Pi-hole DNS to block ads.  The struggle continues... :DNS:privacy:networking:HOWTO:
@@ -446,7 +350,6 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
  #      http://192.168.86.230/admin/index.php
 
 
-
 **** WIP "My Computer ?"         :computers:windows:apple:cloud:ubuntu:linux:
      :PROPERTIES:
      :EXPORT_FILE_NAME: my-computer
@@ -487,7 +390,6 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
      (for the editor), octo (8 processors), mel (for "real
      programmers").  I think when I reinstall this time, I'll call it
      "MyComputer".
-
 
 **** PUBLISHED Publishing a blog on Github with Org and Hugo :blogging:org:emacs:HOWTO:
      :PROPERTIES:
@@ -564,7 +466,6 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
    - Twitter cards partials for Hugo :: https://gohugohq.com/partials/twitter-cards-partials-for-hugo/
    - Ttitter card, ox-hugo discussion :: https://discourse.gohugo.io/t/solved-help-with-twitter-card-image/14067
    - about hugo partials :: https://gohugo.io/templates/partials/
-
 
 ***** How to publish: files, settings, process
       And, finally the gory details of actually publishing.
@@ -689,12 +590,198 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
       tracking, ads, monetization, bloat and more.
 
 
-**** TODO TLS 1.3, China blocking
+*** Cybersecurity                                             :cybersecurity:
+**** PUBLISHED "​Reproducible security analytics?"   :org:emacs:
+     :PROPERTIES:
+     :EXPORT_FILE_NAME: reproducable-security-analytics
+     :EXPORT_HUGO_PUBLISHDATE: 2020-02-25:
+     :END:
+
+ I'm looking for repositories of "reproducible security analytics".
+
+ As an addict of [[https://www.gnu.org/software/emacs/][Emacs]] [[https://orgmode.org/][Org mode]], one of the papers that got me started
+ thinking along these lines was [[https://www.jstatsoft.org/article/view/v046i03/v46i03.pdf][A Multi-Language Computing Environment
+ for Literate Programming and Reproducible Research]]. I realize for most
+ of the rest of the world this vision is now realized more in things
+ like Jupyter and Zeppelin notebooks. Your loss :-)
+
+ One thing that looks promising is [[https://car.mitre.org/][mitre's cyber analytics
+ repository]]. Another is [[https://github.com/hunters-forge/mordor][Hunters Forge/Mordor]] I'd be interested in
+ pointers to more.
+
+**** PUBLISHED Bear attacks, no-win situations and cybersecurity :bears:
+     :PROPERTIES:
+     :EXPORT_FILE_NAME: cybersecurity-and-bears
+     :EXPORT_HUGO_PUBLISHDATE: 2020-03-19:
+     :END:
+
+     I spend a good amount of time hiking in Shenandoah National Park and
+     surrounding areas. I've seen quite a few #bears and I've followed one
+     down the trail. I've been growled at by a mother bear when I
+     unknowingly came between her and her cubs. This is going somewhere
+     related to #cybersecurity. I promise.
+
+     You can't outrun a bear. Climbing a tree won't help. If a bear
+     actually decides to attack you, the odds are not in your favor, but
+     fortunately they almost never attack. The old joke goes "I don't have
+     to outrun the bear, I just have to outrun you" because, presumably the
+     bear will catch your slower partner, stop, and not bother you when you
+     both decide to run for it in violation of bear encounter best
+     practices.
+
+     This hints at any number of cybersecurity principals:
+
+     - Know your threat model.
+     - Know and follow best practices.
+     - Don't let fear (or adrenaline) dictate your response.
+     - Know and practice situationally appropriate responses (Grizzlies:
+       if attacked play dead. Black Bear: if attacked fight for your
+       life)
+     - Be prepared (bear spray, first aid kit)
+     - Practice deterrence (make noise, travel in groups)
+     - Prevention costs less than recovery. By far.
+     - And, of course, make sure the other guy is an easier target. Run faster if you run. Apply patches, have good backups (Hello, ransomware !), have layers of defense, decoys, monitoring, DLP, practice threat hunting, etc.
+       For a decade or so, I've been reflecting on the fact that
+       defensive cybersecurity is a loosing igame. The red team
+       (attackers) always win. I don't like no-win situations.
+
+     There's a lesson here:
+
+     - Don't feed the bears :: They become habituated to humans, loose
+       their inhibition, become a nuisance and sometimes have to be
+       relocated or killed. Nobody wins.
+
+     OK, not that lesson. Lessons like:
+
+     - Follow best practices :: Following best practices CAN help avoid
+       problems. Not following best practices WILL invite problems.
+     - Have an incident response plan :: If you see a bad thing
+       happening, if it is coming straight for you, what do you do?
+     - Line up the right resources ::  Do you know how to triage
+       wounds? Do you have a cell phone? Are you in range of cell
+       towers? If not, do you have a SPOT to call for help? Where is
+       the nearest hospital? Are you prepared to shelter in place if
+       need be?
+     - It's not just you :: Feeding the bears or failing to store food
+       properly might result in perfectly good backcountry shelters
+       being torn down. And here we are, 20 or so years after it
+       became clear that that allowing spoofed packets out of your
+       network enables #DDoS #attacks and we *still* do not have
+       widespread adoption of reverse path forwarding
+       checks. *Please* stop spoofed packets at your border !
+
+
+     So it maybe true that few people win in the face of an actual attack,
+     but, it turns out, there are still good reasons to play the game.
+
+
+***** For Further Reading
+
+      - Numbers of bear attacks :: In North America, only 2-5 people are killed annually by bears: https://www.thealaskalife.com/outdoors/bear-attacks-statistic/ vs (Worldwide) 10 killed by sharks, 50,000 by snakes and 725,000 by mosquitos. https://www.statista.com/chart/2203/the-worlds-deadliest-animals/
+      - U.S. Forrest Service :: "Be bear aware" https://www.fs.usda.gov/visit/know-before-you-go/bears
+      - Internet safety 101 :: "Internet safety 101: 15 tips to keep your kids and family safe online" https://us.norton.com/internetsecurity-kids-safety-stop-stressing-10-internet-safety-rules-to-help-keep-your-family-safe-online.html. Sure they want to sell you antivirus software, but this is generally good advice.
+      - Ultimate Guide to Cybersecurity :: "Your Ultimate Guide to Cybersecurity: At Home, at Work, and on the Go." https://www.ibtimes.com/your-ultimate-guide-cybersecurity-home-work-go-2818655. A little more in depth.
+      - CIS Critical Controls :: "The Center for Internet Security (CIS) Critical Security Controls" - https://www.cisecurity.org/controls/cis-controls-implementation-groups/ More in depth. For enterprises.
+
+**** PUBLISHED Thoughts on the OODA loop and falling out of a canoe :outdoors:SOC:OODA:
+     :PROPERTIES:
+     :EXPORT_FILE_NAME: ooda-loop-and-getting-wet
+     :EXPORT_HUGO_PUBLISHDATE: 2020-05-26
+     :END:
+
+ # Tim, Jono, Leigh
+
+ In my never ending quest for synthesis, this post combines thoughts on
+ [[https://en.wikipedia.org/wiki/OODA_loop][the OODA loop]] and falling out of a canoe twice this weekend in rapids
+ on the Shenandoah river.  There is a connection.  Maybe.
+
+ If you want to see the full trip report, pictures, etc. go here [[https://eludom.github.io/blog/get-wet/][Things
+ that fall in the river get wet]].  If you're interested in how this relates to
+ the OODA loop or, better, if you have experience/thoughts on applying
+ the OODA loop to operational cybersecurity settings, read on (and
+ comment !)
+
+ #+CAPTION: On the river during calm between crisis events
+ #+attr_html: :width 400px
+ #+attr_latex: :width 400px
+ #+ATTR_ODT: :scale 0.5
+ [[./images/paddling.jpg]]
+
+
+ #+hugo: more
+
+***** The OODA Loop
+
+ [[https://en.wikipedia.org/wiki/OODA_loop][The OODA loop]] is a concept cybersecurity has borrowed from the US Air Force.
+ "OODA" stands for "Observe, Orient, Decide, Act".
+ The OODA loop began as a very fighter-pilot-centric view of a problem
+ space.  I always think of Snoopy and the Red Barron.  Snoopy
+ *observes* the Red Barron at a distance, *orients* his Sopwith-Camel
+ towards the Red Barron, *decides* to fire, and then *acts* by firing-away.
+ Then repeat the OODA loop.  *Observe*: what was the effect of your
+ action (the Red Barron went down in flames, or you missed and now he's on your
+ tail)...
+
+***** The OODA Loop and falling out of a canoe
+ The OODA loop parallels my decision making process in the rapids this
+ weekend.  In one of our two crisis events I *observed* the other
+ canoe flip in the rapids ahead.  I *oriented* my canoe towards shore.
+ I *decided* to grab a tree root to buy time to sit and contemplate
+ options.  I *acted* by grabbing the tree root.  We flipped due to the
+ strong current.
+ REPEAT.
+ I *observed* that we were in the water 10 or 20 yards (9 to 18 meters)
+ from the start
+ of the rapids.  I *oriented* myself towards shore.  I *decided* to
+ swim to shore at all costs (loosing the canoe and all our gear) rather
+ than float the rapids in life jackets.  I *acted* by swimming to shore.
+ REPEAT.
+ I *observed* that we were safe on shore without our boat, gear or
+ friends.  I *oriented* myself downstream.  I *decided* to walk in
+ search of boat, gear and friends.  I *acted* by walking...
+
+***** Where does the OODA loop work well?
+
+ The OODA loop seems to be a good model for rapidly changing situations
+ where the personal stakes to the actor are high, the actor is
+ receiving relevant information in a timely fashion and has the ability
+ to decide on appropriate action and execute in a very short
+ timescale.  There were elements of this in Bill Cheswick's classic [[https://www.cheswick.com/ches/papers/berferd.pdf][An
+ Evening with Berferd]] and Cliff Stoll's [[https://en.wikipedia.org/wiki/The_Cuckoo%27s_Egg][The Cuckoo's Egg]], but I am
+ wondering how many of these conditions apply, to, say the modern SOC?
+
+
+***** Does the OODA loop work in SOCs?
+
+ How do the characteristics of crisis situations such has that
+ described above or a fighter pilot in dogfight map to the modern SOC?
+ Does a SOC have a rapidly changing situation?  Probably.  Are there
+ personal stakes for the actor (analyst)?  It depends.  Is it just
+ "work my shift and go home after the hand-off"?  Are the actors
+ (analysts) receiving relevant information in a timely fashion?  Or are
+ they waiting for a weeks-long (months-long?) approval process for the
+ ingest of needed data, the provisioning of enough storage and compute
+ power to run the queries they need?  Are they empowered to take action
+ in a short timescale?  Or are there three levels of management
+ approval needed and reports to be written before any action can taken?
+ Can they take machines offline, implement blocks, etc?  Even if it
+ impacts production?  Can they observe, orient, decide and act, or is
+ it time to put your feet up, hope for the best and float through the
+ rapids?
+
+ Your thoughts?  Experiences?
+
+ Days 17 of #100DaysToOffload https://100daystooffload.com/
+
+**** TODO TLS 1.3, China blocking                     :infosec:
+     :PROPERTIES:
+     :EXPORT_FILE_NAME: blocking-tls-13
+     :EXPORT_HUGO_PUBLISHDATE: 2020-08-18
+     :END:
      - See Paul Vixie Tweet 2020-08-09 + my android brave reading
        bookmarks (cloudflare blog, etc.)
 
 *** Work                                                              :@work:
-
 **** PUBLISHED "​I'm passionate about..."​                :Latin:humanity:work:
      :PROPERTIES:
      :EXPORT_FILE_NAME: Im-passionate about
@@ -727,7 +814,6 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
  Go learn a useless language. Climb a mountain and enjoy the
  view. Spend time playing games with your family. Be human. Be
  passionate. Carpe diem.
-
 
 
 **** PUBLISHED Choosy Programmers Choose GIF :Wilhite:CompuServe:GIF:History:Computers:Emacs:Programming:
@@ -879,97 +965,6 @@ the outcome would have been better if he had...
 
 
 
-**** WIP  Thoughts on the OODA loop and falling out of a canoe :cybersecurity:outdoors:SOC:OODA:
-     :PROPERTIES:
-     :EXPORT_FILE_NAME: ooda-loop-and-getting-wet
-     :EXPORT_HUGO_PUBLISHDATE: 2020-05-26
-     :END:
-
- # Tim, Jono, Leigh
-
- In my never ending quest for synthesis, this post combines thoughts on
- [[https://en.wikipedia.org/wiki/OODA_loop][the OODA loop]] and falling out of a canoe twice this weekend in rapids
- on the Shenandoah river.  There is a connection.  Maybe.
-
- If you want to see the full trip report, pictures, etc. go here [[https://eludom.github.io/blog/get-wet/][Things
- that fall in the river get wet]].  If you're interested in how this relates to
- the OODA loop or, better, if you have experience/thoughts on applying
- the OODA loop to operational cybersecurity settings, read on (and
- comment !)
-
- #+CAPTION: On the river during calm between crisis events
- #+attr_html: :width 400px
- #+attr_latex: :width 400px
- #+ATTR_ODT: :scale 0.5
- [[./images/paddling.jpg]]
-
-
- #+hugo: more
-
-***** The OODA Loop
-
- [[https://en.wikipedia.org/wiki/OODA_loop][The OODA loop]] is a concept cybersecurity has borrowed from the US Air Force.
- "OODA" stands for "Observe, Orient, Decide, Act".
- The OODA loop began as a very fighter-pilot-centric view of a problem
- space.  I always think of Snoopy and the Red Barron.  Snoopy
- *observes* the Red Barron at a distance, *orients* his Sopwith-Camel
- towards the Red Barron, *decides* to fire, and then *acts* by firing-away.
- Then repeat the OODA loop.  *Observe*: what was the effect of your
- action (the Red Barron went down in flames, or you missed and now he's on your
- tail)...
-
-***** The OODA Loop and falling out of a canoe
- The OODA loop parallels my decision making process in the rapids this
- weekend.  In one of our two crisis events I *observed* the other
- canoe flip in the rapids ahead.  I *oriented* my canoe towards shore.
- I *decided* to grab a tree root to buy time to sit and contemplate
- options.  I *acted* by grabbing the tree root.  We flipped due to the
- strong current.
- REPEAT.
- I *observed* that we were in the water 10 or 20 yards (9 to 18 meters)
- from the start
- of the rapids.  I *oriented* myself towards shore.  I *decided* to
- swim to shore at all costs (loosing the canoe and all our gear) rather
- than float the rapids in life jackets.  I *acted* by swimming to shore.
- REPEAT.
- I *observed* that we were safe on shore without our boat, gear or
- friends.  I *oriented* myself downstream.  I *decided* to walk in
- search of boat, gear and friends.  I *acted* by walking...
-
-***** Where does the OODA loop work well?
-
- The OODA loop seems to be a good model for rapidly changing situations
- where the personal stakes to the actor are high, the actor is
- receiving relevant information in a timely fashion and has the ability
- to decide on appropriate action and execute in a very short
- timescale.  There were elements of this in Bill Cheswick's classic [[https://www.cheswick.com/ches/papers/berferd.pdf][An
- Evening with Berferd]] and Cliff Stoll's [[https://en.wikipedia.org/wiki/The_Cuckoo%27s_Egg][The Cuckoo's Egg]], but I am
- wondering how many of these conditions apply, to, say the modern SOC?
-
-
-***** Does the OODA loop work in SOCs?
-
- How do the characteristics of crisis situations such has that
- described above or a fighter pilot in dogfight map to the modern SOC?
- Does a SOC have a rapidly changing situation?  Probably.  Are there
- personal stakes for the actor (analyst)?  It depends.  Is it just
- "work my shift and go home after the hand-off"?  Are the actors
- (analysts) receiving relevant information in a timely fashion?  Or are
- they waiting for a weeks-long (months-long?) approval process for the
- ingest of needed data, the provisioning of enough storage and compute
- power to run the queries they need?  Are they empowered to take action
- in a short timescale?  Or are there three levels of management
- approval needed and reports to be written before any action can taken?
- Can they take machines offline, implement blocks, etc?  Even if it
- impacts production?  Can they observe, orient, decide and act, or is
- it time to put your feet up, hope for the best and float through the
- rapids?
-
- Your thoughts?  Experiences?
-
- Days 17 of #100DaysToOffload https://100daystooffload.com/
-
-
 **** PUBLISHED Adding uncertainty in uncertain times :life:work:startups:GTD:
      :PROPERTIES:
      :EXPORT_FILE_NAME: 2020-06-30
@@ -1043,6 +1038,7 @@ the outcome would have been better if he had...
        interface.
      - People.  There are always "a few of 'those' people", hard to
        work with, disrupt everything.   Stay away.
+
 
 *** Life                                                              :@life:
 **** PUBLISHED Some Happy Notes                     :music:family:life:piano:
@@ -2335,8 +2331,9 @@ She has attended many of the performances.
 **** PUBLISHED 40 years of walled gardens and open platforms: Part I :history:computing:social:USENET:Facebook:Twitter:
      :PROPERTIES:
      :EXPORT_FILE_NAME: walled-gardens-part-1
-     :EXPORT_HUGO_PUBLISHDATE: 2020-08-17
+     :EXPORT_HUGO_PUBLISHDATE: 2020-08-18
      :END:
+
       This the first in a series of articles where I do a brain dump
       pf something like 40 years experience with "social media" of
       various forms: Dial-up BBSs, Fidonet, Usenet, IRC, CompuServe,
