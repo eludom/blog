@@ -9,7 +9,7 @@
 :EXPORT_HUGO_SECTION:
 :END:
 * Content
-** Blog
+** Blog                                                               :@blog:
 :PROPERTIES:
     :EXPORT_HUGO_SECTION: Blog
     :EXPORT_FILE_NAME:
@@ -487,6 +487,206 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
      (for the editor), octo (8 processors), mel (for "real
      programmers").  I think when I reinstall this time, I'll call it
      "MyComputer".
+
+
+**** PUBLISHED Publishing a blog on Github with Org and Hugo :blogging:org:emacs:HOWTO:
+     :PROPERTIES:
+     :EXPORT_FILE_NAME: hugo-org-github
+     :EXPORT_HUGO_PUBLISHDATE: 2020-08-16
+     :END:
+
+     If you ever thought to yourself, "Gee, Emacs Org mode is a great
+     outlining and authoring tool, and I wish there were a powerful
+     and simple way use it to publish static websites on github or in
+     S3 buckets, I wish my blog could look as slick ast
+     https://eludom.github.io/" your're in luck, All but the
+     /simple/ part.  Here are some of the references I used.
+
+     Post 19 of #100DaysToOffload https://100daystooffload.com/
+     #+hugo: more
+
+***** Potential ox-hugo sites to copy
+****** The Art Of Not Asking Why
+       I started by looking for sample web sites to copy by perusing
+       the sites on this list
+       https://ox-hugo.scripter.co/doc/examples/
+
+       I found the following
+
+       - Site :: https://joshrollinswrites.com/
+       - Source :: https://github.com/jarss/TAONAW/tree/master
+
+      Josh has been great in answering the odd question.  His blog is
+      interesting too !!!  He accepts paypal...
+
+***** General Info on Hugo, Ox-Hugo and github pages
+       Then I did some reading (this is where the /not simple/ part
+       comes in) on the following sites
+
+      - hugo getting started :: https://gohugo.io/getting-started/quick-start/
+      - hosting a blog on github pages :: https://gohugo.io/hosting-and-deployment/hosting-on-github/
+      - github pages :: https://pages.github.com/
+      - HOWTO with Hugo and github pages :: https://medium.com/swlh/hosting-a-hugo-blog-on-github-pages-with-travis-ci-e74a1d686f10
+      - Org mode hugo exporter :: https://ox-hugo.scripter.co/
+        + I'll probably go here, but it seems like a bit much to start...
+        + Maybe learn the un-automated way first?
+      - About Hugo :: https://people.umass.edu/weikaichen/post/emacs-ox-hugo/
+      - About blogging with Hugo :: https://www.shanesveller.com/blog/2018/02/13/blogging-with-org-mode-and-ox-hugo/
+
+***** The results
+
+      You're looking at the results: https://eludom.github.io/, this
+      and other posts.  It took a couple deep dives to understand it,
+      but I think I more-or-less have it, and it is a very seamless
+      integration wtih Org-Mode, which for some of us closes the deal
+      even if there is pain involved
+
+***** Bonus: Twitter cards
+
+      And for bonus points I did reading on how to add twitter card
+      support to ox-hugo bog posts, e.g., so you can write your post
+      and have twitter or other sites (such as [[https://mastodon.social/about][Mastadon]]) that
+      understand the format pull the title, intro and possibly an
+      image to post in the web sit.
+
+****** Twitter Cards: HOWTO, the short story
+
+      Short version: if you drop =twitter_cards.html= in
+      =layouts/partials/= of your blog, you then just write your
+      blog, publish it, and past the URL into the https://cards-dev.twitter.com/validator
+      to make sure it's going to work when posted
+
+****** Twitter Cards: More than you ever wanted to know, the long story.
+
+   - Twitter Cards :: https://sproutsocial.com/insights/twitter-cards/
+   - Twitter cards in ox-hugo :: https://ox-hugo.scripter.co/doc/org-toc/
+   - Twitter cards in Hugo :: https://gohugo.io/templates/internal/
+   - Twitter cards partials for Hugo :: https://gohugohq.com/partials/twitter-cards-partials-for-hugo/
+   - Ttitter card, ox-hugo discussion :: https://discourse.gohugo.io/t/solved-help-with-twitter-card-image/14067
+   - about hugo partials :: https://gohugo.io/templates/partials/
+
+
+***** How to publish: files, settings, process
+      And, finally the gory details of actually publishing.
+
+      These are raw/WIP notes, but mostly right.  They actually
+      publish this blog.
+
+****** Important Files and Directories
+       - /home/gmj/public/github/ox-hugo-blogs/blog/curious.org :: The one file to rule them all
+         o This is the blog.  All articles live in this one file as
+         separate org trees.   This is the "source".
+       - HUGO_BASE_DIR=/home/gmj/public/github/ox-hugo-blogs/blog ::  The root of my blog
+         o This is the root/source for the blog.  It gets pushed to
+         git@github.com:eludom/blog.git (fetch)
+       - =${HUGO_BASE_DIR}/content/= :: Where local content (markdown) goes,
+         e.g. =content/posts/steve.md=
+       - =${HUGO_BASE_DIR}/docs/= :: Where the content to publish (html) goes,
+
+****** Settings and Organization
+******* Set EXPORT_HUGO_SECTION
+        In the .org file that is the blog, set EXPORT_HUGO_SECTION
+        to be "Blog" (or in whichever section you want posts to land,
+        default is "posts")
+
+        This is inherited lower level headers in org so
+
+        #+begin_example
+,** Blog
+   :PROPERTIES:
+   :EXPORT_HUGO_SECTION: Blog
+   :EXPORT_FILE_NAME:
+   :EXPORT_HUGO_PUBLISHDATE:
+   :END:
+      #+end_example
+
+      covers things in
+
+      #+begin_example
+,* Content
+,** Blog
+,*** Work Stuff
+,*** PUBLISHED Choosy Programmers Choose GIF :Wilhite:CompuServe:GIF:History:Computers:Emacs:Programming:
+       #+end_example
+
+****** Processes
+******* Drafting
+******** TODO start hugo in root directory
+         =hugo server -D=
+******** TODO Edit curious.org
+
+         Add an entry like this
+
+         #+begin_example
+,*** WIP Walled Gardens
+    :PROPERTIES:
+    :EXPORT_HUGO_SECTION: Blog
+    :EXPORT_FILE_NAME: walled-gardens
+    :EXPORT_HUGO_PUBLISHDATE: 2020-08-11
+    :END:
+
+    This is a brain dump on something like 40 years experience with
+    "social media" of various forms.
+       #+end_example
+
+       - EXPORT_HUGO_SECTION :: probably not needed if inherited from
+         higher level headline
+       - EXPORT_FILE_NAME :: The file name for this post.   Could be date.
+       - EXPORT_HUGO_PUBLISHDATE :: Set to the date this post should be
+         "live".  Can be used to schedule "future" posts.
+
+       - IMPORTANT :: Posts with a status of TODO are drafts.  WIP or
+         PUBLISHED are "live"
+
+       - EVEN MORE IMPORTANT :: /A valid Hugo post subtree is an Org
+         subtree that has the EXPORT_FILE_NAME property set./  ox-hugo
+         only exports valid subtrees to markdown.  You can draft to your
+         hearts content in subtrees that do not have EXPORT_FILE_NAME set
+         (and maybe export the subtree to text or html to view)
+
+******** TODO Save
+         With point in the newly created or updated subtree, save the file.
+******** TODO view at http://localhost:1313/
+         view the drafts http://localhost:1313/
+         View the result in your browser
+******* Publishing
+******** run hugo
+         In the HUGO_BASE_DIR run =hugo=.  The results will be written to
+         "doc/".
+******** push to github
+         - I host on github.io.
+         #+begin_example
+      cd doc
+      git add -A
+      git commit -m"name of new post"
+      git push
+         #+end_example
+******* make sure post is live, looks right
+        - Go to site: https://eludom.github.io/
+        - It often takes a minute or so after push for things to show up
+          on the web site.  You might have to refresh
+******* Add and push the source
+        #+begin_example
+        cd ..
+        git status .
+        git add [new files]
+        git commit -m"name of new post"
+        #+end_example
+
+        - be sure not to add docs/, as that is pushed a a subtree.
+        - possibly move the docs/ tree so that is not subsidiary to the root
+
+***** Conclusion
+      "I mean, why not just use blogger.com or Wordpress"?  Been
+      there done that.
+
+      Companies come and go.  I ought to know.  I started my career
+      working at CompuServe.  The forums where apparently finally
+      deleted on 2017.  History was lost.
+
+      There are issues of control.  There are the issues of using
+      tools I like, not the GUI or "download my app" du jour with
+      tracking, ads, monetization, bloat and more.
 
 
 **** TODO TLS 1.3, China blocking
@@ -1687,243 +1887,6 @@ She has attended many of the performances.
  --- Proverbs 29:8, KJV
  #+end_quote
 
-**** TODO Walled Gardens
-     :PROPERTIES:
-     :EXPORT_FILE_NAME: walled-gardens
-     :EXPORT_HUGO_PUBLISHDATE: 2020-08-11
-     :END:
-
-      This is a brain dump on something like 40 years experience with
-      "social media" of various forms.
-
-      Dial-up BBSs, Fidonet, Usenet, IRC, CompuServe, AOL, Slashdot,
-      Sourceforge, blogspot, Facebook, Jabber, Google+, Twitter,
-      LinkedIn, Mastadon "...we didn't start the fire..."  OK, maybe we
-      did.
-
-      I hope this is useful, or at least interesting.  It may wind up
-      just being a mix of introspection, hubris or narcissism, it may
-      be part of working up the nerve to quit Twitter as I quit
-      Facebook in 2016, maybe I'll even work up the nerve to go cold
-      turkey as [[https://musings.tychi.me/so-long-and-thanks-for-all-the-fish][tychi]] is doing.
-
-***** Who To/why write                                             :noexport:
-
-      This blog post is in reaction to "TyChi"'s rant about quitting
-      social media:
-      share a lot of his concerns/perspectives, and I am again looking
-      at ways to "detoxify" my online life.
-
-      As someone who has had a small part in creating the online-world
-      we live in and who (to a much greater extent) has tried to ride
-      the digital wave and not get drowned in the process, I tought I
-      might refelect on the journey and try to map out my next
-      steps.
-
-
-***** The Past                                                     :noexport:
-      - Telegraphs, Phones, Blind Kids and Steve Jobs :: I pick up the
-        story where I have personal history.  If you want a fascinating
-        story of technology and hacking culture from telegraphs to
-        somewhere after Steve Jobs and Woz were going door to door in
-        the Berkeley dorms selling little black boxes, read Explode The
-        Phone:
-        https://www.amazon.com/Exploding-Phone-Phil-Lapsley/dp/0802122280
-        I've met "Captin Crunch". What a character.  Hackers everywhere
-        owe him homage.
-
-      - Dialup BBS Systems :: once upon a time it was illegal to
-        connect modems (or anything else but AT&T equipment) to the
-        phone network.  And that was, basically, the only network.
-        Some time after that changed, "Dialup Bullitin Board Systems
-        (BBS) arrived.  You could dial up and connect to often the only
-        line (the home phone in most cases), leave messages, read
-        messages, etc.  Communities formed this way.
-
-      - TOPS-20 Bulletin Boards :: I'm not sure, but my first exposure
-        to bulletin boards and email ("social media") was probably on
-        the Ohio State DecSystem-20.  I had friends who worked there,
-        and we later went to school there and thus had a "legitimate"
-        accounts.  The world and software I remember is describe well
-        here http://www.columbia.edu/kermit/dec20.html.  Kermit (the
-        project that the authors of this article ran) was a very
-        important piece of software for 10-15 years, a workhorse of
-        moving files across dial-up phone connections.
-
-      - Usenet News :: Social media c.a. 1980.  [[https://en.wikipedia.org/wiki/Usenet][Usenet]] was (is) a
-        system that moves messages (posts) between connected computers.
-        In the beginning this was dial-up lines.  Mostly between
-        universities and research institutions and, of course,
-        AT&T/Bell Labs etc.  For a while the USENET "backbone" (the
-        long haul links, the well connected site) were run by an
-        unofficial cabal internally AT&T (because they had free access
-        to "long lines") and traffic was farmed out to local sites
-        (universities) for further distribution.  It was the
-        quintessential "old boy" network.  To connect, you had to know
-        someone and convince them to "give you a feed".  I was on
-        sometime from the mid-80s on.
-
-      - I appear in the geologic records :: I make what may be my first
-        appearance in the public record on the on the security-digest
-        mailing list here
-        https://securitydigest.org/tcp-ip/archive/1988/08#000129 (not
-        sure why proxy arp source was a security issue ?), but the
-        content is typical of the day ... software floating across the
-        net (comp.sources.*, etc.) being grabbed (by me) and thrown up
-        on an FTP server 'case that was the cats-meow in those days for
-        software distribution.  Check out the variety of email
-        addressing mechanisms, one familiar, two unfamiliar today which
-        expose topology in the email address.
-        =he%idt.unit.no@relay.cs.net= =george@cis.ohio-state.edu=
-        =!osu-cis!george= Back then, you often had to know how systems
-        connected (pathalias anyone ?)  There was a brief period (Hi,
-        Karl !) where I was running the official GNU mailing <-> Usenet
-        News gateway.  B-News, C-News, NNTP, NNRP, and honey-danbur,
-        Oh-My.
-
-      - Preserving history :: At one point it was rumored that [[https://en.wikipedia.org/wiki/Henry_Spencer][Henry
-        Spencer]] (he of regular expression library fame a.k.a
-        =decvax!utzoo!henry@ucbvax.Berkeley.EDU= ) had a copy of "every
-        Usenet message ever" on tape and there was an effort to collect
-        and archive them...I think Google picked up on that effort
-        later.  Later the "way back" machine (archive.org) came online
-        to try to do similar things for the web.  The ephemeral nature
-        of our digital presence and the importance of preserving it was
-        apparent (to some) early on.  But I'm pretty sure most
-        CompuServe Forum messages are gone forever (anybody got [[https://en.wikipedia.org/wiki/CompuServe#TapCIS][TapCIS]]
-        arcives lying around ?)
-
-
- - My VAX/VMS Fortran BBS system
-   + recursion using common blocks
- - GNU mailing lists, news<->mail gateways
- - CompusServe, the original walled garding
-      + forums, the Amaga Forum, The UNIX forum...
-        o sysop, free account -> karl hakcing things
-      + news, mail opening them up
-      + the web changed the economics
-        o server, client, network
-        o advertising
-          - Charlie McCall said they talked about it
-    - The rise of the web
-      + AOL continued to rise, walled gardin
-      + open, then
-      + cookies, lock-in, paywalls
-      + Now the goolges, facebooks and twitters of the world own you
-      + Just try to link out from a linked-in article
-    - the rise of social media
-      + the graveyard of social media
-        CompuServe, AOL/AIM, MySpace, GooglePlus
-      + the talking wounded of social media
-        SourceForge, SlashDot, BlogSpot, Wordpress, Yahoo, Jabber
-      + the current rage in social media (those about to die...)
-        Facebook, Linkedin, Twitter
-
-***** The 404 Hall Of Fame                                         :noexport:
-
-      And before we leave the past completely, let's take a moment to
-      remember the dearly departed.  Here are some URLs I've known and
-      loved.  See where they lead now (and we're not even going to talk
-      about AOL Keywords....)
-
-      Many of these URLs still resolve to SOMETHING, because, hey, who
-      doesn't check in at myspace.com once in a while, and eyeballs are
-      eyeballs...
-
-      - WOW from CompuServe :: This was going to be the AOL Killer:
-        https://archive.org/details/WOW_from_CompuServe_Online_Made_Easy_META-CS1750A_Version_1.1_1996
-
-      -  Lycos.com :: the search engine that "spider"ed the web (get
-        it?) https://web.archive.org/web/19961022175214/http://www.lycos.com/
-
-      - http://www.compuserve.com :: Still there, but looking back
-        https://web.archive.org/web/19990424095338/http://www.compuserve.com/gateway/default.asp
-        Once upon a tiem I was hostmaster@compuserve.com (I ran the
-        Solaris server that hosted the ?Apache? server ... might have
-        been before Apache ... [[https://en.wikipedia.org/wiki/NCSA_HTTPd][NCSA httpd]] ? ... [[https://en.wikipedia.org/wiki/CERN_httpd][httpd]] ?
-
-      - www.uu.net :: https://www.uu.net I worked there.  Routed over
-        1/2 the Internet.  Now Verizon Business network. Not the same
-        company that use to run billing on Rick Adams' Awk scripts...
-
-      - WorldCom :: Bernie went to jail.  I left the company. The
-        number of productive companies that got sucked into that black
-        hole and destroyed was, well, part of a crime.  Value was was
-        destroyed. Dot Bomb. ... http://www.worldcom.com
-
-      - myspace.com :: Something still there, but not my few web pages
-        ... http://myspace.com
-
-      - plus.google.com :: Gone, Gone, Gone. It was kind of like
-        facebook-for-geeks. Mostly geeks used it. Not enough eyeballs.
-        Facebook won.  G+ got Killed By Google... :
-        https://plus.google.com
-
-      - Killed By Google :: And Google is in class by itself, with a
-        whole web site dedicated just to tracking the things it created
-        and killed (and is still killing): https://killedbygoogle.com/
-
-      - I guess the moral of the story is if you expect Twitter to be a
-        system of permanent record for things subject to the
-        [[https://en.wikipedia.org/wiki/Presidential_Records_Act][Presidentail Records Act]], think again.
-
-      - Microfilm the Internet !!! :: And in the honorable mention
-        department, my father, Robert B Jones, spent 25 years fighting
-        the loss of ephemeral information by running the Microfilm
-        department at the Ohio Historical Society.  Microfilm lasts
-        hundreds of years.  He preserved 19th century newspapers with
-        the only extant account of Aunt Myrtle's visitors from
-        Galopolis and the price of corn at the grain elevator in
-        Mechanicsburg.  He even has a publication reference on Amazon
-        https://www.amazon.com/Microfilm-Preparation-techniques-procedures-Historical/dp/B00071A5DE
-
-***** The Present                                                  :noexport:
-
-
- - I quite facebook in 2016, too political
-     + lost friends
-   - thinking about quitting twitter now
-     + but my main news source, professional feeds
-     + short attention span, snipits, judmentalism, tribal
-     + push model, not pull
-   - addiction, "have to check it" constantly
-     + keep phone off as long as possible
-     + shortens attention span
-
- Here an app, there an app, evereywhere an app, app.  Old McDonald had
- an app. E-I-E-I-O.   Link to Narseo's work on privacy.
-
- And when you go to yahoo.com using a text based browser today, the
- first and only thing you see is....
- #+begin_quote
- Your data, your experience
-
- Yahoo is part of Verizon Media. Click 'I agree' to *allow Verizon Media
- and our partners* to use cookies and similar technologies *to access
- your device and use your data (including location)* to understand your
- interests, and provide and measure personalised ads. We will also
- *provide you with personalised ads* on partner products. Learn more
- about how we use your data
- #+end_quote
-
- No.  Just no.
-
-***** The Future                                                   :noexport:
-   - What's next?
-     + text based browsing?
-     + vpns?
-     + just going offline?
-     + returning to paper, journaling, letters
-     + set up a BBS?
-       o way more options than the early 80s (dialup)
-     + RSS feeds?
-     + run my own server?
-       o mastadon?
-       o discord?
-     + a mix?
-
-***** Conclusions                                                  :noexport:
-
 *** Outdoors                                                      :@outdoors:
 **** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:outdoors:
      :PROPERTIES:
@@ -2363,6 +2326,271 @@ She has attended many of the performances.
      me, and I think potentially others, so I'll keep it up.
 
      Day (well, post) 17 of #100DaysToOffload https://100daystooffload.com/
+
+*** Social Media Series                                             :@socail:
+
+    This is going to be series of articles about my experiences with
+    "social media" and "walled gardens"
+
+**** PUBLISHED 40 years of walled gardens and open platforms: Part I :history:computing:social:USENET:Facebook:Twitter:
+     :PROPERTIES:
+     :EXPORT_FILE_NAME: walled-gardens-part-1
+     :EXPORT_HUGO_PUBLISHDATE: 2020-08-17
+     :END:
+      This the first in a series of articles where I do a brain dump
+      pf something like 40 years experience with "social media" of
+      various forms: Dial-up BBSs, Fidonet, Usenet, IRC, CompuServe,
+      AOL, Slashdot, Sourceforge, blogspot, Facebook, Jabber, Google+,
+      Twitter, LinkedIn, Mastadon "...we didn't start the fire
+      (flame-war?)..."  OK, maybe we did.
+
+      I hope this is useful, or at least interesting.  It may wind up
+      just being a mix of introspection, hubris or narcissism, it may
+      be part of working up the nerve to quit Twitter as I quit
+      Facebook in 2016, maybe I'll even work up the nerve to go cold
+      turkey as [[https://musings.tychi.me/so-long-and-thanks-for-all-the-fish][tychi]] is doing.
+
+      #+caption: RS-232 pin-outs
+      #+label: pic:rs232
+      file:images/rs232.jpg
+
+      Post 20 of #100DaysToOffload https://100daystooffload.com/
+      #+hugo: more
+
+
+
+***** Before my time
+
+      To being with, we need to set the stage.  We're here.  Now.  How
+      did we get here?  What went before?  Understanding these might
+      help us both to live in the world as we find it and figure out
+      how to move forward.
+
+      - '- - - ... - - -' :: Yesterday, <2020-08-16 Sun> was the 100th
+        anniversary of the first trans-Atlantic telegram:
+        https://cryptologicfoundation.org/what-we-do/educate/bytes/this_day_in_history_calendar.html/event/2020/08/16/1597554000/1858-early-telegraph-communications/77123
+        In a very real sense, the telegram was the beginning our
+        digital age.
+
+      - Telegraphs, Phones, Blind Kids and Steve Jobs :: Phil Lapsley
+        wrote a fascinating book called "[[https://www.amazon.com/Exploding-Phone-Phil-Lapsley/dp/0802122280][Explode The Phone]]".  It is
+        fascinating story of technology and hacking culture from
+        telegraphs to somewhere after Steve Jobs and Woz were going
+        door to door in the Berkeley dorms selling little black boxes.
+        Phil gave a keynote at [[https://www.usenix.org/conference/usenixsecurity20][USENIX Security]] one year and I was
+        there and talked to him a bit ... part of his passion was to
+        record the "Phone Phreak" culture that lead directly to the
+        modern "Hacking" (good sense) culture while enough of the
+        principals were still around.  I talked to "Captin Crunch",
+        one of the main subjects of the book at ToorCon one year.
+        What a character.  The entire
+        hacker/blackhat/freedom-to-tinker movements (and Apple
+        Computer) owe him homage.  Just don't give him a piggy-back
+        ride.   Phil was also the author of [[https://en.wikipedia.org/wiki/Network_News_Transfer_Protocol][Network News Transport
+        Protocl (NNTP)]] for for [[https://en.wikipedia.org/wiki/Usenet][Usenet]] and we may get to why Usenet,
+        pathalias, GNUS and friends may or may not have been a good
+        idea in later posts.
+
+      I want to pick up the story where I have personal history and
+      Phil's book, conveniently runs right up to about that point.
+
+      I guess one of my goals parallels his: to document bits of how we
+      got to the "Social Media" (and "walled gardens") of today, as
+      I've live through and been a small player in bits of it.
+
+**** TODO material for future articles                             :noexport:
+***** The Past                                                     :noexport:
+      - Dialup BBS Systems :: once upon a time it was illegal to
+        connect modems (or anything else but AT&T equipment) to the
+        phone network.  And that was, basically, the only network.
+        Some time after that changed, "Dialup Bullitin Board Systems
+        (BBS) arrived.  You could dial up and connect to often the only
+        line (the home phone in most cases), leave messages, read
+        messages, etc.  Communities formed this way.
+
+      - TOPS-20 Bulletin Boards :: I'm not sure, but my first exposure
+        to bulletin boards and email ("social media") was probably on
+        the Ohio State DecSystem-20.  I had friends who worked there,
+        and we later went to school there and thus had a "legitimate"
+        accounts.  The world and software I remember is describe well
+        here http://www.columbia.edu/kermit/dec20.html.  Kermit (the
+        project that the authors of this article ran) was a very
+        important piece of software for 10-15 years, a workhorse of
+        moving files across dial-up phone connections.
+
+      - Usenet News :: Social media c.a. 1980.  [[https://en.wikipedia.org/wiki/Usenet][Usenet]] was (is) a
+        system that moves messages (posts) between connected computers.
+        In the beginning this was dial-up lines.  Mostly between
+        universities and research institutions and, of course,
+        AT&T/Bell Labs etc.  For a while the USENET "backbone" (the
+        long haul links, the well connected site) were run by an
+        unofficial cabal internally AT&T (because they had free access
+        to "long lines") and traffic was farmed out to local sites
+        (universities) for further distribution.  It was the
+        quintessential "old boy" network.  To connect, you had to know
+        someone and convince them to "give you a feed".  I was on
+        sometime from the mid-80s on.
+
+      - I appear in the geologic records :: I make what may be my first
+        appearance in the public record on the on the security-digest
+        mailing list here
+        https://securitydigest.org/tcp-ip/archive/1988/08#000129 (not
+        sure why proxy arp source was a security issue ?), but the
+        content is typical of the day ... software floating across the
+        net (comp.sources.*, etc.) being grabbed (by me) and thrown up
+        on an FTP server 'case that was the cats-meow in those days for
+        software distribution.  Check out the variety of email
+        addressing mechanisms, one familiar, two unfamiliar today which
+        expose topology in the email address.
+        =he%idt.unit.no@relay.cs.net= =george@cis.ohio-state.edu=
+        =!osu-cis!george= Back then, you often had to know how systems
+        connected (pathalias anyone ?)  There was a brief period (Hi,
+        Karl !) where I was running the official GNU mailing <-> Usenet
+        News gateway.  B-News, C-News, NNTP, NNRP, and honey-danbur,
+        Oh-My.
+
+      - Preserving history :: At one point it was rumored that [[https://en.wikipedia.org/wiki/Henry_Spencer][Henry
+        Spencer]] (he of regular expression library fame a.k.a
+        =decvax!utzoo!henry@ucbvax.Berkeley.EDU= ) had a copy of "every
+        Usenet message ever" on tape and there was an effort to collect
+        and archive them...I think Google picked up on that effort
+        later.  Later the "way back" machine (archive.org) came online
+        to try to do similar things for the web.  The ephemeral nature
+        of our digital presence and the importance of preserving it was
+        apparent (to some) early on.  But I'm pretty sure most
+        CompuServe Forum messages are gone forever (anybody got [[https://en.wikipedia.org/wiki/CompuServe#TapCIS][TapCIS]]
+        arcives lying around ?)
+
+
+ - My VAX/VMS Fortran BBS system
+   + recursion using common blocks
+ - GNU mailing lists, news<->mail gateways
+ - CompusServe, the original walled garding
+      + forums, the Amaga Forum, The UNIX forum...
+        o sysop, free account -> karl hakcing things
+      + news, mail opening them up
+      + the web changed the economics
+        o server, client, network
+        o advertising
+          - Charlie McCall said they talked about it
+    - The rise of the web
+      + AOL continued to rise, walled gardin
+      + open, then
+      + cookies, lock-in, paywalls
+      + Now the goolges, facebooks and twitters of the world own you
+      + Just try to link out from a linked-in article
+    - the rise of social media
+      + the graveyard of social media
+        CompuServe, AOL/AIM, MySpace, GooglePlus
+      + the talking wounded of social media
+        SourceForge, SlashDot, BlogSpot, Wordpress, Yahoo, Jabber
+      + the current rage in social media (those about to die...)
+        Facebook, Linkedin, Twitter
+
+***** The 404 Hall Of Fame                                         :noexport:
+
+      And before we leave the past completely, let's take a moment to
+      remember the dearly departed.  Here are some URLs I've known and
+      loved.  See where they lead now (and we're not even going to talk
+      about AOL Keywords....)
+
+      Many of these URLs still resolve to SOMETHING, because, hey, who
+      doesn't check in at myspace.com once in a while, and eyeballs are
+      eyeballs...
+
+      - WOW from CompuServe :: This was going to be the AOL Killer:
+        https://archive.org/details/WOW_from_CompuServe_Online_Made_Easy_META-CS1750A_Version_1.1_1996
+
+      -  Lycos.com :: the search engine that "spider"ed the web (get
+        it?) https://web.archive.org/web/19961022175214/http://www.lycos.com/
+
+      - http://www.compuserve.com :: Still there, but looking back
+        https://web.archive.org/web/19990424095338/http://www.compuserve.com/gateway/default.asp
+        Once upon a tiem I was hostmaster@compuserve.com (I ran the
+        Solaris server that hosted the ?Apache? server ... might have
+        been before Apache ... [[https://en.wikipedia.org/wiki/NCSA_HTTPd][NCSA httpd]] ? ... [[https://en.wikipedia.org/wiki/CERN_httpd][httpd]] ?
+
+      - www.uu.net :: https://www.uu.net I worked there.  Routed over
+        1/2 the Internet.  Now Verizon Business network. Not the same
+        company that use to run billing on Rick Adams' Awk scripts...
+
+      - WorldCom :: Bernie went to jail.  I left the company. The
+        number of productive companies that got sucked into that black
+        hole and destroyed was, well, part of a crime.  Value was was
+        destroyed. Dot Bomb. ... http://www.worldcom.com
+
+      - myspace.com :: Something still there, but not my few web pages
+        ... http://myspace.com
+
+      - plus.google.com :: Gone, Gone, Gone. It was kind of like
+        facebook-for-geeks. Mostly geeks used it. Not enough eyeballs.
+        Facebook won.  G+ got Killed By Google... :
+        https://plus.google.com
+
+      - Killed By Google :: And Google is in class by itself, with a
+        whole web site dedicated just to tracking the things it created
+        and killed (and is still killing): https://killedbygoogle.com/
+
+      - I guess the moral of the story is if you expect Twitter to be a
+        system of permanent record for things subject to the
+        [[https://en.wikipedia.org/wiki/Presidential_Records_Act][Presidentail Records Act]], think again.
+
+      - Microfilm the Internet !!! :: And in the honorable mention
+        department, my father, Robert B Jones, spent 25 years fighting
+        the loss of ephemeral information by running the Microfilm
+        department at the Ohio Historical Society.  Microfilm lasts
+        hundreds of years.  He preserved 19th century newspapers with
+        the only extant account of Aunt Myrtle's visitors from
+        Galopolis and the price of corn at the grain elevator in
+        Mechanicsburg.  He even has a publication reference on Amazon
+        https://www.amazon.com/Microfilm-Preparation-techniques-procedures-Historical/dp/B00071A5DE
+
+***** The Present                                                  :noexport:
+
+
+ - I quite facebook in 2016, too political
+     + lost friends
+   - thinking about quitting twitter now
+     + but my main news source, professional feeds
+     + short attention span, snipits, judmentalism, tribal
+     + push model, not pull
+   - addiction, "have to check it" constantly
+     + keep phone off as long as possible
+     + shortens attention span
+
+ Here an app, there an app, evereywhere an app, app.  Old McDonald had
+ an app. E-I-E-I-O.   Link to Narseo's work on privacy.
+
+ And when you go to yahoo.com using a text based browser today, the
+ first and only thing you see is....
+ #+begin_quote
+ Your data, your experience
+
+ Yahoo is part of Verizon Media. Click 'I agree' to *allow Verizon Media
+ and our partners* to use cookies and similar technologies *to access
+ your device and use your data (including location)* to understand your
+ interests, and provide and measure personalised ads. We will also
+ *provide you with personalised ads* on partner products. Learn more
+ about how we use your data
+ #+end_quote
+
+ No.  Just no.
+
+***** The Future                                                   :noexport:
+   - What's next?
+     + text based browsing?
+     + vpns?
+     + just going offline?
+     + returning to paper, journaling, letters
+     + set up a BBS?
+       o way more options than the early 80s (dialup)
+     + RSS feeds?
+     + run my own server?
+       o mastadon?
+       o discord?
+     + a mix?
+
+***** Conclusions                                                  :noexport:
 
 *** Tech HOWTOs                                                      :@HOWTO:
 
