@@ -589,7 +589,6 @@ There are issues of control.  There are the issues of using
 tools I like, not the GUI or "download my app" du jour with
 tracking, ads, monetization, bloat and more.
 
-
 *** Cybersecurity                                             :cybersecurity:
 **** WIP Thoughts on the OODA loop and falling out of a canoe :outdoors:SOC:OODA:
 :PROPERTIES:
@@ -849,7 +848,6 @@ Connection closed by foreign host.
   bookmarks (cloudflare blog, etc.)
 
 
-
 *** Work                                                              :@work:
 **** PUBLISHED "​I'm passionate about..."​              :Latin:humanity:work:
 :PROPERTIES:
@@ -883,7 +881,6 @@ find creative solutions to important problems."
 Go learn a useless language. Climb a mountain and enjoy the
 view. Spend time playing games with your family. Be human. Be
 passionate. Carpe diem.
-
 
 **** PUBLISHED Choosy Programmers Choose GIF :Wilhite:CompuServe:GIF:History:Computers:Emacs:Programming:
 :PROPERTIES:
@@ -1032,7 +1029,6 @@ the outcome would have been better if he had...
 
 [fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
 
-
 **** PUBLISHED Adding uncertainty in uncertain times :life:work:startups:GTD:
 :PROPERTIES:
 :EXPORT_FILE_NAME: 2020-06-30
@@ -1107,6 +1103,18 @@ cares from that conversation:
 - People.  There are always "a few of 'those' people", hard to
   work with, disrupt everything.   Stay away.
 
+**** PUBLISHED Disclaimer                 :philosophy:humor:100DaysToOffload:
+:PROPERTIES:
+:EXPORT_FILE_NAME: disclaimer
+:EXPORT_HUGO_PUBLISHDATE: 2020-08-19
+:END:
+The opinions expressed in this =[FOO]= are mine, and not those of my
+employer.  In fact, they may not even be mine.  I may have changed my
+mind.   I may have grown beyond a particular opinion.  I may be
+trolling you.  I may be engaging in Socratic dialog to tear down your
+beliefs.  I may be tearing down my own beliefs. γνῶθι σεαυτόν!
+
+# Post 21 of #100DaysToOffload https://100daystooffload.com/
 
 *** Life                                                              :@life:
 **** PUBLISHED Some Happy Notes                     :music:family:life:piano:
