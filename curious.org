@@ -2404,14 +2404,14 @@ Day (well, post) 17 of #100DaysToOffload https://100daystooffload.com/
 This is going to be series of articles about my experiences with
 "social media" and "walled gardens"
 
-**** PUBLISHED 40 years of walled gardens and open platforms: Part I :history:computing:social:USENET:Facebook:Twitter:
+**** PUBLISHED 40 years of walled gardens & open platforms: Part I :history:computing:social:USENET:Facebook:Twitter:
 :PROPERTIES:
 :EXPORT_FILE_NAME: walled-gardens-part-1
 :EXPORT_HUGO_PUBLISHDATE: 2020-08-18
 :END:
 
 This the first in a series of articles where I do a brain dump
-pf something like 40 years experience with "social media" of
+ pf something like 40 years experience with "social media" of
 various forms: Dial-up BBSs, Fidonet, Usenet, IRC, CompuServe,
 AOL, Slashdot, Sourceforge, blogspot, Facebook, Jabber, Google+,
 Twitter, LinkedIn, Mastadon "...we didn't start the fire
@@ -2470,16 +2470,35 @@ Phil's book, conveniently runs right up to about that point.
 I guess one of my goals parallels his: to document bits of how we
 got to the "Social Media" (and "walled gardens") of today, as
 I've live through and been a small player in bits of it.
+**** PUBLISHED 40 years of walled gardens & open platforms: Part II :history:computing:social:USENET:Facebook:Twitter:100DaysToOffload:
+:PROPERTIES:
+:EXPORT_FILE_NAME: walled-gardens-part-2
+:EXPORT_HUGO_PUBLISHDATE: 2020-08-21
+:END:
 
-**** TODO material for future articles                             :noexport:
-***** The Past                                                     :noexport:
-- Dialup BBS Systems :: once upon a time it was illegal to
-     connect modems (or anything else but AT&T equipment) to the
-     phone network.  And that was, basically, the only network.
-     Some time after that changed, "Dialup Bullitin Board Systems
-     (BBS) arrived.  You could dial up and connect to often the only
-     line (the home phone in most cases), leave messages, read
-     messages, etc.  Communities formed this way.
+Here are some developments in late 70s and early 80s where I started
+to become aware/involved in "Online" things that eventually evolved
+into today's Social Media: Modems[fn:5], BBS systems, TOPS-20 Bulletin Boards,
+Usenet News and the birth of CompuServe.
+
+#+caption: Desktop Dial-up
+#+name: pic:modem
+file:images/modem.jpg
+
+Post 21 #100DaysToOffload https://100daystooffload.com/
+
+#+hugo: more
+
+- Dialup BBS Systems :: Once upon a time it was illegal to connect
+  modems (or anything else but AT&T equipment) to the phone network.
+  And that was, basically, the only network.  Some time after that
+  changed, dialup Bullitin Board Systems (BBS) arrived.  You could
+  dial up and connect to a BBS running in someone's house often
+  connected to the only line (the home phone).  Mom and Dad may have
+  wondered at first why they picked up a call and heard awful
+  electronic squawking noises rather than someone saying "Hello".
+  Once on, you could leave messages, read messages, etc.  Communities
+  formed this way.
 
 - TOPS-20 Bulletin Boards :: I'm not sure, but my first exposure
      to bulletin boards and email ("social media") was probably on
@@ -2491,18 +2510,46 @@ I've live through and been a small player in bits of it.
      important piece of software for 10-15 years, a workhorse of
      moving files across dial-up phone connections.
 
-- Usenet News :: Social media c.a. 1980.  [[https://en.wikipedia.org/wiki/Usenet][Usenet]] was (is) a
-     system that moves messages (posts) between connected computers.
-     In the beginning this was dial-up lines.  Mostly between
-     universities and research institutions and, of course,
-     AT&T/Bell Labs etc.  For a while the USENET "backbone" (the
-     long haul links, the well connected site) were run by an
-     unofficial cabal internally AT&T (because they had free access
-     to "long lines") and traffic was farmed out to local sites
-     (universities) for further distribution.  It was the
-     quintessential "old boy" network.  To connect, you had to know
-     someone and convince them to "give you a feed".  I was on
-     sometime from the mid-80s on.
+- Usenet News :: Social media c.a. 1980.  [[https://en.wikipedia.org/wiki/Usenet][Usenet]] was (is) a system
+  that moves messages (posts) between connected computers.  In the
+  beginning this was dial-up lines.  Mostly between universities and
+  research institutions and, of course, AT&T/Bell Labs etc.  For a
+  while the USENET "backbone" (the long haul links, the well connected
+  sites) were run by an unofficial cabal internally at AT&T (because
+  they had free access to "long lines") and traffic was farmed out to
+  local sites (universities) for further distribution.  It was the
+  quintessential "old boy" network.  To connect, you had to know
+  someone and convince them to "give you a feed".  I was on sometime
+  from the mid-80s on. A few ?representative? newsgroups: =comp.sources.amiga=,
+  =rec.humor.funny= =alt.ensign.wesley.die.die.die=
+
+- CompuServe: Dialup+Network+Dec10s == Information Service :: CompuServe
+  ("Online Services") was born in this world.  People started having
+  "Personal Computers" in the late 70s and early 80s.  Modems started
+  becoming a thing.  While Usenet, BBS systems, Fido-net and friends
+  started using these technologies to connect people in non-commercial
+  settings, Compu$erve started to do so in a commercial setting.
+  CompuServe had been running a nationwide packet switching network
+  since 1972 (take that, ARPANET !), had been selling business
+  oriented computing services, and time sharing on its DecSystem10's
+  accessed via that network as well as growing raft of dial-up modem
+  pools, conveniently located in H&R Block offices around the country
+  at a time when having "Local" numbers was important (long distance
+  was expensive).  This was the 1970s version of "Cloud Computing".
+  Business use slacked off at night, so what was a good time-sharing
+  company to do?  Why start an Information Service that grew into the
+  familiar lineup of "Forums" (BBS), "InfoPlex" (email), "CB"
+  (chat/Aim/IRC), and the recurring services that every online service,
+  search engine and social network eventually devolves to: News,
+  Weather, and Sports.  I think the online service started around 1980.   I began working
+  there in 1985.   More from the CompuPerspective as these posts
+  progress.
+
+[fn:5] Modem picture courtesy of: "Dial-a-Grue" by Digital Game Museum is licensed under CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/
+
+
+**** TODO material for future articles                             :noexport:
+***** The Past                                                     :noexport:
 
 - I appear in the geologic records :: I make what may be my first
      appearance in the public record on the on the security-digest
@@ -3099,3 +3146,12 @@ by Github.
 I am grateful to Josh Rollins for his [[https://joshrollinswrites.com/][TAONAW]] blog which I used as a
 model/too for learning Hugo and ox-hugo.  The source can be found
 https://github.com/jarss/
+
+And, of course
+#+begin_quote
+The opinions expressed in this =[FOO]= are mine, and not those of my
+employer.  In fact, they may not even be mine.  I may have changed my
+mind.   I may have grown beyond a particular opinion.  I may be
+trolling you.  I may be engaging in Socratic dialog to tear down your
+beliefs.  I may be tearing down my own beliefs. γνῶθι σεαυτόν!
+#+end_quote
