@@ -1959,7 +1959,7 @@ Where there is no vision, the people perish
 --- Proverbs 29:8, KJV
 #+end_quote
 
-**** TODO The History Of Rome - nihil novi    :history:100DaysToOffload:rome:
+**** PUBLISHED The History Of Rome - nihil novi :history:100DaysToOffload:rome:
 :PROPERTIES:
 :EXPORT_FILE_NAME: history-of-rome
 :EXPORT_HUGO_PUBLISHDATE: 2020-08-22
