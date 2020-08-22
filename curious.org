@@ -1959,6 +1959,61 @@ Where there is no vision, the people perish
 --- Proverbs 29:8, KJV
 #+end_quote
 
+**** TODO The History Of Rome - nihil novi    :history:100DaysToOffload:rome:
+:PROPERTIES:
+:EXPORT_FILE_NAME: history-of-rome
+:EXPORT_HUGO_PUBLISHDATE: 2020-08-22
+:END:
+
+I've been listening to "[[https://thehistoryofrome.typepad.com/the_history_of_rome/2007/07/index.html][The History of Rome]]" podcast recently.  There
+is nothing new under the sun: Plagues (er, "pandemics"), riots,
+xenophobia, wars, greed, ambition, and political factions.
+
+It's filling in a lot of gaps and details for me.  I would recommend
+if you're interested in history.  Today's basic problems are not new.
+
+#+caption: Life-Size Lego Roman Soldier, Lego Store, Rome, 2019
+#+name: pic:legoRoman
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+#+attr_odt: :scale 0.25
+[[file:images/legoRoman.jpg]]
+
+Post 22 #100DaysToOffload https://100daystooffload.com/
+
+#+hugo: more
+
+
+   - Why was Mark Twain's home town named for a general who ultimately
+     lost? (hit, he spent 10 years wondering around Italy conquering
+     everything but Rome itself and his tactics are still studied in
+     military schools).
+
+   - Where did Tolkien get the idea for war "Oliphants"? (related to
+     the last question).
+
+   - What is a Pyrrhic Victory? (hint: the kind you don't want many of)
+
+   - What happens when you move from a democratic society made up of a
+     broad base of citizens with wide distribution of wealth (farms)
+     to one where most of the wealth is held in a few hands (hint:
+     Jefferson and the other American founders had seen where that
+     lead and thus championed the idea of the "Yoeman farmer")
+
+   - How do you accomplish land (wealth) reform and not get killed?
+     Ask the Gracci, wait, they were both killed.  Ask the American
+     Indians, wait, wait...
+
+   - What happens when the reward structure for civic and military
+     leaders morphs from community-minded civic responsibility to
+     personal power bases and personal enrichment? (you get Caesar
+     ... who gave us the basic calendar we use to this day ... and
+     *then* got killed)
+
+   - Is peace under military dictatorship (the "Pax Romana") worth the
+     loss of freedom?  [[https://youtu.be/Y7tvauOJMHo][What *have* the Romans ever done for us?]]
+
+
 *** Outdoors                                                      :@outdoors:
 **** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:outdoors:
 :PROPERTIES:
