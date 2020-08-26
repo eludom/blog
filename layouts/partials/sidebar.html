@@ -7,7 +7,7 @@
       <ul class="sidebar-nav">
         <h3>◾ Frequent</h3>
         {{ range $.Site.Taxonomies.tags.ByCount }}
-        {{ if gt .Count 2 }}
+        {{ if gt .Count 3 }}
         <li>
           <a href="/tags/{{ .Name }}"> {{ .Name }} <small>({{ .Count }})</small></a>
         </li>
@@ -17,6 +17,11 @@
         {{ range .Site.Menus.main -}}
           <li><a href="{{.URL}}"> {{ .Name }} </a></li>
         {{- end }}
+        <h4><a href="/blog/">All Posts ►</a></h4>
+        <!-- {{ range .Site.Menus.main -}} -->
+        <!--   <li><a href="{{.URL}}"> {{ .Name }} </a></li> -->
+        <!-- {{- end }} -->
+
           <h3>◾ About </h3>
           <a href="{{ .Site.BaseURL }}/about">George Jones</a>
           <a href="{{ .Site.BaseURL }}/curious">Curious Musings</a>
