@@ -16,7 +16,7 @@
 :EXPORT_HUGO_PUBLISHDATE:
 :END:
 
-*** Geek Stuff                                                        :@geek:
+*** Geek Stuff                                                        :geek:
 **** PUBLISHED Fixing GNU bash associative array insert speed :programming:gnu:linux:
 :PROPERTIES:
 :EXPORT_FILE_NAME: 20200418
@@ -133,7 +133,6 @@ See https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html
 
 ***** Footnotes
 [fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
-
 
 **** WIP HOWTO: Using Pi-hole DNS to block ads.  The struggle continues... :DNS:privacy:networking:HOWTO:
 :PROPERTIES:
@@ -347,7 +346,6 @@ the WAP to use the Pi-hole DNS directly.   Stay tuned.
 # **** Show and Tell
 
 #      http://192.168.86.230/admin/index.php
-
 
 **** WIP "My Computer ?"         :computers:windows:apple:cloud:ubuntu:linux:
 :PROPERTIES:
@@ -773,82 +771,8 @@ One thing that looks promising is [[https://car.mitre.org/][mitre's cyber analyt
 repository]]. Another is [[https://github.com/hunters-forge/mordor][Hunters Forge/Mordor]] I'd be interested in
 pointers to more.
 
-**** TODO Cybersecurity: Fire-drills or Calm Classification
-***** Hook
-      Stallman's password
-      sendmail back doors..
-      clear-text passwords
-      un-encrypted web traffic (HTTP)
-
-      If you found one of these today, would it be a fire-drill or a
-      calm, deliberate process of identifying the problem, assessing
-      the risk and fixing things?
-
-***** Security as a classification problem
-      - What is?
-      - How do I know?
-      - How certain am I?
-      - Is it "bad"?
-        + depends on who you are
-        + depends on time
-      - What can I do about it?
-
-      These issues need to be decoupled and thought of separately.
-
-***** A few examples
-
-****** Unencrypted HTTP
-
-Old trick ... telnet to the HTTP port....
-
-       #+begin_example
-$ telnet localhost 80
-Trying 127.0.0.1...
-Connected to localhost.
-Escape character is '^]'.
-HEAD / HTTP/1.1
-
-HTTP/1.1 400 Bad Request
-Content-Type: text/html
-Content-Length: 349
-Connection: close
-Date: Tue, 18 Aug 2020 11:47:35 GMT
-Server: lighttpd/1.4.45
-
-Connection closed by foreign host.
-       #+end_example
-
-      - What is?
-      - How do I know?
-      - How certain am I?
-      - Is it "bad"?
-        + depends on who you are
-        + depends on time
-      - What can I do about it?
-
-
-
-
-******  Clear Text Password
-
-       SNMPv1
-
-       https://www.shodan.io/search?query=port%3A161
-
-       Shodan ... ?snmpv1?
-
 **** Conclusion
-
-**** TODO TLS 1.3, China blocking                                   :infosec:
-:PROPERTIES:
-:EXPORT_FILE_NAME: blocking-tls-13
-:EXPORT_HUGO_PUBLISHDATE: 2020-08-18
-:END:
-- See Paul Vixie Tweet 2020-08-09 + my android brave reading
-  bookmarks (cloudflare blog, etc.)
-
-
-*** Work                                                              :@work:
+*** Work                                                              :work:
 **** PUBLISHED "​I'm passionate about..."​              :Latin:humanity:work:
 :PROPERTIES:
 :EXPORT_FILE_NAME: Im-passionate about
@@ -1116,7 +1040,7 @@ beliefs.  I may be tearing down my own beliefs. γνῶθι σεαυτόν!
 
 # Post 21 of #100DaysToOffload https://100daystooffload.com/
 
-*** Life                                                              :@life:
+*** Life                                                              :life:
 **** PUBLISHED Some Happy Notes                     :music:family:life:piano:
 :PROPERTIES:
 :EXPORT_FILE_NAME: happy-notes
@@ -1261,25 +1185,6 @@ you) that tweets in Latin.
 
 Where to go?  Maybe just pick up stakes, head west and see where I
 find myself?
-
-**** PUBLISHED Vis tibi sit                                      :latin:rome:
-:PROPERTIES:
-:EXPORT_FILE_NAME: 2020-05-04
-:EXPORT_HUGO_PUBLISHDATE: 2020-05-04
-:END:
-On the occasion of the ancient Roman Festival /Bella Stellaria/, I
-wish you
-
-#+begin_quote
-Vis tibi sit
-
-Lucas Skywalker
-#+end_quote
-
-magis de bella stellaria hic: https://la.wikipedia.org/wiki/Star_Wars
-et hic https://twitter.com/tutubuslatinus/status/1257065883614109696
-
-Day 05 of #100DaysToOffload.
 
 **** PUBLISHED Getting started in life is harder right now      :life:family:
 :PROPERTIES:
@@ -2014,7 +1919,83 @@ Post 22 #100DaysToOffload https://100daystooffload.com/
      loss of freedom?  [[https://youtu.be/Y7tvauOJMHo][What *have* the Romans ever done for us?]]
 
 
-*** Outdoors                                                      :@outdoors:
+**** PUBLISHED There's a lot to be said for climbing mountains :latin:life:hiking:
+:PROPERTIES:
+:EXPORT_FILE_NAME: turba
+:EXPORT_HUGO_PUBLISHDATE: 2020-08-24
+:END:
+
+Vulgate (Latin): Matthew Chapter 5
+
+#+begin_example
+1 Videns autem Jesus turbas, ascendit in montem...
+#+end_example
+
+or, roughly (my translation):
+
+#+begin_example
+Jesus, however, seeing the crowd/mob/political disturbance went up on
+the mountain...
+#+end_example
+
+The word "turba" per my paper dictionary tends towards a crowd that is
+politically disturbed.  It can also mean an eddy (water) or a child's
+spinning top. Per https://en.wiktionary.org/wiki/turba#Latin it means...
+
+#+hugo: more
+
+#+begin_example
+stir, disturbance, tumult, uproar, trouble
+mob, crowd, throng
+multitude
+#+end_example
+
+The world is like that.   You have to get a way to clear your head, to
+see clearly, to literally "get above it all".   I like going up
+mountains (of the 1000 to 3000 foot variety in the eastern US).
+
+Apparently, Jesus had this figured out.  This was his opening move to
+set the scene for delivering the most profound sermon in history:
+"Blessed are the poor in poor in spirit...the meek..the
+peacemakers...those who thrust and hunger for righteousness..."
+
+Go climb a mountain.   See what happens (in your mind) next.
+
+**** PUBLISHED Dad treated people like people.  I admire that. :family:100DaysToOffload:
+:PROPERTIES:
+:EXPORT_FILE_NAME: people
+:EXPORT_HUGO_PUBLISHDATE: 2020-08-25
+:END:
+When my father was writing letters to faceless, nameless people stuck
+jobs answering IRS letters, he started with tiles like:
+
+#+begin_quote
+PENALTY OR NO PLENALTY,
+THAT IS THE QUESTION
+#+end_quote
+
+Big, bold a the top, and IN CAPS.
+
+#+hugo: more
+
+When talking to nameless customer service drones on the phone, he
+always acted as if they were personally empowered, able to make
+decisions, and as if they were personally invested in their companies
+mission and in serving him, as their customer.  He expected them to be
+engaged, to take responsibility, to solve problems, and to interact
+with him as a human being on equal terms.
+
+In a way, this was naive, not recognizing how many people have just
+been turned in to mindless cogs in the machine.   But in a way, it was
+him insisting on dealing with every human being as a person.
+
+Dad treated people like people, whether they saw themselves that way or not.
+
+I admire that.   Thanks, Dad.
+
+Post 24 #100DaysToOffload https://100daystooffload.com/
+
+*** Outdoors                                                      :outdoors:
 **** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:outdoors:
 :PROPERTIES:
 :EXPORT_FILE_NAME: hiking-and-strange-times
@@ -2241,7 +2222,50 @@ self-selected risks.
 
 Days 15 and 16 of #100DaysToOffload https://100daystooffload.com/
 
-*** Writing                                                        :@writing:
+*** Latin                                                             :latin:
+**** PUBLISHED Vis tibi sit                                      :latin:rome:
+:PROPERTIES:
+:EXPORT_FILE_NAME: 2020-05-04
+:EXPORT_HUGO_PUBLISHDATE: 2020-05-04
+:END:
+On the occasion of the ancient Roman Festival /Bella Stellaria/, I
+wish you
+
+#+begin_quote
+Vis tibi sit
+
+Lucas Skywalker
+#+end_quote
+
+magis de bella stellaria hic: https://la.wikipedia.org/wiki/Star_Wars
+et hic https://twitter.com/tutubuslatinus/status/1257065883614109696
+
+Day 05 of #100DaysToOffload.
+
+**** PUBLISHED Latin Flash Cards in the 21st century (2773 AUC) :100DaysToOffload:
+:PROPERTIES:
+:EXPORT_FILE_NAME: flashcards
+:EXPORT_HUGO_PUBLISHDATE: 2020-08-23
+:END:
+Latin flash cards are not what they were in 1983:
+https://latinlexicon.org.
+
+It's got a thing where you can pop in a sentence (say, one form Cicro
+or random #Latin conversations on twitter (yes, they exist)), and you
+can click on the words (yellow above), it shows you all the possible
+words that particular inflected word might be and then offers to build
+flash cards for you...complete with citations/examples from the
+literature....I know what my Latin reading tool is from here on out.
+
+#+caption: Latin Lexicon
+# #+attr_html: :width 200px
+# #+attr_latex: :width 200px
+# #+attr_odt: :scale 0.5
+[[file:./images/flashcards.png]]
+
+Post 23 #100DaysToOffload https://100daystooffload.com/
+
+*** Writing                                                        :writing:
 **** PUBLISHED Poetry in the trash                     :life:blogging:poetry:
 :PROPERTIES:
 :EXPORT_FILE_NAME: poetry-in-the-trash
@@ -2454,7 +2478,7 @@ me, and I think potentially others, so I'll keep it up.
 
 Day (well, post) 17 of #100DaysToOffload https://100daystooffload.com/
 
-*** Social Media Series                                             :@socail:
+*** Social Media Series                                             :social:
 
 This is going to be series of articles about my experiences with
 "social media" and "walled gardens"
@@ -2602,173 +2626,7 @@ Post 21 #100DaysToOffload https://100daystooffload.com/
 
 [fn:5] Modem picture courtesy of: "Dial-a-Grue" by Digital Game Museum is licensed under CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/
 
-
-**** TODO material for future articles                             :noexport:
-***** The Past                                                     :noexport:
-
-- I appear in the geologic records :: I make what may be my first
-     appearance in the public record on the on the security-digest
-     mailing list here
-     https://securitydigest.org/tcp-ip/archive/1988/08#000129 (not
-     sure why proxy arp source was a security issue ?), but the
-     content is typical of the day ... software floating across the
-     net (comp.sources.*, etc.) being grabbed (by me) and thrown up
-     on an FTP server 'case that was the cats-meow in those days for
-     software distribution.  Check out the variety of email
-     addressing mechanisms, one familiar, two unfamiliar today which
-     expose topology in the email address.
-     =he%idt.unit.no@relay.cs.net= =george@cis.ohio-state.edu=
-     =!osu-cis!george= Back then, you often had to know how systems
-     connected (pathalias anyone ?)  There was a brief period (Hi,
-     Karl !) where I was running the official GNU mailing <-> Usenet
-     News gateway.  B-News, C-News, NNTP, NNRP, and honey-danbur,
-     Oh-My.
-
-- Preserving history :: At one point it was rumored that [[https://en.wikipedia.org/wiki/Henry_Spencer][Henry
-     Spencer]] (he of regular expression library fame a.k.a
-     =decvax!utzoo!henry@ucbvax.Berkeley.EDU= ) had a copy of "every
-     Usenet message ever" on tape and there was an effort to collect
-     and archive them...I think Google picked up on that effort
-     later.  Later the "way back" machine (archive.org) came online
-     to try to do similar things for the web.  The ephemeral nature
-     of our digital presence and the importance of preserving it was
-     apparent (to some) early on.  But I'm pretty sure most
-     CompuServe Forum messages are gone forever (anybody got [[https://en.wikipedia.org/wiki/CompuServe#TapCIS][TapCIS]]
-     arcives lying around ?)
-
-
-- My VAX/VMS Fortran BBS system
-  - recursion using common blocks
-- GNU mailing lists, news<->mail gateways
-- CompusServe, the original walled garding
-  - forums, the Amaga Forum, The UNIX forum...
-    o sysop, free account -> karl hakcing things
-  - news, mail opening them up
-  - the web changed the economics
-    o server, client, network
-    o advertising
-    - Charlie McCall said they talked about it
-  - The rise of the web
-    - AOL continued to rise, walled gardin
-    - open, then
-    - cookies, lock-in, paywalls
-    - Now the goolges, facebooks and twitters of the world own you
-    - Just try to link out from a linked-in article
-  - the rise of social media
-    - the graveyard of social media
-      CompuServe, AOL/AIM, MySpace, GooglePlus
-    - the talking wounded of social media
-      SourceForge, SlashDot, BlogSpot, Wordpress, Yahoo, Jabber
-    - the current rage in social media (those about to die...)
-      Facebook, Linkedin, Twitter
-
-***** The 404 Hall Of Fame                                         :noexport:
-
-And before we leave the past completely, let's take a moment to
-remember the dearly departed.  Here are some URLs I've known and
-loved.  See where they lead now (and we're not even going to talk
-about AOL Keywords....)
-
-Many of these URLs still resolve to SOMETHING, because, hey, who
-doesn't check in at myspace.com once in a while, and eyeballs are
-eyeballs...
-
-- WOW from CompuServe :: This was going to be the AOL Killer:
-     https://archive.org/details/WOW_from_CompuServe_Online_Made_Easy_META-CS1750A_Version_1.1_1996
-
-- Lycos.com :: the search engine that "spider"ed the web (get
-     it?) https://web.archive.org/web/19961022175214/http://www.lycos.com/
-
-- http://www.compuserve.com :: Still there, but looking back
-     https://web.archive.org/web/19990424095338/http://www.compuserve.com/gateway/default.asp
-     Once upon a tiem I was hostmaster@compuserve.com (I ran the
-     Solaris server that hosted the ?Apache? server ... might have
-     been before Apache ... [[https://en.wikipedia.org/wiki/NCSA_HTTPd][NCSA httpd]] ? ... [[https://en.wikipedia.org/wiki/CERN_httpd][httpd]] ?
-
-- www.uu.net :: https://www.uu.net I worked there.  Routed over
-     1/2 the Internet.  Now Verizon Business network. Not the same
-     company that use to run billing on Rick Adams' Awk scripts...
-
-- WorldCom :: Bernie went to jail.  I left the company. The
-     number of productive companies that got sucked into that black
-     hole and destroyed was, well, part of a crime.  Value was was
-     destroyed. Dot Bomb. ... http://www.worldcom.com
-
-- myspace.com :: Something still there, but not my few web pages
-     ... http://myspace.com
-
-- plus.google.com :: Gone, Gone, Gone. It was kind of like
-     facebook-for-geeks. Mostly geeks used it. Not enough eyeballs.
-     Facebook won.  G+ got Killed By Google... :
-     https://plus.google.com
-
-- Killed By Google :: And Google is in class by itself, with a
-     whole web site dedicated just to tracking the things it created
-     and killed (and is still killing): https://killedbygoogle.com/
-
-- I guess the moral of the story is if you expect Twitter to be a
-  system of permanent record for things subject to the
-  [[https://en.wikipedia.org/wiki/Presidential_Records_Act][Presidentail Records Act]], think again.
-
-- Microfilm the Internet !!! :: And in the honorable mention
-     department, my father, Robert B Jones, spent 25 years fighting
-     the loss of ephemeral information by running the Microfilm
-     department at the Ohio Historical Society.  Microfilm lasts
-     hundreds of years.  He preserved 19th century newspapers with
-     the only extant account of Aunt Myrtle's visitors from
-     Galopolis and the price of corn at the grain elevator in
-     Mechanicsburg.  He even has a publication reference on Amazon
-     https://www.amazon.com/Microfilm-Preparation-techniques-procedures-Historical/dp/B00071A5DE
-
-***** The Present                                                  :noexport:
-
-
-- I quite facebook in 2016, too political
-  - lost friends
-  - thinking about quitting twitter now
-    - but my main news source, professional feeds
-    - short attention span, snipits, judmentalism, tribal
-    - push model, not pull
-  - addiction, "have to check it" constantly
-    - keep phone off as long as possible
-    - shortens attention span
-
-Here an app, there an app, evereywhere an app, app.  Old McDonald had
-an app. E-I-E-I-O.   Link to Narseo's work on privacy.
-
-And when you go to yahoo.com using a text based browser today, the
-first and only thing you see is....
-#+begin_quote
-Your data, your experience
-
-Yahoo is part of Verizon Media. Click 'I agree' to *allow Verizon Media
-and our partners* to use cookies and similar technologies *to access
-your device and use your data (including location)* to understand your
-interests, and provide and measure personalised ads. We will also
-*provide you with personalised ads* on partner products. Learn more
-about how we use your data
-#+end_quote
-
-No.  Just no.
-
-***** The Future                                                   :noexport:
-- What's next?
-  - text based browsing?
-  - vpns?
-  - just going offline?
-  - returning to paper, journaling, letters
-  - set up a BBS?
-    o way more options than the early 80s (dialup)
-  - RSS feeds?
-  - run my own server?
-    o mastadon?
-    o discord?
-  - a mix?
-
-***** Conclusions                                                  :noexport:
-
-*** Tech HOWTOs                                                      :@HOWTO:
-
+*** Tech HOWTOs                                                      :HOWTO:
 **** PUBLISHED HOWTO: Breaking and fixing DNS - Understanding modern DNS on Ubuntu. :DNS:Ubuntu:HOWTO:Linux:systemd:
 :PROPERTIES:
 :EXPORT_FILE_NAME: dns-today
@@ -3012,143 +2870,6 @@ debugging this problem further.
 - resolvers, stub resolvers and nameservers :: https://unix.stackexchange.com/questions/500536/what-are-dns-server-resolver-and-stub-resolver
 
 Day 10 of #100DaysToOffload.  Delayed a day due to DNS problems :-)
-
-**** TODO This is not your fathers /etc/resolv.conf -  understanding modern DNS resolution
-:PROPERTIES:
-:EXPORT_FILE_NAME: dns-today
-:EXPORT_HUGO_PUBLISHDATE: 2020-05-09
-:END:
-***** How things used to work
-In 1987 the staff at the Ohio State University Computer and
-Information Science were periodically logging in to SRI-NIC via
-FTP and downloading "the hosts file", that would be =/etc/hosts=
-on today's Unix systems.
-
-No DNS?  No problem.  Just look up the hosts IP address in the
-local database (flatfile) and off you go.  DNS was new then and
-still rolling out.  Updates?  No problem.  We'll pull the file
-once a week or so....
-
-Then along came DNS the resolver library.  Just configure
-=/etc/resolv.conf= on your VAX780 running BSD4.2 and let it go
-ask the new-fangled Root Name Servers who was authoritative for
-=.edu= and where to find the SOA for /red.rutgers.edu/.  Poof.
-Life is good for few years on the academic/military/industrial
-not-so-complex Internet.
-
-Then the Web happened.  Then Window boxes all started getting
-TCP/IP stacks.  And the marketers, hackers, AOL-me-too crowd and
-the unwashed masses all arrived.   And the stress on the nice
-friendly system coordinate by Jon Postel and friends started to
-show.
-
-Spoofed records?  No problem.  With a "quick" IETF DNS standard
-to permit (require?) people to digitally sign their zones and
-replies, everything will be fine, right?
-
-***** What's in a name?
-
-People seems to have caught on that to be able to name something
-is to have power over it, so now *evreybody* wants to mess with
-name resolution for all kinds of reasons, ranging from
-
-- Load balancing
-- Advertising
-- Tracking user behavior
-- Blocking unwanted content
-- Key distribution
-- Security reconnaissance/mapping
-
-***** Ubuntu - How does it today?
-This is an article/post all of its own.  I broke my DNS.  The
-attempts to fix it reveal an odyssey in the discovery of the
-complexity that has acreeted around DNS in the past 30 years.
-
-***** Android - How does it today?
-***** Windows - How does it today?
-***** Chromebook - How does it today?
-***** What about - VPNs
-- Protonvpn
-***** What about - DoH
-***** Around the edges - The dark web
-***** Around the edges - Alternate roots
-
-***** Back to sticks and stones
-DNS and the routing infrastructure represent two of the biggest
-potential points of failure for the modern Internet.
-
-Take DNS down and most everything does not work...Amazon,
-Apple, Netflix, online shopping, zoom.
-
-Of course, it would be possible to go back to the world before
-DNS.   As long as you have a fixed IP address and don't mind
-working with network addresses such as  /192.168.8.230/ or
-/fe90::5e3d:4bd8:7e40:3078/ instead of /amazon.com/
-
-Looks like you don't have to ftp to sri-nic anymore, you can get
-get it from github.com https://github.com/PDP-10/sri-nic
-
-Wait, no DNS?
-
-#+begin_example
-     host github.com | head -1
-     github.com has address 140.82.113.4
-#+end_example
-
-Make that
-
-#+begin_example
-     https://140.82.113.4/PDP-10/sri-nic
-#+end_example
-
-**** TODO DoH - understanding, experimenting, wireshark, personal options
-
-*** Drafts
-**** TODO Keeping my blood pressure down, keeping politics personal
-***** Intro - me and politics
-
-I quit Facebook in the run up to the 2016 election to keep my blood
-pressure down.  I have very definite political opinions.   Most them
-revolve around letting people make their own decisions and looking
-for solutions to life's problems at a personal level.
-
-***** My experiences during corona virus
-
-That said, I'm going to share some of my personal experiences during
-the coronavirus outbreak.
-
-****** Dawn's wedding
-- drive-in shower.  Neighbors called police.
-****** Fly-over
-Military jets.  Crowds.
-****** Strong bias for personal choice
-
-Neighbors dogs bark.  I don't like it.   That's their choice.
-
-**** TODO Thinking on paper
-**** TODO The journey from CompuServe to now        :history:internet:online:
-# :PROPERTIES:
-#     :EXPORT_FILE_NAME: from-compuserve-to-now
-#     :EXPORT_HUGO_PUBLISHDATE: 2020-04-18:
-#     :END:
-
-
-Perspectives on the growth of "online" communities/my experience
-
-- Adm3a terminals
-- Vax email
-- CompuServe
-- Usenet
-- CompuServe again
-- The web
-- UUNET
-
-**** TODO Publish thoughts from my journal
-**** TODO Hiking stories
-
-**** TODO Using ed(1)
-- twitter @edconf
-
 
 * About George Jones
 :PROPERTIES:
