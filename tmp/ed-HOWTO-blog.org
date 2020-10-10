@@ -1,0 +1,11 @@
+* Write a blog post about /bin/ed
+  /bin/ed is "The standard Unix editor" ... since 1969
+  It was written by Ken Thompson or maybe Dennis Ritchie
+
+* Show some basic ed commands
+  - "a" :: append
+  - "p" :: print
+  - "s" :: substitute
+  - "w" :: write
+  - "q" :: quit
+  - "." :: end input

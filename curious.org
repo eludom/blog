@@ -3,7 +3,7 @@
 #+todo: TODO(t) CANCELLED(c) |  WIP(w) PUBLISHED(p)
 #+hugo_base_dir: .
 #+hugo_auto_set_lastmod: %Y-%m-%d
-#+MACRO instagram @@html:@@html:@@https://www.instagram.com/p/$1
+#+MACRO instagram @@html:@@html:@@https:@@https:@@//www.instagram.com/p/$1
 
 :PROPERTIES:
 :EXPORT_HUGO_SECTION:
@@ -16,7 +16,7 @@
 :EXPORT_HUGO_PUBLISHDATE:
 :END:
 
-*** Geek Stuff                                                        :geek:
+*** Geek Stuff                                                         :geek:
 **** PUBLISHED Fixing GNU bash associative array insert speed :programming:gnu:linux:
 :PROPERTIES:
 :EXPORT_FILE_NAME: 20200418
@@ -132,6 +132,7 @@ see if they would even entertain the idea of a patch
 See https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html
 
 ***** Footnotes
+
 [fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
 
 **** WIP HOWTO: Using Pi-hole DNS to block ads.  The struggle continues... :DNS:privacy:networking:HOWTO:
@@ -191,7 +192,7 @@ Here's what I did to instlal
      simple:
 
      #+begin_example
-            sudo bash basic-install.sh
+                 sudo bash basic-install.sh
      #+end_example
 
 - [ ] Static IP :: But you will want a Linux box with a static IP
@@ -288,41 +289,41 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
   to grep out the known and see what's left:
 
   #+begin_example
-        $  cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\ | sed 's/.*: //'  | sort | uniq -c | sort -rn | head
-        334 reply min-api.cryptocompare.com is <CNAME>
-        334 reply ccc-api.cloudapp.net is 40.115.22.134
-        334 query[A] min-api.cryptocompare.com from 127.0.0.1
-        238 forwarded min-api.cryptocompare.com to 8.8.4.4
-        143 cached min-api.cryptocompare.com is <CNAME>
-        101 query[A] no-thanks.invalid.lan from 127.0.0.1
-        101 query[A] no-thanks.invalid from 127.0.0.1
-        101 forwarded min-api.cryptocompare.com to 8.8.8.8
-        100 reply hfq2h9152m63.statuspage.io is <CNAME>
-        100 query[A] rpt.cedexis.com from 127.0.0.1
+          $  cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\ | sed 's/.*: //'  | sort | uniq -c | sort -rn | head
+          334 reply min-api.cryptocompare.com is <CNAME>
+          334 reply ccc-api.cloudapp.net is 40.115.22.134
+          334 query[A] min-api.cryptocompare.com from 127.0.0.1
+          238 forwarded min-api.cryptocompare.com to 8.8.4.4
+          143 cached min-api.cryptocompare.com is <CNAME>
+          101 query[A] no-thanks.invalid.lan from 127.0.0.1
+          101 query[A] no-thanks.invalid from 127.0.0.1
+          101 forwarded min-api.cryptocompare.com to 8.8.8.8
+          100 reply hfq2h9152m63.statuspage.io is <CNAME>
+          100 query[A] rpt.cedexis.com from 127.0.0.1
   #+end_example
 
   #+begin_example
-        $ cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\|compuserve\|aol | sed 's/.*: //'  | sort | uniq -c | sort -rn | tail -20
-        1 cached imap.gmail.com is 2607:f8b0:400d:c0f::6d
-        1 cached imap.gmail.com is 2607:f8b0:400d:c07::6d
-        1 cached imap.gmail.com is 2607:f8b0:400d:c00::6d
-        1 cached imap.gmail.com is 2607:f8b0:4004:c08::6d
-        1 cached imap.gmail.com is 2607:f8b0:4004:c08::6c
-        1 cached imap.gmail.com is 172.253.63.109
-        1 cached imap.gmail.com is 172.253.63.108
-        1 cached hosts-file.net is 3.234.198.254
-        1 cached encrypted-tbn0.gstatic.com is 172.217.13.78
-        1 cached dig is NXDOMAIN
-        1 cached content-signature-2.cdn.mozilla.net is <CNAME>
-        1 cached beacons-handoff.gcp.gvt2.com is 172.217.15.99
-        1 cached beacons.gvt2.com is 172.217.13.227
-        1 cached beacons.gcp.gvt2.com is <CNAME>
-        1 cached beacons4.gvt2.com is 216.239.32.116
-        1 cached beacons2.gvt2.com is 216.239.38.117
-        1 cached beacons2.gvt2.com is 216.239.36.117
-        1 cached beacons2.gvt2.com is 216.239.34.117
-        1 cached beacons2.gvt2.com is 216.239.32.117
-        1 cached article.smartasset.com is <CNAME>
+          $ cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\|compuserve\|aol | sed 's/.*: //'  | sort | uniq -c | sort -rn | tail -20
+          1 cached imap.gmail.com is 2607:f8b0:400d:c0f::6d
+          1 cached imap.gmail.com is 2607:f8b0:400d:c07::6d
+          1 cached imap.gmail.com is 2607:f8b0:400d:c00::6d
+          1 cached imap.gmail.com is 2607:f8b0:4004:c08::6d
+          1 cached imap.gmail.com is 2607:f8b0:4004:c08::6c
+          1 cached imap.gmail.com is 172.253.63.109
+          1 cached imap.gmail.com is 172.253.63.108
+          1 cached hosts-file.net is 3.234.198.254
+          1 cached encrypted-tbn0.gstatic.com is 172.217.13.78
+          1 cached dig is NXDOMAIN
+          1 cached content-signature-2.cdn.mozilla.net is <CNAME>
+          1 cached beacons-handoff.gcp.gvt2.com is 172.217.15.99
+          1 cached beacons.gvt2.com is 172.217.13.227
+          1 cached beacons.gcp.gvt2.com is <CNAME>
+          1 cached beacons4.gvt2.com is 216.239.32.116
+          1 cached beacons2.gvt2.com is 216.239.38.117
+          1 cached beacons2.gvt2.com is 216.239.36.117
+          1 cached beacons2.gvt2.com is 216.239.34.117
+          1 cached beacons2.gvt2.com is 216.239.32.117
+          1 cached article.smartasset.com is <CNAME>
   #+end_example
 
   What is this stuff?
@@ -347,7 +348,7 @@ the WAP to use the Pi-hole DNS directly.   Stay tuned.
 
 #      http://192.168.86.230/admin/index.php
 
-**** WIP "My Computer ?"         :computers:windows:apple:cloud:ubuntu:linux:
+**** PUBLISHED "My Computer ?"   :computers:windows:apple:cloud:ubuntu:linux:
 :PROPERTIES:
 :EXPORT_FILE_NAME: my-computer
 :EXPORT_HUGO_PUBLISHDATE: 2020-05-12
@@ -587,6 +588,349 @@ There are issues of control.  There are the issues of using
 tools I like, not the GUI or "download my app" du jour with
 tracking, ads, monetization, bloat and more.
 
+**** PUBLISHED HOWTO: =/bin/ed= by example      :unix:100DaysToOffload:HOWTO:
+:PROPERTIES:
+:EXPORT_FILE_NAME: bin-ed
+:EXPORT_HUGO_PUBLISHDATE: 2020-08-28
+:END:
+Below I *show* an editing session that uses basic =/bin/ed= commands.
+
+#+begin_quote
+~/bin/ed~ is the standard Unix Editor
+#+end_quote
+
+
+~ed~ was written round 1969.  It's still here.  ~grep~ comes from
+=/bin/ed=: =g/re/p= works as an ed command to search *g*lobally for a
+*re*gular expression and *p*rint the matching lines.  ed commands
+will be familiar to users of ~sed~, as sed is the "stream editor"
+with a very similar set of commands.  ed commands will be familiar to
+~vi~ users.  If you type ":" in vi, you get, basically, an ed prompt.
+You can type ed commands (see below) and they work.  "vi" is the
+"visual interface" to ed (or one of it's successors).  Though I am a
+die hard ~emacs~ user, often when I just want to do a quick edit or take
+some note I just fire up =/bin/ed= and go....
+
+***** A sample ~/bin/ed~ session...
+
+#+hugo: more
+
+#+begin_example
+
+  gmj@ed tmp [master] $ ed -p: ed-HOWTO-blog.org  # use ":" for the prompt, just like vi
+  ed-HOWTO-blog.org: No such file or directory
+  :# append some lines
+  :a
+  ,* Write a blog post about /bin/ed
+    /bin/ed is "The standard Unix editor" ... since 1969
+    It was written by Richard Stallman
+
+  ,* Show some basic ed commands
+    - "a" :: append
+    - "p" :: print
+    - "s" :: substitute
+    - "w" :: write
+    - "q" :: quit
+    - "." :: end input
+  :
+  :# Whoops, Stallman did not write ed
+  :# go back to line 1
+  :1
+  ,* Write a blog post about /bin/ed
+  :# make sure we are at line 1
+  :.=
+  1
+  :# find the mistake
+  :/Stallman/
+    It was written by Richard Stallman
+  :.=
+  3
+  :# its on line three
+  :# fix it
+  :s/Richard Stallman/Ken Thompson/
+  :# let's see the fix
+  :p
+    It was written by Ken Thompson
+  :# let's see the start of the file to here
+  :1,.p
+  ,* Write a blog post about /bin/ed
+    /bin/ed is "The standard Unix editor" ... since 1969
+    It was written by Ken Thompson
+  :# OK, looks good, but one more change
+  :p
+    It was written by Ken Thompson
+  :s/Ken Thompson/Ken Thompson or maybe Dennis Ritchie/p
+    It was written by Ken Thompson or maybe Dennis Ritchie
+  :# let's see the whole file now, it's short
+  :1,$p
+  ,* Write a blog post about /bin/ed
+    /bin/ed is "The standard Unix editor" ... since 1969
+    It was written by Ken Thompson or maybe Dennis Ritchie
+
+  ,* Show some basic ed commands
+    - "a" :: append
+    - "p" :: print
+    - "s" :: substitute
+    - "w" :: write
+    - "q" :: quit
+    - "." :: end input
+  :# now lets grep (g/re/p) for lines that contain "ed"
+  :g/ed/p
+  ,* Write a blog post about /bin/ed
+    /bin/ed is "The standard Unix editor" ... since 1969
+  ,* Show some basic ed commands
+  :# ok, this looks good.  write and quit
+  :w
+  288
+  :q
+  gmj@ed tmp [master] $
+#+end_example
+
+Post 25 #100DaysToOffload https://100daystooffload.com/
+
+**** PUBLISHED HOWTO: See *SOME* lines from a file :unix:100DaysToOffload:HOWTO:
+:PROPERTIES:
+:EXPORT_FILE_NAME: some
+:EXPORT_HUGO_PUBLISHDATE: 2020-09-01
+:END:
+Sometimes you want to see the head of a file.   Sometimes you want to
+see the tail. Sometimes you just want to see *some* lines from a file.
+
+The bash function below gives you *some* lines:
+
+#+begin_example
+gmj@ed bash [master] $ cat <<END > lines.txt
+> 1
+> 2
+> 3
+> 4
+> 5
+> 6
+> 7
+> 8
+> 9
+> 10
+> 11
+> 12
+> 13
+> 14
+> 15
+> END
+gmj@ed bash [master] $ source some.t
+sh
+gmj@ed bash [master] $
+gmj@ed bash [master] $ some -2 lines.txt
+14
+15
+gmj@ed bash [master] $ some -2 lines.txt
+9
+10
+gmj@ed bash [master] $ some -2 lines.txt
+6
+7
+gmj@ed bash [master] $ cat some.sh
+#+end_example
+
+#+hugo: more
+
+#+begin_src bash
+function some {
+    # Functon to print "some" lines of a file, like head or tail but, random start
+    #
+    # Usage: some [[-#] FILE]
+
+    set -u; # be safe out there
+
+    HOW_MANY=10 # Number of lines to print.  Default.
+    FILE="/dev/stdin" # default
+
+
+    if [ "$#" -eq 0 ]; then
+        :
+    elif [ "$#" -eq 1 ]; then
+        if [[ "$1" =~ -[0-9] ]]; then
+            HOW_MANY=`echo "$1" | sed 's/^-//'`
+        else
+            FILE="$1"
+        fi
+
+    elif [ "$#" -eq 2 ]; then
+        if [[ "$1" =~ -[0-9] ]]; then
+            HOW_MANY=`echo "$1" | sed 's/^-//'`
+        else
+            echo "some: Usage: some [-# [FILE]]"
+            return
+        fi
+
+        FILE="$2"
+    fi
+
+    # Count the lines to bound display
+    LINES=`wc -l $FILE | sed -e 's/ .*//'`
+
+    # pick a random starting line at least HOW_MANY back from the end
+    FIRST=$((1 + RANDOM % (LINES - HOW_MANY + 1 )))
+    LAST=$((FIRST + HOW_MANY - 1))
+
+    # Let's see some lines !
+    awk "NR >= $FIRST && NR <= $LAST" $FILE
+}
+#+end_src
+
+Post 26 #100DaysToOffload https://100daystooffload.com/
+
+**** PUBLISHED Source Code Distribution From Printouts to Github :unix:history:100DaysToOffload:
+:PROPERTIES:
+:EXPORT_FILE_NAME: sourcecode
+:EXPORT_HUGO_PUBLISHDATE: 2020-10-10
+:END:
+
+     Source code distribution has changed over the years.  Today we
+     all love (hate?) git, github and friends, but, believe it or not
+     there were ways to distribute source code even before the
+     Internet.  In fact, this was the world in which the GNU Public
+     License was created. Below are a few of the ways I've
+     gotten/transferred source code through the years, in something
+     like chronological order
+
+
+     #+caption: Code on the Europython 2009 bag" by Thomas Guest is licensed with CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/
+     #+name: pic:camera
+     file:images/code.jpg
+
+     #+hugo: more
+
+
+     - Print Outs ::  Paper.  Yes, paper.  My first memories of source
+       code (late 70s) include source listing of BASIC programs
+       printed on ASR-33 Teletypes.  I also have memories of a large
+       stack of "green bar" printouts at home (again, c.a. 78 or 79)
+       that I think where the printouts of Emacs (TECO emacs, the
+       original, before GNU) that my brother probably brought home
+       from Carnegie-Mellon where he went as an undergrad.
+
+     - Paper Tape :: The ASR-33s had paper tape punches on the side.
+       You could punch your programs onto tape and read them back in.
+       It was 8-bit ASCII.   At one point, I think my brother could
+       read the ASCII by looking at the tape.
+
+     - Cards :: Early in college (80, 81) I actually punched cards for
+       a class or two.  You could duplicate cards.   No cheating on
+       that programming assignment now !
+
+     - BYTE Magazine :: Gamers of yore bought BYTE Magazine (and
+       others), in part to get the source code listings that they
+       could then type in.
+
+     - ACM, Knuth :: And of course there were textbooks such as Kunths
+       (to this day unfinished) "The Art of Computer Programming" and
+       ACM publications.  Steve Wilhite used an algorithm published in
+       ACM as part of GIF...of course anything printed was in the
+       public domain, right? ... well, no.  We were all still learning
+       about and in some cases defining the legal status of software
+       then, right along with GNU/FSF.
+
+
+     - USENET News  :: In the late 80s, MIT project Athena periodically posted
+       the source code to X-Windows to the USENET news group
+       comp.sources.x.  If you were on a USENET site that "took a
+       feed" of that newsgroup (usually over modems not faster than
+       9600baud), to get the latest source to X, you watched the news
+       group (using readnews, rn or some other "newsreader" program),
+       saved off the individual pieces from each post, reassembled and
+       then extracted the code.  The (large) distro was compressed and
+       broken up into many pieces, and re-assembling them often
+       involved the use of uudecode, shar, patch, tar, and programs to
+       decompress (pretty sure gzip was not a thing yet).  Of course,
+       you had to grab them before your news site expired the articles
+       (spool space was limited, and space was shared with
+       rec.humor.funny and other essential news groups).  Heaven help
+       you if you missed one piece.  No bit-torrent for you to find
+       the missing pieces.  You got one shot from one source in a
+       limited time window.
+
+     - UUCP :: UUCP being "unix to unix copy", you could literally
+       issue a copy command of source known to live on a remote system
+       something like
+
+       #+begin_example
+       uucp cbosgd!/archive/hdb-uucp.tar.gz hdb-uucp.tar.gz
+       #+end_example
+
+       with multi-hop paths being possible...if you knew the topology
+       (pathalias !) and the filenames.
+
+     - mag tape :: Then there was the time I was in Boston (visiting
+       Encore computer?).   I took a blank 9-track tape, arranged to
+       stop by MIT, was given a personal tour of the labs, show the
+       locked room where the all-important KDC (forerunner of
+       Microsoft's domain controllers) was kept, and got a copy of the
+       latest Athena source (X, Kerberos, Hesiod, etc.) dumped to
+       tape. This was getting software, the easy way.
+
+     - DECUS tapes ::  Tapes were a thing for quite a while.  early on
+       users of DEC computers created and distributed "decus tapes",
+       which were user-contributed collections of software.  If the
+       VAX/VMS bulletin board system I created in FORTRAN-77 around
+       1983 exists anywhere in the world, it's probably in the archive
+       of DECUS tapes.  This is one example of collections of
+       user-generated software that grew into the software archives we
+       came to know later.  I think the IBM SHARE user group had
+       similar collections.  The programs (games, etc) distributed
+       with BSD Unix formed another set.  [[https://en.wikipedia.org/wiki/DistroWatch][DistroWatch]] is one web site
+       in this vein today.
+
+     - Floppies :: With the advent of the PC (early, mid 80s) floppies
+       became a thing.  I purchased a copy of the Mark Williams C
+       compiler for DOS just to get the public-domain source to
+       MicroEmacs which I then ported to the Amiga.  Of course, with
+       floppies came boot sector viruses and the security wars were
+       on.  Later issues of BYTE sometimes shipped with floppies of
+       source so you didn't have to type it in.
+
+     - Email :: Yes, you could always use tar, shar(1), uuencode(1)
+       and friends to email source code.   Email has been a workhorse
+       for something like 40 years, not just for communication but as
+       the file transfer method of last (first?) resort.
+
+     - CompuServe (and other) Forums :: I ran ("SYSOPed" the
+       CompuServe Unix Forum for a few years.  I think we/I may have
+       invented the file suffix ".tgz" to stand for "gzip tar" archive
+       (because the forums could not deal with multiple suffixes, as
+       in .tar.gz).  We had source code available for download.  The
+       Forums were just CompuServe's version of the local dial-up BBS
+       and many other similar message/download o
+
+     - FTP :: As Internet connectivity started becoming common (at
+       least in universities, government and some larger
+       corporations), a number of "well known" FTP sites where created
+       (often at well connected UUCP sites) that collected and offered
+       source downloads. UUNET and WUSTL (Washington Univerity at
+       St. Louis) being some of the larger ones (there is still a
+       version of FTP server software, wu-ftp available for Linux)
+
+     - Source Code Control Systems :: As Internet connectivity became
+       a thing, source code control systems such as cvs, svn,
+       mercurial and friends started being used on local networks and
+       it became possible to use them over the Internet.  They also
+       solved a lot of the collaboration, version control and release
+       management issues that are important for projects of any size.
+
+     - SourceForge :: Sourceforge gets honorable mention as a
+       precursor to github and friends.  In the early 2000s it hosted
+       many open source projects.  I initially hosted NCAT there which
+       became the Center for Internet Security's Router Audit Tool.
+
+     - "My name is Legion, for we are many" ::  Git is a good thing.
+       Really.  Today we have github, gitlab, dropbox and thousands of
+       other options for getting and sharing source code, some of
+       which even work reasonably well.
+
+     The world has changed. It really is a better place. No more
+     trolling the USENET News feed spool.  No more trips to MIT, tape
+     in hand.  No more hoping ftp.uu.net has the latest version.
+     Go forth and hack.
+
 *** Cybersecurity                                             :cybersecurity:
 **** WIP Thoughts on the OODA loop and falling out of a canoe :outdoors:SOC:OODA:
 :PROPERTIES:
@@ -752,11 +1096,12 @@ but, it turns out, there are still good reasons to play the game.
 - Ultimate Guide to Cybersecurity :: "Your Ultimate Guide to Cybersecurity: At Home, at Work, and on the Go." https://www.ibtimes.com/your-ultimate-guide-cybersecurity-home-work-go-2818655. A little more in depth.
 - CIS Critical Controls :: "The Center for Internet Security (CIS) Critical Security Controls" - https://www.cisecurity.org/controls/cis-controls-implementation-groups/ More in depth. For enterprises.
 
-**** PUBLISHED "​Reproducible security analytics?"                 :org:emacs:
+**** PUBLISHED "​Reproducible security analytics?"                :org:emacs:
 :PROPERTIES:
 :EXPORT_FILE_NAME: reproducable-security-analytics
 :EXPORT_HUGO_PUBLISHDATE: 2020-02-25:
 :END:
+
 
 
 I'm looking for repositories of "reproducible security analytics".
@@ -771,8 +1116,367 @@ One thing that looks promising is [[https://car.mitre.org/][mitre's cyber analyt
 repository]]. Another is [[https://github.com/hunters-forge/mordor][Hunters Forge/Mordor]] I'd be interested in
 pointers to more.
 
-**** Conclusion
-*** Work                                                              :work:
+**** PUBLISHED What is that thing on the Internet, and is it bad? :100DaysToOffload:
+:PROPERTIES:
+:EXPORT_FILE_NAME: things-on-the-internet
+:EXPORT_HUGO_PUBLISHDATE: 2020-09-19
+:END:
+
+#+begin_ABSTRACT
+When talking about Internet assets we often confuse "What is it?", "Is
+it bad?" and "What should I do about it?".  This write-up intends to
+show why it is important to keep those questions and answers to them
+separate.
+#+end_ABSTRACT
+
+#+caption: [[https://images.squarespace-cdn.com/content/v1/547e053ae4b04768d95052b5/1449545907243-AHKE1H7G260OO4WJ9L3C/ke17ZwdGBToddI8pDm48kA4OTh10Ye8gZQM8UPYYQJFZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxpL5WijoIxxArGLpk2nP4rt_mQiHA3qkdw2IvdSifHurtFUlA4zHqOnDqw0hNJllc/image-asset.jpeg?format=750w][The Shape of the Elephant]]
+#+name: pic:elephant
+file:images/elephant.jpeg
+
+Post 27 of #100DaysToOffload https://100daystooffload.com/
+
+#+hugo: more
+
+
+***** Questions to ask
+
+When identifying Internet-based assets, there are a series of basic
+questions[fn:6] that need to answered:
+
+- What is it?
+- How do I know?
+- How certain am I?
+- Is it "bad"?
+  - depends on who you are
+  - depends on time
+- What can I do about it?
+
+
+***** An Example: Web servers serving pages with flash
+One example can be used to illustrate the point: web servers
+serving content with Adobe Flash
+(https://en.wikipedia.org/wiki/Adobe_Flash).
+
+Flash is an older web technology that has known security
+vulnerabilities, is deprecated (Adobe to stop supporting it on
+12/31/2020) and has been replace by HTML5.
+
+Let's classify it using the questions above, assuming we have
+scanned a web site and pulled back the HTML body of the main page
+via an HTTP GET request:
+
+- What is it? :: A web server serving pages with flash.
+
+- How do I know? :: We see files with =.swf= extensions embedded in
+     javascript returned as part of the web page, e.g.
+#+begin_example
+    var swfpath="/e/data/images/pixviewer.swf
+#+end_example
+
+
+- How certain am I? :: Your signatures may vary.  There are other
+     strings you can look for such as:
+
+#+begin_example
+application/x-shockwave-flash
+#+end_example
+
+#+begin_example
+http://www.macromedia.com/go/getflashplayer
+#+end_example
+
+You might start with a google search for
+
+#+begin_example
+intext:http://www.macromedia.com/go/getflashplayer
+#+end_example
+
+It's just a question of how much time you want to put into
+developing the signature.  For some things (HTML) there is a lot
+of ambiguity. For others (TCP, HTTP, SNMP, SSH...) the protocol
+will not work if the transactions are not well defined.
+Identification of less well defined protocols is ad hoc based on
+heuristics.  Identification of well defined protocols is more
+certain. See below.
+
+- Is it "bad"? It depends. :: Once we've answered the "what is it"
+     question, you can begin to address the "is it bad" question and
+     possibly it's corollary "how bad is it?" (not addressed here).
+     Lets return to our flash example.  It turns out Chinese web sites
+     are a large current (2020-09-17) source of flash on the web.  A
+     security products vendor also uses a lot of flash on their login
+     page.
+
+  - *'Is it bad?' depends on who you are*
+
+    1. Chinese government? Maybe you WANT people to download
+       vulnerable software to enhance your ability to monitor
+       citizens activity.
+    2. Chinese human rights activist? You probably don't want known
+       vulnerable software on your computer.
+    3. Security vendor?  Forcing your security minded customers to
+       download and run known vulnerable software as part of logging
+       into your security web site is, at best, bad form.
+
+  - *'Is it bad?' "Is it bad" "depends on time*
+    When did vulnerabilities in the product become widely known (e.g. a CVE
+    published)?  When was "proof of concept" exploit code available?
+    When are/were patches/upgrades available? ...
+
+  - *'Is it bad?' depends on where you are*
+    Are you at work on a laptop supplied by your employer who has a policy against
+    accessing web sites that use flash?  Are you at home or in a lab
+    doing web vulnerability research on a "throwaway" machine...
+
+- What can I do about it? :: Lastly, and probably most importantly,
+     the question is "What can I do about it?".  Are there steps I
+     can/should take to fix things that are "bad"?  Patch? Upgrade?
+     Choose a different security vendor...?
+
+***** Keep each issue separate, think about them independently
+
+It is important to keep the answers to these questions separate.
+For instance saying "write some software to find bad things on web
+servers" presupposes a common definition of "bad", which, as we've
+seen above can be highly contextual.
+
+It would be far better to keep them separate.   For instance, define
+a taxonomy (see below) to say "what is this"?   Then separately
+devise ways to answer the "is it bad" question for separate
+environments (countries, organizations, individuals ...)
+
+***** Taxonomies, Ontologies and ASCII Art, Oh My !!!
+
+The outline above lists the basic questions.  It is possible that
+there will be a need for a deeper dive/more complete classification.
+For instance, revisiting *what is it?* for the web server with
+flash, we might come up with this taxonomy:
+
+
+#+begin_example
+  + open port                      WELL DEFINED, CERTAIN IDENTIFICATION
+    + tcp
+      + tls                                        ^
+        + web server                               |
+           + microsoft                             |
+             + iis                                 |
+               + 7.3                               |
+                 + services                        |
+                   + flash                         v
+                 + frameworks
+                    + dotnet       LESS DEFINED, LESS CERTAIN IDENTIFICATION
+#+end_example
+
+Taxonomies help in classifying, understanding and communicating
+about things, for instance taxonomies (and Latin names) have been
+used in Biology for hundreds of years.  More recently, the
+cybersecurity world started standardizing vulnerability naming as
+CVE.
+
+***** Conclusion
+
+When thinking about Internet assets, writing software to detect and
+classify/fingerprint assets and deciding what to call "bad", keep
+the preceding questions in mind and try to keep the questions
+separate.
+
+***** Disclaimer
+The opinions expressed here are mine, and not those of my employer.
+In fact, they may not even be mine.  I may have changed my mind.  I
+may have grown beyond a particular opinion.  I may be trolling you.
+I may be engaging in Socratic dialog to tear down your beliefs.  I
+may be tearing down my own beliefs. γνῶθι σεαυτόν!
+
+***** Footnotes
+
+[fn:6] Note that these are not randomly chosen questions.  They map
+fairly directly to some of the basic questions of epistemology, morals
+and ethics.
+
+*** Privacy                                                         :privacy:
+**** PUBLISHED Privacy: what is it and why do we care? ... :100DaysToOffload:
+:PROPERTIES:
+:EXPORT_FILE_NAME: privacy-intro
+:EXPORT_HUGO_PUBLISHDATE: 2020-09-24
+:END:
+In this world where Big Internet firms track you to sell you stuff
+(and to sell YOU), big Government tracks you because, well, they can,
+and where I found myself on a motion activated camera when backpacking
+alone in the "backcountry" in an attempt to "get away from it all",
+I've spend some time thinking about privacy.
+
+Life is short.  I could spend a lot of time registering domain names,
+managing certificates, running my own mail server, de-googling,
+convincing my friends and family to use nifty new security and privacy
+apps, and generally fighting the privacy fight as an individual
+against entire well-funded industries and governments.  Or I could
+just live my life secure in the knowledge that Google and Amazon know
+what I'm thinking of purchasing even before I do.
+
+This is the first in what will probably be a series of blog posts
+exploring the following (current outline):
+
+#+begin_example
+ ,**** TODO Privacy: Motion activated cameras strapped to trees in the woods?
+ ,**** TODO Privacy: An attainable end state? A lost cause?
+ ,**** TODO Privacy: A path to making a living via bureaucracy?
+ ,**** TODO Privacy: Something to rant about ... with words.
+ ,**** TODO Privacy: Rage against the machine ... with code?
+ ,**** TODO Privacy: Hiding out on the digital frontier?
+ ,**** TODO Privacy: A process, an ideal, one part of life?
+#+end_example
+
+Stay tuned.
+
+Post 28 of #100DaysToOffload https://100daystooffload.com/
+
+**** PUBLISHED Privacy: Motion activated cameras in the woods? :100DaysToOffload:hiking:
+:PROPERTIES:
+:EXPORT_FILE_NAME: privacy-cameras
+:EXPORT_HUGO_PUBLISHDATE: 2020-09-26
+:END:
+I recently went backpacking on the Appalachian Trail in Massachusetts.
+One of the reasons I go out is to "get away", to go "off the grid", to
+enjoy nature and get away from adds, trackers, social media, etc.
+
+But a funny thing happened at my last campsite.  There was a camera
+strapped to a tree taking my picture every time I put my food in or
+out of the "bear box".  The sign on the camera, in addition to asking
+us not disturb the camera (duct tape, anyone ?) assured us that they
+were only using the images to track bear activity at the campsite and
+the images would be destroyed after being used for their intended
+purpose.  Right.  They would not be fed to facial recognition
+software, and the results would not be passed to law enforcement.
+Right.
+
+
+
+#+caption: [[https://live.staticflickr.com/8163/7670889680_2ef260ab0f_b.jpg]["Caméra de vidéo-surveillance" by zigazou76 is licensed under CC BY 2.0]]
+#+name: pic:camera
+file:images/camera.jpg
+
+#+hugo: more
+
+In addition to that, many hikers now use the "[[https://atlasguides.com/?cn-reloaded=1][Guthook]]" app to track
+their progress, find distance to water, etc.  It has social media-like
+features that let you leave messages to help other hikers like "there
+is a good stealth campsite at this stream...".  And such comments
+suggesting helpful, but sometimes over the official line actions,
+which are absolutely not being monitored by park officials (looking at
+you Smokies, Baxter) and others concerned with keeping everyone
+strictly in line with the mountains of rules made by people sitting at
+desks who have NOT just hiked 8 to 12 hours a day for days on end and
+have no appreciation of or sympathy for realities in the field.
+
+Mind you, I'm all for [[https://en.wikipedia.org/wiki/Leave_No_Trace][Leave No Trace]], minimizing impact, ensuring that
+others have the same opportunities I crave to enjoy nature, not
+killing cute little animals out of sheer cruelty, etc, but...
+
+
+#+caption: foo [[https://www.songfacts.com/lyrics/five-man-electrical-band/signs][Signs]]
+#+begin_src
+"Signs, signs, everywhere there's signs,
+blocking out the scenery, blowing my mind,
+saying 'Do this, don't do that'
+Can't you read the signs?"
+
+Signs, The Five Man Electrical Band
+https://www.songfacts.com/lyrics/five-man-electrical-band/signs
+#+end_src
+
+The point is that our information-obsessed, always-connected,
+bureaucratic society will not even leave you alone, even in the woods.
+Thoreau, Muir, Audubon: meet the panopticon.
+
+Post 29 of #100DaysToOffload https://100daystooffload.com/
+
+**** WIP Privacy: The view from 1987 and Antiquity - or why I'm deleting Google,Facebook and Twitter :100DaysToOffload:
+:PROPERTIES:
+:EXPORT_FILE_NAME: privacy-1987
+:EXPORT_HUGO_PUBLISHDATE: 2020-10-04
+:END:
+
+***** "A History of Private Life"
+#+begin_quote
+There is, I think, an urgent need to protect the essence of
+individuality from headlong technological progress.  For unless we are
+careful, individual men and women may soon be reduced to little more
+than numbers in immense and terrifying data bank.
+
+Georges Duby, Forward to /A History of Private Life/, 1987
+
+#+end_quote
+
+I'm in the process of deleting Facebook, Twitter and Google from my
+life. I think Duby et al. were on to something a little ahead of their
+time.
+
+#+caption: [[https://www.thriftbooks.com/w/a-history-of-private-life-from-pagan-rome-to-byzantium_arthur-goldhammer_philippe-aris/288055/item/2915263/?mkwid=%7cdc&pcrid=448915190769&pkw=&pmt=&slid=&plc=&pgrid=104754618896&ptaid=pla-926048762119#idiq=2915263&edition=2266565][A History of Private Life]]
+#+name: pic:privateLife
+file:images/private_life.jpg
+
+Post 30 of #100DaysToOffload https://100daystooffload.com/
+
+#+hugo: more
+
+***** What's bothering me
+
+      It takes a lot of work to change your email provider of 15
+      years.  You loose contacts when you ditch Facebook (that guy
+      I've not seen since 3rd grade..).  Twitter is, well, a thing.
+      Just ask the President ('nuf said ?)  So why go the trouble?
+      What is it about privacy that gets me and so many people spun up
+      to the point that we will spend time fighting what is almost
+      certainly a loosing battle against Big Brother, Big Internet and
+      Big Advertising?
+
+      There are many reasons, but I think they all center around what
+      it means to be human:
+
+      - We want to be left alone sometimes
+      - We want space to be ourselves
+      - We want our thoughts to be our thoughts (and we want to have
+        them before the machine learning algorithms that are tracking
+        us have them)
+      - We want the freedom to think, act, feel, love and hate ("[[https://en.wikipedia.org/wiki/Catullus_85][Odi
+        et amo]] ...") as we see fit, at least inside our own heads
+      - We want to be able to work out life for ourselves
+      - We want space to think, to grow, to make mistakes and correct
+        them, or even to be free to persist in our chosen errors and
+        delusions. "To err is human..."
+
+      Something about using the current set of "free" Big Internet
+      offerings where, "If you're not paying for it you ARE the
+      product" violates the space we so desperately need.
+
+***** Back to the big thinkers
+
+      Enough of my ramblings.  Back to the deep thinkers who put
+      together the encyclopedic /A History of Private Life/ in 1987
+      without (gasp) Google or anything better than a IBM-PC running
+      DOS...
+
+#+begin_quote
+...at all times and in all places a clear commonsensical distinction
+has been made the public --- that which is open to the community and
+subject to the authority of its magistrates --- and the private.  In
+other words, a clearly defined realm is set aside for that part of
+existence for which /every language has a word equivalent to
+"private"/, a zone of immunity to which we may fall back or retreat, a
+place where we may set aside arms and armor needed in the public
+place, relax, take our ease, and lie about unshielded...this is the
+place where the family thrives, the realm of domesticity; it is also
+the realm of secrecy.   The private realm contains our most precious
+possessions, which belong only to ourselves, which concern nobody
+else, and which may not be divulged...
+
+Georges Duby, Forward to /A History of Private Life/, 1987
+#+end_quote
+
+Is he right?  Do /you/ have the space you need to "protect the essence
+of individuality from headlong technological progress"?
+
+*** Work                                                               :work:
 **** PUBLISHED "​I'm passionate about..."​              :Latin:humanity:work:
 :PROPERTIES:
 :EXPORT_FILE_NAME: Im-passionate about
@@ -1040,7 +1744,7 @@ beliefs.  I may be tearing down my own beliefs. γνῶθι σεαυτόν!
 
 # Post 21 of #100DaysToOffload https://100daystooffload.com/
 
-*** Life                                                              :life:
+*** Life                                                               :life:
 **** PUBLISHED Some Happy Notes                     :music:family:life:piano:
 :PROPERTIES:
 :EXPORT_FILE_NAME: happy-notes
@@ -1889,34 +2593,34 @@ Post 22 #100DaysToOffload https://100daystooffload.com/
 #+hugo: more
 
 
-   - Why was Mark Twain's home town named for a general who ultimately
-     lost? (hit, he spent 10 years wondering around Italy conquering
-     everything but Rome itself and his tactics are still studied in
-     military schools).
+- Why was Mark Twain's home town named for a general who ultimately
+  lost? (hit, he spent 10 years wondering around Italy conquering
+  everything but Rome itself and his tactics are still studied in
+  military schools).
 
-   - Where did Tolkien get the idea for war "Oliphants"? (related to
-     the last question).
+- Where did Tolkien get the idea for war "Oliphants"? (related to
+  the last question).
 
-   - What is a Pyrrhic Victory? (hint: the kind you don't want many of)
+- What is a Pyrrhic Victory? (hint: the kind you don't want many of)
 
-   - What happens when you move from a democratic society made up of a
-     broad base of citizens with wide distribution of wealth (farms)
-     to one where most of the wealth is held in a few hands (hint:
-     Jefferson and the other American founders had seen where that
-     lead and thus championed the idea of the "Yoeman farmer")
+- What happens when you move from a democratic society made up of a
+  broad base of citizens with wide distribution of wealth (farms)
+  to one where most of the wealth is held in a few hands (hint:
+  Jefferson and the other American founders had seen where that
+  lead and thus championed the idea of the "Yoeman farmer")
 
-   - How do you accomplish land (wealth) reform and not get killed?
-     Ask the Gracci, wait, they were both killed.  Ask the American
-     Indians, wait, wait...
+- How do you accomplish land (wealth) reform and not get killed?
+  Ask the Gracci, wait, they were both killed.  Ask the American
+  Indians, wait, wait...
 
-   - What happens when the reward structure for civic and military
-     leaders morphs from community-minded civic responsibility to
-     personal power bases and personal enrichment? (you get Caesar
-     ... who gave us the basic calendar we use to this day ... and
-     *then* got killed)
+- What happens when the reward structure for civic and military
+  leaders morphs from community-minded civic responsibility to
+  personal power bases and personal enrichment? (you get Caesar
+  ... who gave us the basic calendar we use to this day ... and
+  *then* got killed)
 
-   - Is peace under military dictatorship (the "Pax Romana") worth the
-     loss of freedom?  [[https://youtu.be/Y7tvauOJMHo][What *have* the Romans ever done for us?]]
+- Is peace under military dictatorship (the "Pax Romana") worth the
+  loss of freedom?  [[https://youtu.be/Y7tvauOJMHo][What *have* the Romans ever done for us?]]
 
 
 **** PUBLISHED There's a lot to be said for climbing mountains :latin:life:hiking:
@@ -1970,8 +2674,11 @@ When my father was writing letters to faceless, nameless people stuck
 jobs answering IRS letters, he started with tiles like:
 
 #+begin_quote
+
+
 PENALTY OR NO PLENALTY,
 THAT IS THE QUESTION
+
 #+end_quote
 
 Big, bold a the top, and IN CAPS.
@@ -1995,7 +2702,7 @@ I admire that.   Thanks, Dad.
 
 Post 24 #100DaysToOffload https://100daystooffload.com/
 
-*** Outdoors                                                      :outdoors:
+*** Outdoors                                                       :outdoors:
 **** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:outdoors:
 :PROPERTIES:
 :EXPORT_FILE_NAME: hiking-and-strange-times
@@ -2222,6 +2929,110 @@ self-selected risks.
 
 Days 15 and 16 of #100DaysToOffload https://100daystooffload.com/
 
+**** PUBLISHED AT Hiking 2020: 1500 miles down, 700 to go :hiking:AppalachianTrail:outdoors:100DaysToOffload:
+:PROPERTIES:
+:EXPORT_FILE_NAME: AT2020
+:EXPORT_HUGO_PUBLISHDATE: 2020-09-19
+:END:
+
+1500 miles down, 700 to go to finish section hiking the Appalachian
+Trail with 215 miles completed this year in 3 trips.
+
+Of course, I have some of the hardest miles left: the Smokies,
+Mt. Washington, the Whites, the Presidentials, the Bigelows, but with
+persistence, luck, health, constant gear tweaks (and some HARD hiking)
+I should finish in a few years.
+
+#+caption: Miles to go before I sleep
+file:./2020-AT-Milage-Status.png
+
+#100daystooffload #hiking
+
+
+#+hugo: more
+
+***** 9/6 - 9/12/2020	Bennington VT to Great Barrington, Mass (Rt. 23)
+82 miles, 6 nights.
+
+
+#+caption: View From The Cobbles, Mt. Greylock, Cheshire Mass (in valley)
+[[file:./images/TheCobbles.jpg]]
+
+
+From Sunday 2020-09-06 to Saturday 2020-09-12 I hiked 82 miles
+SOBO on the Appalachian Trail from Bennington, VT (VT 9) to
+Great Barrington, Mass (Mass 23).  Highlights (high point) of
+the trip included Mt. Greylock, the highest point in Mass, the
+lovely town campsite in Cheshire, Mass, Camping by a beaver dam
+Sunday night and seeing Moose in the morning, lots of beaver
+dams/bogs, staying 2 nights (Thursday, Saturday before driving
+home) at the Berkshire Lakeside Lodge, a lovely little motel .2
+off the trail, and, of course, lots of hiking and people.
+Resupply in Dalton, Mass at the Post Office.  Chocolate shake
+and meatball grinder in Cheshire.  Pizza and milk in Dalton.
+Magic coming down to 20 Thursday in the most-of-the day rain.
+The weather, except for Thursday rain, was excellent.  Upper 50s
+to lower 80s.
+
+Pre-trip I stopped at a Legend Of Sleepy Hollow/Rip Van Winkle
+site, and just down the road the Martin Van Buren home, a short
+hike in Philmont (!), NY to a high waterfall that people were
+swimming under, saw some wild turkeys.  Stayed at the Days Inn
+in Great Barrington and got a shuttle Sunday morning from Debbie
+Andrus
+
+Post trip, I went back to the Berkshire Lakeside Lodge.  I'd
+spent time in the area.  Normal Rockwell museum.  Lakes.
+Tanglewood music festival (Boston Symphony summer series).
+Shaker village (I camped at the ""Shaker Campsite"").  West
+Stockbridge is a lovely little town.  It has the ""TurnPark"",
+an outdoor interactive art park where I met one of the artists
+(cutting the weeds).  Good food.  Probably expensive and crowded
+in a non-COVID high season.  "
+
+***** 7/3-7/4/2020	Davenport Gap to Hot Springs
+33.9 miles, 1 night
+
+#+caption: View From Max Patch in the Morning
+[[file:./images/MaxPatch.jpg]]
+
+
+Breakfast at diner. Shuttle to I-40.  Lost 1 - 1.5 hours because
+shuttle driver (NYC guy) was a slave to his GPS, would not just
+hop on 40.  On trail at 10.  Made it to Max Patch about 6.  UP
+HILL.  I was shot.  July 3 on the summit was a mob scene.  I
+camped 1/2 mile short.  Tried cold dinner (mashed potatoes +
+stuffing + chicken).  Meh. Went up for sunset, and again just
+after sunrise.  Bueatiful. Hiked 21 back into Hot Springs.
+Hiked a little way with 2 girls from Tucker/Stone Mountain, GA
+(where my wife went to school). Hit town.  Liquid.  Shower.
+DROVE to store.  White Castles.  Bed.  Drove home.  %65.1 of
+trail done.
+
+***** 6/17-6/24/2020	Hughs Gap to Hot Springs
+99 Miles, 7 nights.
+
+#+caption: Rob Bird provided "Trail Magic" 2 hikes in a row
+[[file:./images/RobBird.jpg]]
+
+
+"Mountian Squid" joined me for the first 3 miles.  Ran into 2
+older Russian couples who were out for the first time.  Hiked
+with the owner of https://www.flowmarshall.com/ gallary in
+Marshall, NC and her British husband for a bit.  Stayed at Uncle
+Johnnies 1st night, shuttled to Hughs Gap.  Stayed at Uncle
+Johhnies 3rd night, resupplied, hiked on to Hot Springs.  20
+into hot springs from Laurel Fork.  Zeroed at Laughing Heart
+hostle, shuttled back to Irwin to get car, drove, car broke down
+in Wythville (axel), rented a car, came home, started a new job,
+went back to Wythville Wednesday night.  Got car Thursday drove
+back to Hot Springs/Laughing Heart, run by "Chuck Norris" and
+"Tigger" ... former Jesuit retreat center/hostel.  Great place.
+Got food in Hot Springs hiking in.  Big hill/rock steps coming
+down.
+
+Post 26 #100DaysToOffload https://100daystooffload.com/
+
 *** Latin                                                             :latin:
 **** PUBLISHED Vis tibi sit                                      :latin:rome:
 :PROPERTIES:
@@ -2265,7 +3076,7 @@ literature....I know what my Latin reading tool is from here on out.
 
 Post 23 #100DaysToOffload https://100daystooffload.com/
 
-*** Writing                                                        :writing:
+*** Writing                                                         :writing:
 **** PUBLISHED Poetry in the trash                     :life:blogging:poetry:
 :PROPERTIES:
 :EXPORT_FILE_NAME: poetry-in-the-trash
@@ -2478,7 +3289,7 @@ me, and I think potentially others, so I'll keep it up.
 
 Day (well, post) 17 of #100DaysToOffload https://100daystooffload.com/
 
-*** Social Media Series                                             :social:
+*** Social Media Series                                              :social:
 
 This is going to be series of articles about my experiences with
 "social media" and "walled gardens"
@@ -2569,15 +3380,15 @@ Post 21 #100DaysToOffload https://100daystooffload.com/
 #+hugo: more
 
 - Dialup BBS Systems :: Once upon a time it was illegal to connect
-  modems (or anything else but AT&T equipment) to the phone network.
-  And that was, basically, the only network.  Some time after that
-  changed, dialup Bullitin Board Systems (BBS) arrived.  You could
-  dial up and connect to a BBS running in someone's house often
-  connected to the only line (the home phone).  Mom and Dad may have
-  wondered at first why they picked up a call and heard awful
-  electronic squawking noises rather than someone saying "Hello".
-  Once on, you could leave messages, read messages, etc.  Communities
-  formed this way.
+     modems (or anything else but AT&T equipment) to the phone network.
+     And that was, basically, the only network.  Some time after that
+     changed, dialup Bullitin Board Systems (BBS) arrived.  You could
+     dial up and connect to a BBS running in someone's house often
+     connected to the only line (the home phone).  Mom and Dad may have
+     wondered at first why they picked up a call and heard awful
+     electronic squawking noises rather than someone saying "Hello".
+     Once on, you could leave messages, read messages, etc.  Communities
+     formed this way.
 
 - TOPS-20 Bulletin Boards :: I'm not sure, but my first exposure
      to bulletin boards and email ("social media") was probably on
@@ -2590,43 +3401,44 @@ Post 21 #100DaysToOffload https://100daystooffload.com/
      moving files across dial-up phone connections.
 
 - Usenet News :: Social media c.a. 1980.  [[https://en.wikipedia.org/wiki/Usenet][Usenet]] was (is) a system
-  that moves messages (posts) between connected computers.  In the
-  beginning this was dial-up lines.  Mostly between universities and
-  research institutions and, of course, AT&T/Bell Labs etc.  For a
-  while the USENET "backbone" (the long haul links, the well connected
-  sites) were run by an unofficial cabal internally at AT&T (because
-  they had free access to "long lines") and traffic was farmed out to
-  local sites (universities) for further distribution.  It was the
-  quintessential "old boy" network.  To connect, you had to know
-  someone and convince them to "give you a feed".  I was on sometime
-  from the mid-80s on. A few ?representative? newsgroups: =comp.sources.amiga=,
-  =rec.humor.funny= =alt.ensign.wesley.die.die.die=
+     that moves messages (posts) between connected computers.  In the
+     beginning this was dial-up lines.  Mostly between universities and
+     research institutions and, of course, AT&T/Bell Labs etc.  For a
+     while the USENET "backbone" (the long haul links, the well connected
+     sites) were run by an unofficial cabal internally at AT&T (because
+     they had free access to "long lines") and traffic was farmed out to
+     local sites (universities) for further distribution.  It was the
+     quintessential "old boy" network.  To connect, you had to know
+     someone and convince them to "give you a feed".  I was on sometime
+     from the mid-80s on. A few ?representative? newsgroups: =comp.sources.amiga=,
+     =rec.humor.funny= =alt.ensign.wesley.die.die.die=
 
 - CompuServe: Dialup+Network+Dec10s == Information Service :: CompuServe
-  ("Online Services") was born in this world.  People started having
-  "Personal Computers" in the late 70s and early 80s.  Modems started
-  becoming a thing.  While Usenet, BBS systems, Fido-net and friends
-  started using these technologies to connect people in non-commercial
-  settings, Compu$erve started to do so in a commercial setting.
-  CompuServe had been running a nationwide packet switching network
-  since 1972 (take that, ARPANET !), had been selling business
-  oriented computing services, and time sharing on its DecSystem10's
-  accessed via that network as well as growing raft of dial-up modem
-  pools, conveniently located in H&R Block offices around the country
-  at a time when having "Local" numbers was important (long distance
-  was expensive).  This was the 1970s version of "Cloud Computing".
-  Business use slacked off at night, so what was a good time-sharing
-  company to do?  Why start an Information Service that grew into the
-  familiar lineup of "Forums" (BBS), "InfoPlex" (email), "CB"
-  (chat/Aim/IRC), and the recurring services that every online service,
-  search engine and social network eventually devolves to: News,
-  Weather, and Sports.  I think the online service started around 1980.   I began working
-  there in 1985.   More from the CompuPerspective as these posts
-  progress.
+     ("Online Services") was born in this world.  People started having
+     "Personal Computers" in the late 70s and early 80s.  Modems started
+     becoming a thing.  While Usenet, BBS systems, Fido-net and friends
+     started using these technologies to connect people in non-commercial
+     settings, Compu$erve started to do so in a commercial setting.
+     CompuServe had been running a nationwide packet switching network
+     since 1972 (take that, ARPANET !), had been selling business
+     oriented computing services, and time sharing on its DecSystem10's
+     accessed via that network as well as growing raft of dial-up modem
+     pools, conveniently located in H&R Block offices around the country
+     at a time when having "Local" numbers was important (long distance
+     was expensive).  This was the 1970s version of "Cloud Computing".
+     Business use slacked off at night, so what was a good time-sharing
+     company to do?  Why start an Information Service that grew into the
+     familiar lineup of "Forums" (BBS), "InfoPlex" (email), "CB"
+     (chat/Aim/IRC), and the recurring services that every online service,
+     search engine and social network eventually devolves to: News,
+     Weather, and Sports.  I think the online service started around 1980.   I began working
+     there in 1985.   More from the CompuPerspective as these posts
+     progress.
 
 [fn:5] Modem picture courtesy of: "Dial-a-Grue" by Digital Game Museum is licensed under CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/
 
-*** Tech HOWTOs                                                      :HOWTO:
+
+*** Tech HOWTOs                                                       :HOWTO:
 **** PUBLISHED HOWTO: Breaking and fixing DNS - Understanding modern DNS on Ubuntu. :DNS:Ubuntu:HOWTO:Linux:systemd:
 :PROPERTIES:
 :EXPORT_FILE_NAME: dns-today
@@ -2704,7 +3516,7 @@ In this phase of debugging, I try to do name resolution as configured:
      intended.  Nope.  No response.
 
 - dig - known-good nameserver :: I ran =$ dig www.uu.net
-             @9.9.9.9= to see if I could resolve against a known-good
+                  @9.9.9.9= to see if I could resolve against a known-good
      nameserver.  This worked.  No issues with connectivity/routing.
 
 - dig - 127.0.0.53 :: I ran =$ dig www.uu.net @127.0.0.53= to see
@@ -2712,7 +3524,7 @@ In this phase of debugging, I try to do name resolution as configured:
      /etc/resolv.conf was working.  Nope.
 
 - systemd-resolved - how is it configured?  :: I ran =$
-             systemd-resolve --status= to see how systemd thought dns was
+                  systemd-resolve --status= to see how systemd thought dns was
      configured.  The wireless interface I was using pointed to a
      nameserver (the proxy server on my wireless router) that should work:
 
@@ -2734,15 +3546,15 @@ MulticastDNS setting: no
      not the only game in town for doing command line DNS look-ups.
      Systemd (of course) will do it for you:
      #+begin_example
-            $ systemd-resolve www.uu.net
-            www.uu.net: 152.195.32.39
+                 $ systemd-resolve www.uu.net
+                 www.uu.net: 152.195.32.39
      #+end_example
      In this case, it worked, which tells me that systemd-resolved
      is happy and working.
 
 - try dig again :: Try another "normal" lookup:
      #+begin_example
-            $ dig www.uu.net
+                 $ dig www.uu.net
      #+end_example
 
      This failed.  The conclusion seems to be that the whatever the
@@ -2866,10 +3678,11 @@ debugging this problem further.
 - systemd-resolved :: I may want to learn more about this, as it is
      part of the new regime in most Linux distros.  But not now.
 
-***** For Further Reading
+******** For Further Reading
 - resolvers, stub resolvers and nameservers :: https://unix.stackexchange.com/questions/500536/what-are-dns-server-resolver-and-stub-resolver
 
 Day 10 of #100DaysToOffload.  Delayed a day due to DNS problems :-)
+
 
 * About George Jones
 :PROPERTIES:
@@ -2897,7 +3710,6 @@ variously by CompuServe, UUNET, MITRE, Carnegie-Mellon/CERT, Amazon,
 Redjack and Expanse.  See  https://www.linkedin.com/in/georgemjones/
 
 He can be reached via email as gmj at pobox dot com
-
 
 * Curious Musings
 :PROPERTIES:
