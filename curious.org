@@ -798,6 +798,9 @@ Post 26 #100DaysToOffload https://100daystooffload.com/
      #+name: pic:camera
      file:images/code.jpg
 
+
+     Post 31 of #100DaysToOffload https://100daystooffload.com/
+
      #+hugo: more
 
 
@@ -899,7 +902,7 @@ Post 26 #100DaysToOffload https://100daystooffload.com/
        (because the forums could not deal with multiple suffixes, as
        in .tar.gz).  We had source code available for download.  The
        Forums were just CompuServe's version of the local dial-up BBS
-       and many other similar message/download o
+       and many other similar message/download systems.
 
      - FTP :: As Internet connectivity started becoming common (at
        least in universities, government and some larger
@@ -2622,7 +2625,6 @@ Post 22 #100DaysToOffload https://100daystooffload.com/
 - Is peace under military dictatorship (the "Pax Romana") worth the
   loss of freedom?  [[https://youtu.be/Y7tvauOJMHo][What *have* the Romans ever done for us?]]
 
-
 **** PUBLISHED There's a lot to be said for climbing mountains :latin:life:hiking:
 :PROPERTIES:
 :EXPORT_FILE_NAME: turba
@@ -2701,6 +2703,74 @@ Dad treated people like people, whether they saw themselves that way or not.
 I admire that.   Thanks, Dad.
 
 Post 24 #100DaysToOffload https://100daystooffload.com/
+
+**** PUBLISHED Joy in the sorrows of others?
+     :PROPERTIES:
+:EXPORT_FILE_NAME: joy-in-sorrow
+:EXPORT_HUGO_PUBLISHDATE: 2020-10-25
+:END:
+#+begin_quote
+"Why is it that man desires to be made sad, beholding miserable and
+tragic things which he himself would by no means wish to suffer?  Yet
+he desires as a spectator to feel sorrow, and this sorrow is his pleasure..."
+#+end_quote
+
+Was this guy watching too much news, political mudslinging or maybe
+just hanging out on Facebook?
+
+#+hugo: more
+
+No, this was Augustine in "The Confessions" circa AD 397 talking about
+his youthful fascination with stage plays.  People have not changed.
+I have the same desire to feed on doom and gloom.  It's not healthy.
+
+So, what do you do? My answers have included unplugging from thew news
+(never owning a TV by choice), becoming very intentionally and
+deliberately apolitical, turning off Facebook (2016) and Twitter
+(2020) as they became political cesspools and conduits for voyeuristic
+negativity (e.g. "news") to creep back in to my life.
+
+But humans don't change.   I have not changed.  I just choose to
+remove the fire-hoses delivering gloom and tragedy to me 24x7.  It
+will find me again, and I will have to make more choices to cut it
+out.
+
+#+begin_quote
+""Always look on the bright side of life"
+
+Monty Python, Life of Brian
+#+end_quote
+
+Well, yes.
+
+The Monty Python song embraces an outlook that sees a world full of bad
+things, and that it views, in the end, as meaningless and absurd (see
+their next movie, "The Meaning of Life" or John Cleese' most recent
+(2020) one man show "Why There Is No Hope" in which they drive the
+point home)
+
+Augustine himself passed through a period where he embraced
+skepticism...literally the Greek philosophy of Skepticism that doubted
+everything, including the existence and know-ability of meaning
+itself.  But he went further.
+
+It's not enough to create a vacuum, to get rid of the bad, the
+negative.  A vacuum will always be filled.  My answer is to /try/ to
+go where Augustine wound up as articulated by the Apostle Paul:
+
+#+begin_quote
+Finally, brethren, whatever is true, whatever is honorable, whatever
+is right, whatever is pure, whatever is lovely, whatever is of good
+repute, if there is any excellence and if anything worthy of praise,
+dwell on these things.
+
+Philippians 4:8, NASB
+#+end_quote
+
+
+What are you allowing to fill your vacuum ?
+
+Post 33 of #100DaysToOffload https://100daystooffload.com/ (yeah, I'm going slowly)
 
 *** Outdoors                                                       :outdoors:
 **** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:outdoors:
@@ -3436,6 +3506,119 @@ Post 21 #100DaysToOffload https://100daystooffload.com/
      progress.
 
 [fn:5] Modem picture courtesy of: "Dial-a-Grue" by Digital Game Museum is licensed under CC BY 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/2.0/
+
+
+**** PUBLISHED  Goodbye Twitter
+:PROPERTIES:
+:EXPORT_FILE_NAME: Goodbye Twitter
+:EXPORT_HUGO_PUBLISHDATE: 2020-10-12
+:END:
+
+***** 1 of 2
+Goodbye twitter.  In 2016 Facebook got too political so I dropped it.
+Now, Twitter.  You can reach me as gmj AT pobox DOT com.  Please drop
+an email if you to stay in touch. I blog semi-regularly at
+https://eludom.github.io/.
+
+
+***** 2 of 2
+https://en.wikipedia.org/wiki/Mastodon_(software) is a free, open
+source, ad-free, distributed twitter-like thing. No corporation
+algorithmically manipulates your timeline and AUPs are set by the
+community.  I'm on the https://fosstodon.org instance.
+
+
+
+
+
+
+**** PUBLISHED  Hello twtxt                     :HOWTO:100DaysToOffload:geek:
+:PROPERTIES:
+:EXPORT_FILE_NAME: hello_twtxt
+:EXPORT_HUGO_PUBLISHDATE: 2020-10-17
+:END:
+
+And in the to-simple-to-be-true category...
+
+#+begin_quote
+twtxt is a decentralised, minimalist microblogging service for hackers.
+#+end_quote
+
+https://twtxt.readthedocs.io/en/latest/user/intro.html
+
+#+begin_example
+ $ twtxt tweet "Is there anybody out there, just nod if you can hear me"
+#+end_example
+#+hugo: more
+
+Install twtxt
+
+#+begin_example
+pip3 install twtxt
+#+end_example
+
+Configure twtxt
+
+#+begin_example
+twtxt config
+...
+ $ cat ~/.config/twtxt/config
+[twtxt]
+nick = gmj
+twtfile = /home/gmj/twtxt.txt
+twturl = http://www.port111.com/george/twtxt.txt
+disclose_identity = True
+character_limit = 140
+character_warning = 140
+
+[following]
+twtxt = https://buckket.org/twtxt_news.txt
+adiabatic = https://www.frogorbits.com/twtxt.txt
+beyond = https://enotty.dk/beyond.txt
+jcolag = https://john.colagioia.net/twtxt.txt
+vain = https://www.uninformativ.de/twtxt.txt
+prologic = https://twtxt.net/user/prologic/twtxt.txt
+antonio = https://twtxt.net/user/antonio/twtxt.txt
+#+end_example
+
+Post some tweets
+
+#+begin_example
+$ twtxt tweet  This is incredible.  Simple.  Text.  Decentralized :-\)
+$ twtxt tweet  There is life after twitter.  https://eludom.github.io/blog/goodbye-twitter/
+$ twtxt tweet Thanks @prologic
+#+end_example
+
+Push my twtxt.txt file to the server (dropbox, github, s3 buckets, etc
+would do...anything with a public URL)
+
+#+begin_example
+scp twtxt.txt gmj@port111.com:~/public_html/george/twtxt.txt
+#+end_example
+
+Follow someone:
+
+#+begin_example
+twtxt follow prologic https://twtxt.net/user/prologic/twtxt.txt
+#+end_example
+
+Read your timeline
+#+begin_example
+$ twtxt timeline
+#+end_example
+
+Some of the docs
+
+https://twtxt.readthedocs.io/en/latest/user/usage.html
+
+https://twtxt.readthedocs.io/en/latest/index.html
+
+And if you want a browser based interface that does threading, etc
+(BUT requires a login...)
+
+https://twtxt.net/
+
+Day 32 of #100DaysToOffload.
 
 
 *** Tech HOWTOs                                                       :HOWTO:
