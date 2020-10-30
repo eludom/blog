@@ -87,7 +87,7 @@ hash_insert (string, table, flags)
     table = hash_create (0);
 
   item = (flags & HASH_NOSRCH) ? (BUCKET_CONTENTS *)NULL
-                               : hash_search (string, table, 0);
+			       : hash_search (string, table, 0);
 #+end_src
 - and there it is, the linear search walking the list in
   =hash_search()=
@@ -113,10 +113,10 @@ hash_search (string, table, flags)
     {
       /* This is the comparison function */
       if (hv == list->khash && STREQ (list->key, string))
-        {
-          list->times_found++;
-          return (list);
-        }
+	{
+	  list->times_found++;
+	  return (list);
+	}
     }
 #+end_src
 
@@ -192,7 +192,7 @@ Here's what I did to instlal
      simple:
 
      #+begin_example
-                 sudo bash basic-install.sh
+		 sudo bash basic-install.sh
      #+end_example
 
 - [ ] Static IP :: But you will want a Linux box with a static IP
@@ -289,41 +289,41 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
   to grep out the known and see what's left:
 
   #+begin_example
-          $  cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\ | sed 's/.*: //'  | sort | uniq -c | sort -rn | head
-          334 reply min-api.cryptocompare.com is <CNAME>
-          334 reply ccc-api.cloudapp.net is 40.115.22.134
-          334 query[A] min-api.cryptocompare.com from 127.0.0.1
-          238 forwarded min-api.cryptocompare.com to 8.8.4.4
-          143 cached min-api.cryptocompare.com is <CNAME>
-          101 query[A] no-thanks.invalid.lan from 127.0.0.1
-          101 query[A] no-thanks.invalid from 127.0.0.1
-          101 forwarded min-api.cryptocompare.com to 8.8.8.8
-          100 reply hfq2h9152m63.statuspage.io is <CNAME>
-          100 query[A] rpt.cedexis.com from 127.0.0.1
+	  $  cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\ | sed 's/.*: //'  | sort | uniq -c | sort -rn | head
+	  334 reply min-api.cryptocompare.com is <CNAME>
+	  334 reply ccc-api.cloudapp.net is 40.115.22.134
+	  334 query[A] min-api.cryptocompare.com from 127.0.0.1
+	  238 forwarded min-api.cryptocompare.com to 8.8.4.4
+	  143 cached min-api.cryptocompare.com is <CNAME>
+	  101 query[A] no-thanks.invalid.lan from 127.0.0.1
+	  101 query[A] no-thanks.invalid from 127.0.0.1
+	  101 forwarded min-api.cryptocompare.com to 8.8.8.8
+	  100 reply hfq2h9152m63.statuspage.io is <CNAME>
+	  100 query[A] rpt.cedexis.com from 127.0.0.1
   #+end_example
 
   #+begin_example
-          $ cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\|compuserve\|aol | sed 's/.*: //'  | sort | uniq -c | sort -rn | tail -20
-          1 cached imap.gmail.com is 2607:f8b0:400d:c0f::6d
-          1 cached imap.gmail.com is 2607:f8b0:400d:c07::6d
-          1 cached imap.gmail.com is 2607:f8b0:400d:c00::6d
-          1 cached imap.gmail.com is 2607:f8b0:4004:c08::6d
-          1 cached imap.gmail.com is 2607:f8b0:4004:c08::6c
-          1 cached imap.gmail.com is 172.253.63.109
-          1 cached imap.gmail.com is 172.253.63.108
-          1 cached hosts-file.net is 3.234.198.254
-          1 cached encrypted-tbn0.gstatic.com is 172.217.13.78
-          1 cached dig is NXDOMAIN
-          1 cached content-signature-2.cdn.mozilla.net is <CNAME>
-          1 cached beacons-handoff.gcp.gvt2.com is 172.217.15.99
-          1 cached beacons.gvt2.com is 172.217.13.227
-          1 cached beacons.gcp.gvt2.com is <CNAME>
-          1 cached beacons4.gvt2.com is 216.239.32.116
-          1 cached beacons2.gvt2.com is 216.239.38.117
-          1 cached beacons2.gvt2.com is 216.239.36.117
-          1 cached beacons2.gvt2.com is 216.239.34.117
-          1 cached beacons2.gvt2.com is 216.239.32.117
-          1 cached article.smartasset.com is <CNAME>
+	  $ cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\|compuserve\|aol | sed 's/.*: //'  | sort | uniq -c | sort -rn | tail -20
+	  1 cached imap.gmail.com is 2607:f8b0:400d:c0f::6d
+	  1 cached imap.gmail.com is 2607:f8b0:400d:c07::6d
+	  1 cached imap.gmail.com is 2607:f8b0:400d:c00::6d
+	  1 cached imap.gmail.com is 2607:f8b0:4004:c08::6d
+	  1 cached imap.gmail.com is 2607:f8b0:4004:c08::6c
+	  1 cached imap.gmail.com is 172.253.63.109
+	  1 cached imap.gmail.com is 172.253.63.108
+	  1 cached hosts-file.net is 3.234.198.254
+	  1 cached encrypted-tbn0.gstatic.com is 172.217.13.78
+	  1 cached dig is NXDOMAIN
+	  1 cached content-signature-2.cdn.mozilla.net is <CNAME>
+	  1 cached beacons-handoff.gcp.gvt2.com is 172.217.15.99
+	  1 cached beacons.gvt2.com is 172.217.13.227
+	  1 cached beacons.gcp.gvt2.com is <CNAME>
+	  1 cached beacons4.gvt2.com is 216.239.32.116
+	  1 cached beacons2.gvt2.com is 216.239.38.117
+	  1 cached beacons2.gvt2.com is 216.239.36.117
+	  1 cached beacons2.gvt2.com is 216.239.34.117
+	  1 cached beacons2.gvt2.com is 216.239.32.117
+	  1 cached article.smartasset.com is <CNAME>
   #+end_example
 
   What is this stuff?
@@ -567,10 +567,10 @@ In the HUGO_BASE_DIR run =hugo=.  The results will be written to
   on the web site.  You might have to refresh
 ******* Add and push the source
 #+begin_example
-        cd ..
-        git status .
-        git add [new files]
-        git commit -m"name of new post"
+	cd ..
+	git status .
+	git add [new files]
+	git commit -m"name of new post"
 #+end_example
 
 - be sure not to add docs/, as that is pushed a a subtree.
@@ -746,23 +746,23 @@ function some {
 
 
     if [ "$#" -eq 0 ]; then
-        :
+	:
     elif [ "$#" -eq 1 ]; then
-        if [[ "$1" =~ -[0-9] ]]; then
-            HOW_MANY=`echo "$1" | sed 's/^-//'`
-        else
-            FILE="$1"
-        fi
+	if [[ "$1" =~ -[0-9] ]]; then
+	    HOW_MANY=`echo "$1" | sed 's/^-//'`
+	else
+	    FILE="$1"
+	fi
 
     elif [ "$#" -eq 2 ]; then
-        if [[ "$1" =~ -[0-9] ]]; then
-            HOW_MANY=`echo "$1" | sed 's/^-//'`
-        else
-            echo "some: Usage: some [-# [FILE]]"
-            return
-        fi
+	if [[ "$1" =~ -[0-9] ]]; then
+	    HOW_MANY=`echo "$1" | sed 's/^-//'`
+	else
+	    echo "some: Usage: some [-# [FILE]]"
+	    return
+	fi
 
-        FILE="$2"
+	FILE="$2"
     fi
 
     # Count the lines to bound display
@@ -1260,14 +1260,14 @@ flash, we might come up with this taxonomy:
   + open port                      WELL DEFINED, CERTAIN IDENTIFICATION
     + tcp
       + tls                                        ^
-        + web server                               |
-           + microsoft                             |
-             + iis                                 |
-               + 7.3                               |
-                 + services                        |
-                   + flash                         v
-                 + frameworks
-                    + dotnet       LESS DEFINED, LESS CERTAIN IDENTIFICATION
+	+ web server                               |
+	   + microsoft                             |
+	     + iis                                 |
+	       + 7.3                               |
+		 + services                        |
+		   + flash                         v
+		 + frameworks
+		    + dotnet       LESS DEFINED, LESS CERTAIN IDENTIFICATION
 #+end_example
 
 Taxonomies help in classifying, understanding and communicating
@@ -1439,14 +1439,14 @@ Post 30 of #100DaysToOffload https://100daystooffload.com/
       - We want to be left alone sometimes
       - We want space to be ourselves
       - We want our thoughts to be our thoughts (and we want to have
-        them before the machine learning algorithms that are tracking
-        us have them)
+	them before the machine learning algorithms that are tracking
+	us have them)
       - We want the freedom to think, act, feel, love and hate ("[[https://en.wikipedia.org/wiki/Catullus_85][Odi
-        et amo]] ...") as we see fit, at least inside our own heads
+	et amo]] ...") as we see fit, at least inside our own heads
       - We want to be able to work out life for ourselves
       - We want space to think, to grow, to make mistakes and correct
-        them, or even to be free to persist in our chosen errors and
-        delusions. "To err is human..."
+	them, or even to be free to persist in our chosen errors and
+	delusions. "To err is human..."
 
       Something about using the current set of "free" Big Internet
       offerings where, "If you're not paying for it you ARE the
@@ -2772,6 +2772,73 @@ What are you allowing to fill your vacuum ?
 
 Post 33 of #100DaysToOffload https://100daystooffload.com/ (yeah, I'm going slowly)
 
+**** PUBLISHED History: escape to the past or lessons for the present? :history:100DaysToOffload:
+     :PROPERTIES:
+     :EXPORT_FILE_NAME: why-history
+     :EXPORT_HUGO_PUBLISHDATE: 2020-10-30
+     :END:
+
+I've always liked history.  And because the un-examined predilection
+is not worth having (γνῶθι σεαυτόν), I turn to Livy to understand it:
+
+#+begin_quote
+This I hold to be the chief value and reward of history, to have
+examples of all kinds set forth as an illustrious record, from which
+you may choose what is worthy of imitation in public and private life,
+and what is to be shunned as wrong in inception and ruinous in outcome
+
+Livy, Preface to History of Rome.
+
+Quoted from "Classics In Translation: Volume II, Latin Literature",
+MacKendrick and Howe, 1982
+#+end_quote
+
+So, history provides examples for present living.  It provides a moral
+and practical purpose, helping to guide our interactions with others
+in the present, but also...
+
+#+hugo: more
+
+#+begin_quote
+To me on the contrary it is one of the rewards of my labors to turn
+away for a little while from the multitude of evils which our own age
+has witnessed, and to give my whole mind to those earlier times,
+released from every care or consideration by which the historian's mind
+might be troubled and distracted, if not deflected from the pursuit of
+truth.
+
+Livy, Preface to History of Rome.
+
+Quoted from "Classics In Translation: Volume II, Latin Literature",
+MacKendrick and Howe, 1982
+#+end_quote
+
+The study of history can also provide a private, personal escape from
+the calamities and confusion of the present.
+
+And of course, there can be value in loving or doing a thing for it's
+own sake.  Without such passions, life becomes meaningless drudgery.
+That said, here, from this morning's introspection, are a few more
+possible reasons I might be fascinated with history.  History can be:
+
+- an escape
+- a "safe place"
+- a source of examples for living in the world today
+- a place to find idealized people and institutions (that may never
+  have actually existed in the form we visualize)
+- something fixed in a changing world
+- a place where we know the outcomes
+- a place where we can approach the world in the third person
+- something to give context and explanations to our current beliefs
+- a place where we do not have to enter into personal conflict
+- a collection of interesting stories
+
+And, yes, I do have one son studying to be a History/Social Studies
+teacher and another who has devoured the western cannon.  The apples
+do not fall far from the tree.
+
+Post 34 of #100DaysToOffload https://100daystooffload.com/
+
 *** Outdoors                                                       :outdoors:
 **** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:outdoors:
 :PROPERTIES:
@@ -3699,7 +3766,7 @@ In this phase of debugging, I try to do name resolution as configured:
      intended.  Nope.  No response.
 
 - dig - known-good nameserver :: I ran =$ dig www.uu.net
-                  @9.9.9.9= to see if I could resolve against a known-good
+		  @9.9.9.9= to see if I could resolve against a known-good
      nameserver.  This worked.  No issues with connectivity/routing.
 
 - dig - 127.0.0.53 :: I ran =$ dig www.uu.net @127.0.0.53= to see
@@ -3707,7 +3774,7 @@ In this phase of debugging, I try to do name resolution as configured:
      /etc/resolv.conf was working.  Nope.
 
 - systemd-resolved - how is it configured?  :: I ran =$
-                  systemd-resolve --status= to see how systemd thought dns was
+		  systemd-resolve --status= to see how systemd thought dns was
      configured.  The wireless interface I was using pointed to a
      nameserver (the proxy server on my wireless router) that should work:
 
@@ -3720,24 +3787,24 @@ Link 3 (wlp2s0)
 MulticastDNS setting: no
       DNSSEC setting: no
     DNSSEC supported: no
-         DNS Servers: 192.168.86.1
-          DNS Domain: ~.
-                      lan
+	 DNS Servers: 192.168.86.1
+	  DNS Domain: ~.
+		      lan
 #+end_example
 
 - systemd-resolve - let systemd resolve a name :: dig(1) and host(1) are
      not the only game in town for doing command line DNS look-ups.
      Systemd (of course) will do it for you:
      #+begin_example
-                 $ systemd-resolve www.uu.net
-                 www.uu.net: 152.195.32.39
+		 $ systemd-resolve www.uu.net
+		 www.uu.net: 152.195.32.39
      #+end_example
      In this case, it worked, which tells me that systemd-resolved
      is happy and working.
 
 - try dig again :: Try another "normal" lookup:
      #+begin_example
-                 $ dig www.uu.net
+		 $ dig www.uu.net
      #+end_example
 
      This failed.  The conclusion seems to be that the whatever the
