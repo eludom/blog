@@ -1,5 +1,6 @@
 #+title: Curious Musings
 #+options: num:nil toc:nil \n:nil
+#+OPTIONS: tex:t
 #+todo: TODO(t) CANCELLED(c) |  WIP(w) PUBLISHED(p)
 #+hugo_base_dir: .
 #+hugo_auto_set_lastmod: %Y-%m-%d
