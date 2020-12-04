@@ -30,7 +30,6 @@ millions[fn:1].    I went poking around the bash source code today
 (2020-04-18) to confirm my suspicion and gauge the difficulty of
 adding an option to do something more sensible.
 
-
 In less than a day after I reported it, there is a patch
 https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html My
 timing code and pre and post patch timings are here:
@@ -88,7 +87,7 @@ hash_insert (string, table, flags)
     table = hash_create (0);
 
   item = (flags & HASH_NOSRCH) ? (BUCKET_CONTENTS *)NULL
-			       : hash_search (string, table, 0);
+                               : hash_search (string, table, 0);
 #+end_src
 - and there it is, the linear search walking the list in
   =hash_search()=
@@ -114,10 +113,10 @@ hash_search (string, table, flags)
     {
       /* This is the comparison function */
       if (hv == list->khash && STREQ (list->key, string))
-	{
-	  list->times_found++;
-	  return (list);
-	}
+        {
+          list->times_found++;
+          return (list);
+        }
     }
 #+end_src
 
@@ -133,6 +132,9 @@ see if they would even entertain the idea of a patch
 See https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html
 
 ***** Footnotes
+
+
+[fn:7] ADS stands for "Attention Distraction Syndrome"
 
 [fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
 
@@ -193,7 +195,7 @@ Here's what I did to instlal
      simple:
 
      #+begin_example
-		 sudo bash basic-install.sh
+                 sudo bash basic-install.sh
      #+end_example
 
 - [ ] Static IP :: But you will want a Linux box with a static IP
@@ -290,41 +292,41 @@ gp1.wac.v2cdn.net.	3599	IN	A	152.195.32.39
   to grep out the known and see what's left:
 
   #+begin_example
-	  $  cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\ | sed 's/.*: //'  | sort | uniq -c | sort -rn | head
-	  334 reply min-api.cryptocompare.com is <CNAME>
-	  334 reply ccc-api.cloudapp.net is 40.115.22.134
-	  334 query[A] min-api.cryptocompare.com from 127.0.0.1
-	  238 forwarded min-api.cryptocompare.com to 8.8.4.4
-	  143 cached min-api.cryptocompare.com is <CNAME>
-	  101 query[A] no-thanks.invalid.lan from 127.0.0.1
-	  101 query[A] no-thanks.invalid from 127.0.0.1
-	  101 forwarded min-api.cryptocompare.com to 8.8.8.8
-	  100 reply hfq2h9152m63.statuspage.io is <CNAME>
-	  100 query[A] rpt.cedexis.com from 127.0.0.1
+          $  cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\ | sed 's/.*: //'  | sort | uniq -c | sort -rn | head
+          334 reply min-api.cryptocompare.com is <CNAME>
+          334 reply ccc-api.cloudapp.net is 40.115.22.134
+          334 query[A] min-api.cryptocompare.com from 127.0.0.1
+          238 forwarded min-api.cryptocompare.com to 8.8.4.4
+          143 cached min-api.cryptocompare.com is <CNAME>
+          101 query[A] no-thanks.invalid.lan from 127.0.0.1
+          101 query[A] no-thanks.invalid from 127.0.0.1
+          101 forwarded min-api.cryptocompare.com to 8.8.8.8
+          100 reply hfq2h9152m63.statuspage.io is <CNAME>
+          100 query[A] rpt.cedexis.com from 127.0.0.1
   #+end_example
 
   #+begin_example
-	  $ cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\|compuserve\|aol | sed 's/.*: //'  | sort | uniq -c | sort -rn | tail -20
-	  1 cached imap.gmail.com is 2607:f8b0:400d:c0f::6d
-	  1 cached imap.gmail.com is 2607:f8b0:400d:c07::6d
-	  1 cached imap.gmail.com is 2607:f8b0:400d:c00::6d
-	  1 cached imap.gmail.com is 2607:f8b0:4004:c08::6d
-	  1 cached imap.gmail.com is 2607:f8b0:4004:c08::6c
-	  1 cached imap.gmail.com is 172.253.63.109
-	  1 cached imap.gmail.com is 172.253.63.108
-	  1 cached hosts-file.net is 3.234.198.254
-	  1 cached encrypted-tbn0.gstatic.com is 172.217.13.78
-	  1 cached dig is NXDOMAIN
-	  1 cached content-signature-2.cdn.mozilla.net is <CNAME>
-	  1 cached beacons-handoff.gcp.gvt2.com is 172.217.15.99
-	  1 cached beacons.gvt2.com is 172.217.13.227
-	  1 cached beacons.gcp.gvt2.com is <CNAME>
-	  1 cached beacons4.gvt2.com is 216.239.32.116
-	  1 cached beacons2.gvt2.com is 216.239.38.117
-	  1 cached beacons2.gvt2.com is 216.239.36.117
-	  1 cached beacons2.gvt2.com is 216.239.34.117
-	  1 cached beacons2.gvt2.com is 216.239.32.117
-	  1 cached article.smartasset.com is <CNAME>
+          $ cat pihole.log.1  | egrep -v microsoft.com\|google\|amazon\|in-addr\|linkedin\|dropbox\|facebook\|messenger\|ubuntu\|github\|brave\|basicattention\|yahoo\|disqus\|twitter\|akamai\|compuserve\|aol | sed 's/.*: //'  | sort | uniq -c | sort -rn | tail -20
+          1 cached imap.gmail.com is 2607:f8b0:400d:c0f::6d
+          1 cached imap.gmail.com is 2607:f8b0:400d:c07::6d
+          1 cached imap.gmail.com is 2607:f8b0:400d:c00::6d
+          1 cached imap.gmail.com is 2607:f8b0:4004:c08::6d
+          1 cached imap.gmail.com is 2607:f8b0:4004:c08::6c
+          1 cached imap.gmail.com is 172.253.63.109
+          1 cached imap.gmail.com is 172.253.63.108
+          1 cached hosts-file.net is 3.234.198.254
+          1 cached encrypted-tbn0.gstatic.com is 172.217.13.78
+          1 cached dig is NXDOMAIN
+          1 cached content-signature-2.cdn.mozilla.net is <CNAME>
+          1 cached beacons-handoff.gcp.gvt2.com is 172.217.15.99
+          1 cached beacons.gvt2.com is 172.217.13.227
+          1 cached beacons.gcp.gvt2.com is <CNAME>
+          1 cached beacons4.gvt2.com is 216.239.32.116
+          1 cached beacons2.gvt2.com is 216.239.38.117
+          1 cached beacons2.gvt2.com is 216.239.36.117
+          1 cached beacons2.gvt2.com is 216.239.34.117
+          1 cached beacons2.gvt2.com is 216.239.32.117
+          1 cached article.smartasset.com is <CNAME>
   #+end_example
 
   What is this stuff?
@@ -568,10 +570,10 @@ In the HUGO_BASE_DIR run =hugo=.  The results will be written to
   on the web site.  You might have to refresh
 ******* Add and push the source
 #+begin_example
-	cd ..
-	git status .
-	git add [new files]
-	git commit -m"name of new post"
+        cd ..
+        git status .
+        git add [new files]
+        git commit -m"name of new post"
 #+end_example
 
 - be sure not to add docs/, as that is pushed a a subtree.
@@ -747,23 +749,23 @@ function some {
 
 
     if [ "$#" -eq 0 ]; then
-	:
+        :
     elif [ "$#" -eq 1 ]; then
-	if [[ "$1" =~ -[0-9] ]]; then
-	    HOW_MANY=`echo "$1" | sed 's/^-//'`
-	else
-	    FILE="$1"
-	fi
+        if [[ "$1" =~ -[0-9] ]]; then
+            HOW_MANY=`echo "$1" | sed 's/^-//'`
+        else
+            FILE="$1"
+        fi
 
     elif [ "$#" -eq 2 ]; then
-	if [[ "$1" =~ -[0-9] ]]; then
-	    HOW_MANY=`echo "$1" | sed 's/^-//'`
-	else
-	    echo "some: Usage: some [-# [FILE]]"
-	    return
-	fi
+        if [[ "$1" =~ -[0-9] ]]; then
+            HOW_MANY=`echo "$1" | sed 's/^-//'`
+        else
+            echo "some: Usage: some [-# [FILE]]"
+            return
+        fi
 
-	FILE="$2"
+        FILE="$2"
     fi
 
     # Count the lines to bound display
@@ -934,6 +936,505 @@ Post 26 #100DaysToOffload https://100daystooffload.com/
      trolling the USENET News feed spool.  No more trips to MIT, tape
      in hand.  No more hoping ftp.uu.net has the latest version.
      Go forth and hack.
+
+**** PUBLISHED All we are saying, is give =init.el= a chance :100DaysToOffload:
+:PROPERTIES:
+:EXPORT_FILE_NAME: ArmisticeDay2020
+:EXPORT_HUGO_PUBLISHDATE: 2020-11-11
+:END:
+
+On this Armistice Day, 2020, commemorating the end of "The war to end
+all wars" 119 years ago, I reflect that if the whole world were busy
+fiddling with their emacs configs there would be no more war.  Well...
+so the treaty of Versailles and the League of Nations did not work out
+as planned...so maybe we look for community in the small instead.
+
+There is community that has grown out of research labs in Boston (a
+city notable for its contribution to the birth of other well known
+communities).  Some of the well known members of the community that I
+am acquainted with include a Chinese programmer living in Palo Alto, a
+philosophy major in France, an Astronomy professor in the
+Netherlands, a programmer in New Zealand, a Fin living in the United
+states and a Filipina mother of a 4 year old living in Canada and of
+course it's founder, still in Boston.
+
+All we are saying, is give =init.el= a chance.
+
+Post 36 of #100DaysToOffload https://100daystooffload.com/
+
+
+**** TODO From Typewriters, to Scribe, to LaTeX, to Org Mode and back to paper
+:PROPERTIES:
+:EXPORT_FILE_NAME: typewriters
+:EXPORT_HUGO_PUBLISHDATE: 2020-12-02
+:END:
+
+***** What is this and why was it written?
+      This is my personal history of putting
+      words-on-page-or-screen-or-blog-entry covering the period from
+      the late 1970s to present.
+
+      It was written (partially) at the request of [[https://helpdeskheadesk.net/about/][Josh Rollins]] from
+      whom I borrowed a hugo blog theme.  Thanks Josh.
+
+      I was writing a post where I wanted to include the $\TeX$ symbol
+      in the post, which is perfectly possible in emacs org mode where
+      $\TeX$ and $\LaTeX$ are first class citizens.  The blog exports
+      to markdown via the [[https://ox-hugo.scripter.co/][ox-hugo]] Org exporter back end (lost yet?)
+      which [[https://gohugo.io/][hugo]] then translates to HTML which can then be previewed
+      locally with Hugo's own web server and then pushed to the live
+      site, in my case, this site using git push.  I've described [[https://eludom.github.io/blog/hugo-org-github/][the
+      process of publishing my blog with hugo]] here.
+
+      That said, the symbols weren't working, so I pinged Josh who, it
+      turns out had little experience with $\LaTeX$ and so was not
+      able to help.  Along the way, he asked me
+
+      #+begin_quote
+      Is there more you can tell me about use case for it? In other words,
+      can I get you to vent some more about this, it's interesting.
+      #+end_quote
+
+      So here is some venting. And, in case you were wondering, the
+      solution is to put
+
+      #+begin_src html
+      <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+      #+end_src
+
+      at the bottom of =layout/partials/head.html= before ~</head>~ in
+      the modified [[https://themes.gohugo.io/hyde-hyde/][hugo hyde theme]] I borrowed from Josh.
+
+***** Some History
+      #+begin_quote
+      Marley was dead, to begin with...
+      #+end_quote
+
+      No. No. No.
+
+      #+begin_quote
+      It was a dark and stormy night...
+      #+end_quote
+
+      Wrong.
+
+      OK, how about this:
+
+***** Dad - Typewriters
+      #+begin_quote
+      In high school I wrote out my paper assignments by hand and then my
+      Dad typed them for me, at least until I took typing and got up to
+      30wpm.  White-out can be your friend :-)
+      #+end_quote
+
+      Better.
+
+      #+begin_quote
+      As high school progressed I and my friends started using the
+      HP-2000E in the computer lab on [[https://en.wikipedia.org/wiki/Teletype_Model_33][ASR 33 Teletypes]] (=/dev/tty=
+      anyone?) that printed your input and the computers responses on
+      a role of paper.  We may have printed a few stories or other
+      prose, but mostly it was BASIC listings.
+
+      Towards the end of high school, I remember eyeing the school
+      secretary's IBM Selectric typewriter because we knew it could be
+      converted to a printer....(Apple II's were all the rage then
+      ...)
+      #+end_quote
+
+
+***** Brian Reid - Scribe
+       So, [[https://en.wikipedia.org/wiki/Scribe_(markup_language)][Scribe]].  So in the late 70's at Carnegie-Mellon, Brian Reid
+       stepped into the long tradition of Computer Science geeks scratching
+       their own itch, developing one of the first mark-up languages
+       that allowed the author to describe a document structurally
+       (chapters, paragraph, et cetera.), and to target different output
+       devices (text, laser printer, etc.) and to externalize styles,
+       presaging the later CSS style sheets.
+
+       Reid killed several birds with one stone.  Scribe was the
+       subject of his PhD Thesis, it formatted his PhD thesis (and
+       many others for a few years), and was sold to Unilogic sparking
+       the first software copyright problems between CMU and students,
+       wining Reid the ACM Grace Hopper Award, and, of course,
+       criticism from Richard Stallman[fn:11] for not making it available for
+       free...some people :-)
+
+       I wound up using Scribe on the Ohio State DECsystem-20 and then
+       being the SCRIBE administrator for the department of Mechanical
+       Engineering for a year or two.  As I had access to
+       then-world-class formatting and typesetting facilities, Dad was
+       no longer typing my papers :-)
+
+***** Knuth - [[https://en.wikipedia.org/wiki/TeX][TeX]]
+
+
+      Meanwhile, on the other side of the country (on a dark and
+      stormy night?), [[https://en.wikipedia.org/wiki/Donald_Knuth][Donald Knuth]] was (and still is) engaged in
+      writing his foundational series of Computer Science textbooks
+      /The Art of Computer Programming/ [fn:10].  But he was not happy with
+      the appearance of the typesetting from his publisher, so, being
+      Donald Knuth he set out to write his own
+      formatting/type-setting program c.a. 1978.  The result was
+      $\TeX$. Along with [[https://en.wikipedia.org/wiki/TeX][TeX]]  he developed Metafont, a language for
+      describing fonts from which we get the Computer Modern fonts.
+
+      The current $\TeX$ release is 3.14159265.   Each subsequent
+      release adds a digit of $\pi$.   Metafont is at  2.7182818 and
+      approaching /e/ with each release.
+
+      I installed the ?Pascal based? ?TeX82? on the DEC10's at
+      CompuServe.
+
+***** Knuth - Literate Programming
+
+     Not content with having won the Turning award in 1974 (4 years
+     prior), with creating a typesetting system that is used to this
+     day for a large fraction of academic publishing, alongside
+     $\TeX$ he came up with the concept of [[https://en.wikipedia.org/wiki/Literate_programming][Literate Programming]], the
+     basic idea of which is you are writing a program both for humans
+     and machines.  The language was called WEB[fn:9].   The basic
+     process is to run "weave" to generate output for humans (say, a
+     volume of the /The Art of Computer Programming/) and to run
+     "tangle" to generate output (code) for machines.
+
+     We see elements of this today in Jupyter and Zeppelin notebooks,
+     and for those of the Emacs-Org-mode faith, as the mix of [[https://orgmode.org/][Org
+     Mode]] and [[https://orgmode.org/worg/org-contrib/babel/intro.html][Org Babel]].  See the paper by Domnick, Shculte etc on
+     reproducable research: https://www.jstatsoft.org/article/view/v046i03
+
+     Org mode directly supports "tangle" today.
+
+
+***** Guy Steele - 1 degree of speration
+
+      Guy Steele who later went on to have a lot to do with Java
+      seems to have been the 1-degree-of-separation point for Emacs,
+      TeX, possibly and possibly SCRIBE.  As recently as
+      https://emacsconf.org/2020/, Stallman credits Steele with
+      helping invent Emacs.  Per Wikipedia, Steele spent the summer
+      of 78 at Stanford and later implemented a back-end for TeX at
+      MIT.  By 1980 or so (per my wife who knew him there) he was at
+      CMU where Reid was finishing off SCRIBE and his thesis.  The
+      Stanford-Berkeley-MIT-CMU crowed was (is?) a small world.
+      James Gosling (Java, [[https://en.wikipedia.org/wiki/Gosling_Emacs][GosMacs]] 1981) was also kicking around CMU
+      then before moving off to Sun.
+
+***** Leslie Lamport - Latex
+
+      $\LaTeX$
+
+   @eludom this is interesting. A while back I tried to publish to
+   latex from org and it failed. I didn't have some packages
+   installed on my OS side for latex or something ... and after
+   installing a few (large) packages and still getting the same
+   results I kind of gave up. Why?
+
+   @jrss tex and latex and all the fonts are a complex monster.  Do
+   not go there lightly.  But nothing else does the job it does half
+   as well.  Knuth (like Stallman and Linus) was/is a genius
+   scratching his own itch, and we all benefit.
+
+   I actually "grew up" on scribe, a CMU scratch your own itch thing
+   for thesis and papers before latex, so to me, latex has always
+   been a scribe rip off that works well.
+
+   I've been in and out of academic circles for 40 years, so TeX is
+   2nd nature
+
+
+***** Bill Gates and the nameless corporate droids[fn:12] - WYSIAYG Editors
+
+      What You See Is All You Get.  I'm pretty sure SCRIBE and
+      $\LaTeX$ form the basis of my antipathy to the WYSIWIG editors
+      like MicroSoft word that started to come along (mass market)
+      around that time.  When writing documents you should think
+      first about what you are saying and the structure of your
+      document and arguments before you worry (if all) about moving a
+      making a font just the right size and color so you can make
+      your power point.  Formatting should be the after-thought, and
+      no more than choosing the right style sheet.   Brian Reed got
+      that ... in
+
+***** Sir "Almost not appearing in this blog post"
+      A couple honorable mentions that I did in fact use a good bit
+      along the way are [[https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF][DEC RUNOFF]] (DEC 10s, VMS) and [[https://en.wikipedia.org/wiki/Nroff][nroff]] (unix).
+
+***** Tim Berners-Lee - The Web
+
+
+***** Org Mode
+
+   George Jones :emacs: :orgmode: @eludom @jrss latex is still used
+   for a large fraction of academic papers etc worldwide. It was/is
+   so fundamental that when Carsten created org he did not even add
+   special syntax to render it.  Org takes latex markup straight.
+
+
+   10h
+   JTR :emacs:☕ @jrss@mastodon.technology
+   @eludom well yes, I mean Carsten was academia himself, it's his bread and butter. Not underestimating latex, just saying  this is where org grew up.
+
+
+***** Hugo
+
+1d
+    George Jones :emacs: :orgmode: @eludom
+    @jrss I'm trying to export LaTeX fragments (just the LaTeX symbol) via blog.  If I put
+
+    $\LaTeX$
+
+    in  org file and export to HTML, it works fine.   HTML renders the latex symbol.
+
+    and it appears to work for other people https://people.umass.edu/weikaichen/post/emacs-ox-hugo/
+
+    is this some issue with theme?
+
+    This is driving me crazy !
+
+
+    1d
+    JTR :emacs:☕ @jrss@mastodon.technology
+    @eludom I can't help you here, I'm not sure how to work with latex myself, haven't really bothered with it much.
+
+    if this doesn't look right in hugo-generated html but looks ok when you convert directly to html, I'll take a look in the md files, see if you see anything these?
+
+
+    George Jones :emacs: :orgmode: @eludom
+    @jrss so here's the scoop:  put
+
+      <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+
+    at the bottom of layout/partials/head.html (before "</head>"
+
+
+    So with the JS bit you put in, you're saying you can do calculation on your website within the HTML so you can write math formulas... and this is good, why?
+
+    (not underestimating, just wondering what's your use case)?
+
+    are you publishing these things? if so, why on website vs, say, a PDF? again just wondering.
+
+    10h
+    George Jones :emacs: :orgmode: @eludom
+    @jrss no calculations.   Just rendering symbols and equations.
+
+    My use case was trivial.  When writing about tex (upcoming blog post) I wanted to use the official symbols which you get with $\TeX$ and $\LaTeX$   ($...$ brackets math mode in which you can call out to symbols with \name
+
+    My resume is in latex.
+
+
+
+***** George - OK, but did he actually write anything worth reading?
+
+      I may have written some things, well, a lot of things.   You can
+      decide if they are worth reading.
+
+      - This blog :: You be the judge.
+
+      - [[https://tools.ietf.org/html/rfc3871][RFC3871]] :: This was a starry-eyed attempt at getting large
+        network equipment vendors to, you know, stop using telnet
+        (with plain-text passwords in the clear) for management of
+        inconsequential computers like the routers that make up the
+        Internet backbone.  It used yet another cool text formatting
+        tool, [[https://xml2rfc.tools.ietf.org/][xml2rfc]].  In my opinion we lost the war, e.g. getting
+        security features in important devices ... and well.. IOT
+        devices are here now, many using the same least-cost TCP/IP
+        stacks that are full of the same problems
+        (https://en.wikipedia.org/wiki/Ripple20) and not up-gradable.
+        It looks like the [[https://tools.ietf.org/wg/opsec/charters][IETF OPSEC Working Group]] that that document
+        spawned is still going, pumping out documents, and, I'm sure,
+        in the words of Marshall Rose, there have been "[[http://www.faqs.org/rfcs/rfc3160.html][Many fine
+        lunches and dinners]]"
+
+      - A somewhat dated bibliography :: There is a somewhat dated
+        bibliography of things I've written here
+        http://www.port111.com/george/george_bib.html, in, of course,
+        http://www.bibtex.org/ format.
+
+***** Back to paper
+
+***** Some gratuitous typesetting
+
+
+
+   11h
+   George Jones :emacs: :orgmode: @eludom
+   @jrss then stuff like this will Just Work(tm)
+
+   So he did what any self-respecting hacker who happened
+   to be Donald Knuth would do: he created his own typesetting system
+   called $\TeX$ which (along with $\LaTeX$ which borrowed heavily from SCRIBE)
+   is something of a standard to this day in academic publishing.
+
+   $x^3$
+
+   $x^2$
+
+   \begin{equation}                        % arbitrary environments,
+   x=\sqrt{b}                              % even tables, figures
+   \end{equation}                          % etc
+
+
+
+   Is there more you can tell me about use case for it? In other
+   words, can I get you to vent f some more about this, it's interesting. If you don't mind.
+
+   [2/2]
+
+
+   9h
+   George Jones :emacs: :orgmode: @eludom
+   @jrss my use case here is trivial.  I want to insert a symbol, the LaTeX "logo" into a blog post.
+
+   Put
+
+   $\LaTeX$ into an org file and export to HTML.  You will see what I want.
+
+   I'll capture this thread as a blog post and spell out the history.
+
+
+   0
+
+
+   9h
+   JTR :emacs:☕ @jrss@mastodon.technology
+   @eludom so in my case, latex seems extra work that I don't need in the end when what comes with org already gives me what doc and docx which is (unfortunately) what I need sometimes.
+
+
+   0
+***** And finally, a word from our sponsor...
+
+    \begin{array}{*{20}c} {x = \frac{{ - b \pm \sqrt {b^2 - 4ac} }}{{2a}}} & {{\rm{when}}} & {ax^2 + bx + c = 0} \\ \end{array}
+
+***** Footnotes
+
+[fn:9] And, yes, Tim Berners-Lee was in academic circles then and
+      could not have helped knowing about Knuth's WEB ... score naming
+      the Word Wide Web as a side effect of a side effect for Knuth?
+
+[fn:10] Knuth's /The Art Of Computer Programming/ is available on
+github.  I'm not going to provide a link because when I went there and
+tried to view the site it crashed my browser and nearly froze my
+computer.  My guess is Knuth just did something that was perfectly
+sensible from a theoretical view (maybe creating a 50 gig PDF), but
+which mere software chokes on.  Computer Science classic texts as DOS
+attacks?  Another unintended side effect.  I wonder if [[https://attack.mitre.org/][MITRE ATT&CK]]
+has mapped that threat yet?
+
+[fn:11] This was several years before the start of the GNU project.
+
+[fn:12] "Bill Gates and the Nameless Corporate Droids" sounds like a
+fine name for a band, right up there with "The Dead Kennedys"
+
+
+
+
+**** TODO .bashrc as literate programming
+:PROPERTIES:
+:EXPORT_FILE_NAME: bashrc
+:EXPORT_HUGO_PUBLISHDATE: 2020-11-30
+:END:
+
+***** Knuth gets annoyed at his publishers, $\TeX$ is born.
+Back in the 80s Donald Knuth who was (and still is) publishing a
+seminal series of Computer Science text books got annoyed at the
+typesetting, layouts and font choices he was being presented by
+publishers.   So he did what any self-respecting hacker who happened
+to be Donald Knuth would do: he created his own typesetting system
+called $\TeX$ which (along with $\LaTeX$ which borrowed heavily from SCRIBE)
+is something of a standard to this day in academic publishing.
+
+Because, you know, why is it unreasonable to expect publishers to
+render simple equations, right?
+
+\begin{multline*}
+\vec{E}_{\mathrm{tot}}=
+  q\cdot k_{b}\cdot \dfrac{r}{r^3}
+  \left\lgroup
+    \frac{\hat{r}-\left(\dfrac{d}{2\cdot r}\right)\hat{d}}
+         {\biggl(1+\left(\dfrac{d}{2\cdot r}\right)^2-
+                   \left(\dfrac{d}{r}\right)\hat{r}\cdot\hat{d}\cdot\cos(\theta)
+          \biggr)^{3/2}}
+  \right.
+  \\
+  \left.
+    {}-
+    \frac{\hat{r}+\left(\dfrac{d}{2\cdot r}\right)\hat{d}}
+         {\biggl(1+\left(\dfrac{d}{2\cdot r}\right)^2+
+                   \left(\dfrac{d}{r}\right)\cdot\hat{r}\cdot\hat{d}\cdot\cos(\theta)
+          \biggr)^{3/2}}
+  \right\rgroup
+\end{multline*}
+
+#+begin_center
+https://tex.stackexchange.com/questions/371644/how-to-write-this-long-equation
+#+end_center
+
+But wait, there's more.
+
+#+hugo: more
+
+***** Literate Programming
+In addition to writing his own typesetting system, he came up with the
+concept of /Literate Programming/ at the same time.   The basic idea
+is that you write for humans to read (e.g. text books) with a
+side-effect of outputting code (for machines to execute).   It is the
+ultimate in software documentation.   The code and the description are
+an integrated whole with different processes, "tangle", to produce code
+and "weave"[fn:8], to produce output for humans
+
+
+I've been influenced by the concept of /Literate Programming/ ever
+since I installed the original TeX (and LaTex) on CompuServe's DEC10s.
+
+***** The children of tangle and weave - Org, Babel, Jupyter and Zepplin
+
+Fast forward a few decades.  Carsten Dominick creates org mode for
+Emacs to organize, well, everything which, of course, has a back end
+to output .tex files.   Eric Schulte then has the bright ideas of
+creating org-babel, which allows small (or not so small) blocks of
+code to be imbedded in org files and executed with their output
+becoming part of the document.   Literate programming, here were are,
+again....oh, and it's a tool for doing reproducible scientific
+research as well where the data, code, descriptions of experiments and
+results/conclusions are all one document:
+
+https://www.jstatsoft.org/article/view/v046i03
+
+Jupyter and Zeppelin notebooks provide similar functionality today for
+Python, Spark, Scala and the data science community, but Knuth was
+there 40 years ago.
+
+***** George gets annoyed at a complicated .bashrc, .bashrc.org is born
+
+Which brings me to my own humble annoyances which are not likely to
+change the course of science or academic publishing...
+
+As a nearly lifelong emacs user I am mildly annoyed any time I have to do
+something that can't be done in emacs in general, and have been
+particularly annoyed at the growing complexity of my =.bashrc= file
+which could not be organize and documented in org mode....until now.
+
+EMACCSCONF 2020 TALK
+
+***** MY BASHRC FORMATTED ... weave output
+
+***** MY BASHRC UNFORMATTED ... tangle output
+
+***** MY BASHRC AS ORG ... source document
+
+
+***** Footnotes
+
+[fn:8]This was about 10 years before the world wide web ... maybe
+Berners-Lee got some inspiration on the name from Knuth? Or Sir Walter
+Scott: "‘Oh what a tangled web we weave/When first we practice to deceive"
+
+
 
 *** Cybersecurity                                             :cybersecurity:
 **** WIP Thoughts on the OODA loop and falling out of a canoe :outdoors:SOC:OODA:
@@ -1261,14 +1762,14 @@ flash, we might come up with this taxonomy:
   + open port                      WELL DEFINED, CERTAIN IDENTIFICATION
     + tcp
       + tls                                        ^
-	+ web server                               |
-	   + microsoft                             |
-	     + iis                                 |
-	       + 7.3                               |
-		 + services                        |
-		   + flash                         v
-		 + frameworks
-		    + dotnet       LESS DEFINED, LESS CERTAIN IDENTIFICATION
+        + web server                               |
+           + microsoft                             |
+             + iis                                 |
+               + 7.3                               |
+                 + services                        |
+                   + flash                         v
+                 + frameworks
+                    + dotnet       LESS DEFINED, LESS CERTAIN IDENTIFICATION
 #+end_example
 
 Taxonomies help in classifying, understanding and communicating
@@ -1440,14 +1941,14 @@ Post 30 of #100DaysToOffload https://100daystooffload.com/
       - We want to be left alone sometimes
       - We want space to be ourselves
       - We want our thoughts to be our thoughts (and we want to have
-	them before the machine learning algorithms that are tracking
-	us have them)
+        them before the machine learning algorithms that are tracking
+        us have them)
       - We want the freedom to think, act, feel, love and hate ("[[https://en.wikipedia.org/wiki/Catullus_85][Odi
-	et amo]] ...") as we see fit, at least inside our own heads
+        et amo]] ...") as we see fit, at least inside our own heads
       - We want to be able to work out life for ourselves
       - We want space to think, to grow, to make mistakes and correct
-	them, or even to be free to persist in our chosen errors and
-	delusions. "To err is human..."
+        them, or even to be free to persist in our chosen errors and
+        delusions. "To err is human..."
 
       Something about using the current set of "free" Big Internet
       offerings where, "If you're not paying for it you ARE the
@@ -2879,7 +3380,103 @@ could use a man like Richard 'I am not a crook' Milhouse Nixon again",
 a man with the character, morals and civic pride to put the interests
 of the country above his own.
 
-Post 34 of #100DaysToOffload https://100daystooffload.com/
+Post 35 of #100DaysToOffload https://100daystooffload.com/
+
+**** PUBLISHED What a day for a daydream                   :100DaysToOffload:
+     :PROPERTIES:
+     :EXPORT_FILE_NAME: dream-on
+     :EXPORT_HUGO_PUBLISHDATE: 2020-11-25
+     :END:
+
+      #+begin_quote
+      "Ladies and Gentlemen, may I have your attention..."
+      #+end_quote
+
+      This piece began as some thoughts on "attention" and wound up as
+      reflections on daydreams.  I think I'm a fan of daydreaming.
+
+****** Attention
+
+      Attention is a finite commodity.  You only have so much
+      attention to give in your life, in your day.  Parents want your
+      attention. Brothers and sisters and friends want your attention.
+      Teachers want your attention.  Employers want your
+      attention. Politicians want your attention.  Social media wants
+      your attention. And, of course, advertisers[fn:7] want your attention
+      (the most literal translation of the Latin roots of the word
+      "advertisers" would be rendered "turn-toward-ers")
+
+      Sometimes there is a reward (punishment) for your attention
+      (in-attention).  Sometimes you are just "had" and your money
+      goes away with your attention, never to return.
+
+      You never get your attention back once you've given it.  You
+      can't create more attention.  You can't save attention.  You can
+      waste attention.  You can fragment attention. You can destroy
+      attention.
+
+      Attention is a precious, irreplaceable commodity. Guard it. Use
+      it wisely.
+
+      Which leads to...
+
+****** Daydreams
+
+      We say daydreamers are "lost in their own thoughts".  They don't
+      do the things other people want them to do.  They don't /give
+      their attention/ to things /other people/ think they should give
+      their attention to.
+
+      But (some) dreamers change the world.
+
+      #+begin_quote
+      All men dream: but not equally. Those who dream by night in the
+      dusty recesses of their minds wake in the day to find that it
+      was vanity: but the dreamers of the day are dangerous men, for
+      they may act their dreams with open eyes, to make it possible.
+
+      T.E. Lawrence, https://en.wikiquote.org/wiki/T._E._Lawrence
+      #+end_quote
+
+      Daydreamers are "their own people".  And that bothers people who
+      want them to be somebody else, to pay attention to certain
+      other things.
+
+****** One daydreamer
+       This may not be "the perfect blog post".  It may not have the
+       perfect structure and flow. It may not end concise advice you
+       can live by and a nice list of actionable items.
+
+       I've going to end it with a quote from a daydreamer who was
+       torn apart for 40 years by demands on his attention from school
+       teachers, societal norms, family, fans who loved him, people
+       who hated him, the music industry, his band-mates, religious
+       teachers, artists, social causes, politicians, the media and
+       lawyers:
+
+#+begin_example
+...
+
+People say I'm lazy
+Dreaming my life away
+Well they give me all kinds of advice
+Designed to enlighten me
+When I tell them that I'm doing fine watching shadows on the wall
+"Don't you miss the big time boy, you're no longer on the ball?"
+
+I'm just sitting here watching the wheels go round and round
+I really love to watch them roll
+No longer riding on the merry-go-round
+I just had to let it go
+
+I just had to let it go
+
+J. Lennon, Father, "house-husband" and bread-maker, 1980
+#+end_example
+
+Dream on.
+
+Post 37 of #100DaysToOffload https://100daystooffload.com/
 
 *** Outdoors                                                       :outdoors:
 **** PUBLISHED Hiking, the Appalachian Trail, Health and Choices :hiking:AppalachianTrail:ATC:PATC:Katahdin:outdoors:
@@ -3808,7 +4405,7 @@ In this phase of debugging, I try to do name resolution as configured:
      intended.  Nope.  No response.
 
 - dig - known-good nameserver :: I ran =$ dig www.uu.net
-		  @9.9.9.9= to see if I could resolve against a known-good
+                  @9.9.9.9= to see if I could resolve against a known-good
      nameserver.  This worked.  No issues with connectivity/routing.
 
 - dig - 127.0.0.53 :: I ran =$ dig www.uu.net @127.0.0.53= to see
@@ -3816,7 +4413,7 @@ In this phase of debugging, I try to do name resolution as configured:
      /etc/resolv.conf was working.  Nope.
 
 - systemd-resolved - how is it configured?  :: I ran =$
-		  systemd-resolve --status= to see how systemd thought dns was
+                  systemd-resolve --status= to see how systemd thought dns was
      configured.  The wireless interface I was using pointed to a
      nameserver (the proxy server on my wireless router) that should work:
 
@@ -3829,24 +4426,24 @@ Link 3 (wlp2s0)
 MulticastDNS setting: no
       DNSSEC setting: no
     DNSSEC supported: no
-	 DNS Servers: 192.168.86.1
-	  DNS Domain: ~.
-		      lan
+         DNS Servers: 192.168.86.1
+          DNS Domain: ~.
+                      lan
 #+end_example
 
 - systemd-resolve - let systemd resolve a name :: dig(1) and host(1) are
      not the only game in town for doing command line DNS look-ups.
      Systemd (of course) will do it for you:
      #+begin_example
-		 $ systemd-resolve www.uu.net
-		 www.uu.net: 152.195.32.39
+                 $ systemd-resolve www.uu.net
+                 www.uu.net: 152.195.32.39
      #+end_example
      In this case, it worked, which tells me that systemd-resolved
      is happy and working.
 
 - try dig again :: Try another "normal" lookup:
      #+begin_example
-		 $ dig www.uu.net
+                 $ dig www.uu.net
      #+end_example
 
      This failed.  The conclusion seems to be that the whatever the
