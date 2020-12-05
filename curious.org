@@ -133,7 +133,6 @@ See https://lists.gnu.org/archive/html/bug-bash/2020-04/msg00114.html
 
 ***** Footnotes
 
-
 [fn:7] ADS stands for "Attention Distraction Syndrome"
 
 [fn:1] yes, there are many better tools for this job, but not in the constrained environment where this had to run.
@@ -972,30 +971,32 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
 ***** What is this and why was it written?
       This is my personal history of putting
       words-on-page-or-screen-or-blog-entry covering the period from
-      the late 1970s to present.
+      the late 1970s to present (2020-12-05).
 
-      It was written (partially) at the request of [[https://helpdeskheadesk.net/about/][Josh Rollins]] from
-      whom I borrowed a hugo blog theme.  Thanks Josh.
+      It was written (partially) at the request of [[https://helpdeskheadesk.net/about/][JTR]] from
+      whom I borrowed a hugo blog theme.  Thanks JTR.
 
       I was writing a post where I wanted to include the $\TeX$ symbol
       in the post, which is perfectly possible in emacs org mode where
-      $\TeX$ and $\LaTeX$ are first class citizens.  The blog exports
-      to markdown via the [[https://ox-hugo.scripter.co/][ox-hugo]] Org exporter back end (lost yet?)
-      which [[https://gohugo.io/][hugo]] then translates to HTML which can then be previewed
-      locally with Hugo's own web server and then pushed to the live
-      site, in my case, this site using git push.  I've described [[https://eludom.github.io/blog/hugo-org-github/][the
-      process of publishing my blog with hugo]] here.
+      $\TeX$ and $\LaTeX$ are first class citizens, but it wasn't
+      working.
 
-      That said, the symbols weren't working, so I pinged Josh who, it
-      turns out had little experience with $\LaTeX$ and so was not
-      able to help.  Along the way, he asked me
+      The blog exports to markdown via the [[https://ox-hugo.scripter.co/][ox-hugo]] Org exporter back
+      end (lost yet?)  which [[https://gohugo.io/][hugo]] then translates to HTML which can
+      then be previewed locally with Hugo's own web server and then
+      pushed to the live site, in my case, this site using git push.
+      I've described [[https://eludom.github.io/blog/hugo-org-github/][the process of publishing my blog with hugo]] here.
+
+      I pinged JTR who, it turns out had little experience with
+      $\LaTeX$ and so was not able to help.  Along the way, he asked
+      me
 
       #+begin_quote
       Is there more you can tell me about use case for it? In other words,
       can I get you to vent some more about this, it's interesting.
       #+end_quote
 
-      So here is some venting. And, in case you were wondering, the
+      So here is some venting. I can always vent. And, in case you were wondering, the
       solution is to put
 
       #+begin_src html
@@ -1005,7 +1006,7 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
       #+end_src
 
       at the bottom of =layout/partials/head.html= before ~</head>~ in
-      the modified [[https://themes.gohugo.io/hyde-hyde/][hugo hyde theme]] I borrowed from Josh.
+      the modified [[https://themes.gohugo.io/hyde-hyde/][hugo hyde theme]] I borrowed from JTR.
 
 ***** Some History
       #+begin_quote
@@ -1068,8 +1069,7 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
        then-world-class formatting and typesetting facilities, Dad was
        no longer typing my papers :-)
 
-***** Knuth - [[https://en.wikipedia.org/wiki/TeX][TeX]]
-
+***** Donald Knuth - [[https://en.wikipedia.org/wiki/TeX][TeX]]
 
       Meanwhile, on the other side of the country (on a dark and
       stormy night?), [[https://en.wikipedia.org/wiki/Donald_Knuth][Donald Knuth]] was (and still is) engaged in
@@ -1085,10 +1085,10 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
       release adds a digit of $\pi$.   Metafont is at  2.7182818 and
       approaching /e/ with each release.
 
-      I installed the ?Pascal based? ?TeX82? on the DEC10's at
-      CompuServe.
+      I installed the Pascal based ?TeX82? on the DEC10's at
+      CompuServe sometime around 1986.
 
-***** Knuth - Literate Programming
+***** Donald Knuth - Literate Programming
 
      Not content with having won the Turning award in 1974 (4 years
      prior), with creating a typesetting system that is used to this
@@ -1103,28 +1103,43 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
      We see elements of this today in Jupyter and Zeppelin notebooks,
      and for those of the Emacs-Org-mode faith, as the mix of [[https://orgmode.org/][Org
      Mode]] and [[https://orgmode.org/worg/org-contrib/babel/intro.html][Org Babel]].  See the paper by Domnick, Shculte etc on
-     reproducable research: https://www.jstatsoft.org/article/view/v046i03
+     reproducible research: https://www.jstatsoft.org/article/view/v046i03
 
-     Org mode directly supports "tangle" today.
+     Org mode directly supports a form "tangle" today.
 
+***** Guy Steele - the 1 degree of separation
 
-***** Guy Steele - 1 degree of speration
-
-      Guy Steele who later went on to have a lot to do with Java
-      seems to have been the 1-degree-of-separation point for Emacs,
-      TeX, possibly and possibly SCRIBE.  As recently as
-      https://emacsconf.org/2020/, Stallman credits Steele with
-      helping invent Emacs.  Per Wikipedia, Steele spent the summer
-      of 78 at Stanford and later implemented a back-end for TeX at
-      MIT.  By 1980 or so (per my wife who knew him there) he was at
-      CMU where Reid was finishing off SCRIBE and his thesis.  The
-      Stanford-Berkeley-MIT-CMU crowed was (is?) a small world.
+      Guy Steele who later went on to have a lot to do with Java (and
+      standardizing C) seems to have been the 1-degree-of-separation
+      point for Emacs, TeX, possibly and possibly SCRIBE.  As recently
+      as https://emacsconf.org/2020/, Stallman credits Steele with
+      helping invent Emacs.  Per Wikipedia, Steele spent the summer of
+      78 at Stanford and later implemented a back-end for TeX at MIT.
+      By 1980 or so (per my wife who knew him there) he was at CMU and
+      Tartan Labs as Reid was finishing off SCRIBE and his thesis.
+      The Stanford-Berkeley-MIT-CMU crowed was (is?) a small world.
       James Gosling (Java, [[https://en.wikipedia.org/wiki/Gosling_Emacs][GosMacs]] 1981) was also kicking around CMU
-      then before moving off to Sun.
+      before moving off to Sun.
 
 ***** Leslie Lamport - Latex
 
-      $\LaTeX$
+      So, $\TeX$ was cool and all, but it was very low level and in
+      some ways difficult to work with.  People had seen SCRIBE.  So
+      at some point in the mid 80s, as SCRIBE was on it's way to
+      proprietary-software-oblivion, [[https://en.wikipedia.org/wiki/Leslie_Lamport][Leslie Lamport]] created $\LaTeX$.
+
+      $\LaTeX$ is, from my point of view, a set of SCRIBE-like macros
+      on top of $\TeX$.  Very useful.
+
+      And because creators gonna create....along they way Lamport and
+      Oren Patashink created [[https://en.wikipedia.org/wiki/BibTeX][BibTeX]] which is to this day one of the
+      most common ways to keep a list of bibliographic references that
+      can be cited in your papers.
+
+      If you're curious what all this looks like, I keep my resume in
+      .tex format[fn:13]. You can see it here
+      http://www.port111.com/george/resume/ along with the .bib file
+      for citations and .tex input.
 
    @eludom this is interesting. A while back I tried to publish to
    latex from org and it failed. I didn't have some packages
@@ -1147,25 +1162,35 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
 
 ***** Bill Gates and the nameless corporate droids[fn:12] - WYSIAYG Editors
 
-      What You See Is All You Get.  I'm pretty sure SCRIBE and
-      $\LaTeX$ form the basis of my antipathy to the WYSIWIG editors
-      like MicroSoft word that started to come along (mass market)
-      around that time.  When writing documents you should think
-      first about what you are saying and the structure of your
-      document and arguments before you worry (if all) about moving a
-      making a font just the right size and color so you can make
-      your power point.  Formatting should be the after-thought, and
-      no more than choosing the right style sheet.   Brian Reed got
-      that ... in
+      What You See Is All You Get (WYSIAYG) also known as What You See
+      Is What You Get (WISIWYG) editors let you move pixels around on
+      the screen and print exactly what you see.  With no training at
+      all in printing, typesetting, aesthetics, or design you can make
+      wildly inconsistent and incoherent decisions about the visual
+      appearance of your document, in fact, you (and your boss and
+      your marketing department) can focus on that from the start to
+      the exclusion of stringing together coherent thoughts.
+
+      I'm pretty sure SCRIBE and $\LaTeX$ form the basis of my
+      antipathy to the WYSIWIG editors that started to come along
+      (mass market) around that time.  When writing documents you
+      should think first about what you are saying and the structure
+      of your document and arguments before you worry (if all) about
+      making a font just the right size and color so you can make your
+      power point.  Formatting should be the after-thought, and no
+      more than choosing the right style sheet.  Brian Reed got that
+      right.
 
 ***** Sir "Almost not appearing in this blog post"
       A couple honorable mentions that I did in fact use a good bit
       along the way are [[https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF][DEC RUNOFF]] (DEC 10s, VMS) and [[https://en.wikipedia.org/wiki/Nroff][nroff]] (unix).
 
+      nroff comes in handy when you want to write man(1) pages.
+
 ***** Tim Berners-Lee - The Web
 
 
-***** Org Mode
+***** Carsten Dominick - Org Mode
 
    George Jones :emacs: :orgmode: @eludom @jrss latex is still used
    for a large fraction of academic papers etc worldwide. It was/is
@@ -1250,10 +1275,8 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
         in the words of Marshall Rose, there have been "[[http://www.faqs.org/rfcs/rfc3160.html][Many fine
         lunches and dinners]]"
 
-      - A somewhat dated bibliography :: There is a somewhat dated
-        bibliography of things I've written here
-        http://www.port111.com/george/george_bib.html, in, of course,
-        http://www.bibtex.org/ format.
+      - Links few pubs, talks, papers, etc :: Because 20 year old
+        index.html files never die http://www.port111.com/george/#pubs
 
 ***** Back to paper
 
@@ -1330,8 +1353,12 @@ has mapped that threat yet?
 [fn:12] "Bill Gates and the Nameless Corporate Droids" sounds like a
 fine name for a band, right up there with "The Dead Kennedys"
 
-
-
+[fn:13] Actually, it's in in an .org format with custom elisp code
+      that implements cpp style ifdef logic for producing different
+      output for the short resume, the long resume, linkedin, etc. off
+      the same source, that creates latex on export which is then run
+      through tex and friends to produce a pdf, but shhh.  Pay no
+      attention to that man behind the curtain.
 
 **** TODO .bashrc as literate programming
 :PROPERTIES:
@@ -4620,9 +4647,8 @@ generator. It is designed and authored on a free Linux OS using [[https://www.gn
 [[https://orgmode.org/][org-mode]] and [[https://ox-hugo.scripter.co/][ox-hugo]].  Bandwidth is currently supplied free of charge
 by Github.
 
-I am grateful to Josh Rollins for his [[https://joshrollinswrites.com/][TAONAW]] blog which I used as a
-model/too for learning Hugo and ox-hugo.  The source can be found
-https://github.com/jarss/
+I am grateful to JTR for his
+[[https://helpdeskheadesk.net/][TAONAW]] blog which I used as a model/too for learning Hugo and ox-hugo.
 
 And, of course
 #+begin_quote
