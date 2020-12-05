@@ -961,11 +961,10 @@ All we are saying, is give =init.el= a chance.
 
 Post 36 of #100DaysToOffload https://100daystooffload.com/
 
-
-**** TODO From Typewriters, to Scribe, to LaTeX, to Org Mode and back to paper
+**** TODO Of Typewriters, Scribe, LaTeX, Org mode, Hugo and Paper :history:blogging:emacs:100DaysToOffload:
 :PROPERTIES:
 :EXPORT_FILE_NAME: typewriters
-:EXPORT_HUGO_PUBLISHDATE: 2020-12-02
+:EXPORT_HUGO_PUBLISHDATE: 2020-12-05
 :END:
 
 ***** What is this and why was it written?
@@ -974,7 +973,7 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
       the late 1970s to present (2020-12-05).
 
       It was written (partially) at the request of [[https://helpdeskheadesk.net/about/][JTR]] from
-      whom I borrowed a hugo blog theme.  Thanks JTR.
+      whom I borrowed a Hugo blog theme.  Thanks JTR.
 
       I was writing a post where I wanted to include the $\TeX$ symbol
       in the post, which is perfectly possible in emacs org mode where
@@ -982,10 +981,9 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
       working.
 
       The blog exports to markdown via the [[https://ox-hugo.scripter.co/][ox-hugo]] Org exporter back
-      end (lost yet?)  which [[https://gohugo.io/][hugo]] then translates to HTML which can
+      end (lost yet?)  which [[https://gohugo.io/][Hugo]] then translates to HTML which can
       then be previewed locally with Hugo's own web server and then
       pushed to the live site, in my case, this site using git push.
-      I've described [[https://eludom.github.io/blog/hugo-org-github/][the process of publishing my blog with hugo]] here.
 
       I pinged JTR who, it turns out had little experience with
       $\LaTeX$ and so was not able to help.  Along the way, he asked
@@ -995,6 +993,9 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
       Is there more you can tell me about use case for it? In other words,
       can I get you to vent some more about this, it's interesting.
       #+end_quote
+
+      #+hugo: more
+
 
       So here is some venting. I can always vent. And, in case you were wondering, the
       solution is to put
@@ -1006,7 +1007,7 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
       #+end_src
 
       at the bottom of =layout/partials/head.html= before ~</head>~ in
-      the modified [[https://themes.gohugo.io/hyde-hyde/][hugo hyde theme]] I borrowed from JTR.
+      the modified [[https://themes.gohugo.io/hyde-hyde/][Hugo hyde theme]] I borrowed from JTR.
 
 ***** Some History
       #+begin_quote
@@ -1041,7 +1042,7 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
 
       Towards the end of high school, I remember eyeing the school
       secretary's IBM Selectric typewriter because we knew it could be
-      converted to a printer....(Apple II's were all the rage then
+      converted to a printer...(Apple II's were all the rage then
       ...)
       #+end_quote
 
@@ -1052,7 +1053,7 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
        their own itch, developing one of the first mark-up languages
        that allowed the author to describe a document structurally
        (chapters, paragraph, et cetera.), and to target different output
-       devices (text, laser printer, etc.) and to externalize styles,
+       devices (text, laser printer, etc.), and to externalize styles,
        presaging the later CSS style sheets.
 
        Reid killed several birds with one stone.  Scribe was the
@@ -1073,11 +1074,11 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
 
       Meanwhile, on the other side of the country (on a dark and
       stormy night?), [[https://en.wikipedia.org/wiki/Donald_Knuth][Donald Knuth]] was (and still is) engaged in
-      writing his foundational series of Computer Science textbooks
+      writing his foundational series of Computer Science textbooks,
       /The Art of Computer Programming/ [fn:10].  But he was not happy with
       the appearance of the typesetting from his publisher, so, being
-      Donald Knuth he set out to write his own
-      formatting/type-setting program c.a. 1978.  The result was
+      Donald Knuth, he set out to write his own
+      formatting and type-setting program c.a. 1978.  The result was
       $\TeX$. Along with [[https://en.wikipedia.org/wiki/TeX][TeX]]  he developed Metafont, a language for
       describing fonts from which we get the Computer Modern fonts.
 
@@ -1085,7 +1086,7 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
       release adds a digit of $\pi$.   Metafont is at  2.7182818 and
       approaching /e/ with each release.
 
-      I installed the Pascal based ?TeX82? on the DEC10's at
+      I installed the Pascal based TeX82 on the DEC10's at
       CompuServe sometime around 1986.
 
 ***** Donald Knuth - Literate Programming
@@ -1105,13 +1106,13 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
      Mode]] and [[https://orgmode.org/worg/org-contrib/babel/intro.html][Org Babel]].  See the paper by Domnick, Shculte etc on
      reproducible research: https://www.jstatsoft.org/article/view/v046i03
 
-     Org mode directly supports a form "tangle" today.
+     Org directly supports a form "tangle" today.
 
 ***** Guy Steele - the 1 degree of separation
 
       Guy Steele who later went on to have a lot to do with Java (and
       standardizing C) seems to have been the 1-degree-of-separation
-      point for Emacs, TeX, possibly and possibly SCRIBE.  As recently
+      point for Emacs, TeX, and possibly SCRIBE.  As recently
       as https://emacsconf.org/2020/, Stallman credits Steele with
       helping invent Emacs.  Per Wikipedia, Steele spent the summer of
       78 at Stanford and later implemented a back-end for TeX at MIT.
@@ -1123,15 +1124,15 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
 
 ***** Leslie Lamport - Latex
 
-      So, $\TeX$ was cool and all, but it was very low level and in
+      So, $\TeX$ was cool and all, but it was very low level, and in
       some ways difficult to work with.  People had seen SCRIBE.  So
-      at some point in the mid 80s, as SCRIBE was on it's way to
+      at some point in the mid-80s, as SCRIBE was on its way to
       proprietary-software-oblivion, [[https://en.wikipedia.org/wiki/Leslie_Lamport][Leslie Lamport]] created $\LaTeX$.
 
       $\LaTeX$ is, from my point of view, a set of SCRIBE-like macros
       on top of $\TeX$.  Very useful.
 
-      And because creators gonna create....along they way Lamport and
+      And because creators gonna create....along the way Lamport and
       Oren Patashink created [[https://en.wikipedia.org/wiki/BibTeX][BibTeX]] which is to this day one of the
       most common ways to keep a list of bibliographic references that
       can be cited in your papers.
@@ -1140,25 +1141,6 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
       .tex format[fn:13]. You can see it here
       http://www.port111.com/george/resume/ along with the .bib file
       for citations and .tex input.
-
-   @eludom this is interesting. A while back I tried to publish to
-   latex from org and it failed. I didn't have some packages
-   installed on my OS side for latex or something ... and after
-   installing a few (large) packages and still getting the same
-   results I kind of gave up. Why?
-
-   @jrss tex and latex and all the fonts are a complex monster.  Do
-   not go there lightly.  But nothing else does the job it does half
-   as well.  Knuth (like Stallman and Linus) was/is a genius
-   scratching his own itch, and we all benefit.
-
-   I actually "grew up" on scribe, a CMU scratch your own itch thing
-   for thesis and papers before latex, so to me, latex has always
-   been a scribe rip off that works well.
-
-   I've been in and out of academic circles for 40 years, so TeX is
-   2nd nature
-
 
 ***** Bill Gates and the nameless corporate droids[fn:12] - WYSIAYG Editors
 
@@ -1173,163 +1155,279 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
 
       I'm pretty sure SCRIBE and $\LaTeX$ form the basis of my
       antipathy to the WYSIWIG editors that started to come along
-      (mass market) around that time.  When writing documents you
-      should think first about what you are saying and the structure
-      of your document and arguments before you worry (if all) about
+      (mass market).  When writing documents you should think first
+      about what you are saying, the structure of your document, your
+      arguments and your story line before you worry (if all) about
       making a font just the right size and color so you can make your
-      power point.  Formatting should be the after-thought, and no
+      power point.  Formatting should be the afterthought, and no
       more than choosing the right style sheet.  Brian Reed got that
       right.
 
-***** Sir "Almost not appearing in this blog post"
+***** Sir "Almost not appearing in this blog post" - RUNOFF and nroff
       A couple honorable mentions that I did in fact use a good bit
       along the way are [[https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF][DEC RUNOFF]] (DEC 10s, VMS) and [[https://en.wikipedia.org/wiki/Nroff][nroff]] (unix).
 
       nroff comes in handy when you want to write man(1) pages.
 
 ***** Tim Berners-Lee - The Web
+      There was a time before the web.  There were things written and
+      published before the web.  But since the early 90s it's been the
+      800-pound gorilla in the living room.
 
+      There were other hyptertext systems before it.  Apple's
+      HyperCard.  The GNU/Emacs info system.  There was, in fact, a
+      whole academic conference on hypertext systems at which early
+      versions of HTML/HTTP were scorned.
 
-***** Carsten Dominick - Org Mode
+      But NCSA Mosaic happened, Netscape happened ([[https://en.wikipedia.org/wiki/Marc_Andreessen][Marc Andreessen]]).
+      The NCSA, Netscape and Apache servers happened.  For various
+      reasons, the World Wide Web took off in ways that gopher never
+      did and [[https://gemini.circumlunar.space/][Gemini]] probably never will.  Stodgy XML editors were
+      rebranded as exciting new HTML editors.
 
-   George Jones :emacs: :orgmode: @eludom @jrss latex is still used
-   for a large fraction of academic papers etc worldwide. It was/is
-   so fundamental that when Carsten created org he did not even add
-   special syntax to render it.  Org takes latex markup straight.
+      I attended the 2nd International Conference on Mosaic and the
+      Web, met Berners-Lee, and implemented a never-released web
+      browser that worked through CompuServe's WinCIM which would have
+      allowed dial-up users without an IP stack such as SLIP or PPP
+      (most users at that time) to access the web.  But marketing
+      people.  They were not sure this web thing was going to catch
+      on....
 
+***** Carsten Dominick - Org Mode - "Your Life in Plain Text"
+      Your blog post is text.  Your email it text.  Your slack (IRC)
+      messages are text.  Your documents are text.  Your calendar and
+      agenda are text.  Your shopping lists are text.  You TODO lists
+      are text.  Musical scores are texts.  Poems are text.  ASCII art
+      is text.  Source code is text.  Data is text (json).  The web is
+      text (once you strip out all the graphics, videos, java and
+      javascript...) At different levels YOU are text.  Your DNA
+      sequence is a text.  The story of your life is a text.
 
-   10h
-   JTR :emacs:☕ @jrss@mastodon.technology
-   @eludom well yes, I mean Carsten was academia himself, it's his bread and butter. Not underestimating latex, just saying  this is where org grew up.
+      There was a period in the late 90s and early 2000s where Emacs
+      (the text editor) kind of went into a lull.  Then two things
+      happened: package managers (ELPA, MELPA, basically "apps" for
+      emacs) and org mode.
 
+      Org mode is a game changer.  It's going to take me to my grave
+      or senility where I forget the meta-alt-control-shift-escape
+      sequences needed to make the magic happen, whichever comes first.
+      People are learning an arcane 44-year old editor just to use org
+      mode (and the growing list of packages being built in/with round
+      it).
 
-***** Hugo
+      Org started as a simple text outline tool.  It enabled Abraham
+      Lincoln to write a short, pithy, and memorable speech:
 
-1d
-    George Jones :emacs: :orgmode: @eludom
-    @jrss I'm trying to export LaTeX fragments (just the LaTeX symbol) via blog.  If I put
+#+begin_src org
+,* Hook
+  Four score and seven years ago our fathers
+  - brought forth on this continent, a new nation,
+    o conceived in Liberty,
+    o and dedicated to the proposition
+      + that all men are created equal.
+,** Body
+   Now we are engaged in a great civil war, testing whether that
+   nation, or any nation so conceived and so dedicated, can long
+   endure...
+,*** Conclusion
+    ...that government of the people, by the people, for the people,
+    shall not perish from the earth.
+#+end_src
 
-    $\LaTeX$
+     OK, maybe not.
 
-    in  org file and export to HTML, it works fine.   HTML renders the latex symbol.
+     Carsten Dominick, the creator of Org, is an academic
+     (Astronomy professor), he built in support for $\LaTeX$ from the
+     beginning.  To use $\LaTeX$ in Org, you simply write latex
+     and math equations exactly as you would for "normal" $\LaTeX$.
+     If the back-end exporter (e.g. the $\LaTeX$ exporter or the HTML
+     exporter) support $\LaTeX$, you just get your nicely formatted
+     output for free
 
-    and it appears to work for other people https://people.umass.edu/weikaichen/post/emacs-ox-hugo/
+\begin{multline*}
+p(x) = x^8+x^7+x^6+x^5
+\end{multline*}
 
-    is this some issue with theme?
+     Org documents can be easily exported to text (of course),
+     $\LaTeX$, HTML, .ODF (Microsoft Word compatible) and scores of
+     others.  Same input.  2 or 3 keystrokes.  Different output.
 
-    This is driving me crazy !
+     Org naively supports TODO lists, outlines, agendas, planning (GTD
+     and similar systems), note taking/knowledge capture, contact
+     management, calendaring, spreadsheet-like calculations, literate
+     programming and the list goes on.
 
+     Same basic interface.  Same commands.  Not a mouse-over, click or
+     graphical interface in sight (unless you want it) Just text, all
+     the way down.
 
-    1d
-    JTR :emacs:☕ @jrss@mastodon.technology
-    @eludom I can't help you here, I'm not sure how to work with latex myself, haven't really bothered with it much.
+     And since it's just text, it can be handled with source code
+     management tools (git) and of course your favorite text editor.
 
-    if this doesn't look right in hugo-generated html but looks ok when you convert directly to html, I'll take a look in the md files, see if you see anything these?
+     There are mobile clients ([[https://github.com/orgzly/orgzly-android][see Orgzly]]) so you can simply push org
+     text files to your phone with Dropbox or Syncthing and use them
+     for TODO lists, quick note taking and journal entries, shopping
+     lists, contact management, schedules, etc.
 
+     Oh, and ASCII art is a thing...
 
-    George Jones :emacs: :orgmode: @eludom
-    @jrss so here's the scoop:  put
+#+CAPTION: Text Colored Glasses
+#+BEGIN_EXAMPLE
+                                         /  \ "I'll see you on __
+                 /\                     /   /  the text side  /  \
+                /  \                   /       of the moon"  /   /
+ -------R------/    \                _/_____       _______  /
+ -------G-----/    --\-----W------- /       \ / \ /       \/
+ -------B----/        \            |   Org   |   |  Mode   |
+            /          \            \_______/     \_______/
+           -------------
 
-      <script type="text/javascript"
-      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-      </script>
+#+END_EXAMPLE
 
-    at the bottom of layout/partials/head.html (before "</head>"
+***** Johnny Cash - "I've seen 'em come and go, and I've seen 'em die.."
 
+      - CompuServe
+      - Prodigy
+      - BIX
+      - GEnie
+      - AIM
+      - AOL
+      - MySpace
+      - Google+
+      - [[https://killedbygoogle.com/][Killed By Google]]
 
-    So with the JS bit you put in, you're saying you can do calculation on your website within the HTML so you can write math formulas... and this is good, why?
+        My father spent 25 years working for the Ohio Historical
+        Society running the microfilm department.  A lot of that time
+        was spent preserving the last remaining copies of 19th and
+        20th newspapers that somebody found in Aunt Millie's attic at
+        her estate sale.  Save for that, the daily history of Findlay,
+        Cadiz, Yellow Springs, Lima and Barberton would have been
+        completely lost.  He was preserving important texts.  He was
+        preserving, in some cases, the only record of people's lives.
+        People's lives matter.
 
-    (not underestimating, just wondering what's your use case)?
+        I began my professional career at CompuServe.  CompuServe had
+        vibrant forums where there was lots of interaction, growth and
+        history made.  All with text exchanges.   A couple years ago,
+        most of that history was flushed because "there was no
+        business case for preserving it."
 
-    are you publishing these things? if so, why on website vs, say, a PDF? again just wondering.
+        Companies come and go.  They should not be trusted to preserve
+        important texts or to decide which texts are important.  Today
+        Facebook and Twitter are censoring content.  How long will
+        they be in business? When will they dump text you care about?
 
-    10h
-    George Jones :emacs: :orgmode: @eludom
-    @jrss no calculations.   Just rendering symbols and equations.
+        Karl Voit has spelled this out very well in a blog post: [[https://karl-voit.at/2020/10/23/avoid-web-forums/][Don't
+        Contribute Anything Relevant in Web Forums Like Reddit]]
 
-    My use case was trivial.  When writing about tex (upcoming blog post) I wanted to use the official symbols which you get with $\TeX$ and $\LaTeX$   ($...$ brackets math mode in which you can call out to symbols with \name
+        I am systematically moving my texts off "Big Internet".
+        Facebook went (mostly in 2016, completely in 2020).  I've
+        stopped posting to Twitter.  Dropbox is gone.  Github (which
+        hosts this blog) is next.  Google in progress.  I helped
+        create this world, but it's time for a course correction.
+        Centralization and mediation of human interaction by
+        organizations with nothing but a advertising-driven profit
+        motive[fn:14] is a problem.  We need to move to systems that
+        put people first.
 
-    My resume is in latex.
+        Having recently joined the Mastadon community Fosstodon that
+        focuses on Free and Open Source Software, I believe we are
+        living in an incredible time where the tools we need for a
+        federated, decentralized, ad-free, people-centric world are
+        being created...all without even jumping on the
+        crypto-currency bandwagon :-).  There are extant/emerging
+        solutions for authoring, messaging, social networking,
+        distributed source code control and many more.  Herein lies
+        another long post, but to me this "feels" very like the early
+        days of GNU and Linux.
 
+***** Steve Francia - Hugo
+      One last entry in the things-I-have-used-to-write lineup.  The
+      Hugo static web site generator is bringing you this blog.
 
+      The production of this blog combines many of the technologies
+      and processes already discussed:
 
-***** George - OK, but did he actually write anything worth reading?
+      - org mode :: The actual source for this blog is a "normal"
+        emacs org mode buffer which is exported via the ox-hugo
+        backend
 
-      I may have written some things, well, a lot of things.   You can
+      - $\LaTeX$ :: The ox-hugo exporter deals seamlessly
+        with almost all org features, including $\LaTeX$[fn:15],
+        footnotes, /emphasis/, etc.
+
+      - Web :: Once the markdown is produced, Hugo does what it does.
+        It uses style sheets, templates, themes etc to render the blog
+        as HTML served up via a local web server for texting and to be
+        pushed to the "live" web serer for production.
+
+      - Focus on the content :: And all of this is in the "don't worry
+        what it looks like, just focus on the content" mode.  With 4
+        keystrokes I exported a copy of this post to =.ODT= format so
+        my son could review it in word.  A different 4 keystokes
+        exports to text or HTML.  I let the back-ends "do the right
+        thing" to make it "look good" in the target format.
+
+      - git :: Once the results are satisfactory, they are "pushed to
+        production" via =git push=.  Problems?  Need to back out?
+        It's git.   Multiple authors?  It's git.
+
+      I described this process in way too much detail already
+      elsewhere in my blog post on [[https://eludom.github.io/blog/hugo-org-github/][publishing a blog on Github with
+      Org and Hugo]].
+
+***** George Jones - OK, but did George actually write anything worth reading?
+
+      You've read this far on a long blog post :-)
+
+      I may have written some things, well, a lot of things.  You can
       decide if they are worth reading.
 
-      - This blog :: You be the judge.
+      - [[https://tools.ietf.org/html/rfc3871][https://tools.ietf.org/html/rfc3871]] :: RFC3871 was a
+        starry-eyed attempt at getting large network equipment vendors
+        to, you know, stop using telnet (with plain-text passwords in
+        the clear) for management of inconsequential computers like
+        the routers that make up the Internet backbone.  It used yet
+        another cool text formatting tool, [[https://xml2rfc.tools.ietf.org/][xml2rfc]].  In my opinion we
+        lost the war, e.g. getting security features in important
+        devices ... and well ... IOT devices are here now, many using
+        the same least-cost TCP/IP stacks that are full of the same
+        problems, see
+        https://en.wikipedia.org/wiki/Ripple20
+        and not
+        up-gradable.  It looks like the [[https://tools.ietf.org/wg/opsec/charters][IETF OPSEC Working Group]] that
+        that document spawned is still going, pumping out documents,
+        and, I'm sure, in the words of Marshall Rose, there have been
+        "[[http://www.faqs.org/rfcs/rfc3160.html][Many fine lunches and dinners]]"
 
-      - [[https://tools.ietf.org/html/rfc3871][RFC3871]] :: This was a starry-eyed attempt at getting large
-        network equipment vendors to, you know, stop using telnet
-        (with plain-text passwords in the clear) for management of
-        inconsequential computers like the routers that make up the
-        Internet backbone.  It used yet another cool text formatting
-        tool, [[https://xml2rfc.tools.ietf.org/][xml2rfc]].  In my opinion we lost the war, e.g. getting
-        security features in important devices ... and well.. IOT
-        devices are here now, many using the same least-cost TCP/IP
-        stacks that are full of the same problems
-        (https://en.wikipedia.org/wiki/Ripple20) and not up-gradable.
-        It looks like the [[https://tools.ietf.org/wg/opsec/charters][IETF OPSEC Working Group]] that that document
-        spawned is still going, pumping out documents, and, I'm sure,
-        in the words of Marshall Rose, there have been "[[http://www.faqs.org/rfcs/rfc3160.html][Many fine
-        lunches and dinners]]"
-
-      - Links few pubs, talks, papers, etc :: Because 20 year old
+      - Links to a few pubs, talks, papers, etc :: Because 20 year old
         index.html files never die http://www.port111.com/george/#pubs
 
 ***** Back to paper
 
-***** Some gratuitous typesetting
+      I used to have a saying:
 
+      #+begin_quote
+      If it requires paper, it's the wrong interface.
+      #+end_quote
 
+      I'm backtracking on that.  I journal, on paper, most mornings.
+      I'm finding that there is a level of creativity, spontaneity and
+      a kind of catharsis that happens when putting things on paper.
+      I make non-linear connections that would never be made at a
+      keyboard.
 
-   11h
-   George Jones :emacs: :orgmode: @eludom
-   @jrss then stuff like this will Just Work(tm)
+      I'm not sure what that's saying.  Stay open?  Be willing to
+      re-consider things you've discarded?   There will be no follows.
+      No likes.  No re-shares.  No chance of going viral.  But its
+      where I find my thoughts.  Things have come full circle.
 
-   So he did what any self-respecting hacker who happened
-   to be Donald Knuth would do: he created his own typesetting system
-   called $\TeX$ which (along with $\LaTeX$ which borrowed heavily from SCRIBE)
-   is something of a standard to this day in academic publishing.
+***** Final thoughts
+      I hope this has been at least an in interesting read.  I hope it
+      has provided at least some idea of where we are and how we got
+      here in terms of technology for putting thoughts on "paper".
 
-   $x^3$
-
-   $x^2$
-
-   \begin{equation}                        % arbitrary environments,
-   x=\sqrt{b}                              % even tables, figures
-   \end{equation}                          % etc
-
-
-
-   Is there more you can tell me about use case for it? In other
-   words, can I get you to vent f some more about this, it's interesting. If you don't mind.
-
-   [2/2]
-
-
-   9h
-   George Jones :emacs: :orgmode: @eludom
-   @jrss my use case here is trivial.  I want to insert a symbol, the LaTeX "logo" into a blog post.
-
-   Put
-
-   $\LaTeX$ into an org file and export to HTML.  You will see what I want.
-
-   I'll capture this thread as a blog post and spell out the history.
-
-
-   0
-
-
-   9h
-   JTR :emacs:☕ @jrss@mastodon.technology
-   @eludom so in my case, latex seems extra work that I don't need in the end when what comes with org already gives me what doc and docx which is (unfortunately) what I need sometimes.
-
-
-   0
-***** And finally, a word from our sponsor...
+***** And now, a word from our sponsor...
 
     \begin{array}{*{20}c} {x = \frac{{ - b \pm \sqrt {b^2 - 4ac} }}{{2a}}} & {{\rm{when}}} & {ax^2 + bx + c = 0} \\ \end{array}
 
@@ -1359,6 +1457,16 @@ fine name for a band, right up there with "The Dead Kennedys"
       the same source, that creates latex on export which is then run
       through tex and friends to produce a pdf, but shhh.  Pay no
       attention to that man behind the curtain.
+
+[fn:14] Oppressive governments and various other not-so-friendly
+motivations fall here as well.
+
+[fn:15] once the =layout/partials/head.html= was fixed
+
+Posts 38,39, and 40 of #100DaysToOffload
+https://100daystooffload.com/.  This one was a production. It counts
+for 3.
+
 
 **** TODO .bashrc as literate programming
 :PROPERTIES:
@@ -1460,7 +1568,6 @@ EMACCSCONF 2020 TALK
 [fn:8]This was about 10 years before the world wide web ... maybe
 Berners-Lee got some inspiration on the name from Knuth? Or Sir Walter
 Scott: "‘Oh what a tangled web we weave/When first we practice to deceive"
-
 
 
 *** Cybersecurity                                             :cybersecurity:
