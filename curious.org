@@ -961,7 +961,7 @@ All we are saying, is give =init.el= a chance.
 
 Post 36 of #100DaysToOffload https://100daystooffload.com/
 
-**** TODO Of Typewriters, Scribe, LaTeX, Org mode, Hugo and Paper :history:blogging:emacs:100DaysToOffload:
+**** PUBLISHED Of Typewriters, Scribe, LaTeX, Org mode, Hugo and Paper :history:blogging:emacs:100DaysToOffload:
 :PROPERTIES:
 :EXPORT_FILE_NAME: typewriters
 :EXPORT_HUGO_PUBLISHDATE: 2020-12-06
@@ -1466,7 +1466,6 @@ motivations fall here as well.
 Posts 39, 40 and 41 of #100DaysToOffload
 https://100daystooffload.com/.  This one was a production. It counts
 for 3.
-
 
 **** PUBLISHED .bashrc as literate programming :howto:emacs:100DaysToOffload:
 :PROPERTIES:
@@ -2809,7 +2808,6 @@ Posts 38 of #100DaysToOffload https://100daystooffload.com/.
 [fn:8]This was about 10 years before the world wide web ... maybe
 Berners-Lee got some inspiration on the name from Knuth? Or Sir Walter
 Scott: "‘Oh what a tangled web we weave/When first we practice to deceive"
-
 
 *** Cybersecurity                                             :cybersecurity:
 **** WIP Thoughts on the OODA loop and falling out of a canoe :outdoors:SOC:OODA:
