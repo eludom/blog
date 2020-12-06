@@ -964,7 +964,7 @@ Post 36 of #100DaysToOffload https://100daystooffload.com/
 **** TODO Of Typewriters, Scribe, LaTeX, Org mode, Hugo and Paper :history:blogging:emacs:100DaysToOffload:
 :PROPERTIES:
 :EXPORT_FILE_NAME: typewriters
-:EXPORT_HUGO_PUBLISHDATE: 2020-12-05
+:EXPORT_HUGO_PUBLISHDATE: 2020-12-06
 :END:
 
 ***** What is this and why was it written?
@@ -1463,19 +1463,19 @@ motivations fall here as well.
 
 [fn:15] once the =layout/partials/head.html= was fixed
 
-Posts 38,39, and 40 of #100DaysToOffload
+Posts 39, 40 and 41 of #100DaysToOffload
 https://100daystooffload.com/.  This one was a production. It counts
 for 3.
 
 
-**** TODO .bashrc as literate programming
+**** PUBLISHED .bashrc as literate programming :howto:emacs:100DaysToOffload:
 :PROPERTIES:
 :EXPORT_FILE_NAME: bashrc
-:EXPORT_HUGO_PUBLISHDATE: 2020-11-30
+:EXPORT_HUGO_PUBLISHDATE: 2020-12-05
 :END:
 
 ***** Knuth gets annoyed at his publishers, $\TeX$ is born.
-Back in the 80s Donald Knuth who was (and still is) publishing a
+Back in the late 70s Donald Knuth who was (and still is) publishing a
 seminal series of Computer Science text books got annoyed at the
 typesetting, layouts and font choices he was being presented by
 publishers.   So he did what any self-respecting hacker who happened
@@ -1554,17 +1554,1258 @@ something that can't be done in emacs in general, and have been
 particularly annoyed at the growing complexity of my =.bashrc= file
 which could not be organize and documented in org mode....until now.
 
-EMACCSCONF 2020 TALK
+***** EmacsConf 2020 talk: README Driven Design
+      A talk at EmacsConf 2020 reminded me that Org mode can be used
+      directly for literate programming.
 
-***** MY BASHRC FORMATTED ... weave output
+      Test Driven Design (TDD) had been a concept for a while: write
+      your tests first, once your code passes, you're done.  Find a
+      bug, write a new test, code until it passes.
 
-***** MY BASHRC UNFORMATTED ... tangle output
+      "README Driven Design" continues in the same vein.  Often
+      programmers will wait to the end to write their documentation,
+      install notes, user guide etc.  What this talk advocates is to
+      use literate programming and to /start/ the README.org, which,
+      given Org babel, could be the whole application, including TDD
+      scripts.  See. Emacs does subsume all, did you notice how TDD
+      just got swallowed up without missing a step?  See the blog post
+      summarizing the talk at
+      [[http://adamard.com/literate_programming.html][http://adamard.com/literate_programming.html]]
 
-***** MY BASHRC AS ORG ... source document
+*****  1 - My .bashrc as literate programming
 
+      What follows are three different versions of my (457 line)
+      =.bashrc= file.
+
+      The first is the version for-human-consumption, complete with
+      comments, descriptions, useful font highlighting and actual text
+      blocked out. In Knuth's terms, this is the "weave" output.
+
+      The second is the .bashrc that actually gets executed by bash.
+      This is the "tangle" output.
+
+      The last is the org mode source from which both preceding
+      versions used as input.
+
+****** 1.1 - My .bashrc - weave output for humans
+
+       Here is the human-readable .bashrc file with comments, etc.
+
+******* About this .bashrc file
+******** Intro
+         This is George Jones' .bashrc file as an literate programming file in
+         emacs org mode using babel blocks.
+
+******** To generate the actual .bashrc
+         This .bashrc.org file must be processed to generate the actual
+         .bashrc It can be processed interactively to generate .bashrc via
+         org-babel-tangle-file or from the command line as
+
+         #+begin_example
+  emacs --batch --eval "(require 'org)" --eval '(org-babel-tangle-file ".bashrc.org")'
+         #+end_example
+
+         Permanent changes must be made to the .org version, as the actual
+         .bashrc will be overwritten when the .org version is "compiled"
+
+******** Debugging
+
+        In most bash files I do
+
+        #+begin_example
+  set -e
+  set -u
+        #+end_example
+
+        but there are problems setting it in .bashrc.   An error then causes
+        you to exit the shell entirely (not what you want), and there are
+        several constructs that cause warnings due to undefined variables
+        (these can/probably should be fixd)
+
+        Set
+
+        #+begin_example
+  export DEBUG=1
+        #+end_example
+
+        to enable debugging output from the debug helper function.
+
+******* The actual executable .bashrc
+******** Helper functions
+         I define a few syslog-ish helper functions to print warnings,
+         errors, etc.
+
+         #+begin_src shell :tangle .bashrc :noweb no-export
+  #PROG=`basename "$0" | tr -d '\n'`  # normal setting
+  PROG="bashrc" # setting for bashrc due to errors
+
+  function info()  { echo ${PROG}\: info: "$@" 1>&2; }
+  function warn()  { echo ${PROG}\: warning: "$@" 1>&2; }
+  function error() { echo ${PROG}\: error: "$@" 1>&2; }
+  function debug() { [[ -v DEBUG ]] && echo ${PROG}\: debug: "$@" 1>&2 || true ; }
+  function die()   { echo ${PROG}\: fatal: "$@" 1>&2 && exit 1; }
+         #+end_src
+
+******** Set a reasonable default prompt
+
+         Here I set a reasonable default prompt that includes timestamp,
+         username, host and current directory:
+
+       #+begin_src shell :tangle .bashrc :noweb no-export
+export PS1="\# [\t] \u@\h \W/ $ "
+       #+end_src
+
+******** Misc aliases
+
+         Define various aliases that I use
+
+         #+begin_src shell :tangle .bashrc :noweb no-export
+  alias rm='	rm -i'
+  alias ag='	alias | grep -i'
+  alias eg='	printenv | grep -i'
+  alias hg='	history | grep -i'
+  alias ht='	history | tail'
+  alias fpg='	find . -print | egrep -i'
+  alias egi='	egrep -i'
+  alias psg='	/bin/ps -auxww | grep'
+  alias p8='	ping -c 3 8.8.8.8' # make sure routing works
+  alias pp='	ping -c 3 port111.com' # make sure dns and routing work
+  alias locate='locate -r'
+         #+end_src
+
+******** cd commands that use/print the directory stack
+
+         These aliases support pushd/popd/dirs like functionality while
+         listing one directory per line
+
+         I like to keep a "stack" of directories so I can work on one thing
+         then "pop" back to where I was.   =pushd= an =popd= support this,
+         and =dirs= lists the directories, but I prefer to have them listed
+         one per line.
+
+
+         #+begin_src shell :tangle .bashrc :noweb no-export
+  function dirl() {
+      # "DIR"ectory "L"ist directory stack, one per line
+      # Usage: dirl
+
+      for d in `dirs`; do echo $d; done
+  }
+
+  function dirc() {
+      # "DIR"ectory "C"onnect - connect to directory and list stack
+      # Usage: dirc [DIR
+
+      pushd ${1:-"$HOME"} > /dev/null
+      dirl
+  }
+
+  function dirp () {
+      # "DIR"ectory "P"op - pop N entries off the directory stack
+      # Usage: dirp [N]
+      #
+      # OLD:
+      #   alias  dirp='popd > /dev/null && dirl'
+      for i in `seq ${1:-"1"}`; do
+          debug "dirl: popd. i is $i"
+          popd > /dev/null;
+      done
+      dirl
+  }
+
+  alias cd=pushd
+         #+end_src
+
+******** Misc functions
+
+         #+begin_src shell :tangle .bashrc :noweb no-export
+
+  function gf() {
+  # grep-find: grep for patterins in files via find
+  #
+  # Usage: gf patterns [files [days]]
+  #
+  # Examples:
+  #   gf findMeAnywhere
+  #   gf findMeInTextFiles '*.txt'
+  #   gf findMeInTextFiles .txt
+  #   gf BEGIN\|END .org 30
+
+  local files=""
+  local days="365"
+
+  set -o noglob
+
+  # First arg is pattern(s) for egrep
+  if [ -z ${1+x} ]; then
+    echo 'gf needs string(s) to search for ' 1>&2
+    info "Usage: gf patterns [files [days]]"
+    return 1
+  fi
+
+  # Second arg (if present) is files for find.  No globbing, so "*.txt" OK
+  if [ ! -z ${2+x} ]; then
+    if [[ "$2" =~ ^\. ]]; then
+      # Special case: treat ".foo" as "*.foo"
+      # Avoids needing to quote on command line
+      files="-name *$2"
+    else
+      files="-name ${2}"
+    fi
+  fi
+
+  # $3 (if present) is find -mtime arg, default 365
+  if [ ! -z ${3+x} ]; then
+    days="${3}"
+  fi
+
+  # set -x
+  find . -type f -mtime -${days} $files -exec egrep --color -H -i "${1}" \{\} \;
+  # set +x
+
+  set +o noglob
+  }
+       #+end_src
+
+******** Bash history functions and settings
+         #+begin_src shell :tangle .bashrc :noweb no-export
+
+  # Preserve history across sesssions
+  #
+  # http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
+  #
+  export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+  export HISTSIZE=100000                   # big big history
+  export HISTFILESIZE=100000               # big big history
+  shopt -s histappend                      # append to history, don't overwrite it
+
+  # Save and reload the history after each command finishes
+  export PROMPT_COMMAND="history -a; history -c; history -r;"
+
+
+  function hgt() {
+      # hgt == "history grep (for arg) tail"
+      #echo "Histroy Grep tail"
+
+      if [ -z ${1+x} ]; then
+          echo 'hgt needs an argument' 1>&2
+          return 1
+      fi
+
+      history | grep -i "$1" | tail
+      return 0
+  }
+         #+end_src
+
+******** Set the hostnane, timezone and local
+         Set HOSTNAME if ~/etc/hostname exists
+
+         #+begin_src shell :tangle .bashrc :noweb no-export
+   if [ -e ${HOME}/etc/hostname ]; then
+       export HOSTNAME=`cat ${HOME}/etc/hostname`
+   elif [ -e /etc/hostname ]; then
+       export HOSTNAME=`cat /etc/hostname`
+   else
+       export HOSTNAME="unknown"
+   fi
+
+   # Set timezone if ~/bin/tz.sh exists
+
+   # NEW, if neeeed?
+   #
+   # https://linuxize.com/post/how-to-set-or-change-timezone-in-linux/
+   #
+   # OLD:
+   #
+   # if [ -e ~/bin/tz.sh ]; then
+   #     echo Setting timezone.
+   #     source ~/bin/tz.sh # should be in ~/rc.local
+   # fi
+
+   # STILL NEEDED?
+   #
+   # Set local for numeric output
+   LOCAL=`locale -a | grep -i en_us | head -1`
+   if [[ "$LOCAL" != "" ]]; then export LC_NUMERIC="$LOCAL"; fi
+         #+end_src
+
+******** Set up ssh agent
+         Add keys by hand if needed via
+
+         #+begin_example
+   ssh-add ~/.ssh/id_*
+         #+end_example
+
+         #+begin_src shell :tangle .bashrc :noweb no-export
+   if [ -e ~/bin/sshagent ]; then
+       source ~/bin/sshagent
+   fi
+         #+end_src
+
+******** Copy stdin to clipboard
+
+         #+begin_src shell :tangle .bashrc :noweb no-export
+   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+     alias 2clip='xclip -selection c'
+     alias 3clip='printf %s "$(cat /dev/stdin)" | xclip -selection c'  # no final \n
+   elif [[ "$OSTYPE" == "darwin"* ]]; then
+     alias 2clip='pbcopy'
+   fi
+         #+end_src
+
+******** Path functions
+        These path* functions add and remove elements to PATH.
+        They insure that entries are unique.
+        They allow you to place a path first or last in the order (e.g.
+        so that =~/bin= comes before =/usr/local/bin=)
+
+        #+begin_src shell :tangle .bashrc :noweb no-export
+  pathrm() {
+      # remove an item from the path
+      if [ -d "$1" ]; then
+          removeThis="`echo $1 | sed -e 's#/#\\\/#'g`"
+          newPath=`echo $PATH | awk -v RS=: -v ORS=: "/$removeThis/ {next} {print}" | sed 's/[ :]*$//g'`
+          export PATH=$newPath
+      fi
+  }
+
+
+  pathlast() {
+      # add path to the end if not there
+      if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+          export PATH="${PATH:+"$PATH:"}$1"
+      fi
+  }
+
+
+  pathfirst() {
+      # add path to the front if not there
+      if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+          export PATH="$1:${PATH}"
+      fi
+  }
+
+  path() {
+    # show path
+    echo $PATH
+  }
+
+  # show path, one entry per line
+  alias pathcat="echo $PATH | sed 's/:/\n/g'"
+
+
+  # Be sure we have a few specific paths if they exist
+
+  pathlast $HOME/bin
+  pathlast /usr/local/bin
+  pathlast /opt/bin
+        #+end_src
+
+******** source ~/rc.local/*.sh to do non-general bash setup
+         Execute any .sh files in ~/rc.local/*.sh
+
+         This allows me to split out setup for aliases and commands that
+         only get used on certian systems or in certian contexts (git, go,
+         mail, blog..)
+
+         #+begin_src shell :tangle .bashrc :noweb no-export
+
+   if [ -d ${HOME}/rc.local ]; then
+       for rcfile in $(find ${HOME}/rc.local -name \*.sh); do
+           debug running localrc ${rcfile}
+           source ${rcfile}
+       done
+   fi
+         #+end_src
+
+******** Invoking emacs
+         #+begin_src shell :tangle .bashrc :noweb no-export
+   alias emacs='setsid emacs'
+
+   # from http://stuff-things.net/2014/12/16/working-with-emacsclient/
+
+   if [ -z "$SSH_CONNECTION" ]; then
+       export EMACSCLIENT=emacsclient
+       alias ec="$EMACSCLIENT -c -n"
+       export EDITOR="$EMACSCLIENT -c"
+       export ALTERNATE_EDITOR=""
+   else
+       export EDITOR=$(type -P emacs || type -P ed)
+   fi
+   export VISUAL=$EDITOR
+         #+end_src
+
+******** ls aliases
+         #+begin_src shell :tangle .bashrc :noweb no-export
+
+   # coloring for ls functions
+
+   if [[ "$OSTYPE" == "linux-gnu" ]]; then
+       color="--color";
+   else
+       color=""
+   fi
+
+   BIN_LS=/bin/ls
+   alias ls='	ls '$color' -a'
+
+
+   # Long List Reverse Tail
+   function llrt() { ls -lrt $color ${*:-}; }
+
+   # Long List Time
+   function llt() { ls -lt $color ${*:-}; }
+
+   # Long List Time, More
+   function lltm() { ls -lt $color ${*:-} | more; }
+
+   # Long List Time, Less
+   function lltl() { ls -alt $color ${*:-} | more; }
+
+   # Long List Time, Head
+   function llth() { ls -lt $color ${*:-} | head; }
+
+   # Long List Time, Tail
+   function lltt() { ls -alt $color ${*:-} | tail; }
+
+
+   # List Sort Size
+   function lss() { ls -a1s $color ${*:-} | sort -n; }
+
+   # List Sort Size Reverse
+   function lssr() { ls -a1s $color ${*:-} | sort -nr; }
+
+         #+end_src
+
+******** Aliases for viewing the newest file in a directoy
+         #+begin_src shell :tangle .bashrc :noweb no-export
+
+   function nf ()
+   {
+       # list the newest file in the current directory
+       NF=`find ${1:-.} -maxdepth 1 -type f -print0 | xargs -0 ls -1t  |  head -1;`;
+       echo ${NF:-/dev/null} | sed "s/ /\\\ /g"
+   }
+
+
+   # new file tail file
+   function nftf { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs tail -f  ; }
+
+   # new file tail
+   function nft { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs tail  ; }
+
+   # new file head
+   function nfh { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs head  ; }
+
+   # new file less
+   function nfl { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs less  ; }
+
+   # new file cat
+   function nfc { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs cat  ; }
+
+   # new file ls
+   function nfls { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs ls -A1t  ; }
+
+   # new file ls -l
+   function nflsl { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs
+   ls -Atl  ; }
+         #+end_src
+
+******** viewing files
+         Notes on setting up file/mime type associations can be found at
+
+         https://unix.stackexchange.com/questions/77136/xdg-open-default-applications-behavior
+
+         So, to make emacs (what else?) the default for MIME type
+         =text/plain= ...
+
+         #+begin_example
+   locate -r 'emacs.*\.desktop'
+   xdg-mime default emacs.desktop text/plain
+         #+end_example
+
+         #+begin_src shell :tangle .bashrc :noweb no-export
+   if [[  ! -z "`which xdg-open`" ]]; then alias open='xdg-open '; fi
+         #+end_src
+
+******** All done
+         #+begin_src shell :tangle .bashrc :noweb no-export
+   touch $HOME/.bashrc-ran
+   debug ".bashrc done"
+         #+end_src
+
+****** 1.2 - My .bashrc - tangle output for computers
+
+       Here is the actual .bashrc file for bash(1) to consume
+
+#+begin_src bash :eval no
+#PROG=`basename "$0" | tr -d '\n'`  # normal setting
+PROG="bashrc" # setting for bashrc due to errors
+
+function info()  { echo ${PROG}\: info: "$@" 1>&2; }
+function warn()  { echo ${PROG}\: warning: "$@" 1>&2; }
+function error() { echo ${PROG}\: error: "$@" 1>&2; }
+function debug() { [[ -v DEBUG ]] && echo ${PROG}\: debug: "$@" 1>&2 || true ; }
+function die()   { echo ${PROG}\: fatal: "$@" 1>&2 && exit 1; }
+
+export PS1="\# [\t] \u@\h \W/ $ "
+
+alias rm='	rm -i'
+alias ag='	alias | grep -i'
+alias eg='	printenv | grep -i'
+alias hg='	history | grep -i'
+alias ht='	history | tail'
+alias fpg='	find . -print | egrep -i'
+alias egi='	egrep -i'
+alias psg='	/bin/ps -auxww | grep'
+alias p8='	ping -c 3 8.8.8.8' # make sure routing works
+alias pp='	ping -c 3 port111.com' # make sure dns and routing work
+alias locate='locate -r'
+
+function dirl() {
+    # "DIR"ectory "L"ist directory stack, one per line
+    # Usage: dirl
+
+    for d in `dirs`; do echo $d; done
+}
+
+function dirc() {
+    # "DIR"ectory "C"onnect - connect to directory and list stack
+    # Usage: dirc [DIR
+
+    pushd ${1:-"$HOME"} > /dev/null
+    dirl
+}
+
+function dirp () {
+    # "DIR"ectory "P"op - pop N entries off the directory stack
+    # Usage: dirp [N]
+    #
+    # OLD:
+    #   alias  dirp='popd > /dev/null && dirl'
+    for i in `seq ${1:-"1"}`; do
+        debug "dirl: popd. i is $i"
+        popd > /dev/null;
+    done
+    dirl
+}
+
+alias cd=pushd
+
+function gf() {
+# grep-find: grep for patterins in files via find
+#
+# Usage: gf patterns [files [days]]
+#
+# Examples:
+#   gf findMeAnywhere
+#   gf findMeInTextFiles '*.txt'
+#   gf findMeInTextFiles .txt
+#   gf BEGIN\|END .org 30
+
+local files=""
+local days="365"
+
+set -o noglob
+
+# First arg is pattern(s) for egrep
+if [ -z ${1+x} ]; then
+  echo 'gf needs string(s) to search for ' 1>&2
+  info "Usage: gf patterns [files [days]]"
+  return 1
+fi
+
+# Second arg (if present) is files for find.  No globbing, so "*.txt" OK
+if [ ! -z ${2+x} ]; then
+  if [[ "$2" =~ ^\. ]]; then
+    # Special case: treat ".foo" as "*.foo"
+    # Avoids needing to quote on command line
+    files="-name *$2"
+  else
+    files="-name ${2}"
+  fi
+fi
+
+# $3 (if present) is find -mtime arg, default 365
+if [ ! -z ${3+x} ]; then
+  days="${3}"
+fi
+
+# set -x
+find . -type f -mtime -${days} $files -exec egrep --color -H -i "${1}" \{\} \;
+# set +x
+
+set +o noglob
+}
+
+# Preserve history across sesssions
+#
+# http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
+#
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r;"
+
+
+function hgt() {
+    # hgt == "history grep (for arg) tail"
+    #echo "Histroy Grep tail"
+
+    if [ -z ${1+x} ]; then
+        echo 'hgt needs an argument' 1>&2
+        return 1
+    fi
+
+    history | grep -i "$1" | tail
+    return 0
+}
+
+if [ -e ${HOME}/etc/hostname ]; then
+    export HOSTNAME=`cat ${HOME}/etc/hostname`
+elif [ -e /etc/hostname ]; then
+    export HOSTNAME=`cat /etc/hostname`
+else
+    export HOSTNAME="unknown"
+fi
+
+# Set timezone if ~/bin/tz.sh exists
+
+# NEW, if neeeed?
+#
+# https://linuxize.com/post/how-to-set-or-change-timezone-in-linux/
+#
+# OLD:
+#
+# if [ -e ~/bin/tz.sh ]; then
+#     echo Setting timezone.
+#     source ~/bin/tz.sh # should be in ~/rc.local
+# fi
+
+# STILL NEEDED?
+#
+# Set local for numeric output
+LOCAL=`locale -a | grep -i en_us | head -1`
+if [[ "$LOCAL" != "" ]]; then export LC_NUMERIC="$LOCAL"; fi
+
+if [ -e ~/bin/sshagent ]; then
+    source ~/bin/sshagent
+fi
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  alias 2clip='xclip -selection c'
+  alias 3clip='printf %s "$(cat /dev/stdin)" | xclip -selection c'  # no final \n
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  alias 2clip='pbcopy'
+fi
+
+pathrm() {
+    # remove an item from the path
+    if [ -d "$1" ]; then
+        removeThis="`echo $1 | sed -e 's#/#\\\/#'g`"
+        newPath=`echo $PATH | awk -v RS=: -v ORS=: "/$removeThis/ {next} {print}" | sed 's/[ :]*$//g'`
+        export PATH=$newPath
+    fi
+}
+
+
+pathlast() {
+    # add path to the end if not there
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        export PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
+
+
+pathfirst() {
+    # add path to the front if not there
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        export PATH="$1:${PATH}"
+    fi
+}
+
+path() {
+  # show path
+  echo $PATH
+}
+
+# show path, one entry per line
+alias pathcat="echo $PATH | sed 's/:/\n/g'"
+
+
+# Be sure we have a few specific paths if they exist
+
+pathlast $HOME/bin
+pathlast /usr/local/bin
+pathlast /opt/bin
+
+if [ -d ${HOME}/rc.local ]; then
+    for rcfile in $(find ${HOME}/rc.local -name \*.sh); do
+        debug running localrc ${rcfile}
+        source ${rcfile}
+    done
+fi
+
+alias emacs='setsid emacs'
+
+# from http://stuff-things.net/2014/12/16/working-with-emacsclient/
+
+if [ -z "$SSH_CONNECTION" ]; then
+    export EMACSCLIENT=emacsclient
+    alias ec="$EMACSCLIENT -c -n"
+    export EDITOR="$EMACSCLIENT -c"
+    export ALTERNATE_EDITOR=""
+else
+    export EDITOR=$(type -P emacs || type -P ed)
+fi
+export VISUAL=$EDITOR
+
+# coloring for ls functions
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    color="--color";
+else
+    color=""
+fi
+
+BIN_LS=/bin/ls
+alias ls='	ls '$color' -a'
+
+
+# Long List Reverse Tail
+function llrt() { ls -lrt $color ${*:-}; }
+
+# Long List Time
+function llt() { ls -lt $color ${*:-}; }
+
+# Long List Time, More
+function lltm() { ls -lt $color ${*:-} | more; }
+
+# Long List Time, Less
+function lltl() { ls -alt $color ${*:-} | more; }
+
+# Long List Time, Head
+function llth() { ls -lt $color ${*:-} | head; }
+
+# Long List Time, Tail
+function lltt() { ls -alt $color ${*:-} | tail; }
+
+
+# List Sort Size
+function lss() { ls -a1s $color ${*:-} | sort -n; }
+
+# List Sort Size Reverse
+function lssr() { ls -a1s $color ${*:-} | sort -nr; }
+
+function nf ()
+{
+    # list the newest file in the current directory
+    NF=`find ${1:-.} -maxdepth 1 -type f -print0 | xargs -0 ls -1t  |  head -1;`;
+    echo ${NF:-/dev/null} | sed "s/ /\\\ /g"
+}
+
+
+# new file tail file
+function nftf { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs tail -f  ; }
+
+# new file tail
+function nft { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs tail  ; }
+
+# new file head
+function nfh { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs head  ; }
+
+# new file less
+function nfl { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs less  ; }
+
+# new file cat
+function nfc { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs cat  ; }
+
+# new file ls
+function nfls { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs ls -A1t  ; }
+
+# new file ls -l
+function nflsl { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs
+ls -Atl  ; }
+
+if [[  ! -z "`which xdg-open`" ]]; then alias open='xdg-open '; fi
+
+touch $HOME/.bashrc-ran
+debug ".bashrc done"
+#+end_src
+
+****** 1.3 - My .bashrc - The org mode source file
+
+
+Here is the .bash.org input file
+
+#+begin_src org
+,#+title: .bashrc
+,#+date: <2020-12-06 03:13:07 Sunday>
+,#+author: George M Jones
+,#+email: gmj@pobox.com
+,#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline
+,#+options: author:t broken-links:nil c:nil creator:nil
+,#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:2
+,#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+,#+options: timestamp:t title:t toc:t todo:t |:t
+,#+language: en
+,#+select_tags: export
+,#+exclude_tags: noexport
+,#+creator: Emacs 28.0.50 (Org mode 9.4)
+
+
+,* About this .bashrc file
+,** Intro
+   This is George Jones' .bashrc file as an literate programming file in
+   emacs org mode using babel blocks.
+
+,** To generate the actual .bashrc
+   This .bashrc.org file must be processed to generate the actual
+   .bashrc It can be processed interactively to generate .bashrc via
+   org-babel-tangle-file or from the command line as
+
+   ,#+begin_example
+  emacs --batch --eval "(require 'org)" --eval '(org-babel-tangle-file ".bashrc.org")'
+   ,#+end_example
+
+   Permanent changes must be made to the .org version, as the actual
+   .bashrc will be overwritten when the .org version is "compiled"
+
+,** Debugging
+
+  In most bash files I do
+
+  ,#+begin_example
+  set -e
+  set -u
+  ,#+end_example
+
+  but there are problems setting it in .bashrc.   An error then causes
+  you to exit the shell entirely (not what you want), and there are
+  several constructs that cause warnings due to undefined variables
+  (these can/probably should be fixd)
+
+  Set
+
+  ,#+begin_example
+  export DEBUG=1
+  ,#+end_example
+
+  to enable debugging output from the debug helper function.
+
+,* The actual executable .bashrc
+,** Helper functions
+   I define a few syslog-ish helper functions to print warnings,
+   errors, etc.
+
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+  #PROG=`basename "$0" | tr -d '\n'`  # normal setting
+  PROG="bashrc" # setting for bashrc due to errors
+
+  function info()  { echo ${PROG}\: info: "$@" 1>&2; }
+  function warn()  { echo ${PROG}\: warning: "$@" 1>&2; }
+  function error() { echo ${PROG}\: error: "$@" 1>&2; }
+  function debug() { [[ -v DEBUG ]] && echo ${PROG}\: debug: "$@" 1>&2 || true ; }
+  function die()   { echo ${PROG}\: fatal: "$@" 1>&2 && exit 1; }
+   ,#+end_src
+
+,** Set a reasonable default prompt
+
+   Here I set a reasonable default prompt that includes timestamp,
+   username, host and current directory:
+
+ ,#+begin_src shell :tangle .bashrc :noweb no-export
+export PS1="\# [\t] \u@\h \W/ $ "
+ ,#+end_src
+
+,** Misc aliases
+
+   Define various aliases that I use
+
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+  alias rm='	rm -i'
+  alias ag='	alias | grep -i'
+  alias eg='	printenv | grep -i'
+  alias hg='	history | grep -i'
+  alias ht='	history | tail'
+  alias fpg='	find . -print | egrep -i'
+  alias egi='	egrep -i'
+  alias psg='	/bin/ps -auxww | grep'
+  alias p8='	ping -c 3 8.8.8.8' # make sure routing works
+  alias pp='	ping -c 3 port111.com' # make sure dns and routing work
+  alias locate='locate -r'
+   ,#+end_src
+
+,** cd commands that use/print the directory stack
+
+   These aliases support pushd/popd/dirs like functionality while
+   listing one directory per line
+
+   I like to keep a "stack" of directories so I can work on one thing
+   then "pop" back to where I was.   =pushd= an =popd= support this,
+   and =dirs= lists the directories, but I prefer to have them listed
+   one per line.
+
+
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+  function dirl() {
+      # "DIR"ectory "L"ist directory stack, one per line
+      # Usage: dirl
+
+      for d in `dirs`; do echo $d; done
+  }
+
+  function dirc() {
+      # "DIR"ectory "C"onnect - connect to directory and list stack
+      # Usage: dirc [DIR
+
+      pushd ${1:-"$HOME"} > /dev/null
+      dirl
+  }
+
+  function dirp () {
+      # "DIR"ectory "P"op - pop N entries off the directory stack
+      # Usage: dirp [N]
+      #
+      # OLD:
+      #   alias  dirp='popd > /dev/null && dirl'
+      for i in `seq ${1:-"1"}`; do
+          debug "dirl: popd. i is $i"
+          popd > /dev/null;
+      done
+      dirl
+  }
+
+  alias cd=pushd
+   ,#+end_src
+
+,** Misc functions
+
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+
+  function gf() {
+  # grep-find: grep for patterins in files via find
+  #
+  # Usage: gf patterns [files [days]]
+  #
+  # Examples:
+  #   gf findMeAnywhere
+  #   gf findMeInTextFiles '*.txt'
+  #   gf findMeInTextFiles .txt
+  #   gf BEGIN\|END .org 30
+
+  local files=""
+  local days="365"
+
+  set -o noglob
+
+  # First arg is pattern(s) for egrep
+  if [ -z ${1+x} ]; then
+    echo 'gf needs string(s) to search for ' 1>&2
+    info "Usage: gf patterns [files [days]]"
+    return 1
+  fi
+
+  # Second arg (if present) is files for find.  No globbing, so "*.txt" OK
+  if [ ! -z ${2+x} ]; then
+    if [[ "$2" =~ ^\. ]]; then
+      # Special case: treat ".foo" as "*.foo"
+      # Avoids needing to quote on command line
+      files="-name *$2"
+    else
+      files="-name ${2}"
+    fi
+  fi
+
+  # $3 (if present) is find -mtime arg, default 365
+  if [ ! -z ${3+x} ]; then
+    days="${3}"
+  fi
+
+  # set -x
+  find . -type f -mtime -${days} $files -exec egrep --color -H -i "${1}" \{\} \;
+  # set +x
+
+  set +o noglob
+  }
+ ,#+end_src
+
+,** Bash history functions and settings
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+
+  # Preserve history across sesssions
+  #
+  # http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
+  #
+  export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+  export HISTSIZE=100000                   # big big history
+  export HISTFILESIZE=100000               # big big history
+  shopt -s histappend                      # append to history, don't overwrite it
+
+  # Save and reload the history after each command finishes
+  export PROMPT_COMMAND="history -a; history -c; history -r;"
+
+
+  function hgt() {
+      # hgt == "history grep (for arg) tail"
+      #echo "Histroy Grep tail"
+
+      if [ -z ${1+x} ]; then
+          echo 'hgt needs an argument' 1>&2
+          return 1
+      fi
+
+      history | grep -i "$1" | tail
+      return 0
+  }
+   ,#+end_src
+
+,** Set the hostnane, timezone and local
+   Set HOSTNAME if ~/etc/hostname exists
+
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+   if [ -e ${HOME}/etc/hostname ]; then
+       export HOSTNAME=`cat ${HOME}/etc/hostname`
+   elif [ -e /etc/hostname ]; then
+       export HOSTNAME=`cat /etc/hostname`
+   else
+       export HOSTNAME="unknown"
+   fi
+
+   # Set timezone if ~/bin/tz.sh exists
+
+   # NEW, if neeeed?
+   #
+   # https://linuxize.com/post/how-to-set-or-change-timezone-in-linux/
+   #
+   # OLD:
+   #
+   # if [ -e ~/bin/tz.sh ]; then
+   #     echo Setting timezone.
+   #     source ~/bin/tz.sh # should be in ~/rc.local
+   # fi
+
+   # STILL NEEDED?
+   #
+   # Set local for numeric output
+   LOCAL=`locale -a | grep -i en_us | head -1`
+   if [[ "$LOCAL" != "" ]]; then export LC_NUMERIC="$LOCAL"; fi
+   ,#+end_src
+
+,** Set up ssh agent
+   Add keys by hand if needed via
+
+   ,#+begin_example
+   ssh-add ~/.ssh/id_*
+   ,#+end_example
+
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+   if [ -e ~/bin/sshagent ]; then
+       source ~/bin/sshagent
+   fi
+   ,#+end_src
+
+,** Copy stdin to clipboard
+
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+     alias 2clip='xclip -selection c'
+     alias 3clip='printf %s "$(cat /dev/stdin)" | xclip -selection c'  # no final \n
+   elif [[ "$OSTYPE" == "darwin"* ]]; then
+     alias 2clip='pbcopy'
+   fi
+   ,#+end_src
+
+,** Path functions
+  These path* functions add and remove elements to PATH.
+  They insure that entries are unique.
+  They allow you to place a path first or last in the order (e.g.
+  so that =~/bin= comes before =/usr/local/bin=)
+
+  ,#+begin_src shell :tangle .bashrc :noweb no-export
+  pathrm() {
+      # remove an item from the path
+      if [ -d "$1" ]; then
+          removeThis="`echo $1 | sed -e 's#/#\\\/#'g`"
+          newPath=`echo $PATH | awk -v RS=: -v ORS=: "/$removeThis/ {next} {print}" | sed 's/[ :]*$//g'`
+          export PATH=$newPath
+      fi
+  }
+
+
+  pathlast() {
+      # add path to the end if not there
+      if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+          export PATH="${PATH:+"$PATH:"}$1"
+      fi
+  }
+
+
+  pathfirst() {
+      # add path to the front if not there
+      if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+          export PATH="$1:${PATH}"
+      fi
+  }
+
+  path() {
+    # show path
+    echo $PATH
+  }
+
+  # show path, one entry per line
+  alias pathcat="echo $PATH | sed 's/:/\n/g'"
+
+
+  # Be sure we have a few specific paths if they exist
+
+  pathlast $HOME/bin
+  pathlast /usr/local/bin
+  pathlast /opt/bin
+  ,#+end_src
+
+,** source ~/rc.local/*.sh to do non-general bash setup
+   Execute any .sh files in ~/rc.local/*.sh
+
+   This allows me to split out setup for aliases and commands that
+   only get used on certian systems or in certian contexts (git, go,
+   mail, blog..)
+
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+
+   if [ -d ${HOME}/rc.local ]; then
+       for rcfile in $(find ${HOME}/rc.local -name \*.sh); do
+           debug running localrc ${rcfile}
+           source ${rcfile}
+       done
+   fi
+   ,#+end_src
+
+,** Invoking emacs
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+   alias emacs='setsid emacs'
+
+   # from http://stuff-things.net/2014/12/16/working-with-emacsclient/
+
+   if [ -z "$SSH_CONNECTION" ]; then
+       export EMACSCLIENT=emacsclient
+       alias ec="$EMACSCLIENT -c -n"
+       export EDITOR="$EMACSCLIENT -c"
+       export ALTERNATE_EDITOR=""
+   else
+       export EDITOR=$(type -P emacs || type -P ed)
+   fi
+   export VISUAL=$EDITOR
+   ,#+end_src
+
+,** ls aliases
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+
+   # coloring for ls functions
+
+   if [[ "$OSTYPE" == "linux-gnu" ]]; then
+       color="--color";
+   else
+       color=""
+   fi
+
+   BIN_LS=/bin/ls
+   alias ls='	ls '$color' -a'
+
+
+   # Long List Reverse Tail
+   function llrt() { ls -lrt $color ${*:-}; }
+
+   # Long List Time
+   function llt() { ls -lt $color ${*:-}; }
+
+   # Long List Time, More
+   function lltm() { ls -lt $color ${*:-} | more; }
+
+   # Long List Time, Less
+   function lltl() { ls -alt $color ${*:-} | more; }
+
+   # Long List Time, Head
+   function llth() { ls -lt $color ${*:-} | head; }
+
+   # Long List Time, Tail
+   function lltt() { ls -alt $color ${*:-} | tail; }
+
+
+   # List Sort Size
+   function lss() { ls -a1s $color ${*:-} | sort -n; }
+
+   # List Sort Size Reverse
+   function lssr() { ls -a1s $color ${*:-} | sort -nr; }
+
+   ,#+end_src
+
+,** Aliases for viewing the newest file in a directoy
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+
+   function nf ()
+   {
+       # list the newest file in the current directory
+       NF=`find ${1:-.} -maxdepth 1 -type f -print0 | xargs -0 ls -1t  |  head -1;`;
+       echo ${NF:-/dev/null} | sed "s/ /\\\ /g"
+   }
+
+
+   # new file tail file
+   function nftf { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs tail -f  ; }
+
+   # new file tail
+   function nft { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs tail  ; }
+
+   # new file head
+   function nfh { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs head  ; }
+
+   # new file less
+   function nfl { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs less  ; }
+
+   # new file cat
+   function nfc { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs cat  ; }
+
+   # new file ls
+   function nfls { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs ls -A1t  ; }
+
+   # new file ls -l
+   function nflsl { NF=`nf ${1:-.}`; debug NF $NF;  echo "$NF" | xargs
+   ls -Atl  ; }
+   ,#+end_src
+
+,** viewing files
+   Notes on setting up file/mime type associations can be found at
+
+   https://unix.stackexchange.com/questions/77136/xdg-open-default-applications-behavior
+
+   So, to make emacs (what else?) the default for MIME type
+   =text/plain= ...
+
+   ,#+begin_example
+   locate -r 'emacs.*\.desktop'
+   xdg-mime default emacs.desktop text/plain
+   ,#+end_example
+
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+   if [[  ! -z "`which xdg-open`" ]]; then alias open='xdg-open '; fi
+   ,#+end_src
+
+,** All done
+   ,#+begin_src shell :tangle .bashrc :noweb no-export
+   touch $HOME/.bashrc-ran
+   debug ".bashrc done"
+   ,#+end_src
+#+end_src
+
+Congratulations for reading this far.   Go forth and write literate programs.
+
+Posts 38 of #100DaysToOffload https://100daystooffload.com/.
 
 ***** Footnotes
-
 [fn:8]This was about 10 years before the world wide web ... maybe
 Berners-Lee got some inspiration on the name from Knuth? Or Sir Walter
 Scott: "‘Oh what a tangled web we weave/When first we practice to deceive"
